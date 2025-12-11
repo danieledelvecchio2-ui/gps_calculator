@@ -27,6 +27,12 @@ interface GpsFormProps {
 }
 
 export function GpsForm({ onCalculate }: GpsFormProps) {
+  // Dati personali
+  const [nome, setNome] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [cellulare, setCellulare] = useState<string>("");
+  
+  // Dati GPS
   const [votoLaurea, setVotoLaurea] = useState<number>(100);
   const [lode, setLode] = useState<boolean>(false);
   const [numC2, setNumC2] = useState<number>(0);
@@ -38,7 +44,17 @@ export function GpsForm({ onCalculate }: GpsFormProps) {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Validazione campi obbligatori
+    if (!nome.trim() || !email.trim() || !cellulare.trim() || !classeConcorso) {
+      alert("Per favore, compila tutti i campi obbligatori (Nome, Email, Cellulare, Classe di Concorso)");
+      return;
+    }
+    
     onCalculate({
+      nome: nome.trim(),
+      email: email.trim(),
+      cellulare: cellulare.trim(),
       votoLaurea,
       lode,
       numC2,
@@ -69,6 +85,55 @@ export function GpsForm({ onCalculate }: GpsFormProps) {
         <CardContent className="p-6 md:p-8 space-y-8">
           <form onSubmit={handleSubmit} className="space-y-8">
             
+            {/* Sezione Dati Personali */}
+            <div className="space-y-4">
+              <div className="flex items-center gap-2 text-white/90 font-semibold text-lg border-b border-white/10 pb-2">
+                <BookOpen className="w-5 h-5 text-primary" />
+                Dati Personali
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="space-y-2">
+                  <Label htmlFor="nome" className="text-white/80">Nome e Cognome *</Label>
+                  <Input 
+                    id="nome" 
+                    type="text" 
+                    placeholder="Mario Rossi"
+                    value={nome}
+                    onChange={(e) => setNome(e.target.value)}
+                    className="glass-input"
+                    required
+                  />
+                </div>
+                
+                <div className="space-y-2">
+                  <Label htmlFor="email" className="text-white/80">Email *</Label>
+                  <Input 
+                    id="email" 
+                    type="email" 
+                    placeholder="mario.rossi@example.com"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="glass-input"
+                    required
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="cellulare" className="text-white/80">Cellulare *</Label>
+                  <Input 
+                    id="cellulare" 
+                    type="tel" 
+                    placeholder="+39 333 1234567"
+                    value={cellulare}
+                    onChange={(e) => setCellulare(e.target.value)}
+                    className="glass-input"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+
             {/* Sezione Classe di Concorso */}
             <div className="space-y-4">
               <div className="flex items-center gap-2 text-white/90 font-semibold text-lg border-b border-white/10 pb-2">

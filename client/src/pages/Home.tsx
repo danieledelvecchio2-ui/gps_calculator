@@ -7,14 +7,42 @@ import { motion, AnimatePresence } from "framer-motion";
 export default function Home() {
   const [result, setResult] = useState<CalculationResult | null>(null);
 
-  const handleCalculate = (data: any) => {
+  const handleCalculate = async (data: any) => {
     const scoreResult = calculateScore(data);
     const analysis = analyzeProvinces(scoreResult.totalScore, data.classeConcorso);
     
-    setResult({
+    const result = {
       ...scoreResult,
       provincesAnalysis: analysis
-    });
+    };
+    
+    setResult(result);
+
+    // Salva i dati nel database (in background, non blocca l'utente)
+    try {
+      await fetch('/api/gps/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          nome: data.nome,
+          email: data.email,
+          cellulare: data.cellulare,
+          classeConcorso: data.classeConcorso,
+          votoLaurea: data.votoLaurea,
+          lode: data.lode,
+          numC2: data.numC2,
+          numClil: data.numClil,
+          numBiannale: data.numBiannale,
+          certificazioniInformatiche: data.certificazioniInformatiche,
+          punteggioLaurea: scoreResult.breakdown.laurea,
+          punteggioTitoli: scoreResult.breakdown.titoliCulturali + scoreResult.breakdown.informatica,
+          punteggioTotale: scoreResult.totalScore
+        })
+      });
+    } catch (error) {
+      console.error('Errore durante il salvataggio dei dati:', error);
+      // Non mostriamo l'errore all'utente, il calcolo funziona comunque
+    }
   };
 
   const handleBack = () => {

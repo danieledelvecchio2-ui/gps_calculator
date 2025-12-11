@@ -10,11 +10,19 @@ async function startServer() {
   const app = express();
   const server = createServer(app);
 
+  // Parse JSON body
+  app.use(express.json());
+  app.use(express.urlencoded({ extended: true }));
+
   // Serve static files from dist/public in production
   const staticPath =
     process.env.NODE_ENV === "production"
       ? path.resolve(__dirname, "public")
       : path.resolve(__dirname, "..", "dist", "public");
+
+  // API Routes
+  const gpsRoutes = (await import("./routes/gps.js")).default;
+  app.use("/api/gps", gpsRoutes);
 
   app.use(express.static(staticPath));
 
