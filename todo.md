@@ -31,3 +31,8 @@
 
 - [x] Aggiornare schema database: rinominare minScores2023/2024 in minScores2024/2025
 - [x] Spostare dati BAT e Bari da minScores2024 a minScores2025 (sono dati 2024/25)
+
+- [x] Verificare che i dati del form si salvino correttamente nel database
+- [x] Testare l'endpoint API /api/gps/submit
+- [x] Controllare il database per vedere se i dati di esempio sono presenti
+- [x] Correggere registrazione routes GPS in server/_core/index.ts

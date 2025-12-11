@@ -1,0 +1,19 @@
+{
+  "query": "SELECT id, nome, email, cellulare, classe_concorso, punteggio_totale, created_at FROM gps_leads ORDER BY created_at DESC LIMIT 5;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3T1MNWpJmzZCyGi.a736f0c7ef3e --database krUTb4sJjtkxMz7G6iAuW8 --execute SELECT id, nome, email, cellulare, classe_concorso, punteggio_totale, created_at FROM gps_leads ORDER BY created_at DESC LIMIT 5;",
+  "rows": [
+    {
+      "id": "1",
+      "nome": "Test Utente 2",
+      "email": "test2@example.com",
+      "cellulare": "+39 333 7654321",
+      "classe_concorso": "A046",
+      "punteggio_totale": "34.50",
+      "created_at": "2025-12-11 18:18:31"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tnome\temail\tcellulare\tclasse_concorso\tpunteggio_totale\tcreated_at\n1\tTest Utente 2\ttest2@example.com\t+39 333 7654321\tA046\t34.50\t2025-12-11 18:18:31\n",
+  "stderr": "",
+  "execution_time_ms": 51
+}
