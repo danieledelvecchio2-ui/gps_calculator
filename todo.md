@@ -28,3 +28,6 @@
 
 - [x] Analizzare foto bollettini fornite dall'utente per estrarre punteggi minimi corretti
 - [x] Aggiornare database gpsData.ts con i punteggi minimi reali estratti dalle foto (BAT e Bari completati)
+
+- [x] Aggiornare schema database: rinominare minScores2023/2024 in minScores2024/2025
+- [x] Spostare dati BAT e Bari da minScores2024 a minScores2025 (sono dati 2024/25)

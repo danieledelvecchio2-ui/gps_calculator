@@ -65,23 +65,23 @@ export function calculateScore(data: {
 
 export function analyzeProvinces(userScore: number, classeConcorso: string): ProvinceAnalysis[] {
   return provinces.map(province => {
-    const min2023 = province.minScores2023[classeConcorso] || null;
     const min2024 = province.minScores2024[classeConcorso] || null;
-    const hasData = min2023 !== null || min2024 !== null;
+    const min2025 = province.minScores2025[classeConcorso] || null;
+    const hasData = min2024 !== null || min2025 !== null;
     
     let probability: "Alta" | "Media" | "Bassa" | "N/D" = "N/D";
     let probabilityScore = 0;
     let trend: "stable" | "increasing" | "decreasing" | "unknown" = "unknown";
 
     // Determine trend
-    if (min2023 !== null && min2024 !== null) {
-      if (min2024 > min2023 + 2) trend = "increasing";
-      else if (min2024 < min2023 - 2) trend = "decreasing";
+    if (min2024 !== null && min2025 !== null) {
+      if (min2025 > min2024 + 2) trend = "increasing";
+      else if (min2025 < min2024 - 2) trend = "decreasing";
       else trend = "stable";
     }
 
-    // Determine probability based on the most recent data (2024 preferred, then 2023)
-    const referenceScore = min2024 !== null ? min2024 : min2023;
+    // Determine probability based on the most recent data (2025 preferred, then 2024)
+    const referenceScore = min2025 !== null ? min2025 : min2024;
 
     if (referenceScore !== null) {
       const diff = userScore - referenceScore;
@@ -111,8 +111,8 @@ export function analyzeProvinces(userScore: number, classeConcorso: string): Pro
       provinceId: province.id,
       provinceName: province.name,
       region: province.region,
-      minScore2023: min2023,
-      minScore2024: min2024,
+      minScore2023: min2024,
+      minScore2024: min2025,
       probability,
       probabilityScore,
       trend,

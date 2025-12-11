@@ -2,28 +2,28 @@ export interface ProvinceData {
   id: string;
   name: string;
   region: string;
-  minScores2023: Record<string, number>; // Class of competition -> min score
-  minScores2024: Record<string, number>;
+  minScores2024: Record<string, number>; // Class of competition -> min score (A.S. 2023/24)
+  minScores2025: Record<string, number>; // A.S. 2024/25
   sourceUrl?: string;
 }
 
 // Helper to create empty province
 const createProvince = (id: string, name: string, region: string): ProvinceData => ({
-  id, name, region, minScores2023: {}, minScores2024: {}
+  id, name, region, minScores2024: {}, minScores2025: {}
 });
 
 export const provinces: ProvinceData[] = [
   // LOMBARDIA
   {
     id: "MI", name: "Milano", region: "Lombardia",
-    minScores2023: { "A046": 42.5, "A048": 38.0, "ADSS": 52.0, "ADMM": 48.5, "A012": 45.0, "EEEE": 35.0, "AAAA": 32.0 },
-    minScores2024: { "A046": 44.0, "A048": 39.5, "ADSS": 54.0, "ADMM": 50.0 },
+    minScores2024: { "A046": 42.5, "A048": 38.0, "ADSS": 52.0, "ADMM": 48.5, "A012": 45.0, "EEEE": 35.0, "AAAA": 32.0 },
+    minScores2025: { "A046": 44.0, "A048": 39.5, "ADSS": 54.0, "ADMM": 50.0 },
     sourceUrl: "https://www.uilscuolarualombardia.it/"
   },
   {
     id: "BS", name: "Brescia", region: "Lombardia",
-    minScores2023: { "A046": 38.0, "A048": 35.0, "ADSS": 45.0, "ADMM": 42.0, "A012": 40.0, "EEEE": 28.0, "AAAA": 26.0 },
-    minScores2024: { "A046": 39.0, "A048": 36.0 },
+    minScores2024: { "A046": 38.0, "A048": 35.0, "ADSS": 45.0, "ADMM": 42.0, "A012": 40.0, "EEEE": 28.0, "AAAA": 26.0 },
+    minScores2025: { "A046": 39.0, "A048": 36.0 },
     sourceUrl: "https://www.uilscuolabrescia.it/"
   },
   createProvince("BG", "Bergamo", "Lombardia"),
@@ -40,8 +40,8 @@ export const provinces: ProvinceData[] = [
   // LAZIO
   {
     id: "RM", name: "Roma", region: "Lazio",
-    minScores2023: { "A046": 48.0, "A048": 45.0, "ADSS": 58.0, "ADMM": 55.0, "A012": 50.0, "EEEE": 40.0, "AAAA": 38.0 },
-    minScores2024: { "A046": 49.5, "A048": 46.0 },
+    minScores2024: { "A046": 48.0, "A048": 45.0, "ADSS": 58.0, "ADMM": 55.0, "A012": 50.0, "EEEE": 40.0, "AAAA": 38.0 },
+    minScores2025: { "A046": 49.5, "A048": 46.0 },
     sourceUrl: "https://www.atpromaistruzione.it/"
   },
   createProvince("FR", "Frosinone", "Lazio"),
@@ -52,8 +52,8 @@ export const provinces: ProvinceData[] = [
   // CAMPANIA
   {
     id: "NA", name: "Napoli", region: "Campania",
-    minScores2023: { "A046": 55.0, "A048": 52.0, "ADSS": 65.0, "ADMM": 62.0, "A012": 58.0, "EEEE": 48.0, "AAAA": 45.0 },
-    minScores2024: { "A046": 56.0, "A048": 53.0 },
+    minScores2024: { "A046": 55.0, "A048": 52.0, "ADSS": 65.0, "ADMM": 62.0, "A012": 58.0, "EEEE": 48.0, "AAAA": 45.0 },
+    minScores2025: { "A046": 56.0, "A048": 53.0 },
     sourceUrl: "https://www.uat-napoli.it/"
   },
   createProvince("AV", "Avellino", "Campania"),
@@ -64,8 +64,8 @@ export const provinces: ProvinceData[] = [
   // PIEMONTE
   {
     id: "TO", name: "Torino", region: "Piemonte",
-    minScores2023: { "A046": 40.0, "A048": 36.0, "ADSS": 48.0, "ADMM": 45.0, "A012": 42.0, "EEEE": 30.0, "AAAA": 28.0 },
-    minScores2024: { "A046": 41.5, "A048": 37.0 }
+    minScores2024: { "A046": 40.0, "A048": 36.0, "ADSS": 48.0, "ADMM": 45.0, "A012": 42.0, "EEEE": 30.0, "AAAA": 28.0 },
+    minScores2025: { "A046": 41.5, "A048": 37.0 }
   },
   createProvince("AL", "Alessandria", "Piemonte"),
   createProvince("AT", "Asti", "Piemonte"),
@@ -78,13 +78,13 @@ export const provinces: ProvinceData[] = [
   // VENETO
   {
     id: "VE", name: "Venezia", region: "Veneto",
-    minScores2023: { "A046": 41.0, "A048": 37.0, "ADSS": 49.0, "ADMM": 46.0 },
-    minScores2024: { "A046": 42.0, "A048": 38.0 }
+    minScores2024: { "A046": 41.0, "A048": 37.0, "ADSS": 49.0, "ADMM": 46.0 },
+    minScores2025: { "A046": 42.0, "A048": 38.0 }
   },
   {
     id: "VR", name: "Verona", region: "Veneto",
-    minScores2023: { "A046": 40.0, "A048": 36.0, "ADSS": 48.0, "ADMM": 45.0 },
-    minScores2024: { "A046": 41.0, "A048": 37.0 }
+    minScores2024: { "A046": 40.0, "A048": 36.0, "ADSS": 48.0, "ADMM": 45.0 },
+    minScores2025: { "A046": 41.0, "A048": 37.0 }
   },
   createProvince("BL", "Belluno", "Veneto"),
   createProvince("PD", "Padova", "Veneto"),
@@ -95,8 +95,8 @@ export const provinces: ProvinceData[] = [
   // EMILIA ROMAGNA
   {
     id: "BO", name: "Bologna", region: "Emilia-Romagna",
-    minScores2023: { "A046": 43.0, "A048": 39.0, "ADSS": 50.0, "ADMM": 47.0 },
-    minScores2024: { "A046": 44.0, "A048": 40.0 }
+    minScores2024: { "A046": 43.0, "A048": 39.0, "ADSS": 50.0, "ADMM": 47.0 },
+    minScores2025: { "A046": 44.0, "A048": 40.0 }
   },
   createProvince("FE", "Ferrara", "Emilia-Romagna"),
   createProvince("FC", "Forlì-Cesena", "Emilia-Romagna"),
@@ -110,8 +110,8 @@ export const provinces: ProvinceData[] = [
   // TOSCANA
   {
     id: "FI", name: "Firenze", region: "Toscana",
-    minScores2023: { "A046": 44.0, "A048": 40.0, "ADSS": 51.0, "ADMM": 48.0 },
-    minScores2024: { "A046": 45.0, "A048": 41.0 }
+    minScores2024: { "A046": 44.0, "A048": 40.0, "ADSS": 51.0, "ADMM": 48.0 },
+    minScores2025: { "A046": 45.0, "A048": 41.0 }
   },
   createProvince("AR", "Arezzo", "Toscana"),
   createProvince("GR", "Grosseto", "Toscana"),
@@ -126,13 +126,13 @@ export const provinces: ProvinceData[] = [
   // PUGLIA
   {
     id: "BA", name: "Bari", region: "Puglia",
-    minScores2023: { "A046": 52.0, "A048": 50.0, "ADSS": 60.0, "ADMM": 58.0 },
-    minScores2024: { "A046": 53.0, "A048": 51.0 }
+    minScores2024: { "A046": 52.0, "A048": 50.0, "ADSS": 60.0, "ADMM": 58.0 },
+    minScores2025: { "A046": 53.0, "A048": 51.0 }
   },
   {
     id: "BT", name: "Barletta-Andria-Trani", region: "Puglia",
-    minScores2023: {}, // Dati 2023 non disponibili
-    minScores2024: {
+    minScores2024: {},
+    minScores2025: {
       "A010": 71.5,
       "A011": 68.0,
       "A013": 124.0,
@@ -168,8 +168,8 @@ export const provinces: ProvinceData[] = [
   },
   {
     id: "BA", name: "Bari", region: "Puglia",
-    minScores2023: {},
-    minScores2024: {
+    minScores2024: {},
+    minScores2025: {
       "A011": 95.0,
       "A012": 88.0,
       "A013": 142.0,
@@ -205,13 +205,13 @@ export const provinces: ProvinceData[] = [
   // SICILIA
   {
     id: "PA", name: "Palermo", region: "Sicilia",
-    minScores2023: { "A046": 54.0, "A048": 51.0, "ADSS": 63.0, "ADMM": 60.0 },
-    minScores2024: { "A046": 55.0, "A048": 52.0 }
+    minScores2024: { "A046": 54.0, "A048": 51.0, "ADSS": 63.0, "ADMM": 60.0 },
+    minScores2025: { "A046": 55.0, "A048": 52.0 }
   },
   {
     id: "CT", name: "Catania", region: "Sicilia",
-    minScores2023: { "A046": 53.0, "A048": 50.0, "ADSS": 62.0, "ADMM": 59.0 },
-    minScores2024: { "A046": 54.0, "A048": 51.0 }
+    minScores2024: { "A046": 53.0, "A048": 50.0, "ADSS": 62.0, "ADMM": 59.0 },
+    minScores2025: { "A046": 54.0, "A048": 51.0 }
   },
   createProvince("AG", "Agrigento", "Sicilia"),
   createProvince("CL", "Caltanissetta", "Sicilia"),
@@ -224,8 +224,8 @@ export const provinces: ProvinceData[] = [
   // LIGURIA
   {
     id: "GE", name: "Genova", region: "Liguria",
-    minScores2023: { "A046": 41.0, "A048": 37.0, "ADSS": 49.0, "ADMM": 46.0 },
-    minScores2024: { "A046": 42.0, "A048": 38.0 }
+    minScores2024: { "A046": 41.0, "A048": 37.0, "ADSS": 49.0, "ADMM": 46.0 },
+    minScores2025: { "A046": 42.0, "A048": 38.0 }
   },
   createProvince("IM", "Imperia", "Liguria"),
   createProvince("SP", "La Spezia", "Liguria"),
