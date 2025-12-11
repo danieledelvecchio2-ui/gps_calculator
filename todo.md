@@ -36,3 +36,10 @@
 - [x] Testare l'endpoint API /api/gps/submit
 - [x] Controllare il database per vedere se i dati di esempio sono presenti
 - [x] Correggere registrazione routes GPS in server/_core/index.ts
+
+- [x] Aggiungere checkbox obbligatorio "Autorizzo ad essere contattato" nel form GPS
+- [x] Creare pagina /privacy con informativa trattamento dati personali (GDPR)
+- [x] Aggiornare schema database per salvare il consenso privacy
+- [x] Validare che il checkbox sia spuntato prima dell'invio
+- [x] Aggiungere route /privacy al file App.tsx
+- [x] Eseguire migrazione database (pnpm db:push)

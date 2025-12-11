@@ -41,6 +41,7 @@ export function GpsForm({ onCalculate }: GpsFormProps) {
   const [certificazioniInformatiche, setCertificazioniInformatiche] = useState<boolean>(false);
   const [classeConcorso, setClasseConcorso] = useState<string>("");
   const [openCombobox, setOpenCombobox] = useState(false);
+  const [privacyConsent, setPrivacyConsent] = useState<boolean>(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -48,6 +49,12 @@ export function GpsForm({ onCalculate }: GpsFormProps) {
     // Validazione campi obbligatori
     if (!nome.trim() || !email.trim() || !cellulare.trim() || !classeConcorso) {
       alert("Per favore, compila tutti i campi obbligatori (Nome, Email, Cellulare, Classe di Concorso)");
+      return;
+    }
+    
+    // Validazione consenso privacy
+    if (!privacyConsent) {
+      alert("Devi autorizzare il trattamento dei dati personali per poter continuare.");
       return;
     }
     
@@ -297,10 +304,28 @@ export function GpsForm({ onCalculate }: GpsFormProps) {
               </div>
             </div>
 
+            {/* Consenso Privacy */}
+            <div className="flex items-start space-x-3 p-4 rounded-lg bg-white/5 border border-white/10 mt-6">
+              <Checkbox 
+                id="privacyConsent" 
+                checked={privacyConsent}
+                onCheckedChange={(checked) => setPrivacyConsent(checked as boolean)}
+                className="border-white/30 data-[state=checked]:bg-secondary data-[state=checked]:text-primary mt-1"
+              />
+              <div className="space-y-1">
+                <Label htmlFor="privacyConsent" className="text-white/90 cursor-pointer font-medium leading-relaxed">
+                  Autorizzo il trattamento dei miei dati personali (nome, email, cellulare) e acconsento ad essere contattato tramite email e telefono per informazioni relative alle Graduatorie Provinciali per le Supplenze (GPS).
+                </Label>
+                <p className="text-xs text-white/50">
+                  Leggi la nostra <a href="/privacy" target="_blank" className="underline hover:text-white/80">Privacy Policy</a>
+                </p>
+              </div>
+            </div>
+
             <Button 
               type="submit" 
               className="w-full h-14 text-lg font-bold bg-gradient-to-r from-primary to-blue-600 hover:from-blue-600 hover:to-primary shadow-lg shadow-primary/20 transition-all duration-300 rounded-xl mt-8"
-              disabled={!classeConcorso}
+              disabled={!classeConcorso || !privacyConsent}
             >
               Calcola Punteggio e Analizza
             </Button>

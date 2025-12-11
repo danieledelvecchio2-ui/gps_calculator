@@ -53,6 +53,9 @@ export const gpsLeads = mysqlTable("gps_leads", {
   punteggioTitoli: decimal("punteggio_titoli", { precision: 5, scale: 2 }).notNull(),
   punteggioTotale: decimal("punteggio_totale", { precision: 5, scale: 2 }).notNull(),
   
+  // Consenso privacy
+  privacyConsent: int("privacy_consent").default(1).notNull(), // 1 = consenso dato (obbligatorio per invio form)
+  
   // Metadata
   createdAt: timestamp("created_at").defaultNow().notNull(),
   ipAddress: varchar("ip_address", { length: 45 }), // IPv4 o IPv6
