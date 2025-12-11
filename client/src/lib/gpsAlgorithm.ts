@@ -29,7 +29,8 @@ export function calculateScore(data: {
   numC2: number;
   numClil: number;
   numBiannale: number;
-  certificazioniInformatiche: boolean;
+  numDigComp22: number; // Certificazioni in linea al DigComp 2.2 (0.5 punti ciascuna)
+  numDigCompEdu: number; // Certificazioni in linea al DigComp Edu (1 punto ciascuna)
 }): { totalScore: number; breakdown: any } {
   // 1. Calcolo Punteggio Laurea
   // Base 12 + 0.5 per ogni punto oltre 76
@@ -48,8 +49,14 @@ export function calculateScore(data: {
   const biannaleScore = data.numBiannale * 2;
   const titoliCulturaliScore = c2Score + clilScore + biannaleScore;
 
-  // 3. Informatica
-  const informaticaScore = data.certificazioniInformatiche ? 2 : 0;
+  // 3. Informatica (massimo 2 punti)
+  // DigComp 2.2: 0.5 punti ciascuna
+  // DigComp Edu: 1 punto ciascuna
+  const digComp22Score = data.numDigComp22 * 0.5;
+  const digCompEduScore = data.numDigCompEdu * 1.0;
+  const informaticaScoreRaw = digComp22Score + digCompEduScore;
+  // Cap massimo a 2 punti
+  const informaticaScore = Math.min(informaticaScoreRaw, 2);
 
   const totalScore = laureaScore + titoliCulturaliScore + informaticaScore;
 

@@ -47,3 +47,8 @@
 - [x] Analizzare file Excel Rimini per estrarre punteggi minimi GPS
 - [x] Analizzare file Excel Teramo per estrarre punteggi minimi GPS
 - [x] Aggiornare database gpsData.ts con i dati di Rimini e Teramo
+
+- [x] Modificare algoritmo calcolo certificazioni informatiche per DigComp 2.2 (0.5 pt) e DigComp Edu (1 pt)
+- [x] Aggiornare interfaccia form con selezione numerica per certificazioni DigComp
+- [x] Implementare limite massimo di 2 punti totali per certificazioni informatiche
+- [x] Testare il nuovo sistema di calcolo con vari scenari

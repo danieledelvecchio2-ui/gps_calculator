@@ -38,7 +38,8 @@ export function GpsForm({ onCalculate }: GpsFormProps) {
   const [numC2, setNumC2] = useState<number>(0);
   const [numClil, setNumClil] = useState<number>(0);
   const [numBiannale, setNumBiannale] = useState<number>(0);
-  const [certificazioniInformatiche, setCertificazioniInformatiche] = useState<boolean>(false);
+  const [numDigComp22, setNumDigComp22] = useState<number>(0);
+  const [numDigCompEdu, setNumDigCompEdu] = useState<number>(0);
   const [classeConcorso, setClasseConcorso] = useState<string>("");
   const [openCombobox, setOpenCombobox] = useState(false);
   const [privacyConsent, setPrivacyConsent] = useState<boolean>(false);
@@ -67,7 +68,8 @@ export function GpsForm({ onCalculate }: GpsFormProps) {
       numC2,
       numClil,
       numBiannale,
-      certificazioniInformatiche,
+      numDigComp22,
+      numDigCompEdu,
       classeConcorso
     });
   };
@@ -286,21 +288,42 @@ export function GpsForm({ onCalculate }: GpsFormProps) {
                 Certificazioni Informatiche
               </div>
               
-              <div className="flex items-center space-x-3 p-4 rounded-lg bg-white/5 border border-white/10">
-                <Checkbox 
-                  id="certificazioniInformatiche" 
-                  checked={certificazioniInformatiche}
-                  onCheckedChange={(checked) => setCertificazioniInformatiche(checked as boolean)}
-                  className="border-white/30 data-[state=checked]:bg-secondary data-[state=checked]:text-primary"
-                />
-                <div className="space-y-1">
-                  <Label htmlFor="certificazioniInformatiche" className="text-white/90 cursor-pointer font-medium">
-                    Possiedi 4 Certificazioni Informatiche?
-                  </Label>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="space-y-2">
+                  <Label htmlFor="numDigComp22" className="text-white/80">In linea al DigComp 2.2 (0.5 pti)</Label>
+                  <Input 
+                    id="numDigComp22" 
+                    type="number" 
+                    min="0" 
+                    value={numDigComp22}
+                    onChange={(e) => setNumDigComp22(Number(e.target.value))}
+                    className="glass-input"
+                  />
                   <p className="text-xs text-white/50">
-                    (EIPASS, ECDL, ecc. - Max 2 punti totali)
+                    Ogni certificazione vale 0.5 punti
                   </p>
                 </div>
+                
+                <div className="space-y-2">
+                  <Label htmlFor="numDigCompEdu" className="text-white/80">In linea al DigComp Edu (1 pto)</Label>
+                  <Input 
+                    id="numDigCompEdu" 
+                    type="number" 
+                    min="0" 
+                    value={numDigCompEdu}
+                    onChange={(e) => setNumDigCompEdu(Number(e.target.value))}
+                    className="glass-input"
+                  />
+                  <p className="text-xs text-white/50">
+                    Ogni certificazione vale 1 punto
+                  </p>
+                </div>
+              </div>
+              
+              <div className="p-3 rounded-lg bg-blue-500/10 border border-blue-500/30">
+                <p className="text-xs text-blue-200">
+                  ⓘ Massimo 2 punti totali per certificazioni informatiche
+                </p>
               </div>
             </div>
 
