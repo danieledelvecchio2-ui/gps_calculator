@@ -1,71 +1,140 @@
 import { useState } from "react";
-import { useForm } from "react-hook-form";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { competitionClasses } from "@/data/gpsData";
 import { motion } from "framer-motion";
-import { GraduationCap, Award, BookOpen, Monitor, Calculator } from "lucide-react";
-
-interface GpsFormData {
-  votoLaurea: number;
-  lode: boolean;
-  numC2: number;
-  numClil: number;
-  numBiannale: number;
-  certificazioniInformatiche: boolean; // Simplified for UI: "Do you have 4 certs?"
-  classeConcorso: string;
-}
+import { Calculator, BookOpen, GraduationCap, Laptop, Check, ChevronsUpDown } from "lucide-react";
+import { cn } from "@/lib/utils";
+import {
+  Command,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+} from "@/components/ui/command";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
 
 interface GpsFormProps {
-  onCalculate: (data: GpsFormData) => void;
+  onCalculate: (data: any) => void;
 }
 
 export function GpsForm({ onCalculate }: GpsFormProps) {
-  const { register, handleSubmit, setValue, watch, formState: { errors } } = useForm<GpsFormData>({
-    defaultValues: {
-      votoLaurea: 100,
-      lode: false,
-      numC2: 0,
-      numClil: 0,
-      numBiannale: 0,
-      certificazioniInformatiche: false,
-      classeConcorso: ""
-    }
-  });
+  const [votoLaurea, setVotoLaurea] = useState<number>(100);
+  const [lode, setLode] = useState<boolean>(false);
+  const [numC2, setNumC2] = useState<number>(0);
+  const [numClil, setNumClil] = useState<number>(0);
+  const [numBiannale, setNumBiannale] = useState<number>(0);
+  const [certificazioniInformatiche, setCertificazioniInformatiche] = useState<boolean>(false);
+  const [classeConcorso, setClasseConcorso] = useState<string>("");
+  const [openCombobox, setOpenCombobox] = useState(false);
 
-  const onSubmit = (data: GpsFormData) => {
-    onCalculate(data);
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    onCalculate({
+      votoLaurea,
+      lode,
+      numC2,
+      numClil,
+      numBiannale,
+      certificazioniInformatiche,
+      classeConcorso
+    });
   };
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0, scale: 0.95 }}
+      animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}
     >
-      <Card className="glass-panel border-0 overflow-hidden">
+      <Card className="glass-panel border-0 overflow-hidden shadow-2xl">
         <CardHeader className="bg-white/5 border-b border-white/10 pb-6">
-          <CardTitle className="text-2xl font-bold text-white flex items-center gap-2">
+          <CardTitle className="text-2xl font-bold text-white flex items-center gap-3">
             <Calculator className="w-6 h-6 text-secondary" />
             Calcola il tuo Punteggio
           </CardTitle>
-          <CardDescription className="text-white/70">
+          <p className="text-white/60 text-sm mt-1">
             Inserisci i tuoi titoli per scoprire il punteggio GPS e le tue possibilità.
-          </CardDescription>
+          </p>
         </CardHeader>
-        <CardContent className="p-6 space-y-6">
-          <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
+        
+        <CardContent className="p-6 md:p-8 space-y-8">
+          <form onSubmit={handleSubmit} className="space-y-8">
             
+            {/* Sezione Classe di Concorso */}
+            <div className="space-y-4">
+              <div className="flex items-center gap-2 text-white/90 font-semibold text-lg border-b border-white/10 pb-2">
+                <BookOpen className="w-5 h-5 text-primary" />
+                Classe di Concorso
+              </div>
+              
+              <div className="space-y-2">
+                <Label htmlFor="classeConcorso" className="text-white/80">Seleziona la tua classe di concorso</Label>
+                <Popover open={openCombobox} onOpenChange={setOpenCombobox}>
+                  <PopoverTrigger asChild>
+                    <Button
+                      variant="outline"
+                      role="combobox"
+                      aria-expanded={openCombobox}
+                      className="w-full justify-between glass-input text-left font-normal"
+                    >
+                      {classeConcorso
+                        ? competitionClasses.find((c) => c.id === classeConcorso)?.label
+                        : "Cerca classe di concorso (es. A046, Sostegno...)"}
+                      <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+                    </Button>
+                  </PopoverTrigger>
+                  <PopoverContent className="w-[var(--radix-popover-trigger-width)] p-0 bg-slate-900 border-slate-700 text-white max-h-[300px]">
+                    <Command className="bg-transparent text-white">
+                      <CommandInput placeholder="Cerca codice o descrizione..." className="text-white" />
+                      <CommandList className="custom-scrollbar">
+                        <CommandEmpty>Nessuna classe trovata.</CommandEmpty>
+                        <CommandGroup>
+                          {competitionClasses.map((c) => (
+                            <CommandItem
+                              key={c.id}
+                              value={c.label}
+                              onSelect={() => {
+                                setClasseConcorso(c.id);
+                                setOpenCombobox(false);
+                              }}
+                              className="text-white aria-selected:bg-white/10 cursor-pointer"
+                            >
+                              <Check
+                                className={cn(
+                                  "mr-2 h-4 w-4",
+                                  classeConcorso === c.id ? "opacity-100" : "opacity-0"
+                                )}
+                              />
+                              {c.label}
+                            </CommandItem>
+                          ))}
+                        </CommandGroup>
+                      </CommandList>
+                    </Command>
+                  </PopoverContent>
+                </Popover>
+                <p className="text-xs text-white/50">
+                  Digita il codice (es. A046) o parte del nome per filtrare la lista completa.
+                </p>
+              </div>
+            </div>
+
             {/* Sezione Laurea */}
             <div className="space-y-4">
-              <div className="flex items-center gap-2 text-lg font-semibold text-white/90">
+              <div className="flex items-center gap-2 text-white/90 font-semibold text-lg border-b border-white/10 pb-2">
                 <GraduationCap className="w-5 h-5 text-primary" />
-                <h3>Titolo di Accesso (Laurea)</h3>
+                Titolo di Accesso (Laurea)
               </div>
+              
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <Label htmlFor="votoLaurea" className="text-white/80">Voto di Laurea (su 110)</Label>
@@ -74,16 +143,18 @@ export function GpsForm({ onCalculate }: GpsFormProps) {
                     type="number" 
                     min="66" 
                     max="110" 
+                    value={votoLaurea}
+                    onChange={(e) => setVotoLaurea(Number(e.target.value))}
                     className="glass-input"
-                    {...register("votoLaurea", { required: true, min: 66, max: 110 })} 
                   />
-                  {errors.votoLaurea && <span className="text-red-400 text-sm">Inserisci un voto valido (66-110)</span>}
                 </div>
-                <div className="flex items-center space-x-2 pt-8">
+                
+                <div className="flex items-center space-x-3 pt-8">
                   <Checkbox 
                     id="lode" 
-                    onCheckedChange={(checked) => setValue("lode", checked as boolean)}
-                    className="border-white/50 data-[state=checked]:bg-primary data-[state=checked]:border-primary"
+                    checked={lode}
+                    onCheckedChange={(checked) => setLode(checked as boolean)}
+                    className="border-white/30 data-[state=checked]:bg-secondary data-[state=checked]:text-primary"
                   />
                   <Label htmlFor="lode" className="text-white/80 cursor-pointer">Con Lode (+4 punti)</Label>
                 </div>
@@ -92,10 +163,11 @@ export function GpsForm({ onCalculate }: GpsFormProps) {
 
             {/* Sezione Titoli Culturali */}
             <div className="space-y-4">
-              <div className="flex items-center gap-2 text-lg font-semibold text-white/90">
+              <div className="flex items-center gap-2 text-white/90 font-semibold text-lg border-b border-white/10 pb-2">
                 <BookOpen className="w-5 h-5 text-primary" />
-                <h3>Titoli Culturali</h3>
+                Titoli Culturali
               </div>
+              
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="space-y-2">
                   <Label htmlFor="numC2" className="text-white/80">Certificazioni C2 (6 pti)</Label>
@@ -103,28 +175,33 @@ export function GpsForm({ onCalculate }: GpsFormProps) {
                     id="numC2" 
                     type="number" 
                     min="0" 
+                    value={numC2}
+                    onChange={(e) => setNumC2(Number(e.target.value))}
                     className="glass-input"
-                    {...register("numC2", { min: 0 })} 
                   />
                 </div>
+                
                 <div className="space-y-2">
                   <Label htmlFor="numClil" className="text-white/80">CLIL (3 pti)</Label>
                   <Input 
                     id="numClil" 
                     type="number" 
                     min="0" 
+                    value={numClil}
+                    onChange={(e) => setNumClil(Number(e.target.value))}
                     className="glass-input"
-                    {...register("numClil", { min: 0 })} 
                   />
                 </div>
+
                 <div className="space-y-2">
                   <Label htmlFor="numBiannale" className="text-white/80">Master Biennali (2 pti)</Label>
                   <Input 
                     id="numBiannale" 
                     type="number" 
                     min="0" 
+                    value={numBiannale}
+                    onChange={(e) => setNumBiannale(Number(e.target.value))}
                     className="glass-input"
-                    {...register("numBiannale", { min: 0 })} 
                   />
                 </div>
               </div>
@@ -132,52 +209,35 @@ export function GpsForm({ onCalculate }: GpsFormProps) {
 
             {/* Sezione Informatica */}
             <div className="space-y-4">
-              <div className="flex items-center gap-2 text-lg font-semibold text-white/90">
-                <Monitor className="w-5 h-5 text-primary" />
-                <h3>Certificazioni Informatiche</h3>
+              <div className="flex items-center gap-2 text-white/90 font-semibold text-lg border-b border-white/10 pb-2">
+                <Laptop className="w-5 h-5 text-primary" />
+                Certificazioni Informatiche
               </div>
-              <div className="flex items-center space-x-2 p-4 rounded-lg bg-white/5 border border-white/10">
+              
+              <div className="flex items-center space-x-3 p-4 rounded-lg bg-white/5 border border-white/10">
                 <Checkbox 
                   id="certificazioniInformatiche" 
-                  onCheckedChange={(checked) => setValue("certificazioniInformatiche", checked as boolean)}
-                  className="border-white/50 data-[state=checked]:bg-primary data-[state=checked]:border-primary"
+                  checked={certificazioniInformatiche}
+                  onCheckedChange={(checked) => setCertificazioniInformatiche(checked as boolean)}
+                  className="border-white/30 data-[state=checked]:bg-secondary data-[state=checked]:text-primary"
                 />
-                <div className="grid gap-1.5 leading-none">
-                  <Label htmlFor="certificazioniInformatiche" className="text-white/90 font-medium cursor-pointer">
-                    Possiedi almeno 4 certificazioni informatiche?
+                <div className="space-y-1">
+                  <Label htmlFor="certificazioniInformatiche" className="text-white/90 cursor-pointer font-medium">
+                    Possiedi 4 Certificazioni Informatiche?
                   </Label>
-                  <p className="text-sm text-white/60">
-                    (Es. EPA Giusto, EPA Standard, EPA Stitch Compedo, ecc.) - Vale 2 punti totali
+                  <p className="text-xs text-white/50">
+                    (EIPASS, ECDL, ecc. - Max 2 punti totali)
                   </p>
                 </div>
               </div>
             </div>
 
-            {/* Sezione Classe di Concorso */}
-            <div className="space-y-4">
-              <div className="flex items-center gap-2 text-lg font-semibold text-white/90">
-                <Award className="w-5 h-5 text-primary" />
-                <h3>Classe di Concorso</h3>
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="classeConcorso" className="text-white/80">Seleziona la tua classe di concorso principale</Label>
-                <Select onValueChange={(value) => setValue("classeConcorso", value)}>
-                  <SelectTrigger className="glass-input w-full">
-                    <SelectValue placeholder="Seleziona classe di concorso" />
-                  </SelectTrigger>
-                  <SelectContent className="bg-slate-900/95 border-slate-700 text-white max-h-[300px]">
-                    {competitionClasses.map((cls) => (
-                      <SelectItem key={cls.id} value={cls.id} className="focus:bg-white/10 focus:text-white cursor-pointer">
-                        {cls.label}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-              </div>
-            </div>
-
-            <Button type="submit" className="w-full glass-button text-lg py-6 font-bold tracking-wide">
-              Calcola Punteggio e Verifica Possibilità
+            <Button 
+              type="submit" 
+              className="w-full h-14 text-lg font-bold bg-gradient-to-r from-primary to-blue-600 hover:from-blue-600 hover:to-primary shadow-lg shadow-primary/20 transition-all duration-300 rounded-xl mt-8"
+              disabled={!classeConcorso}
+            >
+              Calcola Punteggio e Analizza
             </Button>
           </form>
         </CardContent>
