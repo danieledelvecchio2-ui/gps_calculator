@@ -43,3 +43,7 @@
 - [x] Validare che il checkbox sia spuntato prima dell'invio
 - [x] Aggiungere route /privacy al file App.tsx
 - [x] Eseguire migrazione database (pnpm db:push)
+
+- [x] Analizzare file Excel Rimini per estrarre punteggi minimi GPS
+- [x] Analizzare file Excel Teramo per estrarre punteggi minimi GPS
+- [x] Aggiornare database gpsData.ts con i dati di Rimini e Teramo
