@@ -1,9 +1,12 @@
 import { CalculationResult, ProvinceAnalysis } from "@/lib/gpsAlgorithm";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { motion } from "framer-motion";
-import { MapPin, TrendingUp, TrendingDown, Minus, ExternalLink, ArrowLeft, CheckCircle, AlertCircle, XCircle } from "lucide-react";
+import { MapPin, TrendingUp, TrendingDown, Minus, ExternalLink, ArrowLeft, CheckCircle, AlertCircle, XCircle, Search, Filter } from "lucide-react";
+import { useState, useMemo } from "react";
 
 interface ResultsViewProps {
   result: CalculationResult;
@@ -11,6 +14,30 @@ interface ResultsViewProps {
 }
 
 export function ResultsView({ result, onBack }: ResultsViewProps) {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [regionFilter, setRegionFilter] = useState("all");
+  const [probFilter, setProbFilter] = useState("all");
+
+  // Extract unique regions for filter
+  const regions = useMemo(() => {
+    const uniqueRegions = new Set(result.provincesAnalysis.map(p => p.region));
+    return Array.from(uniqueRegions).sort();
+  }, [result.provincesAnalysis]);
+
+  // Filter provinces
+  const filteredProvinces = useMemo(() => {
+    return result.provincesAnalysis.filter(province => {
+      const matchesSearch = province.provinceName.toLowerCase().includes(searchTerm.toLowerCase());
+      const matchesRegion = regionFilter === "all" || province.region === regionFilter;
+      const matchesProb = probFilter === "all" || 
+                          (probFilter === "data" && province.hasData) ||
+                          (probFilter === "nodata" && !province.hasData) ||
+                          province.probability === probFilter;
+      
+      return matchesSearch && matchesRegion && matchesProb;
+    });
+  }, [result.provincesAnalysis, searchTerm, regionFilter, probFilter]);
+
   return (
     <motion.div
       initial={{ opacity: 0, x: 20 }}
@@ -59,19 +86,72 @@ export function ResultsView({ result, onBack }: ResultsViewProps) {
       </div>
 
       {/* Analisi Province */}
-      <div className="space-y-4">
-        <h3 className="text-2xl font-bold text-white flex items-center gap-2">
-          <MapPin className="w-6 h-6 text-secondary" />
-          Analisi Opportunità per Provincia
-        </h3>
-        <p className="text-white/70">
-          Basato sui punteggi minimi di nomina degli ultimi 2 anni.
-        </p>
+      <div className="space-y-6">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div>
+            <h3 className="text-2xl font-bold text-white flex items-center gap-2">
+              <MapPin className="w-6 h-6 text-secondary" />
+              Analisi Opportunità ({filteredProvinces.length})
+            </h3>
+            <p className="text-white/70 text-sm mt-1">
+              Confronto con i punteggi minimi di nomina (2023-2024).
+            </p>
+          </div>
+        </div>
 
-        <div className="grid grid-cols-1 gap-4">
-          {result.provincesAnalysis.map((province, index) => (
-            <ProvinceCard key={province.provinceId} province={province} index={index} />
-          ))}
+        {/* Filtri */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4 rounded-xl bg-white/5 border border-white/10">
+          <div className="relative">
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/50" />
+            <Input 
+              placeholder="Cerca provincia..." 
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="glass-input pl-9"
+            />
+          </div>
+          
+          <Select value={regionFilter} onValueChange={setRegionFilter}>
+            <SelectTrigger className="glass-input">
+              <div className="flex items-center gap-2">
+                <Filter className="w-4 h-4 opacity-50" />
+                <SelectValue placeholder="Tutte le regioni" />
+              </div>
+            </SelectTrigger>
+            <SelectContent className="bg-slate-900 border-slate-700 text-white max-h-[300px]">
+              <SelectItem value="all">Tutte le regioni</SelectItem>
+              {regions.map(region => (
+                <SelectItem key={region} value={region}>{region}</SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+
+          <Select value={probFilter} onValueChange={setProbFilter}>
+            <SelectTrigger className="glass-input">
+              <SelectValue placeholder="Tutte le probabilità" />
+            </SelectTrigger>
+            <SelectContent className="bg-slate-900 border-slate-700 text-white">
+              <SelectItem value="all">Tutti i risultati</SelectItem>
+              <SelectItem value="data">Solo con dati storici</SelectItem>
+              <SelectItem value="Alta">Alta Probabilità</SelectItem>
+              <SelectItem value="Media">Media Probabilità</SelectItem>
+              <SelectItem value="Bassa">Bassa Probabilità</SelectItem>
+              <SelectItem value="nodata">Dati mancanti</SelectItem>
+            </SelectContent>
+          </Select>
+        </div>
+
+        {/* Lista Province */}
+        <div className="grid grid-cols-1 gap-4 max-h-[600px] overflow-y-auto pr-2 custom-scrollbar">
+          {filteredProvinces.length > 0 ? (
+            filteredProvinces.map((province, index) => (
+              <ProvinceCard key={province.provinceId} province={province} index={index} />
+            ))
+          ) : (
+            <div className="text-center py-12 text-white/50">
+              Nessuna provincia trovata con i filtri selezionati.
+            </div>
+          )}
         </div>
       </div>
     </motion.div>
@@ -101,63 +181,70 @@ function ProvinceCard({ province, index }: { province: ProvinceAnalysis; index: 
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3, delay: index * 0.1 }}
+      transition={{ duration: 0.3, delay: Math.min(index * 0.05, 0.5) }}
     >
       <Card className="glass-panel border-0 overflow-hidden hover:bg-white/15 transition-colors">
-        <CardContent className="p-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+        <CardContent className="p-5 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
           
           {/* Info Provincia */}
           <div className="flex-1">
             <div className="flex items-center gap-3 mb-1">
-              <h4 className="text-xl font-bold text-white">{province.provinceName}</h4>
+              <h4 className="text-lg font-bold text-white">{province.provinceName}</h4>
               <Badge variant="outline" className="text-white/60 border-white/20 text-xs">
                 {province.region}
               </Badge>
             </div>
             
-            <div className="flex flex-wrap gap-4 text-sm text-white/70 mt-2">
-              <div className="flex items-center gap-1">
-                <span className="opacity-60">Min 2023:</span>
-                <span className="font-mono font-semibold text-white">
-                  {province.minScore2023 ? province.minScore2023 : "N/D"}
-                </span>
-              </div>
-              <div className="flex items-center gap-1">
-                <span className="opacity-60">Min 2024:</span>
-                <span className="font-mono font-semibold text-white">
-                  {province.minScore2024 ? province.minScore2024 : "N/D"}
-                </span>
-              </div>
-              {province.trend !== "unknown" && (
-                <div className="flex items-center gap-1 ml-2">
-                  {province.trend === "increasing" && <TrendingUp className="w-3 h-3 text-red-400" />}
-                  {province.trend === "decreasing" && <TrendingDown className="w-3 h-3 text-green-400" />}
-                  {province.trend === "stable" && <Minus className="w-3 h-3 text-yellow-400" />}
-                  <span className="text-xs opacity-60">
-                    {province.trend === "increasing" ? "Punteggi in salita" : 
-                     province.trend === "decreasing" ? "Punteggi in discesa" : "Stabile"}
+            {province.hasData ? (
+              <div className="flex flex-wrap gap-4 text-sm text-white/70 mt-2">
+                <div className="flex items-center gap-1">
+                  <span className="opacity-60">Min 2023:</span>
+                  <span className="font-mono font-semibold text-white">
+                    {province.minScore2023 ? province.minScore2023 : "N/D"}
                   </span>
                 </div>
-              )}
-            </div>
+                <div className="flex items-center gap-1">
+                  <span className="opacity-60">Min 2024:</span>
+                  <span className="font-mono font-semibold text-white">
+                    {province.minScore2024 ? province.minScore2024 : "N/D"}
+                  </span>
+                </div>
+                {province.trend !== "unknown" && (
+                  <div className="flex items-center gap-1 ml-2">
+                    {province.trend === "increasing" && <TrendingUp className="w-3 h-3 text-red-400" />}
+                    {province.trend === "decreasing" && <TrendingDown className="w-3 h-3 text-green-400" />}
+                    {province.trend === "stable" && <Minus className="w-3 h-3 text-yellow-400" />}
+                  </div>
+                )}
+              </div>
+            ) : (
+              <div className="text-sm text-white/40 mt-1 italic">
+                Dati storici non disponibili per questa classe di concorso.
+              </div>
+            )}
           </div>
 
           {/* Probabilità */}
           <div className="flex items-center gap-4 w-full md:w-auto justify-between md:justify-end">
-            <div className={`px-4 py-2 rounded-full border flex items-center gap-2 ${getProbabilityColor(province.probability)}`}>
-              {getProbabilityIcon(province.probability)}
-              <span className="font-bold uppercase tracking-wide text-sm">
-                {province.probability} Probabilità
-              </span>
-            </div>
-            
-            {province.sourceUrl && (
-              <Button variant="ghost" size="icon" className="text-white/40 hover:text-white hover:bg-white/10" asChild>
-                <a href={province.sourceUrl} target="_blank" rel="noopener noreferrer" title="Vedi fonte ufficiale">
-                  <ExternalLink className="w-4 h-4" />
-                </a>
-              </Button>
+            {province.hasData ? (
+              <div className={`px-3 py-1.5 rounded-full border flex items-center gap-2 ${getProbabilityColor(province.probability)}`}>
+                {getProbabilityIcon(province.probability)}
+                <span className="font-bold uppercase tracking-wide text-xs">
+                  {province.probability}
+                </span>
+              </div>
+            ) : (
+              <div className="px-3 py-1.5 rounded-full border bg-slate-500/10 text-slate-400 border-slate-500/20 flex items-center gap-2">
+                <Search className="w-4 h-4" />
+                <span className="text-xs font-medium">Verifica Online</span>
+              </div>
             )}
+            
+            <Button variant="ghost" size="icon" className="text-white/40 hover:text-white hover:bg-white/10" asChild>
+              <a href={province.sourceUrl} target="_blank" rel="noopener noreferrer" title="Vedi fonte ufficiale">
+                <ExternalLink className="w-4 h-4" />
+              </a>
+            </Button>
           </div>
 
         </CardContent>

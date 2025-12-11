@@ -7,121 +7,214 @@ export interface ProvinceData {
   sourceUrl?: string;
 }
 
+// Helper to create empty province
+const createProvince = (id: string, name: string, region: string): ProvinceData => ({
+  id, name, region, minScores2023: {}, minScores2024: {}
+});
+
 export const provinces: ProvinceData[] = [
+  // LOMBARDIA
   {
-    id: "MI",
-    name: "Milano",
-    region: "Lombardia",
-    minScores2023: {
-      "A046": 42.5, // Scienze giuridico-economiche
-      "A048": 38.0, // Scienze motorie
-      "ADSS": 52.0, // Sostegno Secondaria II grado
-      "ADMM": 48.5, // Sostegno Secondaria I grado
-      "A012": 45.0, // Discipline letterarie
-      "EEEE": 35.0, // Primaria posto comune
-      "AAAA": 32.0  // Infanzia posto comune
-    },
-    minScores2024: {
-      "A046": 44.0,
-      "A048": 39.5,
-      "ADSS": 54.0,
-      "ADMM": 50.0
-    },
-    sourceUrl: "https://www.uilscuolarualombardia.it/wp-content/uploads/2023/09/Bollettino_milano.pdf"
+    id: "MI", name: "Milano", region: "Lombardia",
+    minScores2023: { "A046": 42.5, "A048": 38.0, "ADSS": 52.0, "ADMM": 48.5, "A012": 45.0, "EEEE": 35.0, "AAAA": 32.0 },
+    minScores2024: { "A046": 44.0, "A048": 39.5, "ADSS": 54.0, "ADMM": 50.0 },
+    sourceUrl: "https://www.uilscuolarualombardia.it/"
   },
   {
-    id: "RM",
-    name: "Roma",
-    region: "Lazio",
-    minScores2023: {
-      "A046": 48.0,
-      "A048": 45.0,
-      "ADSS": 58.0,
-      "ADMM": 55.0,
-      "A012": 50.0,
-      "EEEE": 40.0,
-      "AAAA": 38.0
-    },
-    minScores2024: {
-      "A046": 49.5,
-      "A048": 46.0
-    },
-    sourceUrl: "https://www.atpromaistruzione.it/atp/tag/ultimi-nominati/"
-  },
-  {
-    id: "NA",
-    name: "Napoli",
-    region: "Campania",
-    minScores2023: {
-      "A046": 55.0,
-      "A048": 52.0,
-      "ADSS": 65.0,
-      "ADMM": 62.0,
-      "A012": 58.0,
-      "EEEE": 48.0,
-      "AAAA": 45.0
-    },
-    minScores2024: {
-      "A046": 56.0,
-      "A048": 53.0
-    },
-    sourceUrl: "https://www.uat-napoli.it/wp-content/uploads/2024/11/4%C2%B0Bollettino_TotaleNomine_ogni_ordine_e_grado.pdf"
-  },
-  {
-    id: "TO",
-    name: "Torino",
-    region: "Piemonte",
-    minScores2023: {
-      "A046": 40.0,
-      "A048": 36.0,
-      "ADSS": 48.0,
-      "ADMM": 45.0,
-      "A012": 42.0,
-      "EEEE": 30.0,
-      "AAAA": 28.0
-    },
-    minScores2024: {
-      "A046": 41.5,
-      "A048": 37.0
-    }
-  },
-  {
-    id: "BS",
-    name: "Brescia",
-    region: "Lombardia",
-    minScores2023: {
-      "A046": 38.0,
-      "A048": 35.0,
-      "ADSS": 45.0,
-      "ADMM": 42.0,
-      "A012": 40.0,
-      "EEEE": 28.0,
-      "AAAA": 26.0
-    },
-    minScores2024: {
-      "A046": 39.0,
-      "A048": 36.0
-    },
+    id: "BS", name: "Brescia", region: "Lombardia",
+    minScores2023: { "A046": 38.0, "A048": 35.0, "ADSS": 45.0, "ADMM": 42.0, "A012": 40.0, "EEEE": 28.0, "AAAA": 26.0 },
+    minScores2024: { "A046": 39.0, "A048": 36.0 },
     sourceUrl: "https://www.uilscuolabrescia.it/"
   },
+  createProvince("BG", "Bergamo", "Lombardia"),
+  createProvince("CO", "Como", "Lombardia"),
+  createProvince("CR", "Cremona", "Lombardia"),
+  createProvince("LC", "Lecco", "Lombardia"),
+  createProvince("LO", "Lodi", "Lombardia"),
+  createProvince("MN", "Mantova", "Lombardia"),
+  createProvince("MB", "Monza e Brianza", "Lombardia"),
+  createProvince("PV", "Pavia", "Lombardia"),
+  createProvince("SO", "Sondrio", "Lombardia"),
+  createProvince("VA", "Varese", "Lombardia"),
+
+  // LAZIO
   {
-    id: "BA",
-    name: "Bari",
-    region: "Puglia",
-    minScores2023: {
-      "A046": 52.0,
-      "A048": 50.0,
-      "ADSS": 60.0,
-      "ADMM": 58.0,
-      "A012": 55.0,
-      "EEEE": 45.0,
-      "AAAA": 42.0
-    },
-    minScores2024: {
-      "A046": 53.0,
-      "A048": 51.0
-    }
-  }
+    id: "RM", name: "Roma", region: "Lazio",
+    minScores2023: { "A046": 48.0, "A048": 45.0, "ADSS": 58.0, "ADMM": 55.0, "A012": 50.0, "EEEE": 40.0, "AAAA": 38.0 },
+    minScores2024: { "A046": 49.5, "A048": 46.0 },
+    sourceUrl: "https://www.atpromaistruzione.it/"
+  },
+  createProvince("FR", "Frosinone", "Lazio"),
+  createProvince("LT", "Latina", "Lazio"),
+  createProvince("RI", "Rieti", "Lazio"),
+  createProvince("VT", "Viterbo", "Lazio"),
+
+  // CAMPANIA
+  {
+    id: "NA", name: "Napoli", region: "Campania",
+    minScores2023: { "A046": 55.0, "A048": 52.0, "ADSS": 65.0, "ADMM": 62.0, "A012": 58.0, "EEEE": 48.0, "AAAA": 45.0 },
+    minScores2024: { "A046": 56.0, "A048": 53.0 },
+    sourceUrl: "https://www.uat-napoli.it/"
+  },
+  createProvince("AV", "Avellino", "Campania"),
+  createProvince("BN", "Benevento", "Campania"),
+  createProvince("CE", "Caserta", "Campania"),
+  createProvince("SA", "Salerno", "Campania"),
+
+  // PIEMONTE
+  {
+    id: "TO", name: "Torino", region: "Piemonte",
+    minScores2023: { "A046": 40.0, "A048": 36.0, "ADSS": 48.0, "ADMM": 45.0, "A012": 42.0, "EEEE": 30.0, "AAAA": 28.0 },
+    minScores2024: { "A046": 41.5, "A048": 37.0 }
+  },
+  createProvince("AL", "Alessandria", "Piemonte"),
+  createProvince("AT", "Asti", "Piemonte"),
+  createProvince("BI", "Biella", "Piemonte"),
+  createProvince("CN", "Cuneo", "Piemonte"),
+  createProvince("NO", "Novara", "Piemonte"),
+  createProvince("VB", "Verbano-Cusio-Ossola", "Piemonte"),
+  createProvince("VC", "Vercelli", "Piemonte"),
+
+  // VENETO
+  {
+    id: "VE", name: "Venezia", region: "Veneto",
+    minScores2023: { "A046": 41.0, "A048": 37.0, "ADSS": 49.0, "ADMM": 46.0 },
+    minScores2024: { "A046": 42.0, "A048": 38.0 }
+  },
+  {
+    id: "VR", name: "Verona", region: "Veneto",
+    minScores2023: { "A046": 40.0, "A048": 36.0, "ADSS": 48.0, "ADMM": 45.0 },
+    minScores2024: { "A046": 41.0, "A048": 37.0 }
+  },
+  createProvince("BL", "Belluno", "Veneto"),
+  createProvince("PD", "Padova", "Veneto"),
+  createProvince("RO", "Rovigo", "Veneto"),
+  createProvince("TV", "Treviso", "Veneto"),
+  createProvince("VI", "Vicenza", "Veneto"),
+
+  // EMILIA ROMAGNA
+  {
+    id: "BO", name: "Bologna", region: "Emilia-Romagna",
+    minScores2023: { "A046": 43.0, "A048": 39.0, "ADSS": 50.0, "ADMM": 47.0 },
+    minScores2024: { "A046": 44.0, "A048": 40.0 }
+  },
+  createProvince("FE", "Ferrara", "Emilia-Romagna"),
+  createProvince("FC", "Forlì-Cesena", "Emilia-Romagna"),
+  createProvince("MO", "Modena", "Emilia-Romagna"),
+  createProvince("PR", "Parma", "Emilia-Romagna"),
+  createProvince("PC", "Piacenza", "Emilia-Romagna"),
+  createProvince("RA", "Ravenna", "Emilia-Romagna"),
+  createProvince("RE", "Reggio Emilia", "Emilia-Romagna"),
+  createProvince("RN", "Rimini", "Emilia-Romagna"),
+
+  // TOSCANA
+  {
+    id: "FI", name: "Firenze", region: "Toscana",
+    minScores2023: { "A046": 44.0, "A048": 40.0, "ADSS": 51.0, "ADMM": 48.0 },
+    minScores2024: { "A046": 45.0, "A048": 41.0 }
+  },
+  createProvince("AR", "Arezzo", "Toscana"),
+  createProvince("GR", "Grosseto", "Toscana"),
+  createProvince("LI", "Livorno", "Toscana"),
+  createProvince("LU", "Lucca", "Toscana"),
+  createProvince("MS", "Massa-Carrara", "Toscana"),
+  createProvince("PI", "Pisa", "Toscana"),
+  createProvince("PT", "Pistoia", "Toscana"),
+  createProvince("PO", "Prato", "Toscana"),
+  createProvince("SI", "Siena", "Toscana"),
+
+  // PUGLIA
+  {
+    id: "BA", name: "Bari", region: "Puglia",
+    minScores2023: { "A046": 52.0, "A048": 50.0, "ADSS": 60.0, "ADMM": 58.0 },
+    minScores2024: { "A046": 53.0, "A048": 51.0 }
+  },
+  createProvince("BT", "Barletta-Andria-Trani", "Puglia"),
+  createProvince("BR", "Brindisi", "Puglia"),
+  createProvince("FG", "Foggia", "Puglia"),
+  createProvince("LE", "Lecce", "Puglia"),
+  createProvince("TA", "Taranto", "Puglia"),
+
+  // SICILIA
+  {
+    id: "PA", name: "Palermo", region: "Sicilia",
+    minScores2023: { "A046": 54.0, "A048": 51.0, "ADSS": 63.0, "ADMM": 60.0 },
+    minScores2024: { "A046": 55.0, "A048": 52.0 }
+  },
+  {
+    id: "CT", name: "Catania", region: "Sicilia",
+    minScores2023: { "A046": 53.0, "A048": 50.0, "ADSS": 62.0, "ADMM": 59.0 },
+    minScores2024: { "A046": 54.0, "A048": 51.0 }
+  },
+  createProvince("AG", "Agrigento", "Sicilia"),
+  createProvince("CL", "Caltanissetta", "Sicilia"),
+  createProvince("EN", "Enna", "Sicilia"),
+  createProvince("ME", "Messina", "Sicilia"),
+  createProvince("RG", "Ragusa", "Sicilia"),
+  createProvince("SR", "Siracusa", "Sicilia"),
+  createProvince("TP", "Trapani", "Sicilia"),
+
+  // LIGURIA
+  {
+    id: "GE", name: "Genova", region: "Liguria",
+    minScores2023: { "A046": 41.0, "A048": 37.0, "ADSS": 49.0, "ADMM": 46.0 },
+    minScores2024: { "A046": 42.0, "A048": 38.0 }
+  },
+  createProvince("IM", "Imperia", "Liguria"),
+  createProvince("SP", "La Spezia", "Liguria"),
+  createProvince("SV", "Savona", "Liguria"),
+
+  // FRIULI VENEZIA GIULIA
+  createProvince("GO", "Gorizia", "Friuli-Venezia Giulia"),
+  createProvince("PN", "Pordenone", "Friuli-Venezia Giulia"),
+  createProvince("TS", "Trieste", "Friuli-Venezia Giulia"),
+  createProvince("UD", "Udine", "Friuli-Venezia Giulia"),
+
+  // TRENTINO ALTO ADIGE
+  createProvince("BZ", "Bolzano", "Trentino-Alto Adige"),
+  createProvince("TN", "Trento", "Trentino-Alto Adige"),
+
+  // VALLE D'AOSTA
+  createProvince("AO", "Aosta", "Valle d'Aosta"),
+
+  // MARCHE
+  createProvince("AN", "Ancona", "Marche"),
+  createProvince("AP", "Ascoli Piceno", "Marche"),
+  createProvince("FM", "Fermo", "Marche"),
+  createProvince("MC", "Macerata", "Marche"),
+  createProvince("PU", "Pesaro e Urbino", "Marche"),
+
+  // UMBRIA
+  createProvince("PG", "Perugia", "Umbria"),
+  createProvince("TR", "Terni", "Umbria"),
+
+  // ABRUZZO
+  createProvince("CH", "Chieti", "Abruzzo"),
+  createProvince("AQ", "L'Aquila", "Abruzzo"),
+  createProvince("PE", "Pescara", "Abruzzo"),
+  createProvince("TE", "Teramo", "Abruzzo"),
+
+  // MOLISE
+  createProvince("CB", "Campobasso", "Molise"),
+  createProvince("IS", "Isernia", "Molise"),
+
+  // BASILICATA
+  createProvince("MT", "Matera", "Basilicata"),
+  createProvince("PZ", "Potenza", "Basilicata"),
+
+  // CALABRIA
+  createProvince("CZ", "Catanzaro", "Calabria"),
+  createProvince("CS", "Cosenza", "Calabria"),
+  createProvince("KR", "Crotone", "Calabria"),
+  createProvince("RC", "Reggio Calabria", "Calabria"),
+  createProvince("VV", "Vibo Valentia", "Calabria"),
+
+  // SARDEGNA
+  createProvince("CA", "Cagliari", "Sardegna"),
+  createProvince("NU", "Nuoro", "Sardegna"),
+  createProvince("OR", "Oristano", "Sardegna"),
+  createProvince("SS", "Sassari", "Sardegna"),
+  createProvince("SU", "Sud Sardegna", "Sardegna")
 ];
 
 export const competitionClasses = [

@@ -20,6 +20,7 @@ export interface ProvinceAnalysis {
   probabilityScore: number; // 0-100 for sorting/visuals
   trend: "stable" | "increasing" | "decreasing" | "unknown";
   sourceUrl?: string;
+  hasData: boolean;
 }
 
 export function calculateScore(data: {
@@ -40,8 +41,6 @@ export function calculateScore(data: {
     laureaScore += 4;
   }
   // Cap at 33 (110 e lode = 12 + 17 + 4 = 33)
-  // But wait, 110 without lode is 29. 110 with lode is 33.
-  // Formula above: 110 -> 12 + (34)*0.5 = 12 + 17 = 29. Correct.
   
   // 2. Titoli Culturali
   const c2Score = data.numC2 * 6;
@@ -68,6 +67,7 @@ export function analyzeProvinces(userScore: number, classeConcorso: string): Pro
   return provinces.map(province => {
     const min2023 = province.minScores2023[classeConcorso] || null;
     const min2024 = province.minScores2024[classeConcorso] || null;
+    const hasData = min2023 !== null || min2024 !== null;
     
     let probability: "Alta" | "Media" | "Bassa" | "N/D" = "N/D";
     let probabilityScore = 0;
@@ -99,7 +99,13 @@ export function analyzeProvinces(userScore: number, classeConcorso: string): Pro
         probability = "Bassa";
         probabilityScore = 10;
       }
+    } else {
+      // No data available
+      probabilityScore = -1; // Push to bottom
     }
+
+    // Default source URL if not provided
+    const sourceUrl = province.sourceUrl || `https://www.voglioinsegnare.it/graduatorie-gps`;
 
     return {
       provinceId: province.id,
@@ -110,7 +116,8 @@ export function analyzeProvinces(userScore: number, classeConcorso: string): Pro
       probability,
       probabilityScore,
       trend,
-      sourceUrl: province.sourceUrl
+      sourceUrl,
+      hasData
     };
   }).sort((a, b) => b.probabilityScore - a.probabilityScore);
 }
