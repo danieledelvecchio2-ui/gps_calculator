@@ -1,24 +1,81 @@
-import { Button } from "@/components/ui/button";
-import { Loader2 } from "lucide-react";
-import { Streamdown } from 'streamdown';
+import { useState } from "react";
+import { GpsForm } from "@/components/GpsForm";
+import { ResultsView } from "@/components/ResultsView";
+import { calculateScore, analyzeProvinces, CalculationResult } from "@/lib/gpsAlgorithm";
+import { motion, AnimatePresence } from "framer-motion";
 
-/**
- * All content in this page are only for example, replace with your own feature implementation
- * When building pages, remember your instructions in Frontend Best Practices, Design Guide and Common Pitfalls
- */
 export default function Home() {
-  // If theme is switchable in App.tsx, we can implement theme toggling like this:
-  // const { theme, toggleTheme } = useTheme();
+  const [result, setResult] = useState<CalculationResult | null>(null);
+
+  const handleCalculate = (data: any) => {
+    const scoreResult = calculateScore(data);
+    const analysis = analyzeProvinces(scoreResult.totalScore, data.classeConcorso);
+    
+    setResult({
+      ...scoreResult,
+      provincesAnalysis: analysis
+    });
+  };
+
+  const handleBack = () => {
+    setResult(null);
+  };
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <main>
-        {/* Example: lucide-react for icons */}
-        <Loader2 className="animate-spin" />
-        Example Page
-        {/* Example: Streamdown for markdown rendering */}
-        <Streamdown>Any **markdown** content</Streamdown>
-        <Button variant="default">Example Button</Button>
+    <div className="min-h-screen flex flex-col relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="fixed inset-0 z-0 pointer-events-none">
+        <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-primary/20 blur-[120px]" />
+        <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] rounded-full bg-secondary/20 blur-[120px]" />
+      </div>
+
+      <main className="container relative z-10 py-12 md:py-20 max-w-4xl mx-auto">
+        
+        {/* Header */}
+        <motion.div 
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-12 space-y-4"
+        >
+          <div className="inline-flex items-center justify-center p-3 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 mb-4 shadow-lg">
+            <img src="/images/logo-icon.png" alt="GPS Logo" className="w-12 h-12 object-contain" />
+          </div>
+          <h1 className="text-4xl md:text-6xl font-bold text-white tracking-tight drop-shadow-sm">
+            GPS <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary">Calculator</span>
+          </h1>
+          <p className="text-lg md:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed">
+            Calcola il tuo punteggio GPS e scopri in quali province hai maggiori possibilità di ottenere una supplenza, basato sui dati storici ufficiali.
+          </p>
+        </motion.div>
+
+        {/* Content Switcher */}
+        <AnimatePresence mode="wait">
+          {!result ? (
+            <motion.div
+              key="form"
+              exit={{ opacity: 0, x: -20 }}
+              transition={{ duration: 0.3 }}
+            >
+              <GpsForm onCalculate={handleCalculate} />
+            </motion.div>
+          ) : (
+            <motion.div
+              key="results"
+              exit={{ opacity: 0, x: 20 }}
+              transition={{ duration: 0.3 }}
+            >
+              <ResultsView result={result} onBack={handleBack} />
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* Footer */}
+        <footer className="mt-20 text-center text-white/40 text-sm">
+          <p>© 2025 GPS Calculator. Dati basati su bollettini ufficiali e stime sindacali.</p>
+          <p className="mt-2">Disclaimer: Le stime sono indicative e non garantiscono l'incarico.</p>
+        </footer>
+
       </main>
     </div>
   );
