@@ -330,7 +330,7 @@ export function GpsForm({ onCalculate }: GpsFormProps) {
                     className="glass-input"
                   />
                   <p className="text-xs text-white/50">
-                    Certificazioni valide: APAS User, IDcert DigiComp 2.2, IDpass User (0.5 punti ciascuna)
+                    Certificazioni valide: EIPASS User, EIPASS Standard, IDPASS EDSC DigComp 2.2, IDCERT DigComp 2.2 (0.5 punti ciascuna)
                   </p>
                 </div>
                 
@@ -345,7 +345,7 @@ export function GpsForm({ onCalculate }: GpsFormProps) {
                     className="glass-input"
                   />
                   <p className="text-xs text-white/50">
-                    Certificazioni valide: IDpass DigiComp Edu, IDcert DigiComp Edu, APAS DigiComp Edu (1 punto ciascuna)
+                    Certificazioni valide: EIPASS DigCompEdu, IDPASS DigCompEdu, IDCERT DigCompEdu (1 punto ciascuna)
                   </p>
                 </div>
               </div>

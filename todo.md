@@ -59,3 +59,6 @@
 - [x] Aggiungere campo Master in L2 (3 punti, massimo 1)
 - [x] Specificare che CLIL e Master Biennali devono essere Universitari (non campus)
 - [x] Aggiornare algoritmo di calcolo per includere Master L2
+
+- [x] Correggere nomi certificazioni DigComp 2.2 (EIPASS User, EIPASS Standard, IDPASS EDSC DigComp 2.2, IDCERT DigComp 2.2)
+- [x] Correggere nomi certificazioni DigComp Edu (EIPASS DigCompEdu, IDPASS DigCompEdu, IDCERT DigCompEdu)
