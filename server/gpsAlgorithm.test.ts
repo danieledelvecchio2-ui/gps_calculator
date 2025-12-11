@@ -8,6 +8,7 @@ describe('GPS Algorithm - Certificazioni Informatiche DigComp', () => {
     numC2: 0,
     numClil: 0,
     numBiannale: 0,
+    hasMasterL2: false,
   };
 
   it('dovrebbe calcolare correttamente 1 certificazione DigComp 2.2 (0.5 punti)', () => {
@@ -121,6 +122,7 @@ describe('GPS Algorithm - Certificazioni Informatiche DigComp', () => {
       numC2: 1, // 6 punti
       numClil: 1, // 3 punti
       numBiannale: 1, // 2 punti
+      hasMasterL2: false,
       numDigComp22: 2, // 1 punto
       numDigCompEdu: 1, // 1 punto
     });
@@ -132,6 +134,39 @@ describe('GPS Algorithm - Certificazioni Informatiche DigComp', () => {
     expect(result.totalScore).toBe(46);
     expect(result.breakdown.laurea).toBe(33);
     expect(result.breakdown.titoliCulturali).toBe(11);
+    expect(result.breakdown.informatica).toBe(2);
+  });
+
+  it('dovrebbe calcolare correttamente il Master L2 (3 punti)', () => {
+    const result = calculateScore({
+      ...baseData,
+      hasMasterL2: true,
+      numDigComp22: 0,
+      numDigCompEdu: 0,
+    });
+    
+    expect(result.breakdown.titoliCulturali).toBe(3);
+  });
+
+  it('dovrebbe calcolare correttamente il punteggio totale con Master L2', () => {
+    const result = calculateScore({
+      votoLaurea: 110,
+      lode: true,
+      numC2: 1, // 6 punti
+      numClil: 1, // 3 punti
+      numBiannale: 1, // 2 punti
+      hasMasterL2: true, // 3 punti
+      numDigComp22: 2, // 1 punto
+      numDigCompEdu: 1, // 1 punto
+    });
+    
+    // Laurea: 12 + 17 + 4 = 33
+    // Titoli culturali: 6 + 3 + 2 + 3 = 14
+    // Informatica: 1 + 1 = 2 (cap a 2)
+    // Totale: 33 + 14 + 2 = 49
+    expect(result.totalScore).toBe(49);
+    expect(result.breakdown.laurea).toBe(33);
+    expect(result.breakdown.titoliCulturali).toBe(14);
     expect(result.breakdown.informatica).toBe(2);
   });
 });

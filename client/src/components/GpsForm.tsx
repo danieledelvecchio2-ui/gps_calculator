@@ -38,6 +38,7 @@ export function GpsForm({ onCalculate }: GpsFormProps) {
   const [numC2, setNumC2] = useState<number>(0);
   const [numClil, setNumClil] = useState<number>(0);
   const [numBiannale, setNumBiannale] = useState<number>(0);
+  const [hasMasterL2, setHasMasterL2] = useState<boolean>(false);
   const [numDigComp22, setNumDigComp22] = useState<number>(0);
   const [numDigCompEdu, setNumDigCompEdu] = useState<number>(0);
   const [classeConcorso, setClasseConcorso] = useState<string>("");
@@ -68,6 +69,7 @@ export function GpsForm({ onCalculate }: GpsFormProps) {
       numC2,
       numClil,
       numBiannale,
+      hasMasterL2,
       numDigComp22,
       numDigCompEdu,
       classeConcorso
@@ -242,7 +244,7 @@ export function GpsForm({ onCalculate }: GpsFormProps) {
                 Titoli Culturali
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <Label htmlFor="numC2" className="text-white/80">Certificazioni C2 (6 pti)</Label>
                   <Input 
@@ -253,10 +255,13 @@ export function GpsForm({ onCalculate }: GpsFormProps) {
                     onChange={(e) => setNumC2(Number(e.target.value))}
                     className="glass-input"
                   />
+                  <p className="text-xs text-white/50">
+                    Certificazioni linguistiche livello C2
+                  </p>
                 </div>
                 
                 <div className="space-y-2">
-                  <Label htmlFor="numClil" className="text-white/80">CLIL (3 pti)</Label>
+                  <Label htmlFor="numClil" className="text-white/80">CLIL Universitario (3 pti)</Label>
                   <Input 
                     id="numClil" 
                     type="number" 
@@ -265,10 +270,13 @@ export function GpsForm({ onCalculate }: GpsFormProps) {
                     onChange={(e) => setNumClil(Number(e.target.value))}
                     className="glass-input"
                   />
+                  <p className="text-xs text-white/50">
+                    Solo perfezionamenti/master universitari (no campus)
+                  </p>
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="numBiannale" className="text-white/80">Master Biennali (2 pti)</Label>
+                  <Label htmlFor="numBiannale" className="text-white/80">Master Biennali Universitari (2 pti)</Label>
                   <Input 
                     id="numBiannale" 
                     type="number" 
@@ -277,6 +285,28 @@ export function GpsForm({ onCalculate }: GpsFormProps) {
                     onChange={(e) => setNumBiannale(Number(e.target.value))}
                     className="glass-input"
                   />
+                  <p className="text-xs text-white/50">
+                    Solo master universitari biennali (no campus)
+                  </p>
+                </div>
+                
+                <div className="space-y-2">
+                  <div className="flex items-center space-x-3 p-4 rounded-lg bg-white/5 border border-white/10">
+                    <Checkbox 
+                      id="hasMasterL2" 
+                      checked={hasMasterL2}
+                      onCheckedChange={(checked) => setHasMasterL2(checked as boolean)}
+                      className="border-white/30 data-[state=checked]:bg-secondary data-[state=checked]:text-primary"
+                    />
+                    <div className="space-y-1">
+                      <Label htmlFor="hasMasterL2" className="text-white/90 cursor-pointer font-medium">
+                        Master in L2 (3 pti)
+                      </Label>
+                      <p className="text-xs text-white/50">
+                        Master universitario in didattica L2 (massimo 1)
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -300,7 +330,7 @@ export function GpsForm({ onCalculate }: GpsFormProps) {
                     className="glass-input"
                   />
                   <p className="text-xs text-white/50">
-                    Ogni certificazione vale 0.5 punti
+                    Certificazioni valide: APAS User, IDcert DigiComp 2.2, IDpass User (0.5 punti ciascuna)
                   </p>
                 </div>
                 
@@ -315,7 +345,7 @@ export function GpsForm({ onCalculate }: GpsFormProps) {
                     className="glass-input"
                   />
                   <p className="text-xs text-white/50">
-                    Ogni certificazione vale 1 punto
+                    Certificazioni valide: IDpass DigiComp Edu, IDcert DigiComp Edu, APAS DigiComp Edu (1 punto ciascuna)
                   </p>
                 </div>
               </div>

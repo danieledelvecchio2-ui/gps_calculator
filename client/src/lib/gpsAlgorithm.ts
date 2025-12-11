@@ -29,6 +29,7 @@ export function calculateScore(data: {
   numC2: number;
   numClil: number;
   numBiannale: number;
+  hasMasterL2: boolean; // Master universitario in L2 (3 punti, massimo 1)
   numDigComp22: number; // Certificazioni in linea al DigComp 2.2 (0.5 punti ciascuna)
   numDigCompEdu: number; // Certificazioni in linea al DigComp Edu (1 punto ciascuna)
 }): { totalScore: number; breakdown: any } {
@@ -47,7 +48,8 @@ export function calculateScore(data: {
   const c2Score = data.numC2 * 6;
   const clilScore = data.numClil * 3;
   const biannaleScore = data.numBiannale * 2;
-  const titoliCulturaliScore = c2Score + clilScore + biannaleScore;
+  const masterL2Score = data.hasMasterL2 ? 3 : 0; // Massimo 1 master L2
+  const titoliCulturaliScore = c2Score + clilScore + biannaleScore + masterL2Score;
 
   // 3. Informatica (massimo 2 punti)
   // DigComp 2.2: 0.5 punti ciascuna

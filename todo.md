@@ -52,3 +52,10 @@
 - [x] Aggiornare interfaccia form con selezione numerica per certificazioni DigComp
 - [x] Implementare limite massimo di 2 punti totali per certificazioni informatiche
 - [x] Testare il nuovo sistema di calcolo con vari scenari
+
+- [x] Aggiungere tooltip con elenco certificazioni DigComp 2.2 valide (APAS User, IDcert DigiComp 2.2, IDpass User)
+- [x] Aggiungere tooltip con elenco certificazioni DigComp Edu valide (IDpass DigiComp Edu, IDcert DigiComp Edu, APAS DigiComp Edu)
+
+- [x] Aggiungere campo Master in L2 (3 punti, massimo 1)
+- [x] Specificare che CLIL e Master Biennali devono essere Universitari (non campus)
+- [x] Aggiornare algoritmo di calcolo per includere Master L2
