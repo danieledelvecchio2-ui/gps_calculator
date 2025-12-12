@@ -116,6 +116,8 @@ export default function Home() {
           <div className="flex items-center justify-center gap-4 text-white/60">
             <Link href="/info-gps" className="hover:text-white transition-colors underline">Guida GPS</Link>
             <span>•</span>
+            <Link href="/contatti" className="hover:text-white transition-colors underline">Contatti</Link>
+            <span>•</span>
             <Link href="/privacy" className="hover:text-white transition-colors underline">Privacy</Link>
           </div>
           <p>© 2025 GPS Calculator. Dati basati su bollettini ufficiali e stime sindacali.</p>

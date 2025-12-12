@@ -85,3 +85,9 @@
 - [ ] Aggiungere sezione FAQ con domande frequenti su GPS
 
 - [x] Aggiungere pulsante "INFO CALCOLO PUNTEGGIO IN GPS" ben visibile nella homepage
+
+- [x] Rimuovere link esterni a voglioinsegnare.it dalle card province nei risultati
+
+- [x] Creare pagina Contatti con form per richieste info GPS
+- [x] Implementare invio email a gianninonba@gmail.com
+- [x] Aggiungere link Contatti nel menu/footer

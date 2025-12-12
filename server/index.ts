@@ -23,6 +23,9 @@ async function startServer() {
   // API Routes
   const gpsRoutes = (await import("./routes/gps.js")).default;
   app.use("/api/gps", gpsRoutes);
+  
+  const contactRoutes = (await import("./routes/contact.js")).default;
+  app.use("/api/contact", contactRoutes);
 
   app.use(express.static(staticPath));
 

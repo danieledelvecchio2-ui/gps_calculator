@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { motion } from "framer-motion";
-import { MapPin, TrendingUp, TrendingDown, Minus, ExternalLink, ArrowLeft, CheckCircle, AlertCircle, XCircle, Search, Filter } from "lucide-react";
+import { MapPin, TrendingUp, TrendingDown, Minus, ArrowLeft, CheckCircle, AlertCircle, XCircle, Search, Filter } from "lucide-react";
 import { useState, useMemo } from "react";
 
 interface ResultsViewProps {
@@ -249,12 +249,6 @@ function ProvinceCard({ province, index }: { province: ProvinceAnalysis; index: 
                 <span className="text-xs font-medium">Verifica Online</span>
               </div>
             )}
-            
-            <Button variant="ghost" size="icon" className="text-white/40 hover:text-white hover:bg-white/10" asChild>
-              <a href={province.sourceUrl} target="_blank" rel="noopener noreferrer" title="Vedi fonte ufficiale">
-                <ExternalLink className="w-4 h-4" />
-              </a>
-            </Button>
           </div>
 
         </CardContent>
