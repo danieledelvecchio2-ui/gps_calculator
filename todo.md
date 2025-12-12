@@ -102,3 +102,6 @@
 - [x] Configurare email dominio (contattaci@infogps2026.it)
 - [x] Aggiornare destinatario email nel form contatti
 - [x] Cambiare email destinatario form contatti a direzione@infogps2026.it
+- [x] Ripristinare pagina "Novità GPS 2026" nel menu di navigazione
+- [x] Creare menu orizzontale per desktop (no hamburger su PC)
+- [x] Mantenere hamburger menu solo su mobile

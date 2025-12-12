@@ -58,7 +58,7 @@ export default function Home() {
         <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] rounded-full bg-secondary/20 blur-[120px]" />
       </div>
 
-      <main className="container relative z-10 py-12 md:py-20 max-w-4xl mx-auto">
+      <main className="container relative z-10 py-12 md:py-20 md:pt-28 max-w-4xl mx-auto">
         
         {/* Header */}
         <motion.div 

@@ -8,7 +8,8 @@ import Home from "./pages/Home";
 import Privacy from "./pages/Privacy";
 import { InfoGPS } from "./pages/InfoGPS";
 import { Contact } from "./pages/Contact";
-import { HamburgerMenu } from "./components/HamburgerMenu";
+import { NewsGPS2026 } from "./pages/NewsGPS2026";
+import { Navigation } from "./components/Navigation";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -17,6 +18,7 @@ function Router() {
       <Route path={"/"} component={Home} />
       <Route path={"/privacy"} component={Privacy} />
       <Route path={"/info-gps"} component={InfoGPS} />
+      <Route path={"/novita-gps-2026"} component={NewsGPS2026} />
       <Route path={"/contatti"} component={Contact} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
@@ -39,7 +41,7 @@ function App() {
       >
         <TooltipProvider>
           <Toaster />
-          <HamburgerMenu />
+          <Navigation />
           <Router />
         </TooltipProvider>
       </ThemeProvider>
