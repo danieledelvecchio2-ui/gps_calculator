@@ -62,3 +62,18 @@
 
 - [x] Correggere nomi certificazioni DigComp 2.2 (EIPASS User, EIPASS Standard, IDPASS EDSC DigComp 2.2, IDCERT DigComp 2.2)
 - [x] Correggere nomi certificazioni DigComp Edu (EIPASS DigCompEdu, IDPASS DigCompEdu, IDCERT DigCompEdu)
+
+- [ ] Ricercare dati GPS per province Lombardia (Bergamo, Brescia, Como, Cremona, Lecco, Lodi, Mantova, Milano, Monza e Brianza, Pavia, Sondrio, Varese)
+- [ ] Elaborare e aggiungere dati province Lombardia al database gpsData.ts
+- [ ] Testare il sistema con le nuove province
+
+- [ ] Estrarre dati GPS da PDF L'Aquila
+- [ ] Estrarre dati GPS da PDF Pescara
+- [ ] Estrarre dati GPS da PDF Chieti
+- [ ] Aggiungere province Abruzzo (L'Aquila, Pescara, Chieti) al database
+
+- [x] Correggere tutti i riferimenti anno 2023 in 2025
+- [x] Cercare e aggiungere immagini delle regioni italiane
+- [x] Migliorare layout card risultati con immagini
+- [ ] Aggiungere visualizzazione punteggio min/medio/max per ogni provincia
+- [ ] Migliorare stile generale del sito

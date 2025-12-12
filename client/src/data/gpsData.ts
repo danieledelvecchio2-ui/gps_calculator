@@ -2,7 +2,7 @@ export interface ProvinceData {
   id: string;
   name: string;
   region: string;
-  minScores2024: Record<string, number>; // Class of competition -> min score (A.S. 2023/24)
+  minScores2024: Record<string, number>; // Class of competition -> min score (A.S. 2024/25)
   minScores2025: Record<string, number>; // A.S. 2024/25
   sourceUrl?: string;
 }

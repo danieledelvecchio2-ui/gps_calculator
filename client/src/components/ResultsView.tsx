@@ -94,7 +94,7 @@ export function ResultsView({ result, onBack }: ResultsViewProps) {
               Analisi Opportunità ({filteredProvinces.length})
             </h3>
             <p className="text-white/70 text-sm mt-1">
-              Confronto con i punteggi minimi di nomina (2023-2024).
+              Confronto con i punteggi minimi di nomina (2024-2025).
             </p>
           </div>
         </div>
@@ -186,6 +186,16 @@ function ProvinceCard({ province, index }: { province: ProvinceAnalysis; index: 
       <Card className="glass-panel border-0 overflow-hidden hover:bg-white/15 transition-colors">
         <CardContent className="p-5 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
           
+          {/* Immagine Regione */}
+          <div className="hidden md:block w-16 h-16 rounded-lg overflow-hidden bg-white/5 flex-shrink-0">
+            <img 
+              src={`/images/${province.region.toLowerCase().replace(/[^a-z]/g, '-')}.jpg`}
+              alt={province.region}
+              className="w-full h-full object-cover opacity-60"
+              onError={(e) => { e.currentTarget.style.display = 'none'; }}
+            />
+          </div>
+
           {/* Info Provincia */}
           <div className="flex-1">
             <div className="flex items-center gap-3 mb-1">
@@ -198,9 +208,9 @@ function ProvinceCard({ province, index }: { province: ProvinceAnalysis; index: 
             {province.hasData ? (
               <div className="flex flex-wrap gap-4 text-sm text-white/70 mt-2">
                 <div className="flex items-center gap-1">
-                  <span className="opacity-60">Min 2023:</span>
+                  <span className="opacity-60">Min 2024/25:</span>
                   <span className="font-mono font-semibold text-white">
-                    {province.minScore2023 ? province.minScore2023 : "N/D"}
+                    {province.minScore2023 ? province.minScore2023.toFixed(1) : "N/D"}
                   </span>
                 </div>
                 <div className="flex items-center gap-1">
