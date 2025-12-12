@@ -1,8 +1,9 @@
-import { COOKIE_NAME } from "@shared/const";
+import { COOKIE_NAME } from "../shared/const";
 import { getSessionCookieOptions } from "./_core/cookies";
 import { systemRouter } from "./_core/systemRouter";
 import { publicProcedure, router } from "./_core/trpc";
 import { z } from "zod";
+import { Resend } from "resend";
 
 export const appRouter = router({
     // if you need to use socket.io, read and register route in server/_core/index.ts, all api should start with '/api/' so that the gateway can route correctly
@@ -29,7 +30,7 @@ export const appRouter = router({
       }))
       .mutation(async ({ input }) => {
         const { nome, email, telefono, messaggio } = input;
-        const destinatario = "direzione@infogps2026.it";
+        const destinatario = "danieledelvecchio2@gmail.com"; // Temporaneo: cambierà a direzione@infogps2026.it dopo verifica dominio su Resend
 
         const emailBody = `
           <h2>Nuova Richiesta Info GPS</h2>
@@ -43,27 +44,26 @@ export const appRouter = router({
           <p style="color: #666; font-size: 12px;">Inviato tramite GPS Calculator - ${new Date().toLocaleString('it-IT')}</p>
         `;
 
+        if (!process.env.RESEND_API_KEY) {
+          throw new Error("RESEND_API_KEY non configurata");
+        }
+
         try {
-          const notificationResponse = await fetch(`${process.env.BUILT_IN_FORGE_API_URL}/notification/send-email`, {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              'Authorization': `Bearer ${process.env.BUILT_IN_FORGE_API_KEY}`
-            },
-            body: JSON.stringify({
-              to: destinatario,
-              subject: `GPS Calculator - Richiesta Info da ${nome}`,
-              html: emailBody,
-              from: 'noreply@infogps2026.it'
-            })
+          const resend = new Resend(process.env.RESEND_API_KEY);
+          
+          const { data, error } = await resend.emails.send({
+            from: 'onboarding@resend.dev',
+            to: destinatario,
+            subject: `GPS Calculator - Richiesta Info da ${nome}`,
+            html: emailBody,
           });
 
-          if (!notificationResponse.ok) {
-            const errorText = await notificationResponse.text();
-            console.error('Errore invio email:', errorText);
+          if (error) {
+            console.error('Errore invio email Resend:', error);
             throw new Error("Errore nell'invio dell'email");
           }
 
+          console.log('Email inviata con successo:', data);
           return { success: true, message: "Email inviata con successo" };
         } catch (error) {
           console.error('Errore nel processare la richiesta di contatto:', error);

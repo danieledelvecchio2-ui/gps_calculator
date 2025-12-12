@@ -105,3 +105,4 @@
 - [x] Ripristinare pagina "Novità GPS 2026" nel menu di navigazione
 - [x] Creare menu orizzontale per desktop (no hamburger su PC)
 - [x] Mantenere hamburger menu solo su mobile
+- [x] Risolvere errore "Errore nell'invio dell'email" nel form contatti
