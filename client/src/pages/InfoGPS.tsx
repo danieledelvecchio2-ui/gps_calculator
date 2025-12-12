@@ -421,8 +421,8 @@ export function InfoGPS() {
                 <div className="p-4 rounded-lg bg-white/5 border border-white/10">
                   <div className="font-semibold text-white mb-2">5. Seconda Laurea o Laurea Magistrale</div>
                   <p className="text-sm text-white/70">
-                    Una seconda laurea (anche triennale) può darti accesso a nuove classi di concorso meno sature, 
-                    aumentando le tue possibilità di supplenza.
+                    Una seconda laurea (anche Triennale) vale 1.5 punti GPS ma NON dà accesso all'insegnamento (tranne ITP). 
+                    Serve solo per aumentare il punteggio. Per accedere a nuove classi di concorso serve Laurea Magistrale/Specialistica.
                   </p>
                 </div>
               </div>

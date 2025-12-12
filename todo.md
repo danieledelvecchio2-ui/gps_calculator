@@ -127,3 +127,5 @@
 - [x] Specificare che per altre classi serve Laurea Magistrale/Specialistica/Ciclo Unico
 
 - [x] Aggiungere nota che seconda laurea può essere anche Triennale (ma non dà accesso insegnamento, solo punteggio)
+
+- [x] Correggere punto 5 pagina Info GPS: laurea triennale NON dà accesso insegnamento (tranne ITP)
