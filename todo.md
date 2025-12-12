@@ -91,3 +91,8 @@
 - [x] Creare pagina Contatti con form per richieste info GPS
 - [x] Implementare invio email a gianninonba@gmail.com
 - [x] Aggiungere link Contatti nel menu/footer
+
+- [x] Rimuovere card Email e Supporto dalla pagina Contatti
+- [x] Aggiungere pulsante "CONTATTACI" ben visibile nella homepage
+- [x] Creare componente menu hamburger con navigazione
+- [x] Integrare menu hamburger in tutte le pagine

@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { ArrowLeft, Mail, Phone, Send, CheckCircle2 } from "lucide-react";
+import { ArrowLeft, Send, CheckCircle2 } from "lucide-react";
 import { Link } from "wouter";
 import { toast } from "sonner";
 
@@ -74,33 +74,6 @@ export function Contact() {
             <p className="text-xl text-white/70">
               Richiedi una guida personalizzata per le Graduatorie GPS
             </p>
-          </div>
-
-          {/* Info Cards */}
-          <div className="grid md:grid-cols-2 gap-4">
-            <Card className="glass-panel border-0">
-              <CardContent className="p-6 flex items-center gap-4">
-                <div className="p-3 rounded-full bg-secondary/20">
-                  <Mail className="w-6 h-6 text-secondary" />
-                </div>
-                <div>
-                  <div className="text-white/60 text-sm">Email</div>
-                  <div className="text-white font-semibold">gianninonba@gmail.com</div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="glass-panel border-0">
-              <CardContent className="p-6 flex items-center gap-4">
-                <div className="p-3 rounded-full bg-secondary/20">
-                  <Phone className="w-6 h-6 text-secondary" />
-                </div>
-                <div>
-                  <div className="text-white/60 text-sm">Supporto</div>
-                  <div className="text-white font-semibold">Disponibile via email</div>
-                </div>
-              </CardContent>
-            </Card>
           </div>
 
           {/* Contact Form */}
@@ -228,8 +201,7 @@ export function Contact() {
           {/* Info Box */}
           <Card className="glass-panel border-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border-cyan-500/20">
             <CardContent className="p-6">
-              <h3 className="text-white font-semibold mb-2 flex items-center gap-2">
-                <Mail className="w-5 h-5 text-secondary" />
+              <h3 className="text-white font-semibold mb-2">
                 Cosa possiamo fare per te
               </h3>
               <ul className="text-white/70 text-sm space-y-2 ml-7">

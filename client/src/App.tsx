@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import Privacy from "./pages/Privacy";
 import { InfoGPS } from "./pages/InfoGPS";
 import { Contact } from "./pages/Contact";
+import { HamburgerMenu } from "./components/HamburgerMenu";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -38,6 +39,7 @@ function App() {
       >
         <TooltipProvider>
           <Toaster />
+          <HamburgerMenu />
           <Router />
         </TooltipProvider>
       </ThemeProvider>
