@@ -3,6 +3,7 @@ import { calculateScore } from '../client/src/lib/gpsAlgorithm';
 
 describe('GPS Algorithm - Calcolo Completo', () => {
   const baseData = {
+    votoDiploma: 0,
     votoLaurea: 100,
     lode: false,
     numB2: 0,
@@ -132,8 +133,52 @@ describe('GPS Algorithm - Calcolo Completo', () => {
   });
 
   // Test Completo
+  // Test Diploma
+  it('dovrebbe calcolare correttamente il punteggio diploma 100 e lode', () => {
+    const result = calculateScore({
+      votoDiploma: 100,
+      votoLaurea: 0,
+      lode: true,
+      numB2: 0,
+      numC1: 0,
+      numC2: 0,
+      numClil: 0,
+      hasDottorato: false,
+      hasSecondaLaurea: false,
+      numMasterUniv: 0,
+      hasMasterL2: false,
+      numDigComp22: 0,
+      numDigCompEdu: 0,
+    });
+    
+    // Diploma 100: 12 + (100-76)*0.5 + 4 lode = 12 + 12 + 4 = 28
+    expect(result.breakdown.laurea).toBe(28);
+  });
+
+  it('dovrebbe calcolare correttamente il punteggio diploma 90', () => {
+    const result = calculateScore({
+      votoDiploma: 90,
+      votoLaurea: 0,
+      lode: false,
+      numB2: 0,
+      numC1: 0,
+      numC2: 0,
+      numClil: 0,
+      hasDottorato: false,
+      hasSecondaLaurea: false,
+      numMasterUniv: 0,
+      hasMasterL2: false,
+      numDigComp22: 0,
+      numDigCompEdu: 0,
+    });
+    
+    // Diploma 90: 12 + (90-76)*0.5 = 12 + 7 = 19
+    expect(result.breakdown.laurea).toBe(19);
+  });
+
   it('dovrebbe calcolare correttamente il punteggio totale con tutti i titoli', () => {
     const result = calculateScore({
+      votoDiploma: 0,
       votoLaurea: 110,
       lode: true,
       numB2: 1, // 3 punti

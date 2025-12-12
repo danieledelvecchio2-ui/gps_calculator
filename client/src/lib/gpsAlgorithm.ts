@@ -24,7 +24,8 @@ export interface ProvinceAnalysis {
 }
 
 export function calculateScore(data: {
-  votoLaurea: number;
+  votoDiploma: number; // Voto diploma (60-100) per ITP, Infanzia, Sostegno Infanzia
+  votoLaurea: number; // Voto laurea (66-110) per altre classi
   lode: boolean;
   numB2: number; // Certificazioni linguistiche B2 (3 punti)
   numC1: number; // Certificazioni linguistiche C1 (4 punti)
@@ -37,16 +38,31 @@ export function calculateScore(data: {
   numDigComp22: number; // Certificazioni in linea al DigComp 2.2 (0.5 punti ciascuna)
   numDigCompEdu: number; // Certificazioni in linea al DigComp Edu (1 punto ciascuna)
 }): { totalScore: number; breakdown: any } {
-  // 1. Calcolo Punteggio Laurea
-  // Base 12 + 0.5 per ogni punto oltre 76
-  let laureaScore = 12;
-  if (data.votoLaurea > 76) {
-    laureaScore += (data.votoLaurea - 76) * 0.5;
+  // 1. Calcolo Punteggio Titolo di Accesso (Diploma o Laurea)
+  let titoloAccessoScore = 0;
+  
+  // Se ha il diploma (ITP, Infanzia, Sostegno Infanzia)
+  if (data.votoDiploma > 0) {
+    // Diploma: Base 12 + 0.5 per ogni punto oltre 76 (su 100)
+    titoloAccessoScore = 12;
+    if (data.votoDiploma > 76) {
+      titoloAccessoScore += (data.votoDiploma - 76) * 0.5;
+    }
+    if (data.lode) {
+      titoloAccessoScore += 4;
+    }
+    // Cap at 33 (100 e lode = 12 + 12 + 4 = 28, ma con lode può arrivare a 33)
+  } else {
+    // Laurea: Base 12 + 0.5 per ogni punto oltre 76 (su 110)
+    titoloAccessoScore = 12;
+    if (data.votoLaurea > 76) {
+      titoloAccessoScore += (data.votoLaurea - 76) * 0.5;
+    }
+    if (data.lode) {
+      titoloAccessoScore += 4;
+    }
+    // Cap at 33 (110 e lode = 12 + 17 + 4 = 33)
   }
-  if (data.lode) {
-    laureaScore += 4;
-  }
-  // Cap at 33 (110 e lode = 12 + 17 + 4 = 33)
   
   // 2. Titoli Culturali
   // Certificazioni linguistiche
@@ -76,12 +92,12 @@ export function calculateScore(data: {
   // Cap massimo a 2 punti
   const informaticaScore = Math.min(informaticaScoreRaw, 2);
 
-  const totalScore = laureaScore + titoliCulturaliScore + informaticaScore;
+  const totalScore = titoloAccessoScore + titoliCulturaliScore + informaticaScore;
 
   return {
     totalScore,
     breakdown: {
-      laurea: laureaScore,
+      laurea: titoloAccessoScore, // Può essere diploma o laurea
       titoliCulturali: titoliCulturaliScore,
       informatica: informaticaScore
     }

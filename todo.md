@@ -117,3 +117,11 @@
   - [x] Master universitari I/II livello (1 pt, max 3)
   - [x] Aggiornare algoritmo calcolo con nuovi titoli
   - [x] Aggiornare test per validare nuovi titoli
+
+- [x] Aggiungere campo voto diploma (per ITP, infanzia, sostegno infanzia)
+- [x] Implementare calcolo punteggio diploma
+- [x] Aggiornare algoritmo per gestire sia laurea che diploma
+
+- [x] Aggiungere nota informativa che specifica validità diploma solo per ITP, Infanzia, Sostegno Infanzia
+- [x] Specificare che per Infanzia/Primaria serve Diploma Magistrale ante 2001/2002
+- [x] Specificare che per altre classi serve Laurea Magistrale/Specialistica/Ciclo Unico

@@ -33,6 +33,7 @@ export function GpsForm({ onCalculate }: GpsFormProps) {
   const [cellulare, setCellulare] = useState<string>("");
   
   // Dati GPS
+  const [votoDiploma, setVotoDiploma] = useState<number>(0);
   const [votoLaurea, setVotoLaurea] = useState<number>(100);
   const [lode, setLode] = useState<boolean>(false);
   const [numB2, setNumB2] = useState<number>(0);
@@ -68,6 +69,7 @@ export function GpsForm({ onCalculate }: GpsFormProps) {
       nome: nome.trim(),
       email: email.trim(),
       cellulare: cellulare.trim(),
+      votoDiploma,
       votoLaurea,
       lode,
       numB2,
@@ -212,14 +214,30 @@ export function GpsForm({ onCalculate }: GpsFormProps) {
               </div>
             </div>
 
-            {/* Sezione Laurea */}
+            {/* Sezione Titolo di Accesso */}
             <div className="space-y-4">
               <div className="flex items-center gap-2 text-white/90 font-semibold text-lg border-b border-white/10 pb-2">
                 <GraduationCap className="w-5 h-5 text-primary" />
-                Titolo di Accesso (Laurea)
+                Titolo di Accesso
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="space-y-2">
+                  <Label htmlFor="votoDiploma" className="text-white/80">Voto di Diploma (su 100)</Label>
+                  <Input 
+                    id="votoDiploma" 
+                    type="number" 
+                    min="60" 
+                    max="100" 
+                    value={votoDiploma}
+                    onChange={(e) => setVotoDiploma(Number(e.target.value))}
+                    className="glass-input"
+                  />
+                  <p className="text-xs text-white/50">
+                    Valido per: Classi ITP (B-01, B-02, B-03, ecc.), Infanzia/Primaria (posto comune e sostegno) solo se Diploma Magistrale conseguito entro a.s. 2001/2002
+                  </p>
+                </div>
+
                 <div className="space-y-2">
                   <Label htmlFor="votoLaurea" className="text-white/80">Voto di Laurea (su 110)</Label>
                   <Input 
@@ -231,9 +249,12 @@ export function GpsForm({ onCalculate }: GpsFormProps) {
                     onChange={(e) => setVotoLaurea(Number(e.target.value))}
                     className="glass-input"
                   />
+                  <p className="text-xs text-white/50">
+                    Requisito minimo: Laurea Magistrale, Specialistica o Ciclo Unico (5 anni)
+                  </p>
                 </div>
                 
-                <div className="flex items-center space-x-3 pt-8">
+                <div className="flex items-center space-x-3 pt-2">
                   <Checkbox 
                     id="lode" 
                     checked={lode}
