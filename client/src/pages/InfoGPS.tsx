@@ -319,9 +319,7 @@ export function InfoGPS() {
                 <div className="p-4 rounded-lg bg-gradient-to-r from-orange-500/10 to-red-500/10 border border-orange-500/20">
                   <div className="font-semibold text-orange-200 mb-2">⚠️ Province con Alta Concorrenza</div>
                   <p className="text-sm text-white/70">
-                    In grandi città (Milano, Roma, Napoli, Torino), il punteggio minimo per ottenere supplenze 
-                    può superare i <strong>150-200 punti</strong>. Per classi di concorso molto richieste (sostegno, inglese, musica) 
-                    servono anche <strong>oltre 250 punti</strong>.
+                    In grandi città (Milano, Roma, Napoli, Torino), il punteggio minimo per ottenere supplenze è più alto.
                   </p>
                 </div>
               </div>
