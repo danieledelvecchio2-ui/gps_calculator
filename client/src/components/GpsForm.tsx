@@ -332,7 +332,7 @@ export function GpsForm({ onCalculate }: GpsFormProps) {
                     className="glass-input"
                   />
                   <p className="text-xs text-white/50">
-                    Corso CLIL universitario (massimo 1)
+                    Corso CLIL universitario (massimo 1 per anno)
                   </p>
                 </div>
 
