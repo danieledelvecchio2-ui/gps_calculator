@@ -24,64 +24,32 @@ export interface ProvinceAnalysis {
 }
 
 export function calculateScore(data: {
-  votoDiploma: number; // Voto diploma (60-100) per ITP, Infanzia, Sostegno Infanzia
-  votoLaurea: number; // Voto laurea (66-110) per altre classi
+  votoLaurea: number;
   lode: boolean;
-  numB2: number; // Certificazioni linguistiche B2 (3 punti)
-  numC1: number; // Certificazioni linguistiche C1 (4 punti)
-  numC2: number; // Certificazioni linguistiche C2 (6 punti)
-  numClil: number; // CLIL universitario (3 punti, massimo 1)
-  hasDottorato: boolean; // Dottorato di ricerca (12 punti, massimo 1)
-  hasSecondaLaurea: boolean; // Seconda laurea (1.5 punti)
-  numMasterUniv: number; // Master universitari I/II livello (1 punto, massimo 3)
+  numC2: number;
+  numClil: number;
+  numBiannale: number;
   hasMasterL2: boolean; // Master universitario in L2 (3 punti, massimo 1)
   numDigComp22: number; // Certificazioni in linea al DigComp 2.2 (0.5 punti ciascuna)
   numDigCompEdu: number; // Certificazioni in linea al DigComp Edu (1 punto ciascuna)
 }): { totalScore: number; breakdown: any } {
-  // 1. Calcolo Punteggio Titolo di Accesso (Diploma o Laurea)
-  let titoloAccessoScore = 0;
-  
-  // Se ha il diploma (ITP, Infanzia, Sostegno Infanzia)
-  if (data.votoDiploma > 0) {
-    // Diploma: Base 12 + 0.5 per ogni punto oltre 76 (su 100)
-    titoloAccessoScore = 12;
-    if (data.votoDiploma > 76) {
-      titoloAccessoScore += (data.votoDiploma - 76) * 0.5;
-    }
-    if (data.lode) {
-      titoloAccessoScore += 4;
-    }
-    // Cap at 33 (100 e lode = 12 + 12 + 4 = 28, ma con lode può arrivare a 33)
-  } else {
-    // Laurea: Base 12 + 0.5 per ogni punto oltre 76 (su 110)
-    titoloAccessoScore = 12;
-    if (data.votoLaurea > 76) {
-      titoloAccessoScore += (data.votoLaurea - 76) * 0.5;
-    }
-    if (data.lode) {
-      titoloAccessoScore += 4;
-    }
-    // Cap at 33 (110 e lode = 12 + 17 + 4 = 33)
+  // 1. Calcolo Punteggio Laurea
+  // Base 12 + 0.5 per ogni punto oltre 76
+  let laureaScore = 12;
+  if (data.votoLaurea > 76) {
+    laureaScore += (data.votoLaurea - 76) * 0.5;
   }
+  if (data.lode) {
+    laureaScore += 4;
+  }
+  // Cap at 33 (110 e lode = 12 + 17 + 4 = 33)
   
   // 2. Titoli Culturali
-  // Certificazioni linguistiche
-  const b2Score = data.numB2 * 3;
-  const c1Score = data.numC1 * 4;
   const c2Score = data.numC2 * 6;
-  const clilScore = Math.min(data.numClil, 1) * 3; // Massimo 1 CLIL
-  
-  // Titoli accademici
-  const dottoratoScore = data.hasDottorato ? 12 : 0; // Massimo 1
-  const secondaLaureaScore = data.hasSecondaLaurea ? 1.5 : 0;
-  
-  // Master e perfezionamenti
-  const masterUnivScore = Math.min(data.numMasterUniv, 3) * 1; // Massimo 3
-  const masterL2Score = data.hasMasterL2 ? 3 : 0; // Massimo 1
-  
-  const titoliCulturaliScore = b2Score + c1Score + c2Score + clilScore + 
-                               dottoratoScore + secondaLaureaScore + 
-                               masterUnivScore + masterL2Score;
+  const clilScore = data.numClil * 3;
+  const biannaleScore = data.numBiannale * 2;
+  const masterL2Score = data.hasMasterL2 ? 3 : 0; // Massimo 1 master L2
+  const titoliCulturaliScore = c2Score + clilScore + biannaleScore + masterL2Score;
 
   // 3. Informatica (massimo 2 punti)
   // DigComp 2.2: 0.5 punti ciascuna
@@ -92,12 +60,12 @@ export function calculateScore(data: {
   // Cap massimo a 2 punti
   const informaticaScore = Math.min(informaticaScoreRaw, 2);
 
-  const totalScore = titoloAccessoScore + titoliCulturaliScore + informaticaScore;
+  const totalScore = laureaScore + titoliCulturaliScore + informaticaScore;
 
   return {
     totalScore,
     breakdown: {
-      laurea: titoloAccessoScore, // Può essere diploma o laurea
+      laurea: laureaScore,
       titoliCulturali: titoliCulturaliScore,
       informatica: informaticaScore
     }

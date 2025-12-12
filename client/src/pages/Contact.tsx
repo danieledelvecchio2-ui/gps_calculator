@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { ArrowLeft, Send, CheckCircle2 } from "lucide-react";
 import { Link } from "wouter";
 import { toast } from "sonner";
+import { trpc } from "@/lib/trpc";
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -17,26 +18,23 @@ export function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
+  const sendEmailMutation = trpc.contact.send.useMutation({
+    onSuccess: () => {
+      setIsSubmitted(true);
+      toast.success("Messaggio inviato con successo!");
+      setFormData({ nome: "", email: "", telefono: "", messaggio: "" });
+    },
+    onError: (error) => {
+      toast.error(error.message || "Errore nell'invio del messaggio. Riprova.");
+    }
+  });
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('/api/contact/send', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)
-      });
-
-      if (response.ok) {
-        setIsSubmitted(true);
-        toast.success("Messaggio inviato con successo!");
-        setFormData({ nome: "", email: "", telefono: "", messaggio: "" });
-      } else {
-        toast.error("Errore nell'invio del messaggio. Riprova.");
-      }
-    } catch (error) {
-      toast.error("Errore di connessione. Riprova.");
+      await sendEmailMutation.mutateAsync(formData);
     } finally {
       setIsSubmitting(false);
     }

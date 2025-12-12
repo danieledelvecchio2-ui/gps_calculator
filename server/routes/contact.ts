@@ -13,7 +13,7 @@ router.post("/send", async (req, res) => {
     }
 
     // Email destinatario
-    const destinatario = "gianninonba@gmail.com";
+    const destinatario = "contattaci@infogps2026.it";
 
     // Corpo email in formato HTML
     const emailBody = `
