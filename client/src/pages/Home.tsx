@@ -3,6 +3,7 @@ import { GpsForm } from "@/components/GpsForm";
 import { ResultsView } from "@/components/ResultsView";
 import { calculateScore, analyzeProvinces, CalculationResult } from "@/lib/gpsAlgorithm";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "wouter";
 
 export default function Home() {
   const [result, setResult] = useState<CalculationResult | null>(null);
@@ -99,7 +100,12 @@ export default function Home() {
         </AnimatePresence>
 
         {/* Footer */}
-        <footer className="mt-20 text-center text-white/40 text-sm">
+        <footer className="mt-20 text-center text-white/40 text-sm space-y-3">
+          <div className="flex items-center justify-center gap-4 text-white/60">
+            <Link href="/info-gps" className="hover:text-white transition-colors underline">Guida GPS</Link>
+            <span>•</span>
+            <Link href="/privacy" className="hover:text-white transition-colors underline">Privacy</Link>
+          </div>
           <p>© 2025 GPS Calculator. Dati basati su bollettini ufficiali e stime sindacali.</p>
           <p className="mt-2">Disclaimer: Le stime sono indicative e non garantiscono l'incarico.</p>
         </footer>

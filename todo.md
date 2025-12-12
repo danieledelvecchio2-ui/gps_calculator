@@ -77,3 +77,9 @@
 - [x] Migliorare layout card risultati con immagini
 - [ ] Aggiungere visualizzazione punteggio min/medio/max per ogni provincia
 - [ ] Migliorare stile generale del sito
+
+- [x] Creare pagina informativa GPS con spiegazione fasce (I e II fascia)
+- [x] Aggiungere tabella punteggi voto laurea (da 66 a 110 e lode)
+- [x] Aggiungere informazioni su punteggi servizio (specifico e aspecifico)
+- [x] Integrare informazioni su certificazioni linguistiche (B2, C1, C2, CLIL)
+- [ ] Aggiungere sezione FAQ con domande frequenti su GPS
