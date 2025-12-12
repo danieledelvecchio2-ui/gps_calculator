@@ -83,3 +83,5 @@
 - [x] Aggiungere informazioni su punteggi servizio (specifico e aspecifico)
 - [x] Integrare informazioni su certificazioni linguistiche (B2, C1, C2, CLIL)
 - [ ] Aggiungere sezione FAQ con domande frequenti su GPS
+
+- [x] Aggiungere pulsante "INFO CALCOLO PUNTEGGIO IN GPS" ben visibile nella homepage
