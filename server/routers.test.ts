@@ -37,7 +37,7 @@ describe('Contact Router', () => {
           'Content-Type': 'application/json',
           'Authorization': 'Bearer test-key'
         }),
-        body: expect.stringContaining('contattaci@infogps2026.it')
+        body: expect.stringContaining('direzione@infogps2026.it')
       })
     );
   });

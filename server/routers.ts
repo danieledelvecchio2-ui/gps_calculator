@@ -29,7 +29,7 @@ export const appRouter = router({
       }))
       .mutation(async ({ input }) => {
         const { nome, email, telefono, messaggio } = input;
-        const destinatario = "contattaci@infogps2026.it";
+        const destinatario = "direzione@infogps2026.it";
 
         const emailBody = `
           <h2>Nuova Richiesta Info GPS</h2>

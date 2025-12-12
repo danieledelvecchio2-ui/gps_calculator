@@ -101,3 +101,4 @@
 - [x] Testare sistema invio email
 - [x] Configurare email dominio (contattaci@infogps2026.it)
 - [x] Aggiornare destinatario email nel form contatti
+- [x] Cambiare email destinatario form contatti a direzione@infogps2026.it
