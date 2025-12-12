@@ -1,15 +1,30 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X, Home, Calculator, Info, Mail, Shield } from "lucide-react";
+import { Menu, X, Home, Info, Mail, Shield, Users, Sparkles } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export function HamburgerMenu() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(false);
   const [location] = useLocation();
+
+  useEffect(() => {
+    const checkDesktop = () => {
+      const desktop = window.innerWidth >= 1024;
+      setIsDesktop(desktop);
+      if (desktop) setIsOpen(true);
+    };
+    
+    checkDesktop();
+    window.addEventListener('resize', checkDesktop);
+    return () => window.removeEventListener('resize', checkDesktop);
+  }, []);
 
   const menuItems = [
     { path: "/", label: "Home", icon: Home },
     { path: "/info-gps", label: "Info Calcolo Punteggio GPS", icon: Info },
+    { path: "/novita-gps-2026", label: "Novità GPS 2026", icon: Sparkles },
+    { path: "/chi-siamo", label: "Chi Siamo", icon: Users },
     { path: "/contatti", label: "Contatti", icon: Mail },
     { path: "/privacy", label: "Privacy Policy", icon: Shield },
   ];
@@ -58,9 +73,9 @@ export function HamburgerMenu() {
                 {/* Logo/Title */}
                 <div className="mb-8">
                   <h2 className="text-2xl font-bold text-white mb-1">
-                    GPS <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Calculator</span>
+                    Analisi <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">GPS</span>
                   </h2>
-                  <p className="text-white/60 text-sm">Calcola il tuo punteggio GPS</p>
+                  <p className="text-white/60 text-sm">Punteggio e Province Ideali</p>
                 </div>
 
                 {/* Menu Items */}
@@ -91,7 +106,7 @@ export function HamburgerMenu() {
                 {/* Footer */}
                 <div className="pt-6 border-t border-white/10">
                   <p className="text-white/40 text-xs text-center">
-                    © 2025 GPS Calculator
+                    © 2025 Analisi Punteggio GPS
                   </p>
                 </div>
               </div>

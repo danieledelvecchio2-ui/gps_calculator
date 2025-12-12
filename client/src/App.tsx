@@ -8,6 +8,8 @@ import Home from "./pages/Home";
 import Privacy from "./pages/Privacy";
 import { InfoGPS } from "./pages/InfoGPS";
 import { Contact } from "./pages/Contact";
+import { About } from "./pages/About";
+import { NewsGPS2026 } from "./pages/NewsGPS2026";
 import { HamburgerMenu } from "./components/HamburgerMenu";
 
 function Router() {
@@ -18,6 +20,8 @@ function Router() {
       <Route path={"/privacy"} component={Privacy} />
       <Route path={"/info-gps"} component={InfoGPS} />
       <Route path={"/contatti"} component={Contact} />
+      <Route path={"/chi-siamo"} component={About} />
+      <Route path={"/novita-gps-2026"} component={NewsGPS2026} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

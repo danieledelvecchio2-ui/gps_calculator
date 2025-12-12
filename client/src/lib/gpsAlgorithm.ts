@@ -26,9 +26,13 @@ export interface ProvinceAnalysis {
 export function calculateScore(data: {
   votoLaurea: number;
   lode: boolean;
-  numC2: number;
-  numClil: number;
-  numBiannale: number;
+  numB2: number; // Certificazioni linguistiche B2 (3 punti)
+  numC1: number; // Certificazioni linguistiche C1 (4 punti)
+  numC2: number; // Certificazioni linguistiche C2 (6 punti)
+  numClil: number; // CLIL universitario (3 punti, massimo 1)
+  hasDottorato: boolean; // Dottorato di ricerca (12 punti, massimo 1)
+  hasSecondaLaurea: boolean; // Seconda laurea (1.5 punti)
+  numMasterUniv: number; // Master universitari I/II livello (1 punto, massimo 3)
   hasMasterL2: boolean; // Master universitario in L2 (3 punti, massimo 1)
   numDigComp22: number; // Certificazioni in linea al DigComp 2.2 (0.5 punti ciascuna)
   numDigCompEdu: number; // Certificazioni in linea al DigComp Edu (1 punto ciascuna)
@@ -45,11 +49,23 @@ export function calculateScore(data: {
   // Cap at 33 (110 e lode = 12 + 17 + 4 = 33)
   
   // 2. Titoli Culturali
+  // Certificazioni linguistiche
+  const b2Score = data.numB2 * 3;
+  const c1Score = data.numC1 * 4;
   const c2Score = data.numC2 * 6;
-  const clilScore = data.numClil * 3;
-  const biannaleScore = data.numBiannale * 2;
-  const masterL2Score = data.hasMasterL2 ? 3 : 0; // Massimo 1 master L2
-  const titoliCulturaliScore = c2Score + clilScore + biannaleScore + masterL2Score;
+  const clilScore = Math.min(data.numClil, 1) * 3; // Massimo 1 CLIL
+  
+  // Titoli accademici
+  const dottoratoScore = data.hasDottorato ? 12 : 0; // Massimo 1
+  const secondaLaureaScore = data.hasSecondaLaurea ? 1.5 : 0;
+  
+  // Master e perfezionamenti
+  const masterUnivScore = Math.min(data.numMasterUniv, 3) * 1; // Massimo 3
+  const masterL2Score = data.hasMasterL2 ? 3 : 0; // Massimo 1
+  
+  const titoliCulturaliScore = b2Score + c1Score + c2Score + clilScore + 
+                               dottoratoScore + secondaLaureaScore + 
+                               masterUnivScore + masterL2Score;
 
   // 3. Informatica (massimo 2 punti)
   // DigComp 2.2: 0.5 punti ciascuna

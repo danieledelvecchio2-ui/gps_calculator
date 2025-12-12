@@ -71,10 +71,13 @@ export default function Home() {
             <img src="/images/logo-icon.png" alt="GPS Logo" className="w-12 h-12 object-contain" />
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-white tracking-tight drop-shadow-sm">
-            GPS <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary">Calculator</span>
+            Analisi <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Punteggio GPS</span>
           </h1>
-          <p className="text-lg md:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed">
-            Calcola il tuo punteggio GPS e scopri in quali province hai maggiori possibilità di ottenere una supplenza, basato sui dati storici ufficiali.
+          <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed font-medium mb-3">
+            Scopri il Tuo Punteggio e le Province Ideali per la Tua Supplenza
+          </p>
+          <p className="text-base md:text-lg text-white/60 max-w-2xl mx-auto leading-relaxed">
+            Calcola gratuitamente il tuo punteggio GPS e ricevi un'analisi personalizzata delle province italiane dove hai maggiori possibilità di ottenere una supplenza. Basato su dati storici ufficiali del primo turno GPS 2024/25.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 items-center justify-center mt-6">
             <Link href="/info-gps">

@@ -96,3 +96,24 @@
 - [x] Aggiungere pulsante "CONTATTACI" ben visibile nella homepage
 - [x] Creare componente menu hamburger con navigazione
 - [x] Integrare menu hamburger in tutte le pagine
+
+- [x] Modificare menu hamburger per rimanere aperto su desktop
+- [x] Creare pagina "Chi Siamo" (struttura base)
+- [x] Creare pagina "Novità GPS 2026" con nuove regole certificazioni
+- [x] Spiegare requisito Accredia + framework DigComp 2.2/DigCompEdu
+- [x] Chiarire che LIM, Tablet, Coding non valgono più dal 2026
+- [x] Espandere pagina Info GPS con informazioni dettagliate da ricerca
+- [x] Correggere terminologia form con quella ufficiale (Master universitario, Perfezionamento universitario)
+- [x] Rimuovere riferimenti "no campus" e altre note non ufficiali
+- [x] Ricercare informazioni approfondite su GPS, normative, strategie
+
+- [x] Cambiare titolo sito (non "GPS Calculator")
+- [x] Aggiungere sottotitolo commerciale che spiega utilità del sito
+
+- [x] Aggiungere TUTTI i titoli valutabili GPS mancanti nel form:
+  - [x] Dottorato di ricerca (12 pt)
+  - [x] Seconda laurea (1.5 pt)
+  - [x] Certificazioni linguistiche B2 (3 pt), C1 (4 pt), C2 (6 pt)
+  - [x] Master universitari I/II livello (1 pt, max 3)
+  - [x] Aggiornare algoritmo calcolo con nuovi titoli
+  - [x] Aggiornare test per validare nuovi titoli

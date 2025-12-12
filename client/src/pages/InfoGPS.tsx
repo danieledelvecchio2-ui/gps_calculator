@@ -294,6 +294,141 @@ export function InfoGPS() {
             </CardContent>
           </Card>
 
+          {/* Cos'è un buon punteggio GPS */}
+          <Card className="glass-panel border-0">
+            <CardHeader>
+              <CardTitle className="text-white flex items-center gap-2">
+                <Award className="w-6 h-6 text-secondary" />
+                Cos'è un Buon Punteggio GPS?
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="text-white/80 space-y-4">
+              <p>
+                Non esiste un punteggio "buono" in assoluto: tutto dipende dalla <strong>provincia</strong>, 
+                dalla <strong>classe di concorso</strong> e dal <strong>tipo di scuola</strong> (infanzia, primaria, secondaria).
+              </p>
+              <div className="space-y-3">
+                <div className="p-4 rounded-lg bg-gradient-to-r from-green-500/10 to-emerald-500/10 border border-green-500/20">
+                  <div className="font-semibold text-green-200 mb-2">✅ Province con Bassa Concorrenza</div>
+                  <p className="text-sm text-white/70">
+                    In province meno richieste (zone montane, isole minori, aree interne), anche con <strong>60-80 punti</strong> 
+                    è possibile ottenere supplenze annuali. Il punteggio minimo può scendere fino a <strong>20-30 punti</strong> 
+                    per alcune classi di concorso poco sature.
+                  </p>
+                </div>
+                <div className="p-4 rounded-lg bg-gradient-to-r from-orange-500/10 to-red-500/10 border border-orange-500/20">
+                  <div className="font-semibold text-orange-200 mb-2">⚠️ Province con Alta Concorrenza</div>
+                  <p className="text-sm text-white/70">
+                    In grandi città (Milano, Roma, Napoli, Torino), il punteggio minimo per ottenere supplenze 
+                    può superare i <strong>150-200 punti</strong>. Per classi di concorso molto richieste (sostegno, inglese, musica) 
+                    servono anche <strong>oltre 250 punti</strong>.
+                  </p>
+                </div>
+              </div>
+              <div className="p-4 rounded-lg bg-white/5 border border-white/10">
+                <div className="text-sm font-semibold text-white mb-2">Consiglio Strategico:</div>
+                <p className="text-sm text-white/70">
+                  Usa il nostro calcolatore per verificare il <strong>punteggio minimo storico</strong> nelle province 
+                  che ti interessano. Questo ti darà un'idea realistica delle tue possibilità di ottenere una supplenza.
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Servizio Scolastico */}
+          <Card className="glass-panel border-0">
+            <CardHeader>
+              <CardTitle className="text-white flex items-center gap-2">
+                <Clock className="w-6 h-6 text-secondary" />
+                Servizio Scolastico: Specifico vs Aspecifico
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="text-white/80 space-y-4">
+              <p>
+                Il servizio prestato nelle scuole è uno dei fattori più importanti per il punteggio GPS. 
+                Esistono due tipologie di servizio:
+              </p>
+              <div className="space-y-3">
+                <div className="p-4 rounded-lg bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20">
+                  <div className="font-semibold text-cyan-200 mb-2">Servizio Specifico</div>
+                  <p className="text-sm text-white/70 mb-2">
+                    Servizio prestato <strong>nella propria classe di concorso</strong> o in classe di concorso affine.
+                  </p>
+                  <div className="text-sm">
+                    <strong className="text-white">Punteggio:</strong> 12 punti per anno (fino al 31 agosto) o 6 punti (fino al 30 giugno)
+                  </div>
+                </div>
+                <div className="p-4 rounded-lg bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20">
+                  <div className="font-semibold text-purple-200 mb-2">Servizio Aspecifico</div>
+                  <p className="text-sm text-white/70 mb-2">
+                    Servizio prestato <strong>in classe di concorso diversa</strong> dalla propria.
+                  </p>
+                  <div className="text-sm">
+                    <strong className="text-white">Punteggio:</strong> 6 punti per anno (fino al 31 agosto) o 3 punti (fino al 30 giugno)
+                  </div>
+                </div>
+              </div>
+              <div className="p-4 rounded-lg bg-gradient-to-r from-green-500/10 to-emerald-500/10 border border-green-500/20">
+                <div className="text-sm font-semibold text-white mb-2">Esempio Pratico:</div>
+                <p className="text-sm text-white/70">
+                  Un docente con 3 anni di servizio specifico (fino al 31 agosto) accumula <strong>36 punti</strong> (12 pt × 3 anni). 
+                  Con lo stesso servizio aspecifico accumulerebbe solo <strong>18 punti</strong> (6 pt × 3 anni).
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Strategie per Aumentare il Punteggio */}
+          <Card className="glass-panel border-0">
+            <CardHeader>
+              <CardTitle className="text-white flex items-center gap-2">
+                <Award className="w-6 h-6 text-secondary" />
+                Strategie per Aumentare il Punteggio
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="text-white/80 space-y-4">
+              <p>
+                Se il tuo punteggio attuale non è sufficiente per le province che desideri, ecco alcune strategie efficaci:
+              </p>
+              <div className="space-y-3">
+                <div className="p-4 rounded-lg bg-white/5 border border-white/10">
+                  <div className="font-semibold text-white mb-2">1. Certificazioni Informatiche (fino a 2 punti)</div>
+                  <p className="text-sm text-white/70">
+                    Consegui certificazioni in linea con DigComp 2.2 (0.5 pt) o DigCompEdu (1 pt). 
+                    Sono relativamente veloci da ottenere e aggiungono punti preziosi.
+                  </p>
+                </div>
+                <div className="p-4 rounded-lg bg-white/5 border border-white/10">
+                  <div className="font-semibold text-white mb-2">2. Certificazioni Linguistiche (fino a 9 punti)</div>
+                  <p className="text-sm text-white/70">
+                    Una certificazione C2 (6 pt) + CLIL (3 pt) ti dà 9 punti. Anche solo un B2 (3 pt) fa la differenza.
+                  </p>
+                </div>
+                <div className="p-4 rounded-lg bg-white/5 border border-white/10">
+                  <div className="font-semibold text-white mb-2">3. Master e Perfezionamenti (1 punto ciascuno)</div>
+                  <p className="text-sm text-white/70">
+                    Master universitari di I o II livello, corsi di perfezionamento universitari (1500 ore - 60 CFU). 
+                    Puoi conseguirne fino a 3 per un totale di 3 punti.
+                  </p>
+                </div>
+                <div className="p-4 rounded-lg bg-white/5 border border-white/10">
+                  <div className="font-semibold text-white mb-2">4. Servizio Scolastico (12 punti/anno)</div>
+                  <p className="text-sm text-white/70">
+                    Accetta supplenze anche brevi: ogni anno di servizio specifico vale 12 punti. 
+                    È il modo più efficace per scalare le graduatorie.
+                  </p>
+                </div>
+                <div className="p-4 rounded-lg bg-white/5 border border-white/10">
+                  <div className="font-semibold text-white mb-2">5. Seconda Laurea o Laurea Magistrale</div>
+                  <p className="text-sm text-white/70">
+                    Una seconda laurea (anche triennale) può darti accesso a nuove classi di concorso meno sature, 
+                    aumentando le tue possibilità di supplenza.
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
           {/* CTA */}
           <div className="text-center pt-8">
             <Link href="/">

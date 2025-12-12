@@ -35,9 +35,13 @@ export function GpsForm({ onCalculate }: GpsFormProps) {
   // Dati GPS
   const [votoLaurea, setVotoLaurea] = useState<number>(100);
   const [lode, setLode] = useState<boolean>(false);
+  const [numB2, setNumB2] = useState<number>(0);
+  const [numC1, setNumC1] = useState<number>(0);
   const [numC2, setNumC2] = useState<number>(0);
   const [numClil, setNumClil] = useState<number>(0);
-  const [numBiannale, setNumBiannale] = useState<number>(0);
+  const [hasDottorato, setHasDottorato] = useState<boolean>(false);
+  const [hasSecondaLaurea, setHasSecondaLaurea] = useState<boolean>(false);
+  const [numMasterUniv, setNumMasterUniv] = useState<number>(0);
   const [hasMasterL2, setHasMasterL2] = useState<boolean>(false);
   const [numDigComp22, setNumDigComp22] = useState<number>(0);
   const [numDigCompEdu, setNumDigCompEdu] = useState<number>(0);
@@ -66,9 +70,13 @@ export function GpsForm({ onCalculate }: GpsFormProps) {
       cellulare: cellulare.trim(),
       votoLaurea,
       lode,
+      numB2,
+      numC1,
       numC2,
       numClil,
-      numBiannale,
+      hasDottorato,
+      hasSecondaLaurea,
+      numMasterUniv,
       hasMasterL2,
       numDigComp22,
       numDigCompEdu,
@@ -245,8 +253,39 @@ export function GpsForm({ onCalculate }: GpsFormProps) {
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* Certificazioni Linguistiche */}
                 <div className="space-y-2">
-                  <Label htmlFor="numC2" className="text-white/80">Certificazioni C2 (6 pti)</Label>
+                  <Label htmlFor="numB2" className="text-white/80">Certificazioni Linguistiche B2 (3 pt)</Label>
+                  <Input 
+                    id="numB2" 
+                    type="number" 
+                    min="0" 
+                    value={numB2}
+                    onChange={(e) => setNumB2(Number(e.target.value))}
+                    className="glass-input"
+                  />
+                  <p className="text-xs text-white/50">
+                    Certificazioni linguistiche livello B2
+                  </p>
+                </div>
+                
+                <div className="space-y-2">
+                  <Label htmlFor="numC1" className="text-white/80">Certificazioni Linguistiche C1 (4 pt)</Label>
+                  <Input 
+                    id="numC1" 
+                    type="number" 
+                    min="0" 
+                    value={numC1}
+                    onChange={(e) => setNumC1(Number(e.target.value))}
+                    className="glass-input"
+                  />
+                  <p className="text-xs text-white/50">
+                    Certificazioni linguistiche livello C1
+                  </p>
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="numC2" className="text-white/80">Certificazioni Linguistiche C2 (6 pt)</Label>
                   <Input 
                     id="numC2" 
                     type="number" 
@@ -261,32 +300,74 @@ export function GpsForm({ onCalculate }: GpsFormProps) {
                 </div>
                 
                 <div className="space-y-2">
-                  <Label htmlFor="numClil" className="text-white/80">CLIL Universitario (3 pti)</Label>
+                  <Label htmlFor="numClil" className="text-white/80">CLIL (3 pt)</Label>
                   <Input 
                     id="numClil" 
                     type="number" 
                     min="0" 
+                    max="1"
                     value={numClil}
                     onChange={(e) => setNumClil(Number(e.target.value))}
                     className="glass-input"
                   />
                   <p className="text-xs text-white/50">
-                    Solo perfezionamenti/master universitari (no campus)
+                    Corso CLIL universitario (massimo 1)
                   </p>
                 </div>
 
+                {/* Titoli Accademici */}
                 <div className="space-y-2">
-                  <Label htmlFor="numBiannale" className="text-white/80">Master Biennali Universitari (2 pti)</Label>
+                  <div className="flex items-center space-x-3 p-4 rounded-lg bg-white/5 border border-white/10">
+                    <Checkbox 
+                      id="hasDottorato" 
+                      checked={hasDottorato}
+                      onCheckedChange={(checked) => setHasDottorato(checked as boolean)}
+                      className="border-white/30 data-[state=checked]:bg-secondary data-[state=checked]:text-primary"
+                    />
+                    <div className="space-y-1">
+                      <Label htmlFor="hasDottorato" className="text-white/90 cursor-pointer font-medium">
+                        Dottorato di Ricerca (12 pt)
+                      </Label>
+                      <p className="text-xs text-white/50">
+                        Dottorato di ricerca (massimo 1)
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="space-y-2">
+                  <div className="flex items-center space-x-3 p-4 rounded-lg bg-white/5 border border-white/10">
+                    <Checkbox 
+                      id="hasSecondaLaurea" 
+                      checked={hasSecondaLaurea}
+                      onCheckedChange={(checked) => setHasSecondaLaurea(checked as boolean)}
+                      className="border-white/30 data-[state=checked]:bg-secondary data-[state=checked]:text-primary"
+                    />
+                    <div className="space-y-1">
+                      <Label htmlFor="hasSecondaLaurea" className="text-white/90 cursor-pointer font-medium">
+                        Seconda Laurea (1.5 pt)
+                      </Label>
+                      <p className="text-xs text-white/50">
+                        Laurea triennale o diploma accademico I livello
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Master e Perfezionamenti */}
+                <div className="space-y-2">
+                  <Label htmlFor="numMasterUniv" className="text-white/80">Master Universitari (1 pt)</Label>
                   <Input 
-                    id="numBiannale" 
+                    id="numMasterUniv" 
                     type="number" 
                     min="0" 
-                    value={numBiannale}
-                    onChange={(e) => setNumBiannale(Number(e.target.value))}
+                    max="3"
+                    value={numMasterUniv}
+                    onChange={(e) => setNumMasterUniv(Number(e.target.value))}
                     className="glass-input"
                   />
                   <p className="text-xs text-white/50">
-                    Solo master universitari biennali (no campus)
+                    Master universitari I o II livello (massimo 3)
                   </p>
                 </div>
                 
@@ -300,7 +381,7 @@ export function GpsForm({ onCalculate }: GpsFormProps) {
                     />
                     <div className="space-y-1">
                       <Label htmlFor="hasMasterL2" className="text-white/90 cursor-pointer font-medium">
-                        Master in L2 (3 pti)
+                        Master in L2 (3 pt)
                       </Label>
                       <p className="text-xs text-white/50">
                         Master universitario in didattica L2 (massimo 1)
