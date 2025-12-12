@@ -125,3 +125,5 @@
 - [x] Aggiungere nota informativa che specifica validità diploma solo per ITP, Infanzia, Sostegno Infanzia
 - [x] Specificare che per Infanzia/Primaria serve Diploma Magistrale ante 2001/2002
 - [x] Specificare che per altre classi serve Laurea Magistrale/Specialistica/Ciclo Unico
+
+- [x] Aggiungere nota che seconda laurea può essere anche Triennale (ma non dà accesso insegnamento, solo punteggio)

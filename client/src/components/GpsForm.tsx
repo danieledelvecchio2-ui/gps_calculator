@@ -369,7 +369,7 @@ export function GpsForm({ onCalculate }: GpsFormProps) {
                         Seconda Laurea (1.5 pt)
                       </Label>
                       <p className="text-xs text-white/50">
-                        Laurea triennale o diploma accademico I livello
+                        Seconda laurea (anche Triennale). NON dà accesso all'insegnamento, vale solo per punteggio GPS
                       </p>
                     </div>
                   </div>
