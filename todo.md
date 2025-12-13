@@ -255,4 +255,11 @@
 - [x] Ridisegnare pagina Novità GPS (sfondo arancione chiaro)
 - [x] Ridisegnare pagina Contatti (sfondo indaco chiaro)
 - [x] Testare tutte le pagine
-- [ ] Creare checkpoint v4.0
+- [x] Creare checkpoint v4.0
+
+## Ripristino contenuti Info GPS
+
+- [x] Recuperare contenuti originali pagina Info GPS dal checkpoint precedente
+- [x] Integrare tutti i contenuti con nuovo stile Bootstrap verde chiaro
+- [x] Verificare che non manchi nessuna sezione
+- [ ] Creare checkpoint v4.1 correttivo
