@@ -182,3 +182,15 @@
 - [x] Migliorare ricerca e filtri
 - [x] Aggiungere animazioni e hover effects
 - [ ] Creare checkpoint v3.6 con scraping completo e UI migliorata
+
+## Rifacimento completo Trova Classe (stile cattedra.it)
+
+- [x] Analizzare cattedra.it per capire esattamente come funziona
+- [x] Creare mapping completo Lauree → Classi accessibili (390 lauree estratte)
+- [x] Creare due tab separate: "Cerca per Laurea" e "Cerca per Classe"
+- [x] Design chiaro con sfondo bianco/chiaro (non scuro)
+- [x] Layout tabellare leggibile come cattedra.it
+- [x] Implementare ricerca bidirezionale funzionante
+- [x] Aggiungere codici classe (A-01, A-26, ecc.) visibili
+- [x] Testare entrambe le modalità di ricerca
+- [ ] Creare checkpoint v3.7

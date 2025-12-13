@@ -1,21 +1,4 @@
-// Auto-generated from classidiconcorso.it
-// Generato automaticamente da scraping di classidiconcorso.it
-
-export interface RequiredTitle {
-  title: string;
-  requirements: string;
-}
-
-export interface ClasseConcorso {
-  codeId: string;
-  code: string;
-  description: string;
-  notes: string;
-  url: string;
-  required_titles?: RequiredTitle[];
-}
-
-export const classiConcorsoData: ClasseConcorso[] = [
+[
   {
     "code": "Infanzia: posto comune",
     "description": "",
@@ -8266,4 +8249,4 @@ export const classiConcorsoData: ClasseConcorso[] = [
     ],
     "codeId": "PP"
   }
-];
+]

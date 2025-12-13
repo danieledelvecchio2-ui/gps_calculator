@@ -10,7 +10,7 @@ import { InfoGPS } from "./pages/InfoGPS";
 import { Contact } from "./pages/Contact";
 import { NewsGPS2026 } from "./pages/NewsGPS2026";
 import { Navigation } from "./components/Navigation";
-import FindClass from "./pages/FindClass";
+import TrovaClasseConcorso from "./pages/TrovaClasseConcorso";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -21,7 +21,7 @@ function Router() {
       <Route path={"/info-gps"} component={InfoGPS} />
       <Route path={"/novita-gps-2026"} component={NewsGPS2026} />
       <Route path={"/contatti"} component={Contact} />
-      <Route path={"/trova-classe"} component={FindClass} />
+      <Route path={"/trova-classe"} component={TrovaClasseConcorso} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
