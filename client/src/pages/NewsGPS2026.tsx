@@ -306,6 +306,145 @@ export function NewsGPS2026() {
             </div>
           </div>
 
+          {/* Come Aumentare il Punteggio GPS */}
+          <div className="bg-gradient-to-r from-indigo-500/10 to-purple-500/10 border border-indigo-500/20 rounded-2xl p-6 mb-8">
+            <h2 className="text-3xl font-bold mb-2 text-center">🎯 Come Aumentare il Tuo Punteggio GPS</h2>
+            <p className="text-white/70 text-center mb-8">Scopri quali titoli ti permettono di scalare la graduatoria</p>
+            
+            <div className="grid md:grid-cols-2 gap-6">
+              {/* Banner C2 + CLIL - Verde */}
+              <div className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 border-2 border-green-500/40 rounded-xl p-6 hover:border-green-400/60 transition-all">
+                <div className="flex items-start justify-between mb-4">
+                  <div>
+                    <h3 className="text-2xl font-bold text-green-300 mb-1">Certificazioni Linguistiche</h3>
+                    <p className="text-green-200/80 text-sm">C1, C2 + CLIL</p>
+                  </div>
+                  <div className="bg-green-500/20 px-4 py-2 rounded-lg border border-green-400/30">
+                    <p className="text-2xl font-bold text-green-300">+9</p>
+                    <p className="text-xs text-green-200/70">punti max</p>
+                  </div>
+                </div>
+                <div className="space-y-2 text-sm text-white/80">
+                  <p className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" />
+                    <span><strong>C1:</strong> 4 punti (6 con CLIL)</span>
+                  </p>
+                  <p className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" />
+                    <span><strong>C2:</strong> 6 punti (9 con CLIL)</span>
+                  </p>
+                  <p className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" />
+                    <span>Certificazioni riconosciute MIUR</span>
+                  </p>
+                </div>
+                <div className="mt-4 pt-4 border-t border-green-500/20">
+                  <p className="text-xs text-green-200/70">💡 Il CLIL aggiunge 3 punti extra alla certificazione linguistica</p>
+                </div>
+              </div>
+
+              {/* Banner DigComp - Blu */}
+              <div className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 border-2 border-blue-500/40 rounded-xl p-6 hover:border-blue-400/60 transition-all">
+                <div className="flex items-start justify-between mb-4">
+                  <div>
+                    <h3 className="text-2xl font-bold text-blue-300 mb-1">Certificazioni Informatiche</h3>
+                    <p className="text-blue-200/80 text-sm">DigComp 2.2 / DigCompEdu</p>
+                  </div>
+                  <div className="bg-blue-500/20 px-4 py-2 rounded-lg border border-blue-400/30">
+                    <p className="text-2xl font-bold text-blue-300">+2</p>
+                    <p className="text-xs text-blue-200/70">punti max</p>
+                  </div>
+                </div>
+                <div className="space-y-2 text-sm text-white/80">
+                  <p className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-blue-400 flex-shrink-0 mt-0.5" />
+                    <span><strong>DigComp 2.2:</strong> 0.5 punti (max 4 cert.)</span>
+                  </p>
+                  <p className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-blue-400 flex-shrink-0 mt-0.5" />
+                    <span><strong>DigCompEdu:</strong> 1 punto (max 2 cert.)</span>
+                  </p>
+                  <p className="flex items-start gap-2">
+                    <AlertCircle className="w-4 h-4 text-blue-400 flex-shrink-0 mt-0.5" />
+                    <span>Solo enti accreditati Accredia</span>
+                  </p>
+                </div>
+                <div className="mt-4 pt-4 border-t border-blue-500/20">
+                  <p className="text-xs text-blue-200/70">⚠️ LIM, Tablet e Coding NON valgono più dal 2026</p>
+                </div>
+              </div>
+
+              {/* Banner Master - Arancione */}
+              <div className="bg-gradient-to-br from-orange-600/20 to-amber-600/20 border-2 border-orange-500/40 rounded-xl p-6 hover:border-orange-400/60 transition-all">
+                <div className="flex items-start justify-between mb-4">
+                  <div>
+                    <h3 className="text-2xl font-bold text-orange-300 mb-1">Master e Perfezionamenti</h3>
+                    <p className="text-orange-200/80 text-sm">60 CFU - Universitari</p>
+                  </div>
+                  <div className="bg-orange-500/20 px-4 py-2 rounded-lg border border-orange-400/30">
+                    <p className="text-2xl font-bold text-orange-300">+3</p>
+                    <p className="text-xs text-orange-200/70">punti max</p>
+                  </div>
+                </div>
+                <div className="space-y-2 text-sm text-white/80">
+                  <p className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-orange-400 flex-shrink-0 mt-0.5" />
+                    <span><strong>Master I/II livello:</strong> 1 punto ciascuno</span>
+                  </p>
+                  <p className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-orange-400 flex-shrink-0 mt-0.5" />
+                    <span><strong>Perfezionamenti:</strong> 1 punto ciascuno</span>
+                  </p>
+                  <p className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-orange-400 flex-shrink-0 mt-0.5" />
+                    <span>Massimo 3 titoli valutabili</span>
+                  </p>
+                </div>
+                <div className="mt-4 pt-4 border-t border-orange-500/20">
+                  <p className="text-xs text-orange-200/70">📚 Devono essere riconosciuti dal MIUR (60 CFU)</p>
+                </div>
+              </div>
+
+              {/* Banner Altri Titoli - Rosso/Rosa */}
+              <div className="bg-gradient-to-br from-rose-600/20 to-pink-600/20 border-2 border-rose-500/40 rounded-xl p-6 hover:border-rose-400/60 transition-all">
+                <div className="flex items-start justify-between mb-4">
+                  <div>
+                    <h3 className="text-2xl font-bold text-rose-300 mb-1">Altri Titoli Valutabili</h3>
+                    <p className="text-rose-200/80 text-sm">Dottorati, Specializzazioni</p>
+                  </div>
+                  <div className="bg-rose-500/20 px-4 py-2 rounded-lg border border-rose-400/30">
+                    <p className="text-2xl font-bold text-rose-300">+12</p>
+                    <p className="text-xs text-rose-200/70">punti max</p>
+                  </div>
+                </div>
+                <div className="space-y-2 text-sm text-white/80">
+                  <p className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-rose-400 flex-shrink-0 mt-0.5" />
+                    <span><strong>Dottorato:</strong> fino a 12 punti</span>
+                  </p>
+                  <p className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-rose-400 flex-shrink-0 mt-0.5" />
+                    <span><strong>Specializzazioni:</strong> variabile</span>
+                  </p>
+                  <p className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-rose-400 flex-shrink-0 mt-0.5" />
+                    <span><strong>Pubblicazioni:</strong> fino a 4 punti</span>
+                  </p>
+                </div>
+                <div className="mt-4 pt-4 border-t border-rose-500/20">
+                  <p className="text-xs text-rose-200/70">🎓 Titoli accademici e scientifici riconosciuti</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Info Box Finale */}
+            <div className="mt-6 bg-white/5 border border-white/10 rounded-xl p-4">
+              <p className="text-center text-white/70 text-sm">
+                <strong className="text-white">Ricorda:</strong> Tutti i titoli devono essere conseguiti entro <strong className="text-cyan-400">gennaio 2026</strong> per essere validi nell'aggiornamento GPS 2026/28
+              </p>
+            </div>
+          </div>
+
           {/* CTA */}
           <div className="mt-12 text-center">
             <p className="text-white/60 mb-6">

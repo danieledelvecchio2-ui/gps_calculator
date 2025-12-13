@@ -139,3 +139,14 @@
 ## Bug Fix
 
 - [x] Aggiungere punteggio medio standard di 45 punti per province senza dati storici
+
+## Correzione urgente
+
+- [ ] Ripristinare contenuti originali sulle certificazioni informatiche Accredia nella pagina NewsGPS2026
+- [ ] Integrare (non sostituire) con le nuove novità GPS 2026
+
+## Nuova richiesta - Banner corsi colorati
+
+- [x] Aggiungere sezione "Come Aumentare il Punteggio GPS" nella pagina NewsGPS2026
+- [x] Banner colorati stile Bootstrap per: C2+CLIL, DigComp, Master, Altri titoli
+- [x] Ogni banner con colore diverso (verde, blu, arancione, rosso) e punteggi
