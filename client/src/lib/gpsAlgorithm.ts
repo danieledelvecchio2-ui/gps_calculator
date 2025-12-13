@@ -90,7 +90,8 @@ export function analyzeProvinces(userScore: number, classeConcorso: string): Pro
     }
 
     // Determine probability based on the most recent data (2025 preferred, then 2024)
-    const referenceScore = min2025 !== null ? min2025 : min2024;
+    // If no data available, use standard score of 45
+    const referenceScore = min2025 !== null ? min2025 : (min2024 !== null ? min2024 : 45);
 
     if (referenceScore !== null) {
       const diff = userScore - referenceScore;
@@ -109,8 +110,22 @@ export function analyzeProvinces(userScore: number, classeConcorso: string): Pro
         probabilityScore = 10;
       }
     } else {
-      // No data available
-      probabilityScore = -1; // Push to bottom
+      // No data available - use standard score of 45
+      const diff = userScore - 45;
+      
+      if (diff >= 5) {
+        probability = "Alta";
+        probabilityScore = 85; // Slightly lower than with real data
+      } else if (diff >= 0) {
+        probability = "Media";
+        probabilityScore = 55;
+      } else if (diff >= -5) {
+        probability = "Bassa";
+        probabilityScore = 25;
+      } else {
+        probability = "Bassa";
+        probabilityScore = 5;
+      }
     }
 
     // Default source URL if not provided

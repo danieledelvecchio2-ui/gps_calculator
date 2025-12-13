@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { GpsForm } from "@/components/GpsForm";
 import { ResultsView } from "@/components/ResultsView";
+import { CoursesBanner } from "@/components/CoursesBanner";
 import { calculateScore, analyzeProvinces, CalculationResult } from "@/lib/gpsAlgorithm";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "wouter";
@@ -115,6 +116,9 @@ export default function Home() {
               transition={{ duration: 0.3 }}
             >
               <GpsForm onCalculate={handleCalculate} />
+              
+              {/* Courses Banner */}
+              <CoursesBanner />
             </motion.div>
           ) : (
             <motion.div

@@ -111,3 +111,31 @@
 - [ ] Creare sistema di caricamento dati province dal JSON
 - [ ] Aggiornare UI per mostrare punteggi minimi per tutte le province
 - [ ] Testare integrazione dati province
+
+## Nuove richieste - Miglioramenti v3.1
+
+- [ ] Leggere e analizzare contenuti da https://www.unidprofessional.com/graduatorie-gps-2026-cosa-prevede-la-bozza-di-ordinanza-ministeriale/
+- [ ] Integrare novità GPS 2026 nelle pagine informative
+- [ ] Ampliare pagina "Chi Siamo" con informazioni complete sul team e missione
+- [ ] Migliorare UI generale del sito (colori, spaziature, animazioni)
+- [ ] Aggiungere banner pubblicitari per corsi (C2, CLIL, certificazioni informatiche)
+- [ ] Valutare implementazione e-commerce per vendita diretta corsi
+- [ ] Testare tutte le modifiche
+- [ ] Creare checkpoint finale v3.1
+
+## Aggiornamento v3.1 - Ente Formazione
+
+- [x] Cambiare email form contatti da Resend a direzione@infogps2026.it
+- [x] Aggiornare pagina NewsGPS2026 con tutte le novità GPS 2026 (algoritmo, scadenze febbraio, sanzioni)
+- [x] Creare pagina "Chi Siamo" con presentazione ente formazione utente
+- [x] Aggiungere sezione corsi offerti (C2, CLIL, DigComp, Master L2)
+- [x] Implementare banner pubblicitari per corsi ente nella homepage
+- [ ] Creare banner contestuali nei risultati GPS (es: "Ti mancano 3 punti? Consegui C2!") - RIMANDATO
+- [x] Migliorare UI generale: colori, spaziature, animazioni
+- [ ] Valutare implementazione e-commerce con Stripe per vendita corsi
+- [x] Testare tutte le modifiche
+- [x] Creare checkpoint v3.1
+
+## Bug Fix
+
+- [x] Aggiungere punteggio medio standard di 45 punti per province senza dati storici

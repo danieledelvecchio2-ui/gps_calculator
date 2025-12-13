@@ -30,7 +30,7 @@ export const appRouter = router({
       }))
       .mutation(async ({ input }) => {
         const { nome, email, telefono, messaggio } = input;
-        const destinatario = "danieledelvecchio2@gmail.com"; // Temporaneo: cambierà a direzione@infogps2026.it dopo verifica dominio su Resend
+        const destinatario = "direzione@infogps2026.it";
 
         const emailBody = `
           <h2>Nuova Richiesta Info GPS</h2>
@@ -52,7 +52,7 @@ export const appRouter = router({
           const resend = new Resend(process.env.RESEND_API_KEY);
           
           const { data, error } = await resend.emails.send({
-            from: 'onboarding@resend.dev',
+            from: 'direzione@infogps2026.it',
             to: destinatario,
             subject: `GPS Calculator - Richiesta Info da ${nome}`,
             html: emailBody,
