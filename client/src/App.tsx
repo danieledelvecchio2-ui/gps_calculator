@@ -10,7 +10,10 @@ import { InfoGPS } from "./pages/InfoGPS";
 import { Contact } from "./pages/Contact";
 import { NewsGPS2026 } from "./pages/NewsGPS2026";
 import { Navigation } from "./components/Navigation";
+import { Footer } from "./components/Footer";
 import TrovaClasseConcorso from "./pages/TrovaClasseConcorso";
+import { CookiePolicy } from "./pages/CookiePolicy";
+import { TermsConditions } from "./pages/TermsConditions";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -22,6 +25,8 @@ function Router() {
       <Route path={"/novita-gps-2026"} component={NewsGPS2026} />
       <Route path={"/contatti"} component={Contact} />
       <Route path={"/trova-classe"} component={TrovaClasseConcorso} />
+      <Route path={"/cookie-policy"} component={CookiePolicy} />
+      <Route path={"/termini-condizioni"} component={TermsConditions} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
@@ -43,8 +48,13 @@ function App() {
       >
         <TooltipProvider>
           <Toaster />
-          <Navigation />
-          <Router />
+          <div className="flex flex-col min-h-screen">
+            <Navigation />
+            <main className="flex-1">
+              <Router />
+            </main>
+            <Footer />
+          </div>
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>

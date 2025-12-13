@@ -193,4 +193,14 @@
 - [x] Implementare ricerca bidirezionale funzionante
 - [x] Aggiungere codici classe (A-01, A-26, ecc.) visibili
 - [x] Testare entrambe le modalità di ricerca
-- [ ] Creare checkpoint v3.7
+- [x] Creare checkpoint v3.7
+
+## Footer e pagine legali
+
+- [x] Creare pagina Cookie Policy
+- [x] Creare pagina Termini e Condizioni
+- [x] Creare componente Footer con link piccoli
+- [x] Rimuovere Privacy Policy dal menu principale
+- [x] Integrare Footer in tutte le pagine
+- [x] Testare tutti i link del footer
+- [ ] Creare checkpoint v3.8

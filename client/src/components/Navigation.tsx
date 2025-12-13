@@ -13,7 +13,6 @@ export function Navigation() {
     { path: "/novita-gps-2026", label: "Novità GPS 2026", icon: Sparkles },
     { path: "/trova-classe", label: "Trova Classe di Concorso", icon: GraduationCap },
     { path: "/contatti", label: "Contatti", icon: Mail },
-    { path: "/privacy", label: "Privacy Policy", icon: Shield },
   ];
 
   const toggleMenu = () => setIsOpen(!isOpen);
