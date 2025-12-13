@@ -311,3 +311,13 @@
 - [x] Rimuovere gradient blu-viola dalla homepage (sostituito con blu solido)
 - [x] Verificare che CoursesBanner sia ben visibile su sfondo scuro
 - [x] Testare leggibilità form e placeholder
+
+## Aggiunta campo voto diploma
+
+- [x] Aggiungere campo "Voto Diploma" nel form GPS
+- [x] Aggiornare algoritmo calcolo punteggio per includere diploma
+- [x] Implementare logica: se diploma presente, calcola punteggio diploma invece di laurea
+- [x] Aggiornare schema database per salvare voto diploma
+- [x] Aggiungere validazione: diploma O laurea (almeno uno dei due)
+- [x] Testare calcolo con voto diploma per ITP e Infanzia/Primaria
+- [x] Creare checkpoint v3.12

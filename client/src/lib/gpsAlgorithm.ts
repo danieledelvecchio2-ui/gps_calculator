@@ -24,8 +24,10 @@ export interface ProvinceAnalysis {
 }
 
 export function calculateScore(data: {
-  votoLaurea: number;
-  lode: boolean;
+  votoDiploma?: number; // Voto diploma (per ITP e Infanzia/Primaria)
+  lodeDiploma?: boolean; // Lode diploma
+  votoLaurea?: number;
+  lode?: boolean;
   numC2: number;
   numClil: number;
   numBiannale: number;
@@ -33,16 +35,30 @@ export function calculateScore(data: {
   numDigComp22: number; // Certificazioni in linea al DigComp 2.2 (0.5 punti ciascuna)
   numDigCompEdu: number; // Certificazioni in linea al DigComp Edu (1 punto ciascuna)
 }): { totalScore: number; breakdown: any } {
-  // 1. Calcolo Punteggio Laurea
-  // Base 12 + 0.5 per ogni punto oltre 76
-  let laureaScore = 12;
-  if (data.votoLaurea > 76) {
-    laureaScore += (data.votoLaurea - 76) * 0.5;
+  // 1. Calcolo Punteggio Titolo di Accesso (Diploma o Laurea)
+  let titoloAccessoScore = 12;
+  
+  // Se c'è il diploma, usa quello (ITP, Infanzia, Primaria)
+  if (data.votoDiploma && data.votoDiploma > 0) {
+    // Diploma: base 12 + 0.5 per ogni punto oltre 76
+    if (data.votoDiploma > 76) {
+      titoloAccessoScore += (data.votoDiploma - 76) * 0.5;
+    }
+    if (data.lodeDiploma) {
+      titoloAccessoScore += 4;
+    }
+  } 
+  // Altrimenti usa la laurea
+  else if (data.votoLaurea && data.votoLaurea > 0) {
+    // Laurea: base 12 + 0.5 per ogni punto oltre 76
+    if (data.votoLaurea > 76) {
+      titoloAccessoScore += (data.votoLaurea - 76) * 0.5;
+    }
+    if (data.lode) {
+      titoloAccessoScore += 4;
+    }
   }
-  if (data.lode) {
-    laureaScore += 4;
-  }
-  // Cap at 33 (110 e lode = 12 + 17 + 4 = 33)
+  // Cap at 33 (110/100 e lode = 12 + 17 + 4 = 33)
   
   // 2. Titoli Culturali
   const c2Score = data.numC2 * 6;
@@ -60,12 +76,12 @@ export function calculateScore(data: {
   // Cap massimo a 2 punti
   const informaticaScore = Math.min(informaticaScoreRaw, 2);
 
-  const totalScore = laureaScore + titoliCulturaliScore + informaticaScore;
+  const totalScore = titoloAccessoScore + titoliCulturaliScore + informaticaScore;
 
   return {
     totalScore,
     breakdown: {
-      laurea: laureaScore,
+      laurea: titoloAccessoScore, // Può essere diploma o laurea
       titoliCulturali: titoliCulturaliScore,
       informatica: informaticaScore
     }

@@ -39,8 +39,12 @@ export const gpsLeads = mysqlTable("gps_leads", {
   
   // Dati GPS
   classeConcorso: varchar("classe_concorso", { length: 50 }).notNull(),
-  votoLaurea: int("voto_laurea").notNull(),
-  lode: int("lode").default(0).notNull(), // 0 = no, 1 = sì
+  
+  // Titolo di accesso: Diploma O Laurea (almeno uno dei due)
+  votoDiploma: int("voto_diploma"), // NULL se ha laurea
+  lodeDiploma: int("lode_diploma").default(0), // 0 = no, 1 = sì
+  votoLaurea: int("voto_laurea"), // NULL se ha diploma
+  lode: int("lode").default(0), // 0 = no, 1 = sì
   
   // Titoli culturali
   numC2: int("num_c2").default(0).notNull(),

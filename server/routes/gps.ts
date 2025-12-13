@@ -15,6 +15,8 @@ router.post("/submit", async (req, res) => {
       email,
       cellulare,
       classeConcorso,
+      votoDiploma,
+      lodeDiploma,
       votoLaurea,
       lode,
       numC2,
@@ -27,9 +29,16 @@ router.post("/submit", async (req, res) => {
     } = req.body;
 
     // Validazione campi obbligatori
-    if (!nome || !email || !cellulare || !classeConcorso || votoLaurea === undefined) {
+    // Deve avere almeno diploma O laurea
+    if (!nome || !email || !cellulare || !classeConcorso) {
       return res.status(400).json({ 
         error: "Campi obbligatori mancanti" 
+      });
+    }
+    
+    if (!votoDiploma && !votoLaurea) {
+      return res.status(400).json({ 
+        error: "Devi inserire almeno il voto di diploma o di laurea" 
       });
     }
 
@@ -39,7 +48,9 @@ router.post("/submit", async (req, res) => {
       email,
       cellulare,
       classeConcorso,
-      votoLaurea: parseInt(votoLaurea),
+      votoDiploma: votoDiploma ? parseInt(votoDiploma) : null,
+      lodeDiploma: lodeDiploma ? 1 : 0,
+      votoLaurea: votoLaurea ? parseInt(votoLaurea) : null,
       lode: lode ? 1 : 0,
       numC2: parseInt(numC2) || 0,
       numClil: parseInt(numClil) || 0,

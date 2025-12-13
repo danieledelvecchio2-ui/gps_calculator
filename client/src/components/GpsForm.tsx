@@ -33,6 +33,9 @@ export function GpsForm({ onCalculate }: GpsFormProps) {
   const [cellulare, setCellulare] = useState<string>("");
   
   // Dati GPS
+  const [titoloAccesso, setTitoloAccesso] = useState<"laurea" | "diploma">("laurea"); // Tipo titolo
+  const [votoDiploma, setVotoDiploma] = useState<number>(0);
+  const [lodeDiploma, setLodeDiploma] = useState<boolean>(false);
   const [votoLaurea, setVotoLaurea] = useState<number>(100);
   const [lode, setLode] = useState<boolean>(false);
   const [numC2, setNumC2] = useState<number>(0);
@@ -64,8 +67,10 @@ export function GpsForm({ onCalculate }: GpsFormProps) {
       nome: nome.trim(),
       email: email.trim(),
       cellulare: cellulare.trim(),
-      votoLaurea,
-      lode,
+      votoDiploma: titoloAccesso === "diploma" ? votoDiploma : undefined,
+      lodeDiploma: titoloAccesso === "diploma" ? lodeDiploma : undefined,
+      votoLaurea: titoloAccesso === "laurea" ? votoLaurea : undefined,
+      lode: titoloAccesso === "laurea" ? lode : undefined,
       numC2,
       numClil,
       numBiannale,
@@ -204,37 +209,105 @@ export function GpsForm({ onCalculate }: GpsFormProps) {
               </div>
             </div>
 
-            {/* Sezione Laurea */}
+            {/* Sezione Titolo di Accesso */}
             <div className="space-y-4">
               <div className="flex items-center gap-2 text-white/90 font-semibold text-lg border-b border-white/10 pb-2">
                 <GraduationCap className="w-5 h-5 text-primary" />
-                Titolo di Accesso (Laurea)
+                Titolo di Accesso
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <Label htmlFor="votoLaurea" className="text-white/80">Voto di Laurea (su 110)</Label>
-                  <Input 
-                    id="votoLaurea" 
-                    type="number" 
-                    min="66" 
-                    max="110" 
-                    value={votoLaurea}
-                    onChange={(e) => setVotoLaurea(Number(e.target.value))}
-                    className="glass-input"
-                  />
-                </div>
-                
-                <div className="flex items-center space-x-3 pt-8">
-                  <Checkbox 
-                    id="lode" 
-                    checked={lode}
-                    onCheckedChange={(checked) => setLode(checked as boolean)}
-                    className="border-white/30 data-[state=checked]:bg-secondary data-[state=checked]:text-primary"
-                  />
-                  <Label htmlFor="lode" className="text-white/80 cursor-pointer">Con Lode (+4 punti)</Label>
+              {/* Selezione Tipo Titolo */}
+              <div className="space-y-3">
+                <Label className="text-white/80">Seleziona il tuo titolo di accesso</Label>
+                <div className="flex gap-4">
+                  <button
+                    type="button"
+                    onClick={() => setTitoloAccesso("laurea")}
+                    className={cn(
+                      "flex-1 py-3 px-4 rounded-lg border-2 transition-all",
+                      titoloAccesso === "laurea"
+                        ? "border-primary bg-primary/20 text-white"
+                        : "border-white/20 bg-white/5 text-white/70 hover:border-white/40"
+                    )}
+                  >
+                    <div className="text-center">
+                      <div className="font-semibold">Laurea</div>
+                      <div className="text-xs opacity-70">Magistrale/Specialistica</div>
+                    </div>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setTitoloAccesso("diploma")}
+                    className={cn(
+                      "flex-1 py-3 px-4 rounded-lg border-2 transition-all",
+                      titoloAccesso === "diploma"
+                        ? "border-primary bg-primary/20 text-white"
+                        : "border-white/20 bg-white/5 text-white/70 hover:border-white/40"
+                    )}
+                  >
+                    <div className="text-center">
+                      <div className="font-semibold">Diploma</div>
+                      <div className="text-xs opacity-70">ITP, Infanzia, Primaria</div>
+                    </div>
+                  </button>
                 </div>
               </div>
+
+              {/* Campi Laurea (condizionali) */}
+              {titoloAccesso === "laurea" && (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <Label htmlFor="votoLaurea" className="text-white/80">Voto di Laurea (su 110)</Label>
+                    <Input 
+                      id="votoLaurea" 
+                      type="number" 
+                      min="66" 
+                      max="110" 
+                      value={votoLaurea}
+                      onChange={(e) => setVotoLaurea(Number(e.target.value))}
+                      className="glass-input"
+                    />
+                  </div>
+                  
+                  <div className="flex items-center space-x-3 pt-8">
+                    <Checkbox 
+                      id="lode" 
+                      checked={lode}
+                      onCheckedChange={(checked) => setLode(checked as boolean)}
+                      className="border-white/30 data-[state=checked]:bg-secondary data-[state=checked]:text-primary"
+                    />
+                    <Label htmlFor="lode" className="text-white/80 cursor-pointer">Con Lode (+4 punti)</Label>
+                  </div>
+                </div>
+              )}
+
+              {/* Campi Diploma (condizionali) */}
+              {titoloAccesso === "diploma" && (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <Label htmlFor="votoDiploma" className="text-white/80">Voto di Diploma (su 100)</Label>
+                    <Input 
+                      id="votoDiploma" 
+                      type="number" 
+                      min="60" 
+                      max="100" 
+                      value={votoDiploma}
+                      onChange={(e) => setVotoDiploma(Number(e.target.value))}
+                      className="glass-input"
+                    />
+                  </div>
+                  
+                  <div className="flex items-center space-x-3 pt-8">
+                    <Checkbox 
+                      id="lodeDiploma" 
+                      checked={lodeDiploma}
+                      onCheckedChange={(checked) => setLodeDiploma(checked as boolean)}
+                      className="border-white/30 data-[state=checked]:bg-secondary data-[state=checked]:text-primary"
+                    />
+                    <Label htmlFor="lodeDiploma" className="text-white/80 cursor-pointer">Con Lode (+4 punti)</Label>
+                  </div>
+                </div>
+              )}
             </div>
 
             {/* Sezione Titoli Culturali */}
