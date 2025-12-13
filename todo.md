@@ -222,4 +222,10 @@
 - [x] Aggiungere "Calcola GPS" al menu principale
 - [x] Aggiornare routing in App.tsx
 - [x] Testare tutte le pagine
-- [ ] Creare checkpoint v3.9
+- [x] Creare checkpoint v3.9
+
+## Rimozione sezione Contatti da pagine legali
+
+- [x] Rimuovere sezione Contatti da Termini e Condizioni
+- [x] Rimuovere sezione Contatti da Cookie Policy
+- [ ] Creare checkpoint v3.10

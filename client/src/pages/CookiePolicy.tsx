@@ -100,21 +100,7 @@ export function CookiePolicy() {
               </p>
             </section>
 
-            <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
-                Contatti
-              </h2>
-              <p>
-                Per qualsiasi domanda relativa alla nostra Cookie Policy, 
-                puoi contattarci all'indirizzo email:{" "}
-                <a 
-                  href="mailto:direzione@infogps2026.it" 
-                  className="text-blue-600 hover:text-blue-800 underline"
-                >
-                  direzione@infogps2026.it
-                </a>
-              </p>
-            </section>
+
           </div>
         </div>
       </div>

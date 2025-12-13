@@ -133,35 +133,6 @@ export function TermsConditions() {
                 Per qualsiasi controversia sarà competente il foro di residenza del consumatore.
               </p>
             </section>
-
-            <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
-                10. Contatti
-              </h2>
-              <p>
-                Per domande o chiarimenti sui Termini e Condizioni, contattaci:
-              </p>
-              <ul className="list-none space-y-2 mt-4">
-                <li>
-                  <strong>Email:</strong>{" "}
-                  <a 
-                    href="mailto:direzione@infogps2026.it" 
-                    className="text-blue-600 hover:text-blue-800 underline"
-                  >
-                    direzione@infogps2026.it
-                  </a>
-                </li>
-                <li>
-                  <strong>Sito web:</strong>{" "}
-                  <a 
-                    href="/" 
-                    className="text-blue-600 hover:text-blue-800 underline"
-                  >
-                    GPS Calculator
-                  </a>
-                </li>
-              </ul>
-            </section>
           </div>
         </div>
       </div>
