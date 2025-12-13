@@ -1,118 +1,111 @@
 import { Link } from "wouter";
-import { motion } from "framer-motion";
-import { Calculator, GraduationCap, Info, Sparkles, Mail, ArrowRight } from "lucide-react";
+import { Calculator, GraduationCap, Info, Sparkles, Mail, BookOpen, Award, Search } from "lucide-react";
+import { CoursesBanner } from "@/components/CoursesBanner";
 
-export default function NewHome() {
+export default function Home() {
   const sections = [
     {
       icon: Calculator,
       title: "Calcola Punteggio GPS",
       description: "Scopri il tuo punteggio GPS e analizza in quali province hai maggiori possibilità di ottenere una supplenza, basato sui dati storici ufficiali.",
       link: "/calcola-gps",
-      color: "from-cyan-500 to-blue-500",
-      bgColor: "bg-cyan-50"
+      color: "text-blue-600",
+      bgColor: "bg-blue-50",
+      borderColor: "border-blue-200"
     },
     {
-      icon: GraduationCap,
+      icon: Search,
       title: "Trova Classe di Concorso",
       description: "Verifica per quali classi di concorso puoi insegnare con la tua laurea, o scopri quali lauree servono per una specifica classe.",
       link: "/trova-classe",
-      color: "from-purple-500 to-pink-500",
-      bgColor: "bg-purple-50"
+      color: "text-purple-600",
+      bgColor: "bg-purple-50",
+      borderColor: "border-purple-200"
     },
     {
       icon: Info,
       title: "Info GPS 2026",
       description: "Tutte le informazioni essenziali sulle Graduatorie Provinciali per le Supplenze: requisiti, punteggi, scadenze e procedure.",
       link: "/info-gps",
-      color: "from-blue-500 to-indigo-500",
-      bgColor: "bg-blue-50"
+      color: "text-indigo-600",
+      bgColor: "bg-indigo-50",
+      borderColor: "border-indigo-200"
     },
     {
       icon: Sparkles,
       title: "Novità GPS 2026",
       description: "Resta aggiornato su tutte le novità, i cambiamenti normativi e le ultime notizie riguardanti le graduatorie GPS.",
-      link: "/novita-gps-2026",
-      color: "from-orange-500 to-red-500",
-      bgColor: "bg-orange-50"
+      link: "/novita-gps",
+      color: "text-orange-600",
+      bgColor: "bg-orange-50",
+      borderColor: "border-orange-200"
     },
     {
       icon: Mail,
       title: "Contatti",
       description: "Hai domande o dubbi? Contattaci per ricevere supporto personalizzato sul tuo percorso per diventare docente.",
       link: "/contatti",
-      color: "from-green-500 to-teal-500",
-      bgColor: "bg-green-50"
+      color: "text-green-600",
+      bgColor: "bg-green-50",
+      borderColor: "border-green-200"
     }
   ];
 
   return (
-    <div className="min-h-screen flex flex-col relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="fixed inset-0 z-0 pointer-events-none">
-        <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-primary/20 blur-[120px]" />
-        <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] rounded-full bg-secondary/20 blur-[120px]" />
+    <div className="min-h-screen bg-gray-50">
+      {/* Hero Section */}
+      <div className="bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 text-white">
+        <div className="container py-20 md:py-28">
+          <div className="text-center max-w-4xl mx-auto">
+            <div className="flex justify-center mb-6">
+              <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl">
+                <GraduationCap className="w-16 h-16 md:w-20 md:h-20" />
+              </div>
+            </div>
+            
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              MONDO SCUOLA
+            </h1>
+            
+            <p className="text-xl md:text-2xl text-white/90 mb-8">
+              Il portale completo per chi vuole insegnare
+            </p>
+            
+            <p className="text-lg text-white/80 max-w-3xl mx-auto">
+              Tutti gli strumenti e le informazioni necessarie per il tuo percorso verso l'insegnamento
+            </p>
+          </div>
+        </div>
       </div>
 
-      <main className="container relative z-10 py-12 md:py-20 md:pt-28 max-w-6xl mx-auto">
-        
-        {/* Hero Section */}
-        <motion.div 
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16 space-y-6"
-        >
-          <div className="inline-flex items-center justify-center p-3 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 mb-4 shadow-lg">
-            <img src="/images/logo-icon.png" alt="Mondo Scuola Logo" className="w-12 h-12 object-contain" />
-          </div>
-          
-          <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tight drop-shadow-sm">
-            MONDO <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary">SCUOLA</span>
-          </h1>
-          
-          <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed font-medium">
-            Il portale completo per chi vuole insegnare
-          </p>
-        </motion.div>
-
+      <main className="container py-12 md:py-16">
         {/* Mission Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 md:p-12 mb-16 shadow-xl"
-        >
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">
+        <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-center">
             La Nostra Mission
           </h2>
-          <div className="space-y-4 text-white/80 text-lg leading-relaxed">
-            <p>
-              <strong className="text-white">MONDO SCUOLA</strong> nasce dalla volontà di supportare tutti gli aspiranti docenti 
-              nel loro percorso verso l'insegnamento. Sappiamo quanto possa essere complesso orientarsi tra graduatorie, 
-              classi di concorso, punteggi e normative in continua evoluzione.
+          
+          <div className="prose prose-lg max-w-none text-gray-700">
+            <p className="text-lg leading-relaxed mb-4">
+              <strong>MONDO SCUOLA</strong> nasce dalla volontà di supportare tutti gli aspiranti docenti nel loro percorso verso l'insegnamento. 
+              Sappiamo quanto possa essere complesso orientarsi tra graduatorie, classi di concorso, punteggi e normative in continua evoluzione.
             </p>
-            <p>
-              Per questo abbiamo creato un <strong className="text-white">portale unico</strong> che raccoglie tutti gli strumenti 
-              e le informazioni necessarie in un unico luogo, con dati aggiornati e strumenti pratici per aiutarti 
-              a prendere decisioni informate sul tuo futuro professionale.
+            
+            <p className="text-lg leading-relaxed mb-4">
+              Per questo abbiamo creato un <strong>portale unico</strong> che raccoglie tutti gli strumenti e le informazioni necessarie in un unico luogo, 
+              con dati aggiornati e strumenti pratici per aiutarti a prendere decisioni informate sul tuo futuro professionale.
             </p>
-            <p>
-              Che tu stia cercando di calcolare il tuo punteggio GPS, scoprire per quali classi puoi insegnare, 
-              o semplicemente rimanere aggiornato sulle ultime novità, <strong className="text-white">MONDO SCUOLA</strong> è 
-              il tuo punto di riferimento affidabile.
+            
+            <p className="text-lg leading-relaxed">
+              Che tu stia cercando di calcolare il tuo punteggio GPS, scoprire per quali classi puoi insegnare, o semplicemente rimanere aggiornato sulle ultime novità, 
+              <strong> MONDO SCUOLA</strong> è il tuo punto di riferimento affidabile.
             </p>
           </div>
-        </motion.div>
+        </div>
 
         {/* Sections Grid */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mb-16"
-        >
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center">
+        <div className="mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-10 text-center">
             Scopri Tutte le Nostre Sezioni
           </h2>
           
@@ -121,41 +114,36 @@ export default function NewHome() {
               const Icon = section.icon;
               return (
                 <Link key={index} href={section.link}>
-                  <motion.div
-                    whileHover={{ y: -8, scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="bg-white rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer h-full flex flex-col"
-                  >
-                    <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${section.color} flex items-center justify-center mb-4 shadow-lg`}>
-                      <Icon className="w-7 h-7 text-white" />
+                  <div className={`bg-white border-2 ${section.borderColor} rounded-xl p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer h-full flex flex-col`}>
+                    <div className={`${section.bgColor} p-4 rounded-xl w-fit mb-4`}>
+                      <Icon className={`w-8 h-8 ${section.color}`} />
                     </div>
                     
                     <h3 className="text-xl font-bold text-gray-900 mb-3">
                       {section.title}
                     </h3>
                     
-                    <p className="text-gray-600 leading-relaxed mb-4 flex-1">
+                    <p className="text-gray-600 leading-relaxed flex-grow">
                       {section.description}
                     </p>
                     
-                    <div className={`flex items-center text-sm font-semibold bg-gradient-to-r ${section.color} bg-clip-text text-transparent`}>
-                      Scopri di più
-                      <ArrowRight className="w-4 h-4 ml-2" style={{ color: 'inherit' }} />
+                    <div className={`mt-4 pt-4 border-t ${section.borderColor}`}>
+                      <span className={`text-sm font-semibold ${section.color}`}>
+                        Scopri di più →
+                      </span>
                     </div>
-                  </motion.div>
+                  </div>
                 </Link>
               );
             })}
           </div>
-        </motion.div>
+        </div>
+
+        {/* Courses Banner */}
+        <CoursesBanner />
 
         {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="text-center bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-3xl p-12 shadow-2xl"
-        >
+        <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-10 md:p-16 text-center shadow-xl">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Inizia il Tuo Percorso Oggi
           </h2>
@@ -164,16 +152,11 @@ export default function NewHome() {
             come punto di riferimento per il loro futuro nell'insegnamento.
           </p>
           <Link href="/calcola-gps">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 bg-white text-purple-600 font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-lg"
-            >
+            <button className="px-8 py-4 bg-white text-blue-600 font-bold rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 text-lg">
               Calcola il Tuo Punteggio GPS
-            </motion.button>
+            </button>
           </Link>
-        </motion.div>
-
+        </div>
       </main>
     </div>
   );

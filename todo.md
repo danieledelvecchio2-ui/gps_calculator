@@ -228,4 +228,31 @@
 
 - [x] Rimuovere sezione Contatti da Termini e Condizioni
 - [x] Rimuovere sezione Contatti da Cookie Policy
-- [ ] Creare checkpoint v3.10
+- [x] Creare checkpoint v3.10
+
+## Ripristino sezione pubblicitaria corsi
+
+- [ ] Ripristinare CoursesBanner nella pagina CalcolaGPS
+- [ ] Verificare che tutte le card siano visibili
+- [ ] Creare checkpoint v3.11
+
+## Ridisegno CoursesBanner
+
+- [ ] Creare nuovo design accattivante per CoursesBanner
+- [ ] Aggiungere gradient colorato e ombre
+- [ ] Migliorare hover effects sulle card
+- [ ] Testare su homepage e pagina Calcola GPS
+- [ ] Creare checkpoint v3.11
+
+## Ridisegno completo sito - Stile Bootstrap professionale
+
+- [x] Ridisegnare homepage con sfondo grigio chiaro e icone grandi
+- [x] Aggiornare Navigation con nuovo stile (sfondo bianco)
+- [x] Aggiornare Footer con nuovo stile (sfondo grigio chiaro)
+- [x] Ridisegnare pagina Calcola GPS (sfondo blu chiaro)
+- [x] Ridisegnare pagina Info GPS (sfondo verde chiaro)
+- [x] Ridisegnare pagina Trova Classe di Concorso (sfondo cyan chiaro)
+- [x] Ridisegnare pagina Novità GPS (sfondo arancione chiaro)
+- [x] Ridisegnare pagina Contatti (sfondo indaco chiaro)
+- [x] Testare tutte le pagine
+- [ ] Creare checkpoint v4.0

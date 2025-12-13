@@ -3,8 +3,7 @@ import { GpsForm } from "@/components/GpsForm";
 import { ResultsView } from "@/components/ResultsView";
 import { CoursesBanner } from "@/components/CoursesBanner";
 import { calculateScore, analyzeProvinces, CalculationResult } from "@/lib/gpsAlgorithm";
-import { motion, AnimatePresence } from "framer-motion";
-import { Link } from "wouter";
+import { Calculator, ArrowLeft } from "lucide-react";
 
 export default function CalcolaGPS() {
   const [result, setResult] = useState<CalculationResult | null>(null);
@@ -43,7 +42,6 @@ export default function CalcolaGPS() {
       });
     } catch (error) {
       console.error('Errore durante il salvataggio dei dati:', error);
-      // Non mostriamo l'errore all'utente, il calcolo funziona comunque
     }
   };
 
@@ -52,87 +50,59 @@ export default function CalcolaGPS() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="fixed inset-0 z-0 pointer-events-none">
-        <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-primary/20 blur-[120px]" />
-        <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] rounded-full bg-secondary/20 blur-[120px]" />
+    <div className="min-h-screen bg-blue-50">
+      {/* Header */}
+      <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-12 md:py-16">
+        <div className="container">
+          <div className="text-center max-w-3xl mx-auto">
+            <div className="flex justify-center mb-6">
+              <div className="bg-white/10 backdrop-blur-sm p-5 rounded-2xl">
+                <Calculator className="w-12 h-12 md:w-16 md:h-16" />
+              </div>
+            </div>
+            
+            <h1 className="text-3xl md:text-5xl font-bold mb-4">
+              Calcola Punteggio GPS
+            </h1>
+            
+            <p className="text-lg md:text-xl text-white/90">
+              Scopri il tuo punteggio GPS e analizza in quali province hai maggiori possibilità di ottenere una supplenza
+            </p>
+          </div>
+        </div>
       </div>
 
-      <main className="container relative z-10 py-12 md:py-20 md:pt-28 max-w-4xl mx-auto">
-        
-        {/* Header */}
-        <motion.div 
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-12 space-y-4"
-        >
-          <div className="inline-flex items-center justify-center p-3 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 mb-4 shadow-lg">
-            <img src="/images/logo-icon.png" alt="GPS Logo" className="w-12 h-12 object-contain" />
-          </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-white tracking-tight drop-shadow-sm">
-            MONDO <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary">SCUOLA</span>
-          </h1>
-          <p className="text-lg md:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed">
-            Calcola il tuo punteggio GPS e scopri in quali province hai maggiori possibilità di ottenere una supplenza, basato sui dati storici ufficiali.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 items-center justify-center mt-6">
-            <Link href="/info-gps">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-semibold rounded-xl shadow-lg transition-all duration-300 flex items-center gap-2"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
-                </svg>
-                INFO CALCOLO PUNTEGGIO IN GPS
-              </motion.button>
-            </Link>
-            
-            <Link href="/contatti">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold rounded-xl shadow-lg transition-all duration-300 flex items-center gap-2"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                </svg>
-                CONTATTACI
-              </motion.button>
-            </Link>
-          </div>
-        </motion.div>
-
-        {/* Content Switcher */}
-        <AnimatePresence mode="wait">
-          {!result ? (
-            <motion.div
-              key="form"
-              exit={{ opacity: 0, x: -20 }}
-              transition={{ duration: 0.3 }}
-            >
+      <main className="container py-12">
+        {!result ? (
+          <div className="max-w-4xl mx-auto">
+            {/* Form Section */}
+            <div className="bg-white rounded-2xl shadow-lg p-8 md:p-10 mb-12">
               <GpsForm onCalculate={handleCalculate} />
-              
-              {/* Courses Banner */}
-              <CoursesBanner />
-            </motion.div>
-          ) : (
-            <motion.div
-              key="results"
-              exit={{ opacity: 0, x: 20 }}
-              transition={{ duration: 0.3 }}
+            </div>
+
+            {/* Courses Banner */}
+            <CoursesBanner />
+          </div>
+        ) : (
+          <div className="max-w-6xl mx-auto">
+            {/* Back Button */}
+            <button
+              onClick={handleBack}
+              className="flex items-center gap-2 text-blue-600 hover:text-blue-700 font-semibold mb-6 transition-colors"
             >
+              <ArrowLeft className="w-5 h-5" />
+              <span>Calcola di nuovo</span>
+            </button>
+
+            {/* Results */}
+            <div className="bg-white rounded-2xl shadow-lg p-8 md:p-10 mb-12">
               <ResultsView result={result} onBack={handleBack} />
-            </motion.div>
-          )}
-        </AnimatePresence>
+            </div>
 
-
-
+            {/* Courses Banner */}
+            <CoursesBanner />
+          </div>
+        )}
       </main>
     </div>
   );

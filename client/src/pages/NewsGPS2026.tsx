@@ -1,448 +1,203 @@
-import { Link } from "wouter";
-import { ArrowLeft, AlertCircle, CheckCircle, XCircle, Info, Calendar, Users, FileText, Clock } from "lucide-react";
-import { motion } from "framer-motion";
+import { Sparkles, AlertCircle, CheckCircle, Calendar, Users, FileText, Clock } from "lucide-react";
 
 export function NewsGPS2026() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
+    <div className="min-h-screen bg-orange-50">
       {/* Header */}
-      <div className="container mx-auto px-4 py-8">
-        <Link href="/">
-          <motion.button
-            whileHover={{ x: -4 }}
-            className="flex items-center gap-2 text-white/70 hover:text-white transition-colors mb-8"
-          >
-            <ArrowLeft className="w-5 h-5" />
-            Torna alla Home
-          </motion.button>
-        </Link>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="max-w-4xl mx-auto"
-        >
-          {/* Title */}
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Novità <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">GPS 2026/28</span>
+      <div className="bg-gradient-to-r from-orange-600 to-red-600 text-white py-12 md:py-16">
+        <div className="container">
+          <div className="text-center max-w-3xl mx-auto">
+            <div className="flex justify-center mb-6">
+              <div className="bg-white/10 backdrop-blur-sm p-5 rounded-2xl">
+                <Sparkles className="w-12 h-12 md:w-16 md:h-16" />
+              </div>
+            </div>
+            
+            <h1 className="text-3xl md:text-5xl font-bold mb-4">
+              Novità GPS 2026
             </h1>
-            <p className="text-xl text-white/70">
-              Tutte le novità dell'aggiornamento Graduatorie Provinciali per le Supplenze 2026-2028
+            
+            <p className="text-lg md:text-xl text-white/90">
+              Tutte le novità e i cambiamenti normativi per l'aggiornamento GPS 2026-2028
             </p>
           </div>
+        </div>
+      </div>
 
-          {/* Info Box - Tempistiche */}
-          <div className="bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 rounded-2xl p-6 mb-8">
-            <div className="flex items-start gap-4">
-              <Calendar className="w-6 h-6 text-blue-400 flex-shrink-0 mt-1" />
-              <div>
-                <h3 className="text-xl font-bold mb-2 text-blue-200">📅 Tempistiche Aggiornamento GPS 2026/28</h3>
-                <p className="text-white/80 leading-relaxed mb-3">
-                  L'aggiornamento delle Graduatorie Provinciali per le Supplenze 2026/28 è previsto per il <strong>primo trimestre 2026</strong>. 
-                  I titoli valutabili saranno quelli conseguiti entro la data di scadenza della domanda.
-                </p>
-                <div className="bg-blue-500/10 border border-blue-500/20 rounded-xl p-4">
-                  <p className="text-sm text-blue-200">
-                    <strong>Suggerimento:</strong> Tieni monitorato il sito del MIUR per le date ufficiali di apertura e chiusura delle domande.
-                  </p>
-                </div>
+      <main className="container py-12">
+        <div className="max-w-5xl mx-auto space-y-8">
+          {/* Tempistiche */}
+          <div className="bg-white rounded-2xl shadow-lg p-8 md:p-10">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="bg-blue-100 p-3 rounded-xl">
+                <Calendar className="w-8 h-8 text-blue-600" />
               </div>
-            </div>
-          </div>
-
-          {/* Main Changes Grid */}
-          <div className="grid md:grid-cols-2 gap-6 mb-8">
-            {/* Nuovo Algoritmo */}
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl flex-shrink-0">
-                  <CheckCircle className="w-6 h-6 text-green-400" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold mb-3">Nuovo Algoritmo "Ripescaggio"</h3>
-                  <p className="text-white/70 leading-relaxed text-sm">
-                    L'algoritmo per l'assegnazione delle supplenze cambierà: chi non ottiene incarico per mancanza 
-                    di sedi disponibili verrà <strong>ripreso in considerazione</strong> finché ci sono posti residui. 
-                    Questo riduce la casualità che penalizzava docenti con punteggio alto.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Sanzioni */}
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-xl flex-shrink-0">
-                  <AlertCircle className="w-6 h-6 text-red-400" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold mb-3">Sanzioni Più Severe</h3>
-                  <p className="text-white/70 leading-relaxed text-sm">
-                    Chi <strong>non prende servizio</strong> su una supplenza da GAE/GPS sarà escluso da tutte 
-                    le fasi successive per l'intero biennio. In caso di <strong>abbandono</strong>, 
-                    il blocco riguarderà qualsiasi tipologia di supplenza per 2 anni.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* TFA e INDIRE */}
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-xl flex-shrink-0">
-                  <Users className="w-6 h-6 text-blue-400" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold mb-3">TFA e INDIRE Equiparati</h3>
-                  <p className="text-white/70 leading-relaxed text-sm">
-                    I percorsi <strong>TFA ordinario</strong> e <strong>TFA INDIRE</strong> avranno lo stesso punteggio. 
-                    Possibilità di inserimento in prima fascia <strong>con riserva</strong> (scioglimento tra giugno e luglio).
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Spezzoni */}
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl flex-shrink-0">
-                  <FileText className="w-6 h-6 text-purple-400" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold mb-3">Aggregazione Spezzoni</h3>
-                  <p className="text-white/70 leading-relaxed text-sm">
-                    Gli Uffici Scolastici Territoriali <strong>aggregheranno gli spezzoni orari</strong> (anche ≤6 ore) 
-                    per costituire posti-orario più consistenti e aumentare le opportunità di supplenza.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Certificazioni Informatiche - Sezione Importante */}
-          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-6 mb-8">
-            <div className="flex items-start gap-4 mb-4">
-              <AlertCircle className="w-6 h-6 text-cyan-400 flex-shrink-0 mt-1" />
-              <h2 className="text-2xl font-bold">Certificazioni Informatiche: Nuove Regole</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
+                📅 Tempistiche Aggiornamento GPS 2026/28
+              </h2>
             </div>
             
-            <div className="space-y-4">
-              <div className="bg-white/5 rounded-xl p-4">
-                <h4 className="font-bold text-cyan-200 mb-2">✅ Certificazioni Valide</h4>
-                <p className="text-white/70 text-sm mb-3">
-                  Saranno valutate <strong>solo le certificazioni rilasciate da enti accreditati Accredia</strong> 
-                  che seguono i framework europei:
+            <div className="prose prose-lg max-w-none text-gray-700">
+              <p className="leading-relaxed mb-4">
+                Il prossimo aggiornamento delle <strong>Graduatorie Provinciali per le Supplenze (GPS)</strong> è previsto per la 
+                <strong> primavera 2026</strong>. Le graduatorie avranno validità biennale e copriranno gli anni scolastici 
+                <strong> 2026/27 e 2027/28</strong>.
+              </p>
+              
+              <div className="bg-blue-50 border-l-4 border-blue-600 p-4 rounded-r-xl mt-4">
+                <p className="text-blue-900 font-semibold mb-2">
+                  ⏰ Date Previste (da confermare dal MIUR):
                 </p>
-                <ul className="space-y-2 text-sm">
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5" />
-                    <span><strong>DigComp 2.2:</strong> 0.5 punti ciascuna (max 4 certificazioni = 2 punti)</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5" />
-                    <span><strong>DigCompEdu:</strong> 1 punto ciascuna (max 2 certificazioni = 2 punti)</span>
-                  </li>
+                <ul className="list-disc list-inside space-y-1 text-blue-800">
+                  <li>Apertura domande: <strong>Aprile-Maggio 2026</strong></li>
+                  <li>Chiusura domande: <strong>Maggio-Giugno 2026</strong></li>
+                  <li>Pubblicazione graduatorie: <strong>Luglio-Agosto 2026</strong></li>
                 </ul>
               </div>
+            </div>
+          </div>
 
-              <div className="bg-red-500/10 border border-red-500/20 rounded-xl p-4">
-                <h4 className="font-bold text-red-200 mb-2">❌ Certificazioni NON Più Valide</h4>
-                <p className="text-white/70 text-sm mb-3">
-                  Anche se rilasciate da enti accreditati, queste certificazioni <strong>non valgono più</strong>:
-                </p>
-                <ul className="space-y-2 text-sm text-white/70">
-                  <li className="flex items-center gap-2">
-                    <XCircle className="w-4 h-4 text-red-400 flex-shrink-0" />
-                    <span>Certificazioni LIM (Lavagna Interattiva Multimediale)</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <XCircle className="w-4 h-4 text-red-400 flex-shrink-0" />
-                    <span>Certificazioni Tablet</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <XCircle className="w-4 h-4 text-red-400 flex-shrink-0" />
-                    <span>Certificazioni Coding</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <XCircle className="w-4 h-4 text-red-400 flex-shrink-0" />
-                    <span>Altre certificazioni non allineate ai framework DigComp</span>
-                  </li>
-                </ul>
+          {/* Novità Principali */}
+          <div className="bg-white rounded-2xl shadow-lg p-8 md:p-10">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="bg-green-100 p-3 rounded-xl">
+                <CheckCircle className="w-8 h-8 text-green-600" />
               </div>
-
-              <div className="bg-green-500/10 border border-green-500/20 rounded-xl p-4">
-                <h4 className="font-bold text-green-200 mb-2">💾 Certificazioni Già Dichiarate</h4>
-                <p className="text-white/70 text-sm">
-                  <strong>Buone notizie:</strong> Le certificazioni già dichiarate e valutate nei precedenti 
-                  aggiornamenti GPS <strong>mantengono la loro validità</strong>. Questa regola vale solo per 
-                  nuove certificazioni da conseguire.
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
+                ✅ Novità Principali GPS 2026
+              </h2>
+            </div>
+            
+            <div className="space-y-6">
+              {/* Novità 1 */}
+              <div className="border-l-4 border-green-500 pl-6 py-2">
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  1. Nuove Classi di Concorso
+                </h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Sono state introdotte <strong>nuove classi di concorso</strong> per rispondere alle esigenze del sistema scolastico. 
+                  Verifica se la tua laurea ti permette di accedere a queste nuove opportunità.
                 </p>
               </div>
-            </div>
-          </div>
 
-          {/* Altre Novità */}
-          <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 mb-8">
-            <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-              <Info className="w-6 h-6 text-purple-400" />
-              Altre Novità Importanti
-            </h2>
-            
-            <div className="space-y-4">
-              <div className="flex items-start gap-3">
-                <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
-                <div>
-                  <p className="font-semibold mb-1">Equiparazione Punteggi ITP</p>
-                  <p className="text-white/70 text-sm">
-                    I punteggi di abilitazione per gli Insegnanti Tecnico-Pratici vengono equiparati.
-                  </p>
-                </div>
+              {/* Novità 2 */}
+              <div className="border-l-4 border-blue-500 pl-6 py-2">
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  2. Requisiti CFU Aggiornati
+                </h3>
+                <p className="text-gray-700 leading-relaxed">
+                  I <strong>requisiti di CFU</strong> per alcune classi di concorso sono stati modificati. È fondamentale verificare 
+                  di possedere tutti i CFU richiesti nei settori scientifico-disciplinari (SSD) previsti.
+                </p>
               </div>
 
-              <div className="flex items-start gap-3">
-                <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
-                <div>
-                  <p className="font-semibold mb-1">Punteggi Aumentati</p>
-                  <p className="text-white/70 text-sm">
-                    Incremento punteggi per: dottorato di ricerca, assegni di ricerca, 
-                    abilitazione scientifica nazionale, graduatorie AFAM.
-                  </p>
-                </div>
+              {/* Novità 3 */}
+              <div className="border-l-4 border-purple-500 pl-6 py-2">
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  3. Valutazione Titoli Culturali
+                </h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Sono stati <strong>rivalutati i punteggi</strong> per alcune certificazioni linguistiche e informatiche. 
+                  Le certificazioni di livello C2 e i percorsi CLIL continuano a garantire il massimo punteggio.
+                </p>
               </div>
 
-              <div className="flex items-start gap-3">
-                <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
-                <div>
-                  <p className="font-semibold mb-1">Servizio con Riserva</p>
-                  <p className="text-white/70 text-sm">
-                    Possibilità di dichiarare con riserva l'anno di servizio in corso (2025/26), 
-                    utile ai fini del punteggio.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-3">
-                <AlertCircle className="w-5 h-5 text-orange-400 flex-shrink-0 mt-0.5" />
-                <div>
-                  <p className="font-semibold mb-1">Divieto Supplenze Brevi</p>
-                  <p className="text-white/70 text-sm">
-                    Introdotto divieto generalizzato di nomina supplenti per assenze temporanee fino a 10 giorni.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-3">
-                <XCircle className="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" />
-                <div>
-                  <p className="font-semibold mb-1">Esclusione per Mancata Domanda</p>
-                  <p className="text-white/70 text-sm">
-                    Chi non presenta domanda GPS o 150 preferenze sarà <strong>escluso per l'intero biennio</strong>.
-                  </p>
-                </div>
+              {/* Novità 4 */}
+              <div className="border-l-4 border-orange-500 pl-6 py-2">
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  4. Procedura Telematica Semplificata
+                </h3>
+                <p className="text-gray-700 leading-relaxed">
+                  La <strong>piattaforma MIUR</strong> per la presentazione delle domande è stata rinnovata per rendere la procedura 
+                  più intuitiva e veloce. Sarà possibile salvare bozze e modificare la domanda fino alla scadenza.
+                </p>
               </div>
             </div>
           </div>
 
-          {/* Timeline */}
-          <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-2xl p-6 mb-8">
-            <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-              <Clock className="w-6 h-6 text-purple-400" />
-              Timeline Aggiornamento GPS 2026
-            </h2>
-            
-            <div className="space-y-4">
-              <div className="flex gap-4">
-                <div className="flex flex-col items-center">
-                  <div className="w-10 h-10 rounded-full bg-purple-500/20 border-2 border-purple-400 flex items-center justify-center font-bold">
-                    1
-                  </div>
-                  <div className="w-0.5 h-full bg-purple-500/20 mt-2"></div>
-                </div>
-                <div className="pb-8">
-                  <p className="font-bold text-purple-200">Primo Trimestre 2026</p>
-                  <p className="text-white/70 text-sm">Apertura domande aggiornamento GPS 2026/28 (date da confermare)</p>
-                </div>
+          {/* Cosa Fare Ora */}
+          <div className="bg-white rounded-2xl shadow-lg p-8 md:p-10">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="bg-orange-100 p-3 rounded-xl">
+                <Clock className="w-8 h-8 text-orange-600" />
               </div>
-
-              <div className="flex gap-4">
-                <div className="flex flex-col items-center">
-                  <div className="w-10 h-10 rounded-full bg-purple-500/20 border-2 border-purple-400 flex items-center justify-center font-bold">
-                    2
-                  </div>
-                  <div className="w-0.5 h-full bg-purple-500/20 mt-2"></div>
-                </div>
-                <div className="pb-8">
-                  <p className="font-bold text-purple-200">Giugno-Luglio 2026</p>
-                  <p className="text-white/70 text-sm">Scioglimento riserve (TFA, INDIRE, servizio)</p>
-                </div>
-              </div>
-
-              <div className="flex gap-4">
-                <div className="flex flex-col items-center">
-                  <div className="w-10 h-10 rounded-full bg-green-500/20 border-2 border-green-400 flex items-center justify-center font-bold">
-                    3
-                  </div>
-                </div>
-                <div>
-                  <p className="font-bold text-green-200">Agosto 2026</p>
-                  <p className="text-white/70 text-sm">Pubblicazione graduatorie definitive e inizio assegnazioni</p>
-                </div>
-              </div>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
+                🎯 Cosa Fare Ora per Prepararsi
+              </h2>
             </div>
-          </div>
-
-          {/* Come Aumentare il Punteggio GPS */}
-          <div className="bg-gradient-to-r from-indigo-500/10 to-purple-500/10 border border-indigo-500/20 rounded-2xl p-6 mb-8">
-            <h2 className="text-3xl font-bold mb-2 text-center">🎯 Come Aumentare il Tuo Punteggio GPS</h2>
-            <p className="text-white/70 text-center mb-8">Scopri quali titoli ti permettono di scalare la graduatoria</p>
             
             <div className="grid md:grid-cols-2 gap-6">
-              {/* Banner C2 + CLIL - Verde */}
-              <div className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 border-2 border-green-500/40 rounded-xl p-6 hover:border-green-400/60 transition-all">
-                <div className="flex items-start justify-between mb-4">
-                  <div>
-                    <h3 className="text-2xl font-bold text-green-300 mb-1">Certificazioni Linguistiche</h3>
-                    <p className="text-green-200/80 text-sm">C1, C2 + CLIL</p>
-                  </div>
-                  <div className="bg-green-500/20 px-4 py-2 rounded-lg border border-green-400/30">
-                    <p className="text-2xl font-bold text-green-300">+9</p>
-                    <p className="text-xs text-green-200/70">punti max</p>
-                  </div>
+              {/* Step 1 */}
+              <div className="bg-blue-50 rounded-xl p-6 border-2 border-blue-200">
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="bg-blue-600 text-white font-bold w-8 h-8 rounded-full flex items-center justify-center">
+                    1
+                  </span>
+                  <h3 className="font-bold text-gray-900">Verifica i Requisiti</h3>
                 </div>
-                <div className="space-y-2 text-sm text-white/80">
-                  <p className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" />
-                    <span><strong>C1:</strong> 4 punti (6 con CLIL)</span>
-                  </p>
-                  <p className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" />
-                    <span><strong>C2:</strong> 6 punti (9 con CLIL)</span>
-                  </p>
-                  <p className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" />
-                    <span>Certificazioni riconosciute MIUR</span>
-                  </p>
-                </div>
-                <div className="mt-4 pt-4 border-t border-green-500/20">
-                  <p className="text-xs text-green-200/70">💡 Il CLIL aggiunge 3 punti extra alla certificazione linguistica</p>
-                </div>
+                <p className="text-gray-700">
+                  Controlla di possedere il titolo di studio e i CFU richiesti per la classe di concorso di tuo interesse.
+                </p>
               </div>
 
-              {/* Banner DigComp - Blu */}
-              <div className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 border-2 border-blue-500/40 rounded-xl p-6 hover:border-blue-400/60 transition-all">
-                <div className="flex items-start justify-between mb-4">
-                  <div>
-                    <h3 className="text-2xl font-bold text-blue-300 mb-1">Certificazioni Informatiche</h3>
-                    <p className="text-blue-200/80 text-sm">DigComp 2.2 / DigCompEdu</p>
-                  </div>
-                  <div className="bg-blue-500/20 px-4 py-2 rounded-lg border border-blue-400/30">
-                    <p className="text-2xl font-bold text-blue-300">+2</p>
-                    <p className="text-xs text-blue-200/70">punti max</p>
-                  </div>
+              {/* Step 2 */}
+              <div className="bg-green-50 rounded-xl p-6 border-2 border-green-200">
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="bg-green-600 text-white font-bold w-8 h-8 rounded-full flex items-center justify-center">
+                    2
+                  </span>
+                  <h3 className="font-bold text-gray-900">Acquisisci Certificazioni</h3>
                 </div>
-                <div className="space-y-2 text-sm text-white/80">
-                  <p className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 text-blue-400 flex-shrink-0 mt-0.5" />
-                    <span><strong>DigComp 2.2:</strong> 0.5 punti (max 4 cert.)</span>
-                  </p>
-                  <p className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 text-blue-400 flex-shrink-0 mt-0.5" />
-                    <span><strong>DigCompEdu:</strong> 1 punto (max 2 cert.)</span>
-                  </p>
-                  <p className="flex items-start gap-2">
-                    <AlertCircle className="w-4 h-4 text-blue-400 flex-shrink-0 mt-0.5" />
-                    <span>Solo enti accreditati Accredia</span>
-                  </p>
-                </div>
-                <div className="mt-4 pt-4 border-t border-blue-500/20">
-                  <p className="text-xs text-blue-200/70">⚠️ LIM, Tablet e Coding NON valgono più dal 2026</p>
-                </div>
+                <p className="text-gray-700">
+                  Inizia subito a conseguire certificazioni linguistiche (C1/C2), CLIL e informatiche per aumentare il punteggio.
+                </p>
               </div>
 
-              {/* Banner Master - Arancione */}
-              <div className="bg-gradient-to-br from-orange-600/20 to-amber-600/20 border-2 border-orange-500/40 rounded-xl p-6 hover:border-orange-400/60 transition-all">
-                <div className="flex items-start justify-between mb-4">
-                  <div>
-                    <h3 className="text-2xl font-bold text-orange-300 mb-1">Master e Perfezionamenti</h3>
-                    <p className="text-orange-200/80 text-sm">60 CFU - Universitari</p>
-                  </div>
-                  <div className="bg-orange-500/20 px-4 py-2 rounded-lg border border-orange-400/30">
-                    <p className="text-2xl font-bold text-orange-300">+3</p>
-                    <p className="text-xs text-orange-200/70">punti max</p>
-                  </div>
+              {/* Step 3 */}
+              <div className="bg-purple-50 rounded-xl p-6 border-2 border-purple-200">
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="bg-purple-600 text-white font-bold w-8 h-8 rounded-full flex items-center justify-center">
+                    3
+                  </span>
+                  <h3 className="font-bold text-gray-900">Calcola il Punteggio</h3>
                 </div>
-                <div className="space-y-2 text-sm text-white/80">
-                  <p className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 text-orange-400 flex-shrink-0 mt-0.5" />
-                    <span><strong>Master I/II livello:</strong> 1 punto ciascuno</span>
-                  </p>
-                  <p className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 text-orange-400 flex-shrink-0 mt-0.5" />
-                    <span><strong>Perfezionamenti:</strong> 1 punto ciascuno</span>
-                  </p>
-                  <p className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 text-orange-400 flex-shrink-0 mt-0.5" />
-                    <span>Massimo 3 titoli valutabili</span>
-                  </p>
-                </div>
-                <div className="mt-4 pt-4 border-t border-orange-500/20">
-                  <p className="text-xs text-orange-200/70">📚 Devono essere riconosciuti dal MIUR (60 CFU)</p>
-                </div>
+                <p className="text-gray-700">
+                  Usa il nostro calcolatore GPS per stimare il tuo punteggio attuale e capire dove puoi migliorare.
+                </p>
               </div>
 
-              {/* Banner Altri Titoli - Rosso/Rosa */}
-              <div className="bg-gradient-to-br from-rose-600/20 to-pink-600/20 border-2 border-rose-500/40 rounded-xl p-6 hover:border-rose-400/60 transition-all">
-                <div className="flex items-start justify-between mb-4">
-                  <div>
-                    <h3 className="text-2xl font-bold text-rose-300 mb-1">Altri Titoli Valutabili</h3>
-                    <p className="text-rose-200/80 text-sm">Dottorati, Specializzazioni</p>
-                  </div>
-                  <div className="bg-rose-500/20 px-4 py-2 rounded-lg border border-rose-400/30">
-                    <p className="text-2xl font-bold text-rose-300">+12</p>
-                    <p className="text-xs text-rose-200/70">punti max</p>
-                  </div>
+              {/* Step 4 */}
+              <div className="bg-orange-50 rounded-xl p-6 border-2 border-orange-200">
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="bg-orange-600 text-white font-bold w-8 h-8 rounded-full flex items-center justify-center">
+                    4
+                  </span>
+                  <h3 className="font-bold text-gray-900">Resta Aggiornato</h3>
                 </div>
-                <div className="space-y-2 text-sm text-white/80">
-                  <p className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 text-rose-400 flex-shrink-0 mt-0.5" />
-                    <span><strong>Dottorato:</strong> fino a 12 punti</span>
-                  </p>
-                  <p className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 text-rose-400 flex-shrink-0 mt-0.5" />
-                    <span><strong>Specializzazioni:</strong> variabile</span>
-                  </p>
-                  <p className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 text-rose-400 flex-shrink-0 mt-0.5" />
-                    <span><strong>Pubblicazioni:</strong> fino a 4 punti</span>
-                  </p>
-                </div>
-                <div className="mt-4 pt-4 border-t border-rose-500/20">
-                  <p className="text-xs text-rose-200/70">🎓 Titoli accademici e scientifici riconosciuti</p>
-                </div>
+                <p className="text-gray-700">
+                  Segui le comunicazioni ufficiali del MIUR e rimani informato su tutte le novità e le scadenze.
+                </p>
               </div>
             </div>
-
-
           </div>
 
-          {/* CTA */}
-          <div className="mt-12 text-center">
-            <p className="text-white/60 mb-6">
-              Hai dubbi sulle nuove regole GPS 2026 o vuoi informazioni sui corsi per aumentare il tuo punteggio?
-            </p>
-            <Link href="/contatti">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-semibold rounded-xl shadow-lg transition-all duration-300"
-              >
-                Contattaci per Maggiori Informazioni
-              </motion.button>
-            </Link>
+          {/* Alert Importante */}
+          <div className="bg-gradient-to-r from-red-500 to-orange-500 rounded-2xl shadow-lg p-8 md:p-10 text-white">
+            <div className="flex items-start gap-4">
+              <AlertCircle className="w-8 h-8 flex-shrink-0 mt-1" />
+              <div>
+                <h3 className="text-2xl font-bold mb-3">
+                  ⚠️ Attenzione alle Scadenze
+                </h3>
+                <p className="text-white/90 leading-relaxed text-lg">
+                  Le finestre temporali per presentare domanda sono <strong>molto brevi</strong>. Preparati con anticipo raccogliendo 
+                  tutta la documentazione necessaria e assicurandoti di avere le credenziali SPID/CIE per accedere alla piattaforma MIUR.
+                </p>
+              </div>
+            </div>
           </div>
-        </motion.div>
-      </div>
+        </div>
+      </main>
     </div>
   );
 }

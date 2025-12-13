@@ -4,36 +4,32 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-900 text-gray-400 py-6 mt-auto">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+    <footer className="bg-gray-100 border-t border-gray-200 py-8 mt-16">
+      <div className="container">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Copyright */}
-          <div className="text-sm">
+          <p className="text-gray-600 text-sm">
             © {currentYear} Mondo Scuola. Tutti i diritti riservati.
-          </div>
+          </p>
 
-          {/* Link legali */}
-          <div className="flex flex-wrap justify-center gap-4 md:gap-6 text-sm">
+          {/* Links */}
+          <div className="flex items-center gap-6 text-sm">
             <Link href="/privacy">
-              <a className="hover:text-white transition-colors">
+              <span className="text-gray-600 hover:text-blue-600 transition-colors cursor-pointer">
                 Privacy Policy
-              </a>
+              </span>
             </Link>
-            <span className="text-gray-600">|</span>
             <Link href="/cookie-policy">
-              <a className="hover:text-white transition-colors">
+              <span className="text-gray-600 hover:text-blue-600 transition-colors cursor-pointer">
                 Cookie Policy
-              </a>
+              </span>
             </Link>
-            <span className="text-gray-600">|</span>
             <Link href="/termini-condizioni">
-              <a className="hover:text-white transition-colors">
+              <span className="text-gray-600 hover:text-blue-600 transition-colors cursor-pointer">
                 Termini e Condizioni
-              </a>
+              </span>
             </Link>
           </div>
-
-
         </div>
       </div>
     </footer>
