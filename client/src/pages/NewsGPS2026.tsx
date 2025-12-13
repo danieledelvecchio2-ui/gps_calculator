@@ -32,20 +32,19 @@ export function NewsGPS2026() {
             </p>
           </div>
 
-          {/* Alert Box - Scadenze */}
-          <div className="bg-gradient-to-r from-orange-500/20 to-red-500/20 border border-orange-500/30 rounded-2xl p-6 mb-8">
+          {/* Info Box - Tempistiche */}
+          <div className="bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 rounded-2xl p-6 mb-8">
             <div className="flex items-start gap-4">
-              <Calendar className="w-6 h-6 text-orange-400 flex-shrink-0 mt-1" />
+              <Calendar className="w-6 h-6 text-blue-400 flex-shrink-0 mt-1" />
               <div>
-                <h3 className="text-xl font-bold mb-2 text-orange-200">⏰ Attenzione alle Scadenze!</h3>
+                <h3 className="text-xl font-bold mb-2 text-blue-200">📅 Tempistiche Aggiornamento GPS 2026/28</h3>
                 <p className="text-white/80 leading-relaxed mb-3">
-                  L'aggiornamento GPS 2026/28 sarà <strong>anticipato a febbraio 2026</strong>. 
-                  Questo significa che i titoli conseguiti in primavera (master, CLIL, certificazioni) 
-                  <strong> NON potranno essere inseriti</strong> e dovranno attendere il prossimo aggiornamento.
+                  L'aggiornamento delle Graduatorie Provinciali per le Supplenze 2026/28 è previsto per il <strong>primo trimestre 2026</strong>. 
+                  I titoli valutabili saranno quelli conseguiti entro la data di scadenza della domanda.
                 </p>
-                <div className="bg-orange-500/10 border border-orange-500/20 rounded-xl p-4">
-                  <p className="text-sm text-orange-200">
-                    <strong>Consiglio:</strong> Se stai conseguendo titoli, assicurati di completarli entro gennaio 2026!
+                <div className="bg-blue-500/10 border border-blue-500/20 rounded-xl p-4">
+                  <p className="text-sm text-blue-200">
+                    <strong>Suggerimento:</strong> Tieni monitorato il sito del MIUR per le date ufficiali di apertura e chiusura delle domande.
                   </p>
                 </div>
               </div>

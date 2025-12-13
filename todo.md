@@ -159,3 +159,11 @@
 - [x] Creare pagina "Trova Classe di Concorso" con ricerca titolo
 - [x] Mostrare classi compatibili con codice, descrizione e requisiti CFU
 - [x] Aggiungere link nel menu navigazione
+
+## Correzioni richieste
+
+- [ ] Completare scraping di TUTTI i titoli richiesti per le 154 classi di concorso
+- [ ] Rimuovere link esterno a classidiconcorso.it dalla pagina Trova Classe
+- [ ] Mostrare titoli richiesti direttamente nella pagina senza link esterni
+- [x] Rimuovere toni allarmistici sulle scadenze febbraio da pagina Novità GPS 2026
+- [ ] Creare checkpoint v3.4 con rimozione allarmismo

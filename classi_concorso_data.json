@@ -4,280 +4,1792 @@
     "description": "",
     "notes": "",
     "url": "https://www.classidiconcorso.it/classe-di-concorso-00AA",
-    "required_titles": []
+    "required_titles": [
+      {
+        "title": "Diploma di Maturita Magistrale Abilitante",
+        "requirements": ""
+      }
+    ]
   },
   {
     "code": "Primaria: posto comune",
     "description": "",
     "notes": "",
     "url": "https://www.classidiconcorso.it/classe-di-concorso-00EE",
-    "required_titles": []
+    "required_titles": [
+      {
+        "title": "Diploma di Maturita Magistrale Abilitante",
+        "requirements": ""
+      }
+    ]
   },
   {
     "code": "Disegno e storia dell'arte nell'istruzione secondaria di I e di II grado",
     "description": "AGGIORNATO SECONDO ALLEGATO 10 FEBBRAIO 2024",
     "notes": "",
     "url": "https://www.classidiconcorso.it/classe-di-concorso-A-01",
-    "required_titles": []
+    "required_titles": [
+      {
+        "title": "Diploma di Istituto Superiore delle Industrie Artistiche (V.O.)",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma di Accademia di Belle Arti (V.O.)Nota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Architettura",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Conservazione dei beni culturaliNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Discipline delle arti, della musica e dello spettacoloNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Disegno industriale",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Storia e conservazione dei beni architettonici ed ambientaliNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Pianificazione territoriale, urbanistica e ambientaleNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma di II livello di Istituto Superiore delle Industrie ArtisticheNota 1Nota 2",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma accademico di II livello rilasciato dalle Accademie Belle ArtiNota 1Nota 2",
+        "requirements": ""
+      }
+    ]
   },
   {
     "code": "Design dei metalli, dell'oreficeria, delle pietre dure e delle gemme",
     "description": "",
     "notes": "",
     "url": "https://www.classidiconcorso.it/classe-di-concorso-A-02",
-    "required_titles": []
+    "required_titles": [
+      {
+        "title": "Diploma di Istituto Superiore delle Industrie Artistiche (V.O.)Nota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma di Accademia di Belle Arti (V.O.)Nota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in ArchitetturaNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Disegno industrialeNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma di II livello di Istituto Superiore delle Industrie Artistiche",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma accademico di II livello rilasciato dalle Accademie Belle Arti - Decorazione",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma accademico di II livello rilasciato dalle Accademie Belle Arti - Progettazione artistica per l'impresa",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma accademico di II livello rilasciato dalle Accademie Belle Arti - Restauro",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma accademico di II livello rilasciato dalle Accademie Belle Arti - Scultura",
+        "requirements": ""
+      }
+    ]
   },
   {
     "code": "Design della ceramica",
     "description": "",
     "notes": "",
     "url": "https://www.classidiconcorso.it/classe-di-concorso-A-03",
-    "required_titles": []
+    "required_titles": [
+      {
+        "title": "Diploma di Istituto Superiore delle Industrie Artistiche (V.O.)Nota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma di Accademia di Belle Arti (V.O.)Nota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in ArchitetturaNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in ChimicaNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Geologia",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Ingegneria chimica",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Ingegneria delle tecnologie industriali (indirizzo chimico)",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Mineralogia",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Scienze geologiche",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma di II livello di Istituto Superiore delle Industrie Artistiche",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma accademico di II livello rilasciato dalle Accademie Belle Arti - Decorazione",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma accademico di II livello rilasciato dalle Accademie Belle Arti - Progettazione artistica per l'impresa",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma accademico di II livello rilasciato dalle Accademie Belle Arti - Restauro",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma accademico di II livello rilasciato dalle Accademie Belle Arti - Scultura",
+        "requirements": ""
+      }
+    ]
   },
   {
     "code": "Design del libro",
     "description": "",
     "notes": "",
     "url": "https://www.classidiconcorso.it/classe-di-concorso-A-04",
-    "required_titles": []
+    "required_titles": [
+      {
+        "title": "Diploma di Istituto Superiore delle Industrie Artistiche (V.O.)Nota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma di Accademia di Belle Arti (V.O.)Nota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in ArchitetturaNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma di II livello di Istituto Superiore delle Industrie Artistiche",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma accademico di II livello rilasciato dalle Accademie Belle Arti - Grafica",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma accademico di II livello rilasciato dalle Accademie Belle Arti - Progettazione artistica per l'impresa",
+        "requirements": ""
+      }
+    ]
   },
   {
     "code": "Design del tessuto e della moda",
     "description": "",
     "notes": "",
     "url": "https://www.classidiconcorso.it/classe-di-concorso-A-05",
-    "required_titles": []
+    "required_titles": [
+      {
+        "title": "Diploma di Istituto Superiore delle Industrie Artistiche (V.O.)Nota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma di Accademia di Belle Arti (V.O.)Nota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in ArchitetturaNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma di II livello di Istituto Superiore delle Industrie Artistiche",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma accademico di II livello rilasciato dalle Accademie Belle Arti - Decorazione",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma accademico di II livello rilasciato dalle Accademie Belle Arti - Progettazione artistica per l'impresa",
+        "requirements": ""
+      }
+    ]
   },
   {
     "code": "Design del vetro",
     "description": "",
     "notes": "",
     "url": "https://www.classidiconcorso.it/classe-di-concorso-A-06",
-    "required_titles": []
+    "required_titles": [
+      {
+        "title": "Diploma di Istituto Superiore delle Industrie Artistiche (V.O.)Nota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma di Accademia di Belle Arti (V.O.)Nota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in ArchitetturaNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma di II livello di Istituto Superiore delle Industrie Artistiche",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma accademico di II livello rilasciato dalle Accademie Belle Arti - Decorazione",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma accademico di II livello rilasciato dalle Accademie Belle Arti - Progettazione artistica per l'impresa",
+        "requirements": ""
+      }
+    ]
   },
   {
     "code": "Discipline Audiovisive",
     "description": "",
     "notes": "",
     "url": "https://www.classidiconcorso.it/classe-di-concorso-A-07",
-    "required_titles": []
+    "required_titles": [
+      {
+        "title": "Diploma di Istituto Superiore delle Industrie Artistiche (V.O.)Nota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma di Accademia di Belle Arti (V.O.)Nota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in ArchitetturaNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma di II livello di Istituto Superiore delle Industrie Artistiche",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma accademico di II livello rilasciato dalle Accademie Belle Arti - Nuove tecnologie dell'arte (NTA)",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma accademico di II livello rilasciato dalle Accademie Belle Arti - Progettazione artistica per l'impresa",
+        "requirements": ""
+      }
+    ]
   },
   {
     "code": "Discipline geometriche, architettura, design d'arredamento e scenotecnica",
     "description": "",
     "notes": "",
     "url": "https://www.classidiconcorso.it/classe-di-concorso-A-08",
-    "required_titles": []
+    "required_titles": [
+      {
+        "title": "Diploma di Istituto Superiore delle Industrie Artistiche (V.O.)Nota 1Nota 2",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma di Accademia di Belle Arti (V.O.)Nota 1Nota 2Nota 3",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma di Accademia di Belle Arti (V.O.) - Corso di scenografiaNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in ArchitetturaNota 1Nota 2Nota 3Nota 4Nota 5",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Disegno industrialeNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma di II livello di Istituto Superiore delle Industrie Artistiche",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma accademico di II livello rilasciato dalle Accademie Belle Arti - Decorazione",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma accademico di II livello rilasciato dalle Accademie Belle Arti - Progettazione artistica per l'impresa",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma accademico di II livello rilasciato dalle Accademie Belle Arti - Scenografia",
+        "requirements": ""
+      }
+    ]
   },
   {
     "code": "Discipline grafiche, pittoriche e scenografiche",
     "description": "",
     "notes": "",
     "url": "https://www.classidiconcorso.it/classe-di-concorso-A-09",
-    "required_titles": []
+    "required_titles": [
+      {
+        "title": "Diploma di Istituto Superiore delle Industrie Artistiche (V.O.)Nota 1Nota 2Nota 3Nota 4",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma di Accademia di Belle Arti (V.O.)Nota 1Nota 2Nota 3Nota 4Nota 5",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma di Accademia di Belle Arti (V.O.) - Corso di decorazioneNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma di Accademia di Belle Arti (V.O.) - Corso di pitturaNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma di Accademia di Belle Arti (V.O.) - Corso di scenografiaNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in ArchitetturaNota 1Nota 2Nota 3Nota 4",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma di II livello di Istituto Superiore delle Industrie Artistiche",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma accademico di II livello rilasciato dalle Accademie Belle Arti - Decorazione",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma accademico di II livello rilasciato dalle Accademie Belle Arti - Grafica",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma accademico di II livello rilasciato dalle Accademie Belle Arti - Grafica d'arte",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma accademico di II livello rilasciato dalle Accademie Belle Arti - Pittura",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma accademico di II livello rilasciato dalle Accademie Belle Arti - Restauro",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma accademico di II livello rilasciato dalle Accademie Belle Arti - Scenografia",
+        "requirements": ""
+      }
+    ]
   },
   {
     "code": "Discipline grafico-pubblicitarie",
     "description": "",
     "notes": "",
     "url": "https://www.classidiconcorso.it/classe-di-concorso-A-10",
-    "required_titles": []
+    "required_titles": [
+      {
+        "title": "Diploma di Istituto Superiore delle Industrie Artistiche (V.O.)Nota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma di Accademia di Belle Arti (V.O.)Nota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in ArchitetturaNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma di II livello di Istituto Superiore delle Industrie Artistiche",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma accademico di II livello rilasciato dalle Accademie Belle Arti - Arti e disciplina per la grafica",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma accademico di II livello rilasciato dalle Accademie Belle Arti - Comunicazione del patrimonio artistico",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma accademico di II livello rilasciato dalle Accademie Belle Arti - Fotografia",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma accademico di II livello rilasciato dalle Accademie Belle Arti - Grafica",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma accademico di II livello rilasciato dalle Accademie Belle Arti - Grafica d'arte",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma accademico di II livello rilasciato dalle Accademie Belle Arti - Grafica e Fotografia",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma accademico di II livello rilasciato dalle Accademie Belle Arti - Nuove tecnologie dell'arte (NTA)",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma accademico di II livello rilasciato dalle Accademie Belle Arti - Progettazione artistica per l'impresa",
+        "requirements": ""
+      }
+    ]
   },
   {
     "code": "Discipline letterarie e latino",
     "description": "",
     "notes": "",
     "url": "https://www.classidiconcorso.it/classe-di-concorso-A-11",
-    "required_titles": []
+    "required_titles": [
+      {
+        "title": "Laurea in FilosofiaNota 1Nota 2",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in GeografiaNota 1Nota 2",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in LettereNota 1Nota 2Nota 3",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Materie letterarieNota 1Nota 2Nota 3",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in PedagogiaNota 1Nota 2",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in StoriaNota 1Nota 2",
+        "requirements": ""
+      }
+    ]
   },
   {
     "code": "Discipline letterarie nell'istruzione secondaria di I e II grado",
     "description": "AGGIORNATO SECONDO ALLEGATO 10 FEBBRAIO 2024",
     "notes": "",
     "url": "https://www.classidiconcorso.it/classe-di-concorso-A-12",
-    "required_titles": []
+    "required_titles": [
+      {
+        "title": "Laurea in Conservazione dei beni culturaliNota 1Nota 2",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in FilosofiaNota 1Nota 2Nota 3",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in GeografiaNota 1Nota 2",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in LettereNota 1Nota 2Nota 3Nota 4",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Lingue e letterature straniereNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Materie letterarieNota 1Nota 2Nota 3Nota 4",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in PedagogiaNota 1Nota 2Nota 3",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Scienze della comunicazioneNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Scienze dell'educazioneNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in StoriaNota 1Nota 2Nota 3Nota 4",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Relazioni pubblicheNota 1",
+        "requirements": ""
+      }
+    ]
   },
   {
     "code": "Discipline letterarie, latino e greco",
     "description": "",
     "notes": "",
     "url": "https://www.classidiconcorso.it/classe-di-concorso-A-13",
-    "required_titles": []
+    "required_titles": [
+      {
+        "title": "Laurea in LettereNota 1Nota 2Nota 3",
+        "requirements": ""
+      }
+    ]
   },
   {
     "code": "Discipline plastiche, scultoree e scenoplastiche",
     "description": "",
     "notes": "",
     "url": "https://www.classidiconcorso.it/classe-di-concorso-A-14",
-    "required_titles": []
+    "required_titles": [
+      {
+        "title": "Diploma di Accademia di Belle Arti (V.O.) - Corso di sculturaNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma di II livello di Istituto Superiore delle Industrie Artistiche",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma accademico di II livello rilasciato dalle Accademie Belle Arti - Decorazione",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma accademico di II livello rilasciato dalle Accademie Belle Arti - Scenografia",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma accademico di II livello rilasciato dalle Accademie Belle Arti - Scultura",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma accademico di II livello rilasciato dalle Accademie Belle Arti - Scultura ambientale e Lapis tiburtinus",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma accademico di II livello rilasciato dalle Accademie Belle Arti - Scultura ambientale e Tecnologie produttive",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma accademico di II livello rilasciato dalle Accademie Belle Arti - Scultura e Arte pubblica",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma accademico di II livello rilasciato dalle Accademie Belle Arti - Scultura e nuove tecnologie applicate allo spazio",
+        "requirements": ""
+      }
+    ]
   },
   {
     "code": "Discipline sanitarie",
     "description": "",
     "notes": "",
     "url": "https://www.classidiconcorso.it/classe-di-concorso-A-15",
-    "required_titles": []
+    "required_titles": [
+      {
+        "title": "Laurea in Chimica e tecnologie farmaceutiche",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Farmacia",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Medicina e chirurgia",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Odontoiatria e protesi dentariaNota 1Nota 2",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Scienze biologiche",
+        "requirements": ""
+      }
+    ]
   },
   {
     "code": "Disegno artistico e modellazione odontotecnica",
     "description": "",
     "notes": "",
     "url": "https://www.classidiconcorso.it/classe-di-concorso-A-16",
-    "required_titles": []
+    "required_titles": [
+      {
+        "title": "Diploma di Istituto Superiore delle Industrie Artistiche (V.O.)Nota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma di Accademia di Belle Arti (V.O.)Nota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Architettura",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Discipline delle arti, della musica e dello spettacoloNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Disegno industriale",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Ingegneria civile",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma di II livello di Istituto Superiore delle Industrie Artistiche",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma accademico di II livello rilasciato dalle Accademie Belle Arti - Decorazione",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma accademico di II livello rilasciato dalle Accademie Belle Arti - Pittura",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma accademico di II livello rilasciato dalle Accademie Belle Arti - Progettazione artistica per l'impresa",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma accademico di II livello rilasciato dalle Accademie Belle Arti - Scenografia",
+        "requirements": ""
+      }
+    ]
   },
   {
     "code": "Filosofia e Scienze umane",
     "description": "",
     "notes": "",
     "url": "https://www.classidiconcorso.it/classe-di-concorso-A-18",
-    "required_titles": []
+    "required_titles": [
+      {
+        "title": "Laurea in FilosofiaNota 1Nota 2",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in LettereNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Materie letterarieNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in PedagogiaNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in PsicologiaNota 1Nota 2",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Scienze della comunicazioneNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Scienze dell'educazioneNota 1Nota 2",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Scienze politicheNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in SociologiaNota 1Nota 2",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in StoriaNota 1",
+        "requirements": ""
+      }
+    ]
   },
   {
     "code": "Filosofia e Storia",
     "description": "",
     "notes": "",
     "url": "https://www.classidiconcorso.it/classe-di-concorso-A-19",
-    "required_titles": []
+    "required_titles": [
+      {
+        "title": "Laurea in FilosofiaNota 1Nota 2Nota 3",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in LettereNota 1Nota 2",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Materie letterarieNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in PedagogiaNota 1Nota 2",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in PsicologiaNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Scienze dell'educazioneNota 1Nota 2",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in StoriaNota 1Nota 2Nota 3",
+        "requirements": ""
+      }
+    ]
   },
   {
     "code": "Fisica",
     "description": "AGGIORNATO SECONDO ALLEGATO 10 FEBBRAIO 2024",
     "notes": "",
     "url": "https://www.classidiconcorso.it/classe-di-concorso-A-20",
-    "required_titles": []
+    "required_titles": [
+      {
+        "title": "Laurea in Astronomia",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Discipline nautiche",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Fisica",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Ingegneria (tutti gli indirizzi)Nota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in MatematicaNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Matematica e Fisica",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Scienze fisiche e matematiche",
+        "requirements": ""
+      }
+    ]
   },
   {
     "code": "Geografia",
     "description": "",
     "notes": "",
     "url": "https://www.classidiconcorso.it/classe-di-concorso-A-21",
-    "required_titles": []
+    "required_titles": [
+      {
+        "title": "Laurea in Economia assicurativa e previdenzialeNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Economia del TurismoNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Economia delle amministrazioni pubbliche e delle istituzioni internazionaliNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Economia delle istituzioni e dei mercati finanziariNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Economia e commercioNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Economia e finanzaNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Economia e gestione dei serviziNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Economia e legislazione per l'impresaNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Geografia",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in LettereNota 1",
+        "requirements": ""
+      }
+    ]
   },
   {
     "code": "Lingue e culture straniere nell'istruzione secondaria di I e II grado",
     "description": "AGGIORNATO SECONDO ALLEGATO 10 FEBBRAIO 2024",
     "notes": "",
     "url": "https://www.classidiconcorso.it/classe-di-concorso-A-22",
-    "required_titles": []
+    "required_titles": [
+      {
+        "title": "Laurea in Filologia e storia dell'Europa orientaleNota 1Nota 2Nota 3",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in InterpretiNota 1Nota 2",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Lingue e civiltà orientaliNota 1Nota 2",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Lingue e culture dell'europa orientaleNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Lingue e culture europeeNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Lingue e letterature e istituzioni dell'europa occidentaleNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Lingue e letterature e istituzioni dell'Europa orientaleNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Lingue e letterature orientaliNota 1Nota 2",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Lingue e letterature straniereNota 1Nota 2",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Lingue e letterature straniere moderneNota 1Nota 2",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Lingue e letterature slave rilasciate dall'istituto universitario orientale di Napoli o dal medesimo Istituto con la precedente denominazione di Istituto Superiore Orientale di NapoliNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Lingue, culture ed istituzioni dei Paesi del MediterraneoNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Studi comparatisticiNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in TraduttoriNota 1Nota 2",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Traduzione e interpretazioneNota 1",
+        "requirements": ""
+      }
+    ]
   },
   {
     "code": "Lingua italiana per discenti di lingua straniera (alloglotti)",
     "description": "",
     "notes": "",
     "url": "https://www.classidiconcorso.it/classe-di-concorso-A-23",
-    "required_titles": []
+    "required_titles": [
+      {
+        "title": "Laurea in Conservazione dei beni culturaliNota 1Nota 2Nota 3",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in FilosofiaNota 1Nota 2Nota 3",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in GeografiaNota 1Nota 2",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in LettereNota 1Nota 2Nota 3Nota 4",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Lingua e cultura italianaNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Lingue e letterature straniereNota 1Nota 2",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Materie letterarieNota 1Nota 2Nota 3Nota 4",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in PedagogiaNota 1Nota 2Nota 3",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Scienze dell'educazioneNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in StoriaNota 1Nota 2Nota 3Nota 4",
+        "requirements": ""
+      }
+    ]
   },
   {
     "code": "Matematica",
     "description": "",
     "notes": "",
     "url": "https://www.classidiconcorso.it/classe-di-concorso-A-26",
-    "required_titles": []
+    "required_titles": [
+      {
+        "title": "Laurea in Astronomia",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Discipline nautiche",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Fisica",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Informatica",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Ingegneria (tutti gli indirizzi)Nota 1Nota 2",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Matematica",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Matematica e Fisica",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Scienze dell'informazione",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Scienze fisiche e matematiche",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Scienze matematiche",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Scienze statistiche e demografiche",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Scienze statistiche ed attuariali",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Scienze statistiche ed economiche",
+        "requirements": ""
+      }
+    ]
   },
   {
     "code": "Matematica e Fisica",
     "description": "AGGIORNATO SECONDO ALLEGATO 10 FEBBRAIO 2024",
     "notes": "",
     "url": "https://www.classidiconcorso.it/classe-di-concorso-A-27",
-    "required_titles": []
+    "required_titles": [
+      {
+        "title": "Laurea in Astronomia",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Discipline nautiche",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Fisica",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Ingegneria (tutti gli indirizzi)Nota 1Nota 2",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Matematica",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Matematica e Fisica",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Scienze fisiche e matematiche",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Scienze matematiche",
+        "requirements": ""
+      }
+    ]
   },
   {
     "code": "Matematica e scienze",
     "description": "",
     "notes": "",
     "url": "https://www.classidiconcorso.it/classe-di-concorso-A-28",
-    "required_titles": []
+    "required_titles": [
+      {
+        "title": "Laurea in Agricoltura tropicale e subtropicale",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Astronomia",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Chimica",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Chimica e tecnologie farmaceuticheNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Chimica industrialeNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Discipline nautiche",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Fisica",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Ingegneria biomedicaNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Ingegneria chimicaNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Ingegneria per l'ambiente e il territorioNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Matematica",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Matematica e Fisica",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Scienze agrarieNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Scienze agrarie tropicali e subtropicali",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Scienze ambientali",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Scienze biologiche",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Scienze dei materiali",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Scienze della produzione animaleNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Scienze delle preparazioni alimentariNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Scienze e tecnologie agrarie",
+        "requirements": ""
+      }
+    ]
   },
   {
     "code": "Musica nell'istruzione secondaria di I grado e II grado",
     "description": "AGGIORNATO SECONDO ALLEGATO 10 FEBBRAIO 2024",
     "notes": "",
     "url": "https://www.classidiconcorso.it/classe-di-concorso-A-30",
-    "required_titles": []
+    "required_titles": [
+      {
+        "title": "Diploma di Conservatorio (V.O.) in ArpaNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma di Conservatorio (V.O.) in CantoNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma di Conservatorio (V.O.) in ChitarraNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma di Conservatorio (V.O.) in ComposizioneNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma di Conservatorio (V.O.) in Composizione polifonica vocaleNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma di Conservatorio (V.O.) in ContrabbassoNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma di Conservatorio (V.O.) in Didattica della musicaNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma di Conservatorio (V.O.) in Direzione di orchestraNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma di Conservatorio (V.O.) in FisarmonicaNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma di Conservatorio (V.O.) in JazzNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma di Conservatorio (V.O.) in Liuto (vedi anche Strumenti a corda)Nota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma di Conservatorio (V.O.) in MandolinoNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma di Conservatorio (V.O.) in Musica corale e direzione del coroNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma di Conservatorio (V.O.) in Musica elettronicaNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma di Conservatorio (V.O.) in Musica sacraNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma di Conservatorio (V.O.) in Musica vocale da cameraNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma di Conservatorio (V.O.) in Nuova didattica della composizioneNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma di Conservatorio (V.O.) in Organo e composizione organisticaNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma di Conservatorio (V.O.) in PianoforteNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Diploma di Conservatorio (V.O.) in PrepolifoniaNota 1",
+        "requirements": ""
+      }
+    ]
   },
   {
     "code": "Scienze degli alimenti",
     "description": "",
     "notes": "",
     "url": "https://www.classidiconcorso.it/classe-di-concorso-A-31",
-    "required_titles": []
+    "required_titles": [
+      {
+        "title": "Laurea in Biotecnologie agro-industriali",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Chimica",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Chimica e tecnologie farmaceutiche",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Farmacia",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Ingegneria chimica (indirizzo alimentare)",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Medicina e chirurgia",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Scienze agrarie",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Scienze biologiche",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Scienze della produzione animale",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Scienze e tecnologie agrarie",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Scienze e tecnologie alimentari",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Scienze forestali",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Scienze forestali e ambientali",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Scienze naturali",
+        "requirements": ""
+      }
+    ]
   },
   {
     "code": "Scienze della geologia e della mineralogia",
     "description": "",
     "notes": "",
     "url": "https://www.classidiconcorso.it/classe-di-concorso-A-32",
-    "required_titles": []
+    "required_titles": [
+      {
+        "title": "Laurea in Chimica",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Chimica industriale",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Ingegneria chimica",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Ingegneria civile",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Ingegneria civile per la difesa del suolo e la pianificazione territoriale",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Ingegneria industriale - sottosezione chimica",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Ingegneria meccanica (indirizzo minerario)",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Ingegneria mineraria",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Ingegneria per l'ambiente e il territorio",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Scienza dei materiali",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Scienze geologiche",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Scienze naturali",
+        "requirements": ""
+      }
+    ]
   },
   {
     "code": "Scienze e tecnologie aeronautiche",
     "description": "",
     "notes": "",
     "url": "https://www.classidiconcorso.it/classe-di-concorso-A-33",
-    "required_titles": []
+    "required_titles": [
+      {
+        "title": "Qualsiasi Laurea (V.O.)Nota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in AstronomiaNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Discipline nauticheNota 1Nota 2Nota 3",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in FisicaNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Ingegneria (tutti gli indirizzi)Nota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Ingegneria aerospazialeNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in MatematicaNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Matematica e FisicaNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Scienze matematicheNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Qualsiasi Laurea specialisticaNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Qualsiasi Laurea magistraleNota 1",
+        "requirements": ""
+      }
+    ]
   },
   {
     "code": "Scienze e tecnologie chimiche",
     "description": "",
     "notes": "",
     "url": "https://www.classidiconcorso.it/classe-di-concorso-A-34",
-    "required_titles": []
+    "required_titles": [
+      {
+        "title": "Laurea in Agricoltura tropicale e subtropicale",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Chimica",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Chimica e farmaciaNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Chimica e tecnologie farmaceutiche",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Chimica industriale",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in FarmaciaNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Ingegneria chimica",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Ingegneria dei materiali",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Ingegneria delle tecnologie industriali (indirizzo chimico)",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Scienza dei materiali",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Scienze agrarie",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Scienze agrarie tropicali e subtropicali",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Scienze biologicheNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Scienze della produzione animaleNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Scienze delle preparazioni alimentari",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Scienze e tecnologie agrarie",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Scienze e tecnologie alimentari",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Scienze forestali",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Scienze forestali e ambientali",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Scienze naturaliNota 1",
+        "requirements": ""
+      }
+    ]
   },
   {
     "code": "Scienze e tecnologie della calzatura e della moda",
     "description": "",
     "notes": "",
     "url": "https://www.classidiconcorso.it/classe-di-concorso-A-35",
-    "required_titles": []
+    "required_titles": [
+      {
+        "title": "Qualsiasi Laurea (V.O.)Nota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Ingegneria delle tecnologie industriali (indirizzo meccanico)Nota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Ingegneria industriale - sottosezione meccanicaNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Qualsiasi Laurea specialisticaNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Qualsiasi Laurea magistraleNota 1",
+        "requirements": ""
+      }
+    ]
   },
   {
     "code": "Scienze e tecnologie della logistica",
     "description": "",
     "notes": "",
     "url": "https://www.classidiconcorso.it/classe-di-concorso-A-36",
-    "required_titles": []
+    "required_titles": [
+      {
+        "title": "Laurea in Discipline nautiche",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Ingegneria aeronautica",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Ingegneria aerospaziale",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Ingegneria industriale - sottosezione aeronautica",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Ingegneria industriale - sottosezione meccanica",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Ingegneria meccanica",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Ingegneria navale",
+        "requirements": ""
+      }
+    ]
   },
   {
     "code": "Scienze e tecnologie delle costruzioni, tecnologie e tecniche di rappresentazione grafica",
     "description": "",
     "notes": "",
     "url": "https://www.classidiconcorso.it/classe-di-concorso-A-37",
-    "required_titles": []
+    "required_titles": [
+      {
+        "title": "Laurea in Architettura",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Discipline nautiche (indirizzo geodetico)Nota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Ingegneria civile",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Ingegneria civile per la difesa del suolo e la pianificazione territoriale",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Ingegneria edile",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Ingegneria per l'ambiente e il territorio",
+        "requirements": ""
+      }
+    ]
   },
   {
     "code": "Scienze e tecnologie delle costruzioni aeronautiche",
     "description": "",
     "notes": "",
     "url": "https://www.classidiconcorso.it/classe-di-concorso-A-38",
-    "required_titles": []
+    "required_titles": [
+      {
+        "title": "Laurea in Ingegneria aeronautica",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Ingegneria aerospaziale",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Ingegneria industriale - sottosezione aeronautica",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Ingegneria industriale - sottosezione meccanica",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Ingegneria meccanica",
+        "requirements": ""
+      }
+    ]
   },
   {
     "code": "Scienze e tecnologie delle costruzioni navali",
     "description": "",
     "notes": "",
     "url": "https://www.classidiconcorso.it/classe-di-concorso-A-39",
-    "required_titles": []
+    "required_titles": [
+      {
+        "title": "Laurea in Discipline nauticheNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Ingegneria navale",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Ingegneria navale e meccanica",
+        "requirements": ""
+      }
+    ]
   },
   {
     "code": "Scienze e tecnologie elettriche ed elettroniche",
     "description": "",
     "notes": "",
     "url": "https://www.classidiconcorso.it/classe-di-concorso-A-40",
-    "required_titles": []
+    "required_titles": [
+      {
+        "title": "Laurea in Discipline nauticheNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Fisica",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in InformaticaNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Ingegneria aeronauticaNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Ingegneria aerospazialeNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Ingegneria civileNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Ingegneria dei materialiNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Ingegneria delle tecnologie industriali (indirizzo elettrico)",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Ingegneria delle telecomunicazioni",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Ingegneria elettrica",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Ingegneria elettronica",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Ingegneria elettrotecnica",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Ingegneria gestionaleNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Ingegneria industriale - sottosezione elettrotecnica",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Ingegneria informatica",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Ingegneria meccanicaNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Ingegneria nucleare",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Ingegneria per l'ambiente e il territorioNota 1",
+        "requirements": ""
+      }
+    ]
   },
   {
     "code": "Scienze e tecnologie informatiche",
     "description": "",
     "notes": "",
     "url": "https://www.classidiconcorso.it/classe-di-concorso-A-41",
-    "required_titles": []
+    "required_titles": [
+      {
+        "title": "Laurea in Discipline nauticheNota 1",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Fisica",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Informatica",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Ingegneria aerospaziale",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Ingegneria delle telecomunicazioni",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Ingegneria elettronica",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Ingegneria gestionale",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Ingegneria informatica",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Matematica",
+        "requirements": ""
+      },
+      {
+        "title": "Laurea in Scienze dell'informazione",
+        "requirements": ""
+      }
+    ]
   },
   {
     "code": "Scienze e tecnologie meccaniche",
     "description": "",
     "notes": "",
     "url": "https://www.classidiconcorso.it/classe-di-concorso-A-42",
-    "required_titles": []
+    "required_titles": [
+      {
+        "title": "Laurea in Ingegneria meccanica",
+        "requirements": ""
+      }
+    ]
   },
   {
     "code": "Scienze e tecnologie nautiche",
