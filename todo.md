@@ -203,4 +203,23 @@
 - [x] Rimuovere Privacy Policy dal menu principale
 - [x] Integrare Footer in tutte le pagine
 - [x] Testare tutti i link del footer
-- [ ] Creare checkpoint v3.8
+- [x] Creare checkpoint v3.8
+
+## Rebranding: GPS Calculator → MONDO SCUOLA
+
+- [x] Aggiornare logo/brand in Navigation
+- [x] Aggiornare titolo homepage
+- [x] Aggiornare Footer copyright
+- [x] Aggiornare meta title in index.html
+- [x] Rimuovere email dal footer
+- [x] Testare tutte le pagine
+- [x] Creare checkpoint v3.8
+
+## Rifacimento Homepage - Landing Page Istituzionale
+
+- [x] Creare nuova homepage con Hero + Mission + Sezioni
+- [x] Spostare form calcolatore in pagina dedicata /calcola-gps
+- [x] Aggiungere "Calcola GPS" al menu principale
+- [x] Aggiornare routing in App.tsx
+- [x] Testare tutte le pagine
+- [ ] Creare checkpoint v3.9

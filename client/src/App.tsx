@@ -5,6 +5,7 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
+import CalcolaGPS from "./pages/CalcolaGPS";
 import Privacy from "./pages/Privacy";
 import { InfoGPS } from "./pages/InfoGPS";
 import { Contact } from "./pages/Contact";
@@ -20,6 +21,7 @@ function Router() {
   return (
     <Switch>
       <Route path={"/"} component={Home} />
+      <Route path={"/calcola-gps"} component={CalcolaGPS} />
       <Route path={"/privacy"} component={Privacy} />
       <Route path={"/info-gps"} component={InfoGPS} />
       <Route path={"/novita-gps-2026"} component={NewsGPS2026} />

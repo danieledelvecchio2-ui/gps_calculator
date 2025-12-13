@@ -9,7 +9,7 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           {/* Copyright */}
           <div className="text-sm">
-            © {currentYear} GPS Calculator. Tutti i diritti riservati.
+            © {currentYear} Mondo Scuola. Tutti i diritti riservati.
           </div>
 
           {/* Link legali */}
@@ -33,15 +33,7 @@ export function Footer() {
             </Link>
           </div>
 
-          {/* Email contatto */}
-          <div className="text-sm">
-            <a 
-              href="mailto:direzione@infogps2026.it" 
-              className="hover:text-white transition-colors"
-            >
-              direzione@infogps2026.it
-            </a>
-          </div>
+
         </div>
       </div>
     </footer>

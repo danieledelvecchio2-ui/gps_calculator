@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X, Home, Info, Sparkles, Mail, Shield, GraduationCap } from "lucide-react";
+import { Menu, X, Home, Calculator, Info, Sparkles, Mail, Shield, GraduationCap } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export function Navigation() {
@@ -9,6 +9,7 @@ export function Navigation() {
 
   const menuItems = [
     { path: "/", label: "Home", icon: Home },
+    { path: "/calcola-gps", label: "Calcola GPS", icon: Calculator },
     { path: "/info-gps", label: "Info Calcolo Punteggio GPS", icon: Info },
     { path: "/novita-gps-2026", label: "Novità GPS 2026", icon: Sparkles },
     { path: "/trova-classe", label: "Trova Classe di Concorso", icon: GraduationCap },
@@ -28,7 +29,7 @@ export function Navigation() {
             <Link href="/">
               <div className="flex items-center gap-2 cursor-pointer">
                 <h2 className="text-xl font-bold text-white">
-                  GPS <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Calculator</span>
+                  MONDO <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">SCUOLA</span>
                 </h2>
               </div>
             </Link>
@@ -102,9 +103,9 @@ export function Navigation() {
                   {/* Logo/Title */}
                   <div className="mb-8">
                     <h2 className="text-2xl font-bold text-white mb-1">
-                      GPS <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Calculator</span>
+                      MONDO <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">SCUOLA</span>
                     </h2>
-                    <p className="text-white/60 text-sm">Calcola il tuo punteggio GPS</p>
+                    <p className="text-white/60 text-sm">Il tuo portale per il mondo della scuola</p>
                   </div>
 
                   {/* Menu Items */}

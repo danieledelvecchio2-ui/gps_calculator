@@ -1,55 +1,50 @@
-import { useState } from "react";
-import { GpsForm } from "@/components/GpsForm";
-import { ResultsView } from "@/components/ResultsView";
-import { CoursesBanner } from "@/components/CoursesBanner";
-import { calculateScore, analyzeProvinces, CalculationResult } from "@/lib/gpsAlgorithm";
-import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "wouter";
+import { motion } from "framer-motion";
+import { Calculator, GraduationCap, Info, Sparkles, Mail, ArrowRight } from "lucide-react";
 
-export default function Home() {
-  const [result, setResult] = useState<CalculationResult | null>(null);
-
-  const handleCalculate = async (data: any) => {
-    const scoreResult = calculateScore(data);
-    const analysis = analyzeProvinces(scoreResult.totalScore, data.classeConcorso);
-    
-    const result = {
-      ...scoreResult,
-      provincesAnalysis: analysis
-    };
-    
-    setResult(result);
-
-    // Salva i dati nel database (in background, non blocca l'utente)
-    try {
-      await fetch('/api/gps/submit', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          nome: data.nome,
-          email: data.email,
-          cellulare: data.cellulare,
-          classeConcorso: data.classeConcorso,
-          votoLaurea: data.votoLaurea,
-          lode: data.lode,
-          numC2: data.numC2,
-          numClil: data.numClil,
-          numBiannale: data.numBiannale,
-          certificazioniInformatiche: data.certificazioniInformatiche,
-          punteggioLaurea: scoreResult.breakdown.laurea,
-          punteggioTitoli: scoreResult.breakdown.titoliCulturali + scoreResult.breakdown.informatica,
-          punteggioTotale: scoreResult.totalScore
-        })
-      });
-    } catch (error) {
-      console.error('Errore durante il salvataggio dei dati:', error);
-      // Non mostriamo l'errore all'utente, il calcolo funziona comunque
+export default function NewHome() {
+  const sections = [
+    {
+      icon: Calculator,
+      title: "Calcola Punteggio GPS",
+      description: "Scopri il tuo punteggio GPS e analizza in quali province hai maggiori possibilità di ottenere una supplenza, basato sui dati storici ufficiali.",
+      link: "/calcola-gps",
+      color: "from-cyan-500 to-blue-500",
+      bgColor: "bg-cyan-50"
+    },
+    {
+      icon: GraduationCap,
+      title: "Trova Classe di Concorso",
+      description: "Verifica per quali classi di concorso puoi insegnare con la tua laurea, o scopri quali lauree servono per una specifica classe.",
+      link: "/trova-classe",
+      color: "from-purple-500 to-pink-500",
+      bgColor: "bg-purple-50"
+    },
+    {
+      icon: Info,
+      title: "Info GPS 2026",
+      description: "Tutte le informazioni essenziali sulle Graduatorie Provinciali per le Supplenze: requisiti, punteggi, scadenze e procedure.",
+      link: "/info-gps",
+      color: "from-blue-500 to-indigo-500",
+      bgColor: "bg-blue-50"
+    },
+    {
+      icon: Sparkles,
+      title: "Novità GPS 2026",
+      description: "Resta aggiornato su tutte le novità, i cambiamenti normativi e le ultime notizie riguardanti le graduatorie GPS.",
+      link: "/novita-gps-2026",
+      color: "from-orange-500 to-red-500",
+      bgColor: "bg-orange-50"
+    },
+    {
+      icon: Mail,
+      title: "Contatti",
+      description: "Hai domande o dubbi? Contattaci per ricevere supporto personalizzato sul tuo percorso per diventare docente.",
+      link: "/contatti",
+      color: "from-green-500 to-teal-500",
+      bgColor: "bg-green-50"
     }
-  };
-
-  const handleBack = () => {
-    setResult(null);
-  };
+  ];
 
   return (
     <div className="min-h-screen flex flex-col relative overflow-hidden">
@@ -59,79 +54,125 @@ export default function Home() {
         <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] rounded-full bg-secondary/20 blur-[120px]" />
       </div>
 
-      <main className="container relative z-10 py-12 md:py-20 md:pt-28 max-w-4xl mx-auto">
+      <main className="container relative z-10 py-12 md:py-20 md:pt-28 max-w-6xl mx-auto">
         
-        {/* Header */}
+        {/* Hero Section */}
         <motion.div 
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12 space-y-4"
+          className="text-center mb-16 space-y-6"
         >
           <div className="inline-flex items-center justify-center p-3 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 mb-4 shadow-lg">
-            <img src="/images/logo-icon.png" alt="GPS Logo" className="w-12 h-12 object-contain" />
+            <img src="/images/logo-icon.png" alt="Mondo Scuola Logo" className="w-12 h-12 object-contain" />
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-white tracking-tight drop-shadow-sm">
-            GPS <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary">Calculator</span>
+          
+          <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tight drop-shadow-sm">
+            MONDO <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary">SCUOLA</span>
           </h1>
-          <p className="text-lg md:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed">
-            Calcola il tuo punteggio GPS e scopri in quali province hai maggiori possibilità di ottenere una supplenza, basato sui dati storici ufficiali.
+          
+          <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed font-medium">
+            Il portale completo per chi vuole insegnare
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 items-center justify-center mt-6">
-            <Link href="/info-gps">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-semibold rounded-xl shadow-lg transition-all duration-300 flex items-center gap-2"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
-                </svg>
-                INFO CALCOLO PUNTEGGIO IN GPS
-              </motion.button>
-            </Link>
-            
-            <Link href="/contatti">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold rounded-xl shadow-lg transition-all duration-300 flex items-center gap-2"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                </svg>
-                CONTATTACI
-              </motion.button>
-            </Link>
+        </motion.div>
+
+        {/* Mission Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 md:p-12 mb-16 shadow-xl"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">
+            La Nostra Mission
+          </h2>
+          <div className="space-y-4 text-white/80 text-lg leading-relaxed">
+            <p>
+              <strong className="text-white">MONDO SCUOLA</strong> nasce dalla volontà di supportare tutti gli aspiranti docenti 
+              nel loro percorso verso l'insegnamento. Sappiamo quanto possa essere complesso orientarsi tra graduatorie, 
+              classi di concorso, punteggi e normative in continua evoluzione.
+            </p>
+            <p>
+              Per questo abbiamo creato un <strong className="text-white">portale unico</strong> che raccoglie tutti gli strumenti 
+              e le informazioni necessarie in un unico luogo, con dati aggiornati e strumenti pratici per aiutarti 
+              a prendere decisioni informate sul tuo futuro professionale.
+            </p>
+            <p>
+              Che tu stia cercando di calcolare il tuo punteggio GPS, scoprire per quali classi puoi insegnare, 
+              o semplicemente rimanere aggiornato sulle ultime novità, <strong className="text-white">MONDO SCUOLA</strong> è 
+              il tuo punto di riferimento affidabile.
+            </p>
           </div>
         </motion.div>
 
-        {/* Content Switcher */}
-        <AnimatePresence mode="wait">
-          {!result ? (
-            <motion.div
-              key="form"
-              exit={{ opacity: 0, x: -20 }}
-              transition={{ duration: 0.3 }}
-            >
-              <GpsForm onCalculate={handleCalculate} />
-              
-              {/* Courses Banner */}
-              <CoursesBanner />
-            </motion.div>
-          ) : (
-            <motion.div
-              key="results"
-              exit={{ opacity: 0, x: 20 }}
-              transition={{ duration: 0.3 }}
-            >
-              <ResultsView result={result} onBack={handleBack} />
-            </motion.div>
-          )}
-        </AnimatePresence>
+        {/* Sections Grid */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="mb-16"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center">
+            Scopri Tutte le Nostre Sezioni
+          </h2>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {sections.map((section, index) => {
+              const Icon = section.icon;
+              return (
+                <Link key={index} href={section.link}>
+                  <motion.div
+                    whileHover={{ y: -8, scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    className="bg-white rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer h-full flex flex-col"
+                  >
+                    <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${section.color} flex items-center justify-center mb-4 shadow-lg`}>
+                      <Icon className="w-7 h-7 text-white" />
+                    </div>
+                    
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">
+                      {section.title}
+                    </h3>
+                    
+                    <p className="text-gray-600 leading-relaxed mb-4 flex-1">
+                      {section.description}
+                    </p>
+                    
+                    <div className={`flex items-center text-sm font-semibold bg-gradient-to-r ${section.color} bg-clip-text text-transparent`}>
+                      Scopri di più
+                      <ArrowRight className="w-4 h-4 ml-2" style={{ color: 'inherit' }} />
+                    </div>
+                  </motion.div>
+                </Link>
+              );
+            })}
+          </div>
+        </motion.div>
 
-
+        {/* CTA Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className="text-center bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-3xl p-12 shadow-2xl"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Inizia il Tuo Percorso Oggi
+          </h2>
+          <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
+            Unisciti a migliaia di aspiranti docenti che hanno già scelto MONDO SCUOLA 
+            come punto di riferimento per il loro futuro nell'insegnamento.
+          </p>
+          <Link href="/calcola-gps">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="px-8 py-4 bg-white text-purple-600 font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-lg"
+            >
+              Calcola il Tuo Punteggio GPS
+            </motion.button>
+          </Link>
+        </motion.div>
 
       </main>
     </div>
