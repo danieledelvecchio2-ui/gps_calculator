@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X, Home, Info, Sparkles, Mail, Shield } from "lucide-react";
+import { Menu, X, Home, Info, Sparkles, Mail, Shield, GraduationCap } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export function Navigation() {
@@ -11,6 +11,7 @@ export function Navigation() {
     { path: "/", label: "Home", icon: Home },
     { path: "/info-gps", label: "Info Calcolo Punteggio GPS", icon: Info },
     { path: "/novita-gps-2026", label: "Novità GPS 2026", icon: Sparkles },
+    { path: "/trova-classe", label: "Trova Classe di Concorso", icon: GraduationCap },
     { path: "/contatti", label: "Contatti", icon: Mail },
     { path: "/privacy", label: "Privacy Policy", icon: Shield },
   ];

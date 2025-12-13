@@ -1,0 +1,1094 @@
+// Dati classi di concorso estratti da classidiconcorso.it
+// Aggiornato al DM 259/17 e DM 22/12/2023
+
+export interface ClasseDiConcorso {
+  code: string;
+  description: string;
+  notes: string;
+  url: string;
+  required_titles?: Array<{
+    title: string;
+    requirements: string;
+  }>;
+}
+
+export const classiDiConcorso: ClasseDiConcorso[] = [
+  {
+    "code": "Infanzia: posto comune",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-00AA",
+    "required_titles": []
+  },
+  {
+    "code": "Primaria: posto comune",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-00EE",
+    "required_titles": []
+  },
+  {
+    "code": "Disegno e storia dell'arte nell'istruzione secondaria di I e di II grado",
+    "description": "AGGIORNATO SECONDO ALLEGATO 10 FEBBRAIO 2024",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-01",
+    "required_titles": []
+  },
+  {
+    "code": "Design dei metalli, dell'oreficeria, delle pietre dure e delle gemme",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-02",
+    "required_titles": []
+  },
+  {
+    "code": "Design della ceramica",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-03",
+    "required_titles": []
+  },
+  {
+    "code": "Design del libro",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-04",
+    "required_titles": []
+  },
+  {
+    "code": "Design del tessuto e della moda",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-05",
+    "required_titles": []
+  },
+  {
+    "code": "Design del vetro",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-06",
+    "required_titles": []
+  },
+  {
+    "code": "Discipline Audiovisive",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-07",
+    "required_titles": []
+  },
+  {
+    "code": "Discipline geometriche, architettura, design d'arredamento e scenotecnica",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-08",
+    "required_titles": []
+  },
+  {
+    "code": "Discipline grafiche, pittoriche e scenografiche",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-09",
+    "required_titles": []
+  },
+  {
+    "code": "Discipline grafico-pubblicitarie",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-10",
+    "required_titles": []
+  },
+  {
+    "code": "Discipline letterarie e latino",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-11",
+    "required_titles": []
+  },
+  {
+    "code": "Discipline letterarie nell'istruzione secondaria di I e II grado",
+    "description": "AGGIORNATO SECONDO ALLEGATO 10 FEBBRAIO 2024",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-12",
+    "required_titles": []
+  },
+  {
+    "code": "Discipline letterarie, latino e greco",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-13",
+    "required_titles": []
+  },
+  {
+    "code": "Discipline plastiche, scultoree e scenoplastiche",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-14",
+    "required_titles": []
+  },
+  {
+    "code": "Discipline sanitarie",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-15",
+    "required_titles": []
+  },
+  {
+    "code": "Disegno artistico e modellazione odontotecnica",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-16",
+    "required_titles": []
+  },
+  {
+    "code": "Filosofia e Scienze umane",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-18",
+    "required_titles": []
+  },
+  {
+    "code": "Filosofia e Storia",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-19",
+    "required_titles": []
+  },
+  {
+    "code": "Fisica",
+    "description": "AGGIORNATO SECONDO ALLEGATO 10 FEBBRAIO 2024",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-20",
+    "required_titles": []
+  },
+  {
+    "code": "Geografia",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-21",
+    "required_titles": []
+  },
+  {
+    "code": "Lingue e culture straniere nell'istruzione secondaria di I e II grado",
+    "description": "AGGIORNATO SECONDO ALLEGATO 10 FEBBRAIO 2024",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-22",
+    "required_titles": []
+  },
+  {
+    "code": "Lingua italiana per discenti di lingua straniera (alloglotti)",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-23",
+    "required_titles": []
+  },
+  {
+    "code": "Matematica",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-26",
+    "required_titles": []
+  },
+  {
+    "code": "Matematica e Fisica",
+    "description": "AGGIORNATO SECONDO ALLEGATO 10 FEBBRAIO 2024",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-27",
+    "required_titles": []
+  },
+  {
+    "code": "Matematica e scienze",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-28",
+    "required_titles": []
+  },
+  {
+    "code": "Musica nell'istruzione secondaria di I grado e II grado",
+    "description": "AGGIORNATO SECONDO ALLEGATO 10 FEBBRAIO 2024",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-30",
+    "required_titles": []
+  },
+  {
+    "code": "Scienze degli alimenti",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-31",
+    "required_titles": []
+  },
+  {
+    "code": "Scienze della geologia e della mineralogia",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-32",
+    "required_titles": []
+  },
+  {
+    "code": "Scienze e tecnologie aeronautiche",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-33",
+    "required_titles": []
+  },
+  {
+    "code": "Scienze e tecnologie chimiche",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-34",
+    "required_titles": []
+  },
+  {
+    "code": "Scienze e tecnologie della calzatura e della moda",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-35",
+    "required_titles": []
+  },
+  {
+    "code": "Scienze e tecnologie della logistica",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-36",
+    "required_titles": []
+  },
+  {
+    "code": "Scienze e tecnologie delle costruzioni, tecnologie e tecniche di rappresentazione grafica",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-37",
+    "required_titles": []
+  },
+  {
+    "code": "Scienze e tecnologie delle costruzioni aeronautiche",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-38",
+    "required_titles": []
+  },
+  {
+    "code": "Scienze e tecnologie delle costruzioni navali",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-39",
+    "required_titles": []
+  },
+  {
+    "code": "Scienze e tecnologie elettriche ed elettroniche",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-40",
+    "required_titles": []
+  },
+  {
+    "code": "Scienze e tecnologie informatiche",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-41",
+    "required_titles": []
+  },
+  {
+    "code": "Scienze e tecnologie meccaniche",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-42",
+    "required_titles": []
+  },
+  {
+    "code": "Scienze e tecnologie nautiche",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-43",
+    "required_titles": []
+  },
+  {
+    "code": "Scienze e tecnologie tessili, dell'abbigliamento e della moda",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-44",
+    "required_titles": []
+  },
+  {
+    "code": "Scienze economico-aziendali",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-45",
+    "required_titles": []
+  },
+  {
+    "code": "Scienze giuridico-economiche",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-46",
+    "required_titles": []
+  },
+  {
+    "code": "Scienze matematiche applicate",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-47",
+    "required_titles": []
+  },
+  {
+    "code": "Scienze motorie e sportive nell'istruzione secondaria di I grado e II grado",
+    "description": "AGGIORNATO SECONDO ALLEGATO 10 FEBBRAIO 2024",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-48",
+    "required_titles": []
+  },
+  {
+    "code": "Scienze naturali, chimiche e biologiche",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-50",
+    "required_titles": []
+  },
+  {
+    "code": "Scienze, tecnologie e tecniche agrarie",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-51",
+    "required_titles": []
+  },
+  {
+    "code": "Scienze, tecnologie e tecniche di produzioni animali",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-52",
+    "required_titles": []
+  },
+  {
+    "code": "Storia della musica e della danza",
+    "description": "AGGIORNATO SECONDO ALLEGATO 10 FEBBRAIO 2024",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-53",
+    "required_titles": []
+  },
+  {
+    "code": "Storia dell'arte",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-54",
+    "required_titles": []
+  },
+  {
+    "code": "Strumento musicale negli istituti di istruzione superiore di II grado",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-55",
+    "required_titles": []
+  },
+  {
+    "code": "Strumento musicale nella scuola secondaria di I grado",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-56",
+    "required_titles": []
+  },
+  {
+    "code": "Tecnica della danza classica",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-57",
+    "required_titles": []
+  },
+  {
+    "code": "Tecnica della danza contemporanea",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-58",
+    "required_titles": []
+  },
+  {
+    "code": "Tecniche di accompagnamento alla danza e teoria e pratica musicale per la danza",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-59",
+    "required_titles": []
+  },
+  {
+    "code": "Tecnologia nella scuola secondaria di I grado",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-60",
+    "required_titles": []
+  },
+  {
+    "code": "Tecnologie e tecniche delle comunicazioni multimediali",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-61",
+    "required_titles": []
+  },
+  {
+    "code": "Tecnologie e tecniche per la grafica",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-62",
+    "required_titles": []
+  },
+  {
+    "code": "Tecnologie musicali",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-63",
+    "required_titles": []
+  },
+  {
+    "code": "Teoria, analisi e composizione",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-64",
+    "required_titles": []
+  },
+  {
+    "code": "Teoria e tecnica della comunicazione",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-65",
+    "required_titles": []
+  },
+  {
+    "code": "Trattamento testi, dati ed applicazioni. Informatica (ad esaurimento)",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-66",
+    "required_titles": []
+  },
+  {
+    "code": "Italiano negli istituti di istruzione secondaria di I e II grado con lingua di insegnamento slovena o bilingui del Friuli Venezia Giulia",
+    "description": "AGGIORNATO SECONDO ALLEGATO 10 FEBBRAIO 2024",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-70",
+    "required_titles": []
+  },
+  {
+    "code": "Discipline letterarie negli istituti di istruzione secondaria di I e Il grado con lingua di insegnamento slovena o bilingui del Friuli Venezia Giulia",
+    "description": "AGGIORNATO SECONDO ALLEGATO 10 FEBBRAIO 2024",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-71",
+    "required_titles": []
+  },
+  {
+    "code": "Discipline letterarie e latino con lingua di insegnamento slovena",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-74",
+    "required_titles": []
+  },
+  {
+    "code": "Discipline letterarie, latino e greco con lingua di insegnamento slovena",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-75",
+    "required_titles": []
+  },
+  {
+    "code": "Trattamento testi, dati ed applicazioni, Informatica negli istituti professionali con lingua di insegnamento slovena (ad esaurimento)",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-76",
+    "required_titles": []
+  },
+  {
+    "code": "Lingua e cultura ladina, storia ed educazione civica, geografia, nella scuola secondaria di I grado con lingua di insegnamento ladina",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-77",
+    "required_titles": []
+  },
+  {
+    "code": "Italiano (seconda lingua), storia ed educazione civica, geografia, nella scuola secondaria di I grado con lingua di insegnamento tedesca",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-78",
+    "required_titles": []
+  },
+  {
+    "code": "Discipline letterarie (italiano seconda lingua) negli istituti di istruzione secondaria di II grado in lingua tedesca",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-79",
+    "required_titles": []
+  },
+  {
+    "code": "Discipline letterarie negli istituti di istruzione secondaria di II grado in lingua tedesca e con lingua di insegnamento tedesca delle località ladine",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-80",
+    "required_titles": []
+  },
+  {
+    "code": "Discipline letterarie e latino nei licei in lingua tedesca e con lingua di insegnamento, tedesca delle località ladine",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-81",
+    "required_titles": []
+  },
+  {
+    "code": "Discipline letterarie, latino e greco nel liceo classico in lingua tedesca e con lingua di insegnamento tedesca delle località ladine",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-82",
+    "required_titles": []
+  },
+  {
+    "code": "Discipline letterarie (tedesco seconda lingua) negli istituti di istruzione secondaria di II grado in lingua italiana della provincia di Bolzano",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-83",
+    "required_titles": []
+  },
+  {
+    "code": "Tedesco (seconda lingua), storia ed educazione civica, geografia, nella scuola secondaria di I grado con lingua di insegnamento italiana della provincia di Bolzano",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-84",
+    "required_titles": []
+  },
+  {
+    "code": "Tedesco storia ed educazione civica, geografia, nella scuola secondaria di I grado in lingua tedesca e con lingua di insegnamento tedesca",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-85",
+    "required_titles": []
+  },
+  {
+    "code": "Trattamento testi, dati ed applicazioni, Informatica negli istituti professionali in lingua tedesca e con lingua di insegnamento tedesca (ad esaurimento)",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-A-86",
+    "required_titles": []
+  },
+  {
+    "code": "Lingue e culture straniere nell'istruzione secondaria di I e II grado (FRANCESE)",
+    "description": "AGGIORNATO SECONDO ALLEGATO 10 FEBBRAIO 2024",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-AA22",
+    "required_titles": []
+  },
+  {
+    "code": "Strumento musicale negli istituti di istruzione superiore di II grado (ARPA)",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-AA55",
+    "required_titles": []
+  },
+  {
+    "code": "Strumento musicale nella scuola secondaria di I grado (ARPA)",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-AA56",
+    "required_titles": []
+  },
+  {
+    "code": "Lingue e culture straniere nell'istruzione secondaria di I e II grado (INGLESE)",
+    "description": "AGGIORNATO SECONDO ALLEGATO 10 FEBBRAIO 2024",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-AB22",
+    "required_titles": []
+  },
+  {
+    "code": "Strumento musicale negli istituti di istruzione superiore di II grado (CHITARRA)",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-AB55",
+    "required_titles": []
+  },
+  {
+    "code": "Strumento musicale nella scuola secondaria di I grado (CHITARRA)",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-AB56",
+    "required_titles": []
+  },
+  {
+    "code": "Lingue e culture straniere nell'istruzione secondaria di I e II grado (SPAGNOLO)",
+    "description": "AGGIORNATO SECONDO ALLEGATO 10 FEBBRAIO 2024",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-AC22",
+    "required_titles": []
+  },
+  {
+    "code": "Strumento musicale nella scuola secondaria di I grado (CLARINETTO)",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-AC56",
+    "required_titles": []
+  },
+  {
+    "code": "Sostegno Scuola Media: area comune",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-AD00",
+    "required_titles": []
+  },
+  {
+    "code": "Sostegno Scuola Infanzia: area comune",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-AD0D",
+    "required_titles": []
+  },
+  {
+    "code": "Sostegno Scuola Elementare: area comune",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-AD0J",
+    "required_titles": []
+  },
+  {
+    "code": "Lingue e culture straniere nell'istruzione secondaria di I e II grado (TEDESCO)",
+    "description": "AGGIORNATO SECONDO ALLEGATO 10 FEBBRAIO 2024",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-AD22",
+    "required_titles": []
+  },
+  {
+    "code": "Strumento musicale nella scuola secondaria di I grado (CORNO)",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-AD56",
+    "required_titles": []
+  },
+  {
+    "code": "Primaria: posto sostegno",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-ADEE",
+    "required_titles": []
+  },
+  {
+    "code": "Sostegno Scuola Superiore",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-ADSS",
+    "required_titles": []
+  },
+  {
+    "code": "Lingue e culture straniere nell'istruzione secondaria di I e II grado (RUSSO)",
+    "description": "AGGIORNATO SECONDO ALLEGATO 10 FEBBRAIO 2024",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-AE22",
+    "required_titles": []
+  },
+  {
+    "code": "Strumento musicale nella scuola secondaria di I grado (FAGOTTO)",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-AE56",
+    "required_titles": []
+  },
+  {
+    "code": "Lingue e culture straniere nell'istruzione secondaria di I e II grado (ALBANESE)",
+    "description": "AGGIORNATO SECONDO ALLEGATO 10 FEBBRAIO 2024",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-AF22",
+    "required_titles": []
+  },
+  {
+    "code": "Strumento musicale nella scuola secondaria di I grado (FISARMONICA)",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-AF56",
+    "required_titles": []
+  },
+  {
+    "code": "Lingue e culture straniere nell'istruzione secondaria di I e II grado (SLOVENO)",
+    "description": "AGGIORNATO SECONDO ALLEGATO 10 FEBBRAIO 2024",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-AG22",
+    "required_titles": []
+  },
+  {
+    "code": "Strumento musicale nella scuola secondaria di I grado (FLAUTO)",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-AG56",
+    "required_titles": []
+  },
+  {
+    "code": "Lingue e culture straniere nell'istruzione secondaria di I e II grado (SERBO-CROATO)",
+    "description": "AGGIORNATO SECONDO ALLEGATO 10 FEBBRAIO 2024",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-AH22",
+    "required_titles": []
+  },
+  {
+    "code": "Strumento musicale negli istituti di istruzione superiore di II grado (FLAUTO)",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-AH55",
+    "required_titles": []
+  },
+  {
+    "code": "Strumento musicale nella scuola secondaria di I grado (OBOE)",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-AH56",
+    "required_titles": []
+  },
+  {
+    "code": "Lingue e culture straniere nell'istruzione secondaria di I e II grado (CINESE)",
+    "description": "AGGIORNATO SECONDO ALLEGATO 10 FEBBRAIO 2024",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-AI22",
+    "required_titles": []
+  },
+  {
+    "code": "Strumento musicale negli istituti di istruzione superiore di II grado (PERCUSSIONI)",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-AI55",
+    "required_titles": []
+  },
+  {
+    "code": "Strumento musicale nella scuola secondaria di I grado (PERCUSSIONI)",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-AI56",
+    "required_titles": []
+  },
+  {
+    "code": "Lingue e culture straniere nell'istruzione secondaria di I e II grado (GIAPPONESE)",
+    "description": "AGGIORNATO SECONDO ALLEGATO 10 FEBBRAIO 2024",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-AJ22",
+    "required_titles": []
+  },
+  {
+    "code": "Strumento musicale negli istituti di istruzione superiore di II grado (PIANOFORTE)",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-AJ55",
+    "required_titles": []
+  },
+  {
+    "code": "Strumento musicale nella scuola secondaria di I grado (PIANOFORTE)",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-AJ56",
+    "required_titles": []
+  },
+  {
+    "code": "Lingue e culture straniere nell'istruzione secondaria di I e II grado (EBRAICO)",
+    "description": "AGGIORNATO SECONDO ALLEGATO 10 FEBBRAIO 2024",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-AK22",
+    "required_titles": []
+  },
+  {
+    "code": "Strumento musicale negli istituti di istruzione superiore di II grado (SAXSOFONO)",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-AK55",
+    "required_titles": []
+  },
+  {
+    "code": "Strumento musicale nella scuola secondaria di I grado (SAXSOFONO)",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-AK56",
+    "required_titles": []
+  },
+  {
+    "code": "Lingue e culture straniere nell'istruzione secondaria di I e II grado (ARABO)",
+    "description": "AGGIORNATO SECONDO ALLEGATO 10 FEBBRAIO 2024",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-AL22",
+    "required_titles": []
+  },
+  {
+    "code": "Strumento musicale negli istituti di istruzione superiore di II grado (TROMBA)",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-AL55",
+    "required_titles": []
+  },
+  {
+    "code": "Strumento musicale nella scuola secondaria di I grado (TROMBA)",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-AL56",
+    "required_titles": []
+  },
+  {
+    "code": "Lingue e culture straniere nell'istruzione secondaria di I e II grado (NEO-GRECO)",
+    "description": "AGGIORNATO SECONDO ALLEGATO 10 FEBBRAIO 2024",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-AM22",
+    "required_titles": []
+  },
+  {
+    "code": "Strumento musicale negli istituti di istruzione superiore di II grado (VIOLINO)",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-AM55",
+    "required_titles": []
+  },
+  {
+    "code": "Strumento musicale nella scuola secondaria di I grado (VIOLINO)",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-AM56",
+    "required_titles": []
+  },
+  {
+    "code": "Lingue e culture straniere nell'istruzione secondaria di I e II grado (PORTOGHESE)",
+    "description": "AGGIORNATO SECONDO ALLEGATO 10 FEBBRAIO 2024",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-AN22",
+    "required_titles": []
+  },
+  {
+    "code": "Strumento musicale negli istituti di istruzione superiore di II grado (VIOLONCELLO)",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-AN55",
+    "required_titles": []
+  },
+  {
+    "code": "Strumento musicale nella scuola secondaria di I grado (VIOLONCELLO)",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-AN56",
+    "required_titles": []
+  },
+  {
+    "code": "Attività pratiche speciali (ad esaurimento)",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-B-01",
+    "required_titles": []
+  },
+  {
+    "code": "Conversazione in lingua straniera",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-B-02",
+    "required_titles": []
+  },
+  {
+    "code": "Laboratori di Fisica",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-B-03",
+    "required_titles": []
+  },
+  {
+    "code": "Laboratori di liuteria",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-B-04",
+    "required_titles": []
+  },
+  {
+    "code": "Laboratorio di logistica",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-B-05",
+    "required_titles": []
+  },
+  {
+    "code": "Laboratorio di odontotecnica",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-B-06",
+    "required_titles": []
+  },
+  {
+    "code": "Laboratorio di ottica",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-B-07",
+    "required_titles": []
+  },
+  {
+    "code": "Laboratori di produzioni industriali ed artigianali della ceramica",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-B-08",
+    "required_titles": []
+  },
+  {
+    "code": "Laboratori di scienze e tecnologie aeronautiche",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-B-09",
+    "required_titles": []
+  },
+  {
+    "code": "Laboratori di scienze e tecnologie delle costruzioni aeronautiche",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-B-10",
+    "required_titles": []
+  },
+  {
+    "code": "Laboratori di scienze e tecnologie agrarie",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-B-11",
+    "required_titles": []
+  },
+  {
+    "code": "Laboratori di scienze e tecnologie chimiche e microbiologiche",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-B-12",
+    "required_titles": []
+  },
+  {
+    "code": "Laboratori di scienze e tecnologie della calzatura e della moda",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-B-13",
+    "required_titles": []
+  },
+  {
+    "code": "Laboratori di scienze e tecnologie delle costruzioni",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-B-14",
+    "required_titles": []
+  },
+  {
+    "code": "Laboratori di scienze e tecnologie elettriche ed elettroniche",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-B-15",
+    "required_titles": []
+  },
+  {
+    "code": "Laboratori di scienze e tecnologie informatiche",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-B-16",
+    "required_titles": []
+  },
+  {
+    "code": "Laboratori di scienze e tecnologie meccaniche",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-B-17",
+    "required_titles": []
+  },
+  {
+    "code": "Laboratori di scienze e tecnologie tessili, dell'abbigliamento e della moda",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-B-18",
+    "required_titles": []
+  },
+  {
+    "code": "Laboratori di servizi di ricettività alberghiera",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-B-19",
+    "required_titles": []
+  },
+  {
+    "code": "Laboratori di servizi enogastronomici, settore cucina",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-B-20",
+    "required_titles": []
+  },
+  {
+    "code": "Laboratori di servizi enogastronomici, settore sala e vendita",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-B-21",
+    "required_titles": []
+  },
+  {
+    "code": "Laboratori di tecnologie e tecniche delle comunicazioni multimediali",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-B-22",
+    "required_titles": []
+  },
+  {
+    "code": "Laboratori per i servizi socio–sanitari",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-B-23",
+    "required_titles": []
+  },
+  {
+    "code": "Laboratorio di scienze e tecnologie nautiche",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-B-24",
+    "required_titles": []
+  },
+  {
+    "code": "Laboratorio di scienze e tecnologie delle costruzioni navali",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-B-25",
+    "required_titles": []
+  },
+  {
+    "code": "Laboratorio di tecnologie del legno",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-B-26",
+    "required_titles": []
+  },
+  {
+    "code": "Laboratorio di tecnologie del marmo",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-B-27",
+    "required_titles": []
+  },
+  {
+    "code": "Laboratorio di tecnologie orafe",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-B-28",
+    "required_titles": []
+  },
+  {
+    "code": "Gabinetto fisioterapico (ad esaurimento)",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-B-29",
+    "required_titles": []
+  },
+  {
+    "code": "Addetto all'ufficio tecnico (ad esaurimento)",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-B-30",
+    "required_titles": []
+  },
+  {
+    "code": "Esercitazioni pratiche per centralinisti telefonici (ad esaurimento)",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-B-31",
+    "required_titles": []
+  },
+  {
+    "code": "Esercitazioni di pratica professionale (ad esaurimento)",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-B-32",
+    "required_titles": []
+  },
+  {
+    "code": "Educazione motoria scuola primaria",
+    "description": "AGGIORNATO SECONDO ALLEGATO 10 FEBBRAIO 2024",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-EEEM",
+    "required_titles": []
+  },
+  {
+    "code": "Educatore",
+    "description": "",
+    "notes": "",
+    "url": "https://www.classidiconcorso.it/classe-di-concorso-PP",
+    "required_titles": []
+  }
+];

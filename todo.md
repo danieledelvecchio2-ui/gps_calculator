@@ -150,3 +150,12 @@
 - [x] Aggiungere sezione "Come Aumentare il Punteggio GPS" nella pagina NewsGPS2026
 - [x] Banner colorati stile Bootstrap per: C2+CLIL, DigComp, Master, Altri titoli
 - [x] Ogni banner con colore diverso (verde, blu, arancione, rosso) e punteggi
+
+## Nuova richiesta - Sezione "Trova la tua Classe di Concorso"
+
+- [x] Visitare cattedra.it per analizzare la struttura
+- [x] Scraping dati da classidiconcorso.it (154 classi estratte)
+- [x] Convertire JSON in formato TypeScript per il sito
+- [x] Creare pagina "Trova Classe di Concorso" con ricerca titolo
+- [x] Mostrare classi compatibili con codice, descrizione e requisiti CFU
+- [x] Aggiungere link nel menu navigazione
