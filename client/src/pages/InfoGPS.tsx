@@ -2,7 +2,7 @@ import { Info, GraduationCap, Award, Clock, Languages, Laptop, BookOpen } from "
 
 export function InfoGPS() {
   return (
-    <div className="min-h-screen bg-green-50">
+    <div className="min-h-screen bg-white">
       {/* Header */}
       <div className="bg-gradient-to-r from-green-600 to-emerald-600 text-white py-12 md:py-16">
         <div className="container">

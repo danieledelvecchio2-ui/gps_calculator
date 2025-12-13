@@ -269,10 +269,22 @@
 - [x] Verificare e migliorare leggibilità form (contrasto colori) - Aggiunto text-gray-900 ai label
 - [x] Cambiare "Apertura: Aprile/Maggio - Chiusura: Maggio/Giugno" → "Apertura: Primavera" - Trovato in NewsGPS2026 e corretto
 - [x] Testare la pagina
-- [ ] Creare checkpoint v4.2
+- [x] Creare checkpoint v4.2
 
 ## Sistemazione pagina Novità GPS 2026
 
 - [x] Aggiungere novità sull'accredito titoli/certificazioni
 - [x] Rimuovere tutte le date specifiche (Aprile, Maggio, Giugno) e sostituire con termini generici (Primavera, Estate)
 - [x] Testare la pagina
+
+## Ridisegno completo: sfondo bianco + testo nero (massima leggibilità)
+
+- [x] Ridisegnare homepage con sfondo bianco e testo nero
+- [x] Ridisegnare pagina Calcola GPS con sfondo bianco
+- [x] Ridisegnare pagina Info GPS con sfondo bianco e tabelle leggibili
+- [x] Ridisegnare pagina Trova Classe con sfondo bianco
+- [x] Ridisegnare pagina Novità GPS con sfondo bianco
+- [x] Ridisegnare pagina Contatti con sfondo bianco
+- [x] Verificare leggibilità di tutte le tabelle e sezioni
+- [x] Testare tutte le pagine
+- [ ] Creare checkpoint v5.0

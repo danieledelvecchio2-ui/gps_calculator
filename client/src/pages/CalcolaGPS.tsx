@@ -50,7 +50,7 @@ export default function CalcolaGPS() {
   };
 
   return (
-    <div className="min-h-screen bg-blue-50">
+    <div className="min-h-screen bg-white">
       {/* Header */}
       <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-12 md:py-16">
         <div className="container">

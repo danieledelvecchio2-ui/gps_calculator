@@ -2,7 +2,7 @@ import { Sparkles, AlertCircle, CheckCircle, Calendar, Users, FileText, Clock } 
 
 export function NewsGPS2026() {
   return (
-    <div className="min-h-screen bg-orange-50">
+    <div className="min-h-screen bg-white">
       {/* Header */}
       <div className="bg-gradient-to-r from-orange-600 to-red-600 text-white py-12 md:py-16">
         <div className="container">
@@ -178,7 +178,7 @@ export function NewsGPS2026() {
               </div>
 
               {/* Step 4 */}
-              <div className="bg-orange-50 rounded-xl p-6 border-2 border-orange-200">
+              <div className="bg-white rounded-xl p-6 border-2 border-orange-200">
                 <div className="flex items-center gap-2 mb-3">
                   <span className="bg-orange-600 text-white font-bold w-8 h-8 rounded-full flex items-center justify-center">
                     4

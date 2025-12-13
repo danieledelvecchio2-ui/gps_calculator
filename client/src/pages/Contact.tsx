@@ -46,7 +46,7 @@ export function Contact() {
   };
 
   return (
-    <div className="min-h-screen bg-indigo-50">
+    <div className="min-h-screen bg-white">
       {/* Header */}
       <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-12 md:py-16">
         <div className="container">
