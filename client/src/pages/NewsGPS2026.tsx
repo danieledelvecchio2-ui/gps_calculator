@@ -46,12 +46,11 @@ export function NewsGPS2026() {
               
               <div className="bg-blue-50 border-l-4 border-blue-600 p-4 rounded-r-xl mt-4">
                 <p className="text-blue-900 font-semibold mb-2">
-                  ⏰ Date Previste (da confermare dal MIUR):
+                  ⏰ Tempistiche Previste (da confermare dal MIUR):
                 </p>
                 <ul className="list-disc list-inside space-y-1 text-blue-800">
-                  <li>Apertura domande: <strong>Aprile-Maggio 2026</strong></li>
-                  <li>Chiusura domande: <strong>Maggio-Giugno 2026</strong></li>
-                  <li>Pubblicazione graduatorie: <strong>Luglio-Agosto 2026</strong></li>
+                  <li>Apertura domande: <strong>Primavera 2026</strong></li>
+                  <li>Pubblicazione graduatorie: <strong>Estate 2026</strong></li>
                 </ul>
               </div>
             </div>
@@ -110,6 +109,18 @@ export function NewsGPS2026() {
                 <p className="text-gray-700 leading-relaxed">
                   La <strong>piattaforma MIUR</strong> per la presentazione delle domande è stata rinnovata per rendere la procedura 
                   più intuitiva e veloce. Sarà possibile salvare bozze e modificare la domanda fino alla scadenza.
+                </p>
+              </div>
+
+              {/* Novità 5 - Certificazioni Informatiche Accreditate */}
+              <div className="border-l-4 border-cyan-500 pl-6 py-2">
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  5. Certificazioni Informatiche Accreditate
+                </h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Dal 2026, le <strong>certificazioni informatiche</strong> devono essere rilasciate esclusivamente da <strong>enti accreditati Accredia</strong> e 
+                  devono essere <strong>in linea con i framework DigComp 2.2 e DigCompEdu</strong>. Solo le certificazioni conformi a questi standard 
+                  saranno riconosciute per l'attribuzione del punteggio GPS.
                 </p>
               </div>
             </div>

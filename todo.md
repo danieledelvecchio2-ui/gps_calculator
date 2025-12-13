@@ -262,4 +262,17 @@
 - [x] Recuperare contenuti originali pagina Info GPS dal checkpoint precedente
 - [x] Integrare tutti i contenuti con nuovo stile Bootstrap verde chiaro
 - [x] Verificare che non manchi nessuna sezione
-- [ ] Creare checkpoint v4.1 correttivo
+- [x] Creare checkpoint v4.1 correttivo
+
+## Sistemazione pagina Calcola GPS
+
+- [x] Verificare e migliorare leggibilità form (contrasto colori) - Aggiunto text-gray-900 ai label
+- [x] Cambiare "Apertura: Aprile/Maggio - Chiusura: Maggio/Giugno" → "Apertura: Primavera" - Trovato in NewsGPS2026 e corretto
+- [x] Testare la pagina
+- [ ] Creare checkpoint v4.2
+
+## Sistemazione pagina Novità GPS 2026
+
+- [x] Aggiungere novità sull'accredito titoli/certificazioni
+- [x] Rimuovere tutte le date specifiche (Aprile, Maggio, Giugno) e sostituire con termini generici (Primavera, Estate)
+- [x] Testare la pagina
