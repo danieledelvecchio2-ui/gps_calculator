@@ -214,7 +214,7 @@ function ProvinceCard({ province, index }: { province: ProvinceAnalysis; index: 
                   </span>
                 </div>
                 <div className="flex items-center gap-1">
-                  <span className="opacity-60">Min 2024:</span>
+                  <span className="opacity-60">Min 2025/26:</span>
                   <span className="font-mono font-semibold text-white">
                     {province.minScore2024 ? province.minScore2024 : "N/D"}
                   </span>

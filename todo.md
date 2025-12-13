@@ -106,3 +106,8 @@
 - [x] Creare menu orizzontale per desktop (no hamburger su PC)
 - [x] Mantenere hamburger menu solo su mobile
 - [x] Risolvere errore "Errore nell'invio dell'email" nel form contatti
+- [ ] Correggere anni scolastici nella tabella risultati (2024/25 e 2025/26)
+- [ ] Integrare dati GPS delle 105 province italiane
+- [ ] Creare sistema di caricamento dati province dal JSON
+- [ ] Aggiornare UI per mostrare punteggi minimi per tutte le province
+- [ ] Testare integrazione dati province
