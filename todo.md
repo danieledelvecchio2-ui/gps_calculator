@@ -167,3 +167,9 @@
 - [ ] Mostrare titoli richiesti direttamente nella pagina senza link esterni
 - [x] Rimuovere toni allarmistici sulle scadenze febbraio da pagina Novità GPS 2026
 - [ ] Creare checkpoint v3.4 con rimozione allarmismo
+
+## Nuova correzione
+
+- [x] Rimuovere punto timeline "Gennaio 2026 - Completa tutti i titoli" dalla pagina Novità GPS
+- [x] Rimuovere box "Ricorda: Tutti i titoli devono essere conseguiti entro gennaio 2026"
+- [ ] Creare checkpoint v3.5 con correzioni scadenze

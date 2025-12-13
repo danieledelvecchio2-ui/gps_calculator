@@ -260,8 +260,8 @@ export function NewsGPS2026() {
                   <div className="w-0.5 h-full bg-purple-500/20 mt-2"></div>
                 </div>
                 <div className="pb-8">
-                  <p className="font-bold text-purple-200">Gennaio 2026</p>
-                  <p className="text-white/70 text-sm">Completa tutti i titoli che vuoi inserire (ultimo mese utile!)</p>
+                  <p className="font-bold text-purple-200">Primo Trimestre 2026</p>
+                  <p className="text-white/70 text-sm">Apertura domande aggiornamento GPS 2026/28 (date da confermare)</p>
                 </div>
               </div>
 
@@ -269,19 +269,6 @@ export function NewsGPS2026() {
                 <div className="flex flex-col items-center">
                   <div className="w-10 h-10 rounded-full bg-purple-500/20 border-2 border-purple-400 flex items-center justify-center font-bold">
                     2
-                  </div>
-                  <div className="w-0.5 h-full bg-purple-500/20 mt-2"></div>
-                </div>
-                <div className="pb-8">
-                  <p className="font-bold text-purple-200">Febbraio 2026</p>
-                  <p className="text-white/70 text-sm">Apertura domande aggiornamento GPS 2026/28</p>
-                </div>
-              </div>
-
-              <div className="flex gap-4">
-                <div className="flex flex-col items-center">
-                  <div className="w-10 h-10 rounded-full bg-purple-500/20 border-2 border-purple-400 flex items-center justify-center font-bold">
-                    3
                   </div>
                   <div className="w-0.5 h-full bg-purple-500/20 mt-2"></div>
                 </div>
@@ -294,7 +281,7 @@ export function NewsGPS2026() {
               <div className="flex gap-4">
                 <div className="flex flex-col items-center">
                   <div className="w-10 h-10 rounded-full bg-green-500/20 border-2 border-green-400 flex items-center justify-center font-bold">
-                    4
+                    3
                   </div>
                 </div>
                 <div>
@@ -436,12 +423,7 @@ export function NewsGPS2026() {
               </div>
             </div>
 
-            {/* Info Box Finale */}
-            <div className="mt-6 bg-white/5 border border-white/10 rounded-xl p-4">
-              <p className="text-center text-white/70 text-sm">
-                <strong className="text-white">Ricorda:</strong> Tutti i titoli devono essere conseguiti entro <strong className="text-cyan-400">gennaio 2026</strong> per essere validi nell'aggiornamento GPS 2026/28
-              </p>
-            </div>
+
           </div>
 
           {/* CTA */}
