@@ -173,3 +173,12 @@
 - [x] Rimuovere punto timeline "Gennaio 2026 - Completa tutti i titoli" dalla pagina Novità GPS
 - [x] Rimuovere box "Ricorda: Tutti i titoli devono essere conseguiti entro gennaio 2026"
 - [ ] Creare checkpoint v3.5 con correzioni scadenze
+
+## Miglioramento UI Trova Classe
+
+- [x] Rifare completamente la pagina Trova Classe con design moderno
+- [x] Mostrare titoli richiesti direttamente nelle card (non link esterno)
+- [x] Aggiungere card espandibili per ogni classe
+- [x] Migliorare ricerca e filtri
+- [x] Aggiungere animazioni e hover effects
+- [ ] Creare checkpoint v3.6 con scraping completo e UI migliorata
