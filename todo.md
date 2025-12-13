@@ -287,4 +287,11 @@
 - [x] Ridisegnare pagina Contatti con sfondo bianco
 - [x] Verificare leggibilità di tutte le tabelle e sezioni
 - [x] Testare tutte le pagine
-- [ ] Creare checkpoint v5.0
+- [x] Creare checkpoint v5.0
+
+## Miglioramento visibilità form Calcola GPS
+
+- [x] Rendere placeholder più scuri e visibili (cambiato da muted-foreground a gray-700)
+- [x] Migliorare contrasto label e input
+- [x] Testare form su mobile
+- [ ] Creare checkpoint v5.1
