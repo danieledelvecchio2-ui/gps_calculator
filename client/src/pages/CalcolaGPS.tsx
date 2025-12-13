@@ -50,9 +50,9 @@ export default function CalcolaGPS() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#1e3a5f] text-white">
       {/* Header */}
-      <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-12 md:py-16">
+      <div className="bg-[#152d4a] text-white py-12 md:py-16 border-b border-white/10">
         <div className="container">
           <div className="text-center max-w-3xl mx-auto">
             <div className="flex justify-center mb-6">
@@ -76,7 +76,7 @@ export default function CalcolaGPS() {
         {!result ? (
           <div className="max-w-4xl mx-auto">
             {/* Form Section */}
-            <div className="bg-white rounded-2xl shadow-lg p-8 md:p-10 mb-12">
+            <div className="bg-[#152d4a] rounded-2xl shadow-lg p-8 md:p-10 mb-12 border border-white/10">
               <GpsForm onCalculate={handleCalculate} />
             </div>
 
@@ -88,14 +88,14 @@ export default function CalcolaGPS() {
             {/* Back Button */}
             <button
               onClick={handleBack}
-              className="flex items-center gap-2 text-blue-600 hover:text-blue-700 font-semibold mb-6 transition-colors"
+              className="flex items-center gap-2 text-blue-300 hover:text-blue-200 font-semibold mb-6 transition-colors"
             >
               <ArrowLeft className="w-5 h-5" />
               <span>Calcola di nuovo</span>
             </button>
 
             {/* Results */}
-            <div className="bg-white rounded-2xl shadow-lg p-8 md:p-10 mb-12">
+            <div className="bg-[#152d4a] rounded-2xl shadow-lg p-8 md:p-10 mb-12 border border-white/10">
               <ResultsView result={result} onBack={handleBack} />
             </div>
 

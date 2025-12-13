@@ -294,4 +294,20 @@
 - [x] Rendere placeholder più scuri e visibili (cambiato da muted-foreground a gray-700)
 - [x] Migliorare contrasto label e input
 - [x] Testare form su mobile
-- [ ] Creare checkpoint v5.1
+- [x] Creare checkpoint v5.1
+
+## Sfondo scuro solo per pagina Calcola GPS
+
+- [ ] Cambiare sfondo Calcola GPS da bianco a gradient blu/viola scuro
+- [ ] Cambiare testo form da nero a bianco
+- [ ] Testare leggibilità form
+- [ ] Creare checkpoint v6.0
+
+## Correzione sfondo pagina Calcola GPS
+
+- [x] Cambiare sfondo pagina Calcola GPS da bianco a blu scuro navy (#1e3a5f)
+- [x] Applicare testo bianco per massima leggibilità
+- [x] Mantenere sfondo bianco per tutte le altre pagine (Home, Info GPS, ecc.)
+- [x] Rimuovere gradient blu-viola dalla homepage (sostituito con blu solido)
+- [x] Verificare che CoursesBanner sia ben visibile su sfondo scuro
+- [x] Testare leggibilità form e placeholder
