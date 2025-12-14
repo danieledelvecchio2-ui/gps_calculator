@@ -356,3 +356,8 @@
 ### Checkpoint
 
 - [ ] Creare checkpoint v4.0 dopo implementazione FASE 1
+
+
+## Correzione Form Contatti
+
+- [x] Cambiare colore testo input da grigio chiaro a nero per renderlo leggibile

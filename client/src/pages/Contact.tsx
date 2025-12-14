@@ -120,7 +120,7 @@ export function Contact() {
                     onChange={handleChange}
                     required
                     placeholder="Mario Rossi"
-                    className="w-full"
+                    className="w-full text-gray-900"
                   />
                 </div>
 
@@ -137,7 +137,7 @@ export function Contact() {
                     onChange={handleChange}
                     required
                     placeholder="mario.rossi@email.com"
-                    className="w-full"
+                    className="w-full text-gray-900"
                   />
                 </div>
 
@@ -153,7 +153,7 @@ export function Contact() {
                     value={formData.telefono}
                     onChange={handleChange}
                     placeholder="333 1234567"
-                    className="w-full"
+                    className="w-full text-gray-900"
                   />
                 </div>
 
@@ -170,7 +170,7 @@ export function Contact() {
                     required
                     placeholder="Scrivi qui la tua domanda o richiesta..."
                     rows={6}
-                    className="w-full"
+                    className="w-full text-gray-900"
                   />
                 </div>
 
