@@ -371,5 +371,15 @@
 - [x] Popolare gpsData.ts con punteggi per tutte le 104 province
 - [x] Aggiungere punteggi per 21 classi popolari (A-22, A-28, A-46, ADSS, ecc.)
 - [x] Correggere errori TypeScript in GpsForm.tsx
-- [ ] Testare calcolo con dati completi
-- [ ] Creare checkpoint v4.1
+- [x] Testare calcolo con dati completi
+- [x] Creare checkpoint v4.1
+
+
+## Implementazione Tutte le Classi di Concorso
+
+- [x] Creare script per generare dati dettagliati per tutte le 154 classi
+- [x] Popolare classiDettagliate.json con tutte le classi
+- [x] Aggiornare interfacce TypeScript per nuova struttura dati
+- [x] Correggere componente ClasseDetail per matchare JSON
+- [x] Testare navigazione per diverse classi (A-28, ADSS, 00AA)
+- [x] Creare checkpoint v4.2

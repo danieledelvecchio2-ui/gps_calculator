@@ -3,26 +3,30 @@ import { ChevronLeft, BookOpen, School, FileText } from "lucide-react";
 import classiDettagliate from "@/data/classiDettagliate.json";
 
 interface TitoloAccesso {
-  titolo: string;
-  note: string[];
+  laurea?: string;
+  diploma?: string;
+  requisito?: string;
+  cfu_richiesti?: string;
+  note: string;
 }
 
 interface IstitutoMateria {
-  istituto: string;
-  materia: string;
-  nota: string;
+  tipo_istituto: string;
+  materie: string;
+  note: string;
 }
 
 interface ClasseDettagliata {
   codice: string;
   descrizione: string;
-  codiciVecchi: string[];
-  titoliAccesso: {
-    dm39_1998: TitoloAccesso[];
-    dm22_2005: TitoloAccesso[];
-    dm270_2004: TitoloAccesso[];
+  codici_vecchio_ordinamento: string[];
+  titoli_accesso: {
+    dm_39_1998: TitoloAccesso[];
+    dm_22_2005: TitoloAccesso[];
+    dm_270_2004: TitoloAccesso[];
   };
-  istitutiMaterie: IstitutoMateria[];
+  istituti_materie: IstitutoMateria[];
+  note_importanti: string;
 }
 
 export default function ClasseDetail() {
@@ -71,9 +75,9 @@ export default function ClasseDetail() {
             Classe di concorso {classe.codice}
           </h1>
           <p className="text-xl text-white/90">{classe.descrizione}</p>
-          {classe.codiciVecchi.length > 0 && (
+          {classe.codici_vecchio_ordinamento.length > 0 && (
             <p className="text-sm text-white/70 mt-4">
-              Codici vecchio ordinamento: ex ({classe.codiciVecchi.join(", ")})
+              Codici vecchio ordinamento: ex ({classe.codici_vecchio_ordinamento.join(", ")})
             </p>
           )}
         </div>
@@ -92,20 +96,20 @@ export default function ClasseDetail() {
             </div>
 
             {/* DM 39/1998 - Vecchio Ordinamento */}
-            {classe.titoliAccesso.dm39_1998.length > 0 && (
+            {classe.titoli_accesso.dm_39_1998.length > 0 && (
               <div className="mb-8">
                 <h3 className="text-lg font-semibold text-gray-800 mb-4 pb-2 border-b-2 border-amber-200 bg-amber-50 px-4 py-2 rounded-t-lg">
                   DM 39/1998 (Vecchio Ordinamento)
                 </h3>
                 <ul className="space-y-2 px-4">
-                  {classe.titoliAccesso.dm39_1998.map((titolo, idx) => (
+                  {classe.titoli_accesso.dm_39_1998.map((titolo, idx) => (
                     <li key={idx} className="flex items-start gap-3">
                       <span className="text-blue-600 mt-1">•</span>
                       <div>
-                        <span className="text-gray-700">{titolo.titolo}</span>
-                        {titolo.note.length > 0 && (
+                        <span className="text-gray-700">{titolo.laurea || titolo.diploma || titolo.requisito || ''}</span>
+                        {titolo.note && (
                           <span className="ml-2 text-sm text-amber-600">
-                            {titolo.note.join(", ")}
+                            {titolo.note}
                           </span>
                         )}
                       </div>
@@ -116,21 +120,21 @@ export default function ClasseDetail() {
             )}
 
             {/* DM 22/2005 - Lauree Specialistiche */}
-            {classe.titoliAccesso.dm22_2005.length > 0 && (
+            {classe.titoli_accesso.dm_22_2005.length > 0 && (
               <div className="mb-8">
                 <h3 className="text-lg font-semibold text-gray-800 mb-4 pb-2 border-b-2 border-green-200 bg-green-50 px-4 py-2 rounded-t-lg">
                   DM 22/2005 (Lauree Specialistiche e integrazione vecchio
                   ordinamento)
                 </h3>
                 <ul className="space-y-2 px-4">
-                  {classe.titoliAccesso.dm22_2005.map((titolo, idx) => (
+                  {classe.titoli_accesso.dm_22_2005.map((titolo, idx) => (
                     <li key={idx} className="flex items-start gap-3">
                       <span className="text-blue-600 mt-1">•</span>
                       <div>
-                        <span className="text-gray-700">{titolo.titolo}</span>
-                        {titolo.note.length > 0 && (
+                        <span className="text-gray-700">{titolo.laurea || titolo.diploma || titolo.requisito || ''}</span>
+                        {titolo.note && (
                           <span className="ml-2 text-sm text-amber-600">
-                            {titolo.note.join(", ")}
+                            {titolo.note}
                           </span>
                         )}
                       </div>
@@ -141,21 +145,21 @@ export default function ClasseDetail() {
             )}
 
             {/* DM 270/2004 - Lauree Magistrali */}
-            {classe.titoliAccesso.dm270_2004.length > 0 && (
+            {classe.titoli_accesso.dm_270_2004.length > 0 && (
               <div>
                 <h3 className="text-lg font-semibold text-gray-800 mb-4 pb-2 border-b-2 border-blue-200 bg-blue-50 px-4 py-2 rounded-t-lg">
                   DM 270/2004 (Lauree Magistrali e Diplomi Accademici di II
                   livello)
                 </h3>
                 <ul className="space-y-2 px-4">
-                  {classe.titoliAccesso.dm270_2004.map((titolo, idx) => (
+                  {classe.titoli_accesso.dm_270_2004.map((titolo, idx) => (
                     <li key={idx} className="flex items-start gap-3">
                       <span className="text-blue-600 mt-1">•</span>
                       <div>
-                        <span className="text-gray-700">{titolo.titolo}</span>
-                        {titolo.note.length > 0 && (
+                        <span className="text-gray-700">{titolo.laurea || titolo.diploma || titolo.requisito || ''}</span>
+                        {titolo.note && (
                           <span className="ml-2 text-sm text-amber-600">
-                            {titolo.note.join(", ")}
+                            {titolo.note}
                           </span>
                         )}
                       </div>
@@ -177,7 +181,7 @@ export default function ClasseDetail() {
           </section>
 
           {/* Sezione Istituti e Materie */}
-          {classe.istitutiMaterie.length > 0 && (
+          {classe.istituti_materie.length > 0 && (
             <section className="bg-white rounded-xl shadow-sm p-8">
               <div className="flex items-center gap-3 mb-6">
                 <School className="w-6 h-6 text-green-600" />
@@ -207,17 +211,17 @@ export default function ClasseDetail() {
                     </tr>
                   </thead>
                   <tbody>
-                    {classe.istitutiMaterie.map((item, idx) => (
+                    {classe.istituti_materie.map((item, idx) => (
                       <tr
                         key={idx}
                         className="border-b border-gray-200 hover:bg-gray-50 transition-colors"
                       >
                         <td className="p-4 text-gray-700 font-medium">
-                          {item.istituto}
+                          {item.tipo_istituto}
                         </td>
-                        <td className="p-4 text-gray-700">{item.materia}</td>
+                        <td className="p-4 text-gray-700">{item.materie}</td>
                         <td className="p-4 text-gray-600 text-sm">
-                          {item.nota || "-"}
+                          {item.note || "-"}
                         </td>
                       </tr>
                     ))}
