@@ -1,6 +1,7 @@
 import { useParams, Link } from "wouter";
-import { ChevronLeft, BookOpen, School, FileText } from "lucide-react";
+import { ChevronLeft, BookOpen, School, FileText, ArrowRight } from "lucide-react";
 import classiDettagliate from "@/data/classiDettagliate.json";
+import { classiConcorsoData } from "@/data/classiConcorsoData";
 
 interface TitoloAccesso {
   laurea?: string;
@@ -80,6 +81,23 @@ export default function ClasseDetail() {
               Codici vecchio ordinamento: ex ({classe.codici_vecchio_ordinamento.join(", ")})
             </p>
           )}
+        </div>
+      </div>
+
+      {/* Breadcrumb */}
+      <div className="bg-white border-b border-gray-200">
+        <div className="container py-3">
+          <nav className="flex items-center gap-2 text-sm text-gray-600">
+            <Link href="/">
+              <a className="hover:text-blue-600 transition-colors">Home</a>
+            </Link>
+            <span>/</span>
+            <Link href="/trova-classe">
+              <a className="hover:text-blue-600 transition-colors">Trova Classe</a>
+            </Link>
+            <span>/</span>
+            <span className="text-gray-900 font-medium">{classe.codice}</span>
+          </nav>
         </div>
       </div>
 
@@ -230,6 +248,56 @@ export default function ClasseDetail() {
               </div>
             </section>
           )}
+
+          {/* Classi Correlate */}
+          <section className="bg-white rounded-xl shadow-sm p-8">
+            <div className="flex items-center gap-3 mb-6">
+              <BookOpen className="w-6 h-6 text-purple-600" />
+              <h2 className="text-2xl font-bold text-gray-900">
+                Classi di Concorso Correlate
+              </h2>
+            </div>
+            <p className="text-gray-600 mb-6">
+              Altre classi che potrebbero interessarti in base alla tua area disciplinare
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {(() => {
+                // Trova classi correlate basate su:
+                // 1. Stesso prefisso (es. A-22, A-23, A-24 per italiano)
+                // 2. Stessa area disciplinare (matematica, lingue, ecc.)
+                const prefix = classe.codice.split('-')[0];
+                const correlate = classiConcorsoData
+                  .filter(c => 
+                    c.codeId !== classe.codice && // Escludi classe corrente
+                    (c.codeId.startsWith(prefix) || // Stesso prefisso
+                     c.description.toLowerCase().includes(classe.descrizione.toLowerCase().split(' ')[0])) // Stessa parola chiave
+                  )
+                  .slice(0, 6); // Massimo 6 classi correlate
+                
+                return correlate.length > 0 ? (
+                  correlate.map((c) => (
+                    <Link key={c.codeId} href={`/classe/${c.codeId}`}>
+                      <a className="block p-4 border border-gray-200 rounded-lg hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <div className="flex items-center justify-between">
+                          <div>
+                            <div className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
+                              {c.codeId}
+                            </div>
+                            <div className="text-sm text-gray-600 mt-1">
+                              {c.description}
+                            </div>
+                          </div>
+                          <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-blue-600 transition-colors" />
+                        </div>
+                      </a>
+                    </Link>
+                  ))
+                ) : (
+                  <p className="text-gray-500 col-span-2">Nessuna classe correlata trovata</p>
+                );
+              })()}
+            </div>
+          </section>
 
           {/* CTA */}
           <section className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl shadow-lg p-8 text-white text-center">

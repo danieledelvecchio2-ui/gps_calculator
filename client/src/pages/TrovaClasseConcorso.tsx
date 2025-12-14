@@ -26,15 +26,29 @@ export default function TrovaClasseConcorso() {
 
   const allLauree = useMemo(() => getAllLauree(), []);
 
-  // Filtra classi per ricerca
+  // Filtra classi per ricerca full-text (codice, descrizione, materie, titoli)
   const filteredClassi = useMemo(() => {
     if (!searchTerm) return classiConcorsoData;
     const term = searchTerm.toLowerCase();
-    return classiConcorsoData.filter(
-      (c) =>
-        c.code.toLowerCase().includes(term) ||
-        c.description.toLowerCase().includes(term)
-    );
+    return classiConcorsoData.filter((c) => {
+      // Cerca in codice e descrizione
+      if (c.code.toLowerCase().includes(term) || c.description.toLowerCase().includes(term)) {
+        return true;
+      }
+      // Cerca in codeId
+      if (c.codeId?.toLowerCase().includes(term)) {
+        return true;
+      }
+      // Cerca nei titoli di accesso
+      if (c.required_titles?.some(title => title.title.toLowerCase().includes(term))) {
+        return true;
+      }
+      // Cerca nelle note
+      if (c.notes?.toLowerCase().includes(term)) {
+        return true;
+      }
+      return false;
+    });
   }, [searchTerm]);
 
   // Filtra lauree per ricerca

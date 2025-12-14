@@ -383,3 +383,13 @@
 - [x] Correggere componente ClasseDetail per matchare JSON
 - [x] Testare navigazione per diverse classi (A-28, ADSS, 00AA)
 - [x] Creare checkpoint v4.2
+
+
+## Miglioramenti UX Trova Classe e Dettagli
+
+- [x] Implementare ricerca full-text per codice, descrizione, titoli, note
+- [x] Aggiungere breadcrumb nelle pagine dettaglio (Home / Trova Classe / Codice)
+- [x] Implementare sezione "Classi Correlate" con fino a 6 classi simili
+- [x] Testare ricerca (es. "matematica" trova 8 classi)
+- [x] Testare navigazione e classi correlate (A-28 mostra A-01 a A-06)
+- [x] Creare checkpoint v4.3
