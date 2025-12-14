@@ -321,3 +321,38 @@
 - [x] Aggiungere validazione: diploma O laurea (almeno uno dei due)
 - [x] Testare calcolo con voto diploma per ITP e Infanzia/Primaria
 - [x] Creare checkpoint v3.12
+
+
+## Ampliamento Sezione Classi di Concorso
+
+### FASE 1: Pagine Dettaglio Classe (PRIORITÀ ALTA)
+
+- [x] Creare route `/classe/:codice` in App.tsx
+- [x] Creare componente `ClasseDetail.tsx` per pagina dettaglio classe
+- [x] Creare struttura dati JSON per titoli di accesso (3 sezioni: DM 39/1998, DM 22/2005, DM 270/2004)
+- [x] Creare struttura dati JSON per tabella istituti/materie dove si può insegnare
+- [x] Implementare layout con sezioni colorate per titoli di accesso
+- [x] Aggiungere codici vecchio ordinamento (ex A043, A050, ecc.)
+- [x] Implementare tabella istituti/materie con colonna Note
+- [x] Aggiungere nota importante sui CFU
+- [x] Rendere cliccabili i codici classe nella pagina TrovaClasse con pulsante "Vedi Dettagli"
+- [x] Testare navigazione e visualizzazione pagina A-22
+
+### FASE 2: Ampliare Pagina Titolo di Studio (PRIORITÀ MEDIA)
+
+- [ ] Aggiungere colonna "Note/Requisiti" alla tabella classi esistente
+- [ ] Aggiungere codici vecchio ordinamento per ogni classe
+- [ ] Rendere cliccabili i link alle pagine dettaglio classe
+- [ ] Aggiungere nota importante sui CFU necessari
+- [ ] Creare route `/titolo-studio/:slug` per pagine dedicate ai titoli
+
+### FASE 3: Dati Completi (PRIORITÀ BASSA - lungo termine)
+
+- [ ] Raccogliere dati titoli di accesso per tutte le 154 classi
+- [ ] Raccogliere dati tabelle istituti/materie per tutte le classi
+- [ ] Creare JSON strutturato con tutti i dati
+- [ ] Implementare ricerca avanzata per materia/istituto
+
+### Checkpoint
+
+- [ ] Creare checkpoint v4.0 dopo implementazione FASE 1

@@ -13,6 +13,7 @@ import { NewsGPS2026 } from "./pages/NewsGPS2026";
 import { Navigation } from "./components/Navigation";
 import { Footer } from "./components/Footer";
 import TrovaClasseConcorso from "./pages/TrovaClasseConcorso";
+import ClasseDetail from "./pages/ClasseDetail";
 import { CookiePolicy } from "./pages/CookiePolicy";
 import { TermsConditions } from "./pages/TermsConditions";
 
@@ -27,6 +28,7 @@ function Router() {
       <Route path={"/novita-gps-2026"} component={NewsGPS2026} />
       <Route path={"/contatti"} component={Contact} />
       <Route path={"/trova-classe"} component={TrovaClasseConcorso} />
+      <Route path={"/classe/:codice"} component={ClasseDetail} />
       <Route path={"/cookie-policy"} component={CookiePolicy} />
       <Route path={"/termini-condizioni"} component={TermsConditions} />
       <Route path={"/404"} component={NotFound} />

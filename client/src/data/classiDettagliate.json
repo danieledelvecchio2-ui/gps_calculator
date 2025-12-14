@@ -1,0 +1,508 @@
+[
+  {
+    "codice": "A-22",
+    "descrizione": "Italiano, storia, geografia nella scuola secondaria di I grado",
+    "codiciVecchi": ["A043", "A050", "A051", "A052"],
+    "titoliAccesso": {
+      "dm39_1998": [
+        {
+          "titolo": "Laurea in Filosofia",
+          "note": []
+        },
+        {
+          "titolo": "Laurea in Lettere",
+          "note": []
+        },
+        {
+          "titolo": "Laurea in Materie letterarie",
+          "note": []
+        },
+        {
+          "titolo": "Laurea in Storia",
+          "note": []
+        }
+      ],
+      "dm22_2005": [
+        {
+          "titolo": "LS 1-Antropologia culturale ed etnologia",
+          "note": []
+        },
+        {
+          "titolo": "LS 2-Archeologia",
+          "note": []
+        },
+        {
+          "titolo": "LS 5-Archivistica e biblioteconomia",
+          "note": []
+        },
+        {
+          "titolo": "LS 10-Conservazione dei beni architettonici e ambientali",
+          "note": []
+        },
+        {
+          "titolo": "LS 11-Conservazione dei beni scientifici e della civiltà industriale",
+          "note": []
+        },
+        {
+          "titolo": "LS 12-Conservazione e restauro del patrimonio storico-artistico",
+          "note": []
+        },
+        {
+          "titolo": "LS 15-Filologia e letterature dell'antichità",
+          "note": []
+        },
+        {
+          "titolo": "LS 16-Filologia moderna",
+          "note": []
+        },
+        {
+          "titolo": "LS 21-Geografia",
+          "note": []
+        },
+        {
+          "titolo": "LS 40-Lingua e cultura italiana",
+          "note": []
+        },
+        {
+          "titolo": "LS 93-Storia antica",
+          "note": []
+        },
+        {
+          "titolo": "LS 94-Storia contemporanea",
+          "note": []
+        },
+        {
+          "titolo": "LS 95-Storia dell'arte",
+          "note": []
+        },
+        {
+          "titolo": "LS 96-Storia della filosofia",
+          "note": []
+        },
+        {
+          "titolo": "LS 97-Storia medievale",
+          "note": []
+        },
+        {
+          "titolo": "LS 98-Storia moderna",
+          "note": []
+        }
+      ],
+      "dm270_2004": [
+        {
+          "titolo": "LM-1 Antropologia culturale ed etnologia",
+          "note": []
+        },
+        {
+          "titolo": "LM-2 Archeologia",
+          "note": []
+        },
+        {
+          "titolo": "LM-5 Archivistica e biblioteconomia",
+          "note": []
+        },
+        {
+          "titolo": "LM-10 Conservazione dei beni architettonici e ambientali",
+          "note": []
+        },
+        {
+          "titolo": "LM-11 Conservazione e restauro dei beni culturali",
+          "note": []
+        },
+        {
+          "titolo": "LM-14 Filologia moderna",
+          "note": []
+        },
+        {
+          "titolo": "LM-15 Filologia, letterature e storia dell'antichità",
+          "note": []
+        },
+        {
+          "titolo": "LM-39 Linguistica",
+          "note": []
+        },
+        {
+          "titolo": "LM-80 Scienze geografiche",
+          "note": []
+        },
+        {
+          "titolo": "LM-84 Scienze storiche",
+          "note": []
+        },
+        {
+          "titolo": "LM-89 Storia dell'arte",
+          "note": []
+        }
+      ]
+    },
+    "istitutiMaterie": [
+      {
+        "istituto": "SCUOLA SECONDARIA DI I GRADO",
+        "materia": "Italiano",
+        "nota": ""
+      },
+      {
+        "istituto": "SCUOLA SECONDARIA DI I GRADO",
+        "materia": "Storia",
+        "nota": ""
+      },
+      {
+        "istituto": "SCUOLA SECONDARIA DI I GRADO",
+        "materia": "Geografia",
+        "nota": ""
+      },
+      {
+        "istituto": "SCUOLA SECONDARIA DI I GRADO",
+        "materia": "Approfondimento di materie letterarie",
+        "nota": ""
+      }
+    ]
+  },
+  {
+    "codice": "A-28",
+    "descrizione": "Matematica e scienze",
+    "codiciVecchi": ["A059"],
+    "titoliAccesso": {
+      "dm39_1998": [
+        {
+          "titolo": "Laurea in Astronomia",
+          "note": []
+        },
+        {
+          "titolo": "Laurea in Chimica",
+          "note": []
+        },
+        {
+          "titolo": "Laurea in Fisica",
+          "note": []
+        },
+        {
+          "titolo": "Laurea in Matematica",
+          "note": []
+        },
+        {
+          "titolo": "Laurea in Scienze biologiche",
+          "note": []
+        },
+        {
+          "titolo": "Laurea in Scienze dell'informazione",
+          "note": []
+        },
+        {
+          "titolo": "Laurea in Scienze geologiche",
+          "note": []
+        },
+        {
+          "titolo": "Laurea in Scienze naturali",
+          "note": []
+        }
+      ],
+      "dm22_2005": [
+        {
+          "titolo": "LS 6-Biologia",
+          "note": []
+        },
+        {
+          "titolo": "LS 7-Biotecnologie agrarie",
+          "note": []
+        },
+        {
+          "titolo": "LS 8-Biotecnologie industriali",
+          "note": []
+        },
+        {
+          "titolo": "LS 9-Biotecnologie mediche, veterinarie e farmaceutiche",
+          "note": []
+        },
+        {
+          "titolo": "LS 20-Fisica",
+          "note": []
+        },
+        {
+          "titolo": "LS 27-Ingegneria chimica",
+          "note": []
+        },
+        {
+          "titolo": "LS 45-Matematica",
+          "note": []
+        },
+        {
+          "titolo": "LS 50-Modellistica matematico-fisica per l'ingegneria",
+          "note": []
+        },
+        {
+          "titolo": "LS 62-Scienze chimiche",
+          "note": []
+        },
+        {
+          "titolo": "LS 68-Scienze della natura",
+          "note": []
+        },
+        {
+          "titolo": "LS 74-Scienze e gestione delle risorse rurali e forestali",
+          "note": []
+        },
+        {
+          "titolo": "LS 77-Scienze e tecnologie agrarie",
+          "note": []
+        },
+        {
+          "titolo": "LS 79-Scienze e tecnologie agrozootecniche",
+          "note": []
+        },
+        {
+          "titolo": "LS 82-Scienze e tecnologie per l'ambiente e il territorio",
+          "note": []
+        },
+        {
+          "titolo": "LS 85-Scienze geofisiche",
+          "note": []
+        },
+        {
+          "titolo": "LS 86-Scienze geologiche",
+          "note": []
+        }
+      ],
+      "dm270_2004": [
+        {
+          "titolo": "LM-6 Biologia",
+          "note": []
+        },
+        {
+          "titolo": "LM-8 Biotecnologie industriali",
+          "note": []
+        },
+        {
+          "titolo": "LM-9 Biotecnologie mediche, veterinarie e farmaceutiche",
+          "note": []
+        },
+        {
+          "titolo": "LM-17 Fisica",
+          "note": []
+        },
+        {
+          "titolo": "LM-18 Informatica",
+          "note": []
+        },
+        {
+          "titolo": "LM-40 Matematica",
+          "note": []
+        },
+        {
+          "titolo": "LM-54 Scienze chimiche",
+          "note": []
+        },
+        {
+          "titolo": "LM-58 Scienze dell'universo",
+          "note": []
+        },
+        {
+          "titolo": "LM-60 Scienze della natura",
+          "note": []
+        },
+        {
+          "titolo": "LM-69 Scienze e tecnologie agrarie",
+          "note": []
+        },
+        {
+          "titolo": "LM-74 Scienze e tecnologie geologiche",
+          "note": []
+        },
+        {
+          "titolo": "LM-75 Scienze e tecnologie per l'ambiente e il territorio",
+          "note": []
+        },
+        {
+          "titolo": "LM-79 Scienze geofisiche",
+          "note": []
+        }
+      ]
+    },
+    "istitutiMaterie": [
+      {
+        "istituto": "SCUOLA SECONDARIA DI I GRADO",
+        "materia": "Matematica",
+        "nota": ""
+      },
+      {
+        "istituto": "SCUOLA SECONDARIA DI I GRADO",
+        "materia": "Scienze",
+        "nota": ""
+      }
+    ]
+  },
+  {
+    "codice": "A-46",
+    "descrizione": "Scienze giuridico-economiche",
+    "codiciVecchi": ["A019"],
+    "titoliAccesso": {
+      "dm39_1998": [
+        {
+          "titolo": "Laurea in Economia aziendale",
+          "note": []
+        },
+        {
+          "titolo": "Laurea in Economia bancaria, finanziaria ed assicurativa",
+          "note": []
+        },
+        {
+          "titolo": "Laurea in Economia e commercio",
+          "note": []
+        },
+        {
+          "titolo": "Laurea in Economia industriale",
+          "note": []
+        },
+        {
+          "titolo": "Laurea in Economia marittima e dei trasporti",
+          "note": []
+        },
+        {
+          "titolo": "Laurea in Economia politica",
+          "note": []
+        },
+        {
+          "titolo": "Laurea in Giurisprudenza",
+          "note": []
+        },
+        {
+          "titolo": "Laurea in Scienze politiche",
+          "note": []
+        }
+      ],
+      "dm22_2005": [
+        {
+          "titolo": "LS 19-Finanza",
+          "note": []
+        },
+        {
+          "titolo": "LS 22-Giurisprudenza",
+          "note": []
+        },
+        {
+          "titolo": "LS 56-Programmazione e gestione delle politiche e dei servizi sociali",
+          "note": []
+        },
+        {
+          "titolo": "LS 57-Programmazione e gestione delle politiche e dei servizi sociali",
+          "note": []
+        },
+        {
+          "titolo": "LS 64-Scienze dell'economia",
+          "note": []
+        },
+        {
+          "titolo": "LS 71-Scienze delle pubbliche amministrazioni",
+          "note": []
+        },
+        {
+          "titolo": "LS 84-Scienze economico-aziendali",
+          "note": []
+        },
+        {
+          "titolo": "LS 88-Scienze per la cooperazione allo sviluppo",
+          "note": []
+        },
+        {
+          "titolo": "LS 89-Sociologia",
+          "note": []
+        },
+        {
+          "titolo": "LS 99-Studi europei",
+          "note": []
+        },
+        {
+          "titolo": "LS 100-Tecniche e metodi per la società dell'informazione",
+          "note": []
+        },
+        {
+          "titolo": "LS 102-Teoria e tecniche della normazione e dell'informazione giuridica",
+          "note": []
+        }
+      ],
+      "dm270_2004": [
+        {
+          "titolo": "LM-16 Finanza",
+          "note": []
+        },
+        {
+          "titolo": "LMG/01 Giurisprudenza",
+          "note": []
+        },
+        {
+          "titolo": "LM-52 Relazioni internazionali",
+          "note": []
+        },
+        {
+          "titolo": "LM-56 Scienze dell'economia",
+          "note": []
+        },
+        {
+          "titolo": "LM-62 Scienze della politica",
+          "note": []
+        },
+        {
+          "titolo": "LM-63 Scienze delle pubbliche amministrazioni",
+          "note": []
+        },
+        {
+          "titolo": "LM-77 Scienze economico-aziendali",
+          "note": []
+        },
+        {
+          "titolo": "LM-81 Scienze per la cooperazione allo sviluppo",
+          "note": []
+        },
+        {
+          "titolo": "LM-87 Servizio sociale e politiche sociali",
+          "note": []
+        },
+        {
+          "titolo": "LM-88 Sociologia e ricerca sociale",
+          "note": []
+        },
+        {
+          "titolo": "LM-90 Studi europei",
+          "note": []
+        }
+      ]
+    },
+    "istitutiMaterie": [
+      {
+        "istituto": "ISTITUTO TECNICO, settore ECONOMICO",
+        "materia": "Diritto ed economia",
+        "nota": ""
+      },
+      {
+        "istituto": "ISTITUTO TECNICO, settore ECONOMICO, indirizzo AMMINISTRAZIONE, FINANZA E MARKETING",
+        "materia": "Diritto 2° biennio e 5° anno",
+        "nota": ""
+      },
+      {
+        "istituto": "ISTITUTO TECNICO, settore ECONOMICO, indirizzo AMMINISTRAZIONE, FINANZA E MARKETING",
+        "materia": "Economia politica 2° biennio e 5° anno",
+        "nota": ""
+      },
+      {
+        "istituto": "ISTITUTO TECNICO, settore ECONOMICO, indirizzo TURISMO",
+        "materia": "Diritto e legislazione turistica 2° biennio e 5° anno",
+        "nota": ""
+      },
+      {
+        "istituto": "ISTITUTO PROFESSIONALE, settore SERVIZI, indirizzo SERVIZI COMMERCIALI",
+        "materia": "Diritto ed economia 1° biennio",
+        "nota": ""
+      },
+      {
+        "istituto": "LICEO DELLE SCIENZE UMANE",
+        "materia": "Diritto ed economia",
+        "nota": ""
+      },
+      {
+        "istituto": "LICEO DELLE SCIENZE UMANE - opzione ECONOMICO-SOCIALE",
+        "materia": "Diritto ed economia politica",
+        "nota": ""
+      }
+    ]
+  }
+]

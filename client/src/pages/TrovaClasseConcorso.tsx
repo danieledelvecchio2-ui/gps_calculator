@@ -1,5 +1,6 @@
 import { useState, useMemo } from "react";
-import { Search, BookOpen, GraduationCap, ChevronDown, ChevronUp } from "lucide-react";
+import { Link } from "wouter";
+import { Search, BookOpen, GraduationCap, ChevronDown, ChevronUp, ExternalLink } from "lucide-react";
 import { classiConcorsoData } from "@/data/classiConcorsoData";
 
 // Estrai lista unica di tutte le lauree da tutte le classi
@@ -161,17 +162,27 @@ export default function TrovaClasseConcorso() {
               {selectedClasseData ? (
                 <>
                   <div className="mb-6 pb-4 border-b border-gray-200">
-                    <div className="text-3xl font-bold text-blue-600 mb-2">
-                      {selectedClasseData.codeId}
+                    <div className="flex items-start justify-between gap-4">
+                      <div className="flex-1">
+                        <div className="text-3xl font-bold text-blue-600 mb-2">
+                          {selectedClasseData.codeId}
+                        </div>
+                        <h2 className="text-xl font-semibold text-gray-900 mb-2">
+                          {selectedClasseData.code}
+                        </h2>
+                        {selectedClasseData.description && (
+                          <p className="text-sm text-gray-600 bg-blue-50 px-3 py-2 rounded">
+                            {selectedClasseData.description}
+                          </p>
+                        )}
+                      </div>
+                      <Link href={`/classe/${selectedClasseData.codeId}`}>
+                        <a className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white text-sm font-semibold rounded-lg hover:bg-blue-700 transition-colors whitespace-nowrap">
+                          Vedi Dettagli
+                          <ExternalLink className="w-4 h-4" />
+                        </a>
+                      </Link>
                     </div>
-                    <h2 className="text-xl font-semibold text-gray-900 mb-2">
-                      {selectedClasseData.code}
-                    </h2>
-                    {selectedClasseData.description && (
-                      <p className="text-sm text-gray-600 bg-blue-50 px-3 py-2 rounded">
-                        {selectedClasseData.description}
-                      </p>
-                    )}
                   </div>
 
                   <h3 className="text-lg font-bold text-gray-900 mb-4">
