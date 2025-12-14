@@ -47,6 +47,11 @@ export function GpsForm({ onCalculate }: GpsFormProps) {
   const [classeConcorso, setClasseConcorso] = useState<string>("");
   const [openCombobox, setOpenCombobox] = useState(false);
   const [privacyConsent, setPrivacyConsent] = useState<boolean>(false);
+  
+  // Sezione A - Abilitazioni (I Fascia)
+  const [hasAbilitazione, setHasAbilitazione] = useState<boolean>(false);
+  const [votoAbilitazione, setVotoAbilitazione] = useState<number>(0); // Voto su 100
+  const [tipoAbilitazione, setTipoAbilitazione] = useState<string>(""); // A.1, A.2.a, A.2.b, ecc.
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -168,7 +173,10 @@ export function GpsForm({ onCalculate }: GpsFormProps) {
                       className="w-full justify-between glass-input text-left font-normal"
                     >
                       {classeConcorso
-                        ? classiConcorsoData.find((c: any) => c.codeId === classeConcorso)?.code
+                        ? (() => {
+                            const selected = classiConcorsoData.find((c: any) => c.codeId === classeConcorso);
+                            return selected ? `${selected.codeId} - ${selected.code}` : "Seleziona classe";
+                          })()
                         : "Cerca classe di concorso (es. A046, Sostegno...)"}
                       <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
                     </Button>
@@ -181,10 +189,10 @@ export function GpsForm({ onCalculate }: GpsFormProps) {
                         <CommandGroup>
                           {classiConcorsoData.map((c: any) => (
                             <CommandItem
-                              key={c.id}
-                              value={c.label}
+                              key={c.codeId}
+                              value={`${c.codeId} ${c.code} ${c.description}`.toLowerCase()}
                               onSelect={() => {
-                                setClasseConcorso(c.id);
+                                setClasseConcorso(c.codeId);
                                 setOpenCombobox(false);
                               }}
                               className="text-white aria-selected:bg-white/10 cursor-pointer"
@@ -192,10 +200,13 @@ export function GpsForm({ onCalculate }: GpsFormProps) {
                               <Check
                                 className={cn(
                                   "mr-2 h-4 w-4",
-                                  classeConcorso === c.id ? "opacity-100" : "opacity-0"
+                                  classeConcorso === c.codeId ? "opacity-100" : "opacity-0"
                                 )}
                               />
-                              {c.label}
+                              <div>
+                                <div className="font-semibold">{c.codeId}</div>
+                                <div className="text-sm text-white/70">{c.code}</div>
+                              </div>
                             </CommandItem>
                           ))}
                         </CommandGroup>

@@ -393,3 +393,59 @@
 - [x] Testare ricerca (es. "matematica" trova 8 classi)
 - [x] Testare navigazione e classi correlate (A-28 mostra A-01 a A-06)
 - [x] Creare checkpoint v4.3
+
+
+## Bug Fix e Ampliamento Titoli GPS
+
+### Bug da Risolvere
+- [x] Fix: Corretto uso di codeId invece di id nel combobox (parziale - popover non si apre ancora)
+
+### Ampliamento Titoli Culturali (Allegato A)
+- [x] Creato file configurazione titoliGPS.ts con TUTTI i 40+ titoli
+- [x] Creato componente TitoliGPSSection per rendering dinamico
+- [ ] Sezione A - Abilitazioni (I Fascia):
+  - [ ] A.1: Abilitazione specifica con voto (4-12 punti)
+  - [ ] A.2: Abilitazioni aggiuntive (SSIS, COBASLID, BIFORDOC, TFA, percorsi formativi, ecc.)
+  
+- [ ] Sezione B - Titoli Accademici/Professionali/Culturali:
+  - [ ] B.1: Diploma laurea/specialistica/magistrale aggiuntivo (3 punti)
+  - [ ] B.2: Diploma ISEF, Laurea triennale, Diploma I livello (1,5 punti)
+  - [ ] B.3: Diploma Istituto Tecnico Superiore (1,5 punti)
+  - [ ] B.4: Ulteriore abilitazione (3 punti)
+  - [ ] B.5: Titolo specializzazione sostegno alunni disabilità (9 punti)
+  - [ ] B.6: Superamento concorso ordinario (3 punti)
+  - [ ] B.7: Dottorato ricerca (12 punti)
+  - [ ] B.8: Abilitazione scientifica nazionale I/II fascia (12 punti)
+  - [ ] B.9: Attività ricerca scientifica (12 punti)
+  - [ ] B.10: Inserimento graduatorie nazionali AFAM (12 punti)
+  - [ ] B.11: Diploma specializzazione universitaria pluriennale (2 punti)
+  - [ ] B.12: Perfezionamento CLIL (6 punti)
+  - [ ] B.13: Certificazione CeCIL CLIL (3 punti)
+  - [ ] B.14: Certificazioni linguistiche B2 (3-6 punti)
+  - [ ] B.15: Diploma perfezionamento post-laurea/master 60 CFU (1 punto)
+  - [ ] B.16: Specializzazione italiano L2 (3 punti)
+  - [ ] B.17: Certificazioni informatiche (0,5 punti max 2 punti)
+
+- [ ] Sezione BA - Titoli Artistici (classi A-55, A-56, A-59, A-57, A-58):
+  - [ ] BA.18: Diploma perfezionamento Accademia Santa Cecilia (6 punti)
+  - [ ] BA.19: Premi concorsi nazionali/internazionali (1-3 punti)
+  - [ ] BA.20: Idoneità concorsi orchestre (2 punti)
+  - [ ] BA.21: Attività professionale orchestre (5 punti)
+  - [ ] BA.22: Attività concertistica/formazione musica camera (max 30 punti)
+  - [ ] BA.23: Premi danza (1-3 punti)
+  - [ ] BA.24: Attività artistica danzatore (5 punti)
+  - [ ] BA.25: Attività artistica coreografo (3 punti)
+  - [ ] BA.26: Altra attività artistica (2 punti)
+
+- [ ] Sezione C - Titoli di Servizio:
+  - [ ] C.1: Servizio insegnamento specifico grado/sostegno (2-12 punti)
+  - [ ] C.2: Servizio insegnamento altra classe/grado (1-6 punti)
+
+### Aggiornamenti Algoritmo
+- [ ] Aggiornare gpsAlgorithm.ts per calcolare punteggi sezione A, B, BA, C
+- [ ] Aggiornare schema database per salvare tutti i nuovi titoli
+- [ ] Aggiornare GpsForm.tsx per mostrare tutti i campi
+
+### Test e Checkpoint
+- [ ] Testare calcolo con vari titoli
+- [ ] Creare checkpoint v5.0
