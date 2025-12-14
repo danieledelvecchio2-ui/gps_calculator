@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
-import { competitionClasses } from "@/data/gpsData";
+import { classiConcorsoData } from "@/data/classiConcorsoData";
 import { motion } from "framer-motion";
 import { Calculator, BookOpen, GraduationCap, Laptop, Check, ChevronsUpDown } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -168,7 +168,7 @@ export function GpsForm({ onCalculate }: GpsFormProps) {
                       className="w-full justify-between glass-input text-left font-normal"
                     >
                       {classeConcorso
-                        ? competitionClasses.find((c) => c.id === classeConcorso)?.label
+                        ? classiConcorsoData.find((c: any) => c.codeId === classeConcorso)?.code
                         : "Cerca classe di concorso (es. A046, Sostegno...)"}
                       <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
                     </Button>
@@ -179,7 +179,7 @@ export function GpsForm({ onCalculate }: GpsFormProps) {
                       <CommandList className="custom-scrollbar">
                         <CommandEmpty>Nessuna classe trovata.</CommandEmpty>
                         <CommandGroup>
-                          {competitionClasses.map((c) => (
+                          {classiConcorsoData.map((c: any) => (
                             <CommandItem
                               key={c.id}
                               value={c.label}

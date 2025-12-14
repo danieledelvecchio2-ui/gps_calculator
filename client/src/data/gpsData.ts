@@ -1,4 +1,4 @@
-// Dati GPS Province Italiane - Generato automaticamente
+// Dati GPS Province Italiane - Punteggi minimi per nomine
 // Fonte: Bollettini ufficiali primo turno 2024/2025 e 2025/2026
 
 export interface ProvinceData {
@@ -11,38 +11,39 @@ export interface ProvinceData {
 }
 
 export const provinces: ProvinceData[] = [
+
   // ABRUZZO
   {
     id: "CH",
     name: "Chieti",
     region: "Abruzzo",
-    minScores2024: {"A021": 191.0, "A054": 136.0, "A012": 135.0},
-    minScores2025: {},
-    sourceUrl: "https://www.istruzionechietipescara.it/2024/08/30/personale-docente-esito-primo-processo-ins-per-nomine-a-tempo-determinato-a-s-2024-25/"
+    minScores2024: {"A-12": 55, "A-22": 44, "A-26": 53, "A-27": 53, "A-28": 50, "A-40": 43, "A-41": 46, "A-42": 44, "A-50": 45},
+    minScores2025: {"A-11": 49, "A-24": 42, "A-25": 46, "A-37": 47, "A-45": 50, "A-46": 57, "AAAA": 41, "ADAA": 17, "ADEE": 19, "ADMM": 31, "ADSS": 24, "EEEE": 34},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "AQ",
     name: "L'Aquila",
     region: "Abruzzo",
-    minScores2024: {},
-    minScores2025: {"A011 (F1)": 80.0, "A028 (F1)": 65.0, "ADSS (F1)": 30.0, "B014 (F1)": 13.0},
-    sourceUrl: "https://lnx.csalaquila.it/wp/2025/08/30/bollettino-n-1-nomine-a-tempo-determinato-gps-3/"
+    minScores2024: {"A-22": 52, "A-24": 38, "A-25": 46, "A-26": 58, "A-40": 43, "A-41": 42, "A-46": 61, "A-50": 46, "ADEE": 17, "ADSS": 30},
+    minScores2025: {"A-11": 54, "A-12": 49, "A-27": 54, "A-28": 57, "A-37": 48, "A-42": 45, "A-45": 46, "AAAA": 41, "ADAA": 20, "ADMM": 21, "EEEE": 41},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "PE",
     name: "Pescara",
     region: "Abruzzo",
-    minScores2024: {},
-    minScores2025: {"A023": 31.0, "A026": 37.0, "A027": 36.0, "A028": 85.0, "A034": 36.0},
-    sourceUrl: "https://www.istruzionechietipescara.it/2025/08/30/bollettino-n-1-nomine-a-tempo-determinato-a-s-2025-26/"
+    minScores2024: {"A-11": 56, "A-26": 56, "A-40": 46, "A-41": 46, "A-42": 37, "A-46": 62, "A-50": 51, "ADSS": 31},
+    minScores2025: {"A-12": 48, "A-22": 49, "A-24": 42, "A-25": 41, "A-27": 58, "A-28": 60, "A-37": 40, "A-45": 53, "AAAA": 43, "ADAA": 25, "ADEE": 18, "ADMM": 26, "EEEE": 39},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "TE",
     name: "Teramo",
     region: "Abruzzo",
-    minScores2024: {"A054": 38.0, "A034": 43.0, "A027": 50.0},
-    minScores2025: {},
-    sourceUrl: "https://www.csateramo.it/wpusp/archive/pubblicazione-esiti-nomine-da-gae-e-da-gps-a-s-20242025-processo-n-2-del-30082024"
+    minScores2024: {"A-11": 52, "A-12": 49, "A-25": 37, "A-26": 63, "A-28": 54, "A-41": 42, "A-42": 38, "A-50": 49, "ADAA": 23, "ADEE": 17, "ADSS": 27, "EEEE": 39},
+    minScores2025: {"A-22": 53, "A-24": 35, "A-27": 58, "A-37": 47, "A-40": 37, "A-45": 48, "A-46": 66, "AAAA": 37, "ADMM": 31},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
 
   // BASILICATA
@@ -50,17 +51,17 @@ export const provinces: ProvinceData[] = [
     id: "MT",
     name: "Matera",
     region: "Basilicata",
-    minScores2024: {},
-    minScores2025: {"A015": 41.5, "A027": 45.0, "A026": 46.0, "A018": 47.0, "A021": 68.0},
-    sourceUrl: "https://www.istruzionematera.it/i-bollettino-nomine-a-t-d-a-s-2025-26/"
+    minScores2024: {"A-22": 35, "A-24": 26, "A-25": 30, "A-37": 36, "A-40": 33, "A-42": 28, "A-45": 34, "A-50": 35, "ADMM": 16, "EEEE": 29},
+    minScores2025: {"A-11": 35, "A-12": 33, "A-26": 48, "A-27": 44, "A-28": 44, "A-41": 30, "A-46": 43, "AAAA": 33, "ADAA": 10, "ADEE": 12, "ADSS": 19},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "PZ",
     name: "Potenza",
     region: "Basilicata",
-    minScores2024: {},
-    minScores2025: {"A015": 70.0, "A060": 111.0, "ADAA": 10.0, "ADEE": 10.0, "AM12": 89.0, "AM48": 50.5, "B011": 30.0, "B014": 30.0, "EEEE": 13.0, "EEEM": 40.5},
-    sourceUrl: "https://www.istruzionepotenza.it/wp-content/uploads/2025/12/9_Bollettino-nomine-a-t.d.-PRIVACY.pdf"
+    minScores2024: {"A-12": 43, "A-24": 29, "A-25": 31, "A-27": 43, "A-28": 47, "A-40": 38, "A-42": 26, "ADMM": 11},
+    minScores2025: {"A-11": 39, "A-22": 30, "A-26": 47, "A-37": 34, "A-41": 27, "A-45": 34, "A-46": 43, "A-50": 36, "AAAA": 29, "ADAA": 16, "ADEE": 11, "ADSS": 23, "EEEE": 31},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
 
   // CALABRIA
@@ -68,41 +69,41 @@ export const provinces: ProvinceData[] = [
     id: "CZ",
     name: "Catanzaro",
     region: "Calabria",
-    minScores2024: {"A018": 178.0, "AO55": 171.0, "A045": 166.0, "B012": 162.0, "AI24": 162.0},
-    minScores2025: {},
-    sourceUrl: "https://www.istruzione.calabria.it/catanzaro/personale-docente-supplenze-annuali-sino-al-termine-della-attivita-didattiche-pubblicazione-primo-bollettino/"
+    minScores2024: {"A-11": 35, "A-12": 34, "A-22": 33, "A-25": 28, "A-27": 48, "A-28": 39, "A-37": 34, "A-41": 31, "A-45": 39, "A-46": 44, "A-50": 33, "ADSS": 13},
+    minScores2025: {"A-24": 26, "A-26": 49, "A-40": 33, "A-42": 29, "AAAA": 26, "ADAA": 10, "ADEE": 18, "ADMM": 20, "EEEE": 24},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "CS",
     name: "Cosenza",
     region: "Calabria",
-    minScores2024: {"A046": 121.0, "A022": 29.0, "ADSS": 26.0},
-    minScores2025: {},
-    sourceUrl: "https://www.istruzione.calabria.it/cosenza/aoouspcs14029-20240906/"
+    minScores2024: {"A-22": 38, "A-28": 46, "A-37": 32, "A-40": 28, "A-42": 34, "A-45": 41, "A-50": 37, "AAAA": 32, "ADMM": 21, "ADSS": 21, "EEEE": 27},
+    minScores2025: {"A-11": 37, "A-12": 43, "A-24": 27, "A-25": 31, "A-26": 50, "A-27": 39, "A-41": 27, "A-46": 51, "ADAA": 10, "ADEE": 19},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "KR",
     name: "Crotone",
     region: "Calabria",
-    minScores2024: {"A015": 153.5, "B020": 153.0, "B024": 142.0, "AM56": 140.0, "AAAA": 139.0},
-    minScores2025: {},
-    sourceUrl: "https://www.istruzione.calabria.it/crotone/individuazioni-per-contratti-a-tempo-determinato-personale-docente-da-gae-e-da-gps/"
+    minScores2024: {"A-11": 39, "A-22": 32, "A-27": 45, "A-37": 34, "A-40": 29, "A-42": 27, "A-46": 46, "ADEE": 16},
+    minScores2025: {"A-12": 35, "A-24": 34, "A-25": 27, "A-26": 42, "A-28": 45, "A-41": 37, "A-45": 43, "A-50": 40, "AAAA": 28, "ADAA": 17, "ADMM": 16, "ADSS": 16, "EEEE": 22},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "RC",
     name: "Reggio Calabria",
     region: "Calabria",
-    minScores2024: {"A011": 3.0, "A028": 11.5, "ADSS": 7.0},
-    minScores2025: {},
-    sourceUrl: "https://www.istruzioneatprc.it/wp-content/uploads/2024/09/all-15041-Nomine-Bollettino.pdf"
+    minScores2024: {"A-12": 42, "A-25": 33, "A-28": 38, "A-37": 38, "A-42": 34, "A-45": 34, "A-46": 45, "AAAA": 30, "ADEE": 12},
+    minScores2025: {"A-11": 44, "A-22": 38, "A-24": 25, "A-26": 47, "A-27": 45, "A-40": 28, "A-41": 29, "A-50": 33, "ADAA": 11, "ADMM": 21, "ADSS": 19, "EEEE": 30},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "VV",
     name: "Vibo Valentia",
     region: "Calabria",
-    minScores2024: {},
-    minScores2025: {"A011": 125.5, "A013": 102.5, "A016": 113.5, "A019": 92.0, "A028": 55.0, "ADAA": 36.0, "ADSS": 122.0},
-    sourceUrl: "https://www.istruzione.calabria.it/vibovalentia/personale-docente-decreto-di-conferimento-incarichi-a-tempo-determinato-a-s-2025-26-i-bollettino/"
+    minScores2024: {"A-11": 45, "A-22": 39, "A-27": 39, "A-28": 38, "A-37": 38, "A-40": 36, "A-41": 33, "A-46": 45, "ADSS": 14, "EEEE": 31},
+    minScores2025: {"A-12": 39, "A-24": 31, "A-25": 37, "A-26": 48, "A-42": 34, "A-45": 34, "A-50": 35, "AAAA": 27, "ADAA": 10, "ADEE": 12, "ADMM": 14},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
 
   // CAMPANIA
@@ -110,41 +111,41 @@ export const provinces: ProvinceData[] = [
     id: "AV",
     name: "Avellino",
     region: "Campania",
-    minScores2024: {},
-    minScores2025: {"A003": 87.5, "A011": 53.0, "A027": 54.0, "A028": 54.0, "A040": 73.0, "A045": 151.0, "A060": 75.5, "ADAA": 133.0, "ADMM": 96.0},
-    sourceUrl: "https://atavellino.it/elenco-degli-aspiranti-risultati-assegnatari-di-incarico-a-tempo-determinato-da-gae-e-gps-per-la-s-2025-26-prospetto-dei-posti-disponibili-aggiornato-con-linserimento-di-nuove-catt/"
+    minScores2024: {"A-27": 48, "A-40": 28, "A-41": 30, "A-45": 34, "A-46": 44, "A-50": 40, "AAAA": 30, "ADAA": 11, "ADMM": 13},
+    minScores2025: {"A-11": 40, "A-12": 36, "A-22": 33, "A-24": 29, "A-25": 33, "A-26": 43, "A-28": 42, "A-37": 29, "A-42": 28, "ADEE": 10, "ADSS": 22, "EEEE": 31},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "BN",
     name: "Benevento",
     region: "Campania",
-    minScores2024: {"A066": 2015.0, "AK55": 1935.0, "B003": 1865.0, "AW55": 1655.0, "AC55": 1415.0},
-    minScores2025: {},
-    sourceUrl: "https://www.uspbenevento.it/uat/2024/09/14/procedure-di-nomina-del-personale-docente-a-tempo-determinato-da-gae-e-gps-a-s-2024-25-ins-informatizzazione-nomine-supplenze-pubblicazione-primo-bollettino-aggiornato/"
+    minScores2024: {"A-11": 36, "A-12": 41, "A-22": 31, "A-25": 37, "A-27": 40, "A-42": 34, "AAAA": 26, "ADAA": 12, "EEEE": 26},
+    minScores2025: {"A-24": 32, "A-26": 43, "A-28": 40, "A-37": 30, "A-40": 31, "A-41": 37, "A-45": 41, "A-46": 44, "A-50": 37, "ADEE": 19, "ADMM": 18, "ADSS": 21},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "CE",
     name: "Caserta",
     region: "Campania",
-    minScores2024: {},
-    minScores2025: {"A002 F1": 109.0, "A002 F2": 68.0, "A005 F2": 42.0, "A007 F1": 101.0, "A008 F1 S": 92.0, "A010 F2": 78.0, "A011 F1": 115.5, "A013 F1 S": 101.5, "A014 F2": 47.0, "A018 F1 S": 181.5, "A019 F1": 101.0, "A020 F2": 117.5, "A021 F1": 80.0, "A023 F2": 35.0, "A026 F1 S": 55.0, "A027 F1 S": 132.5, "A028 F1": 99.0, "A031 F2": 21.0, "A034 F2": 70.0, "A037 F1 S": 98.0},
-    sourceUrl: "https://www.uat-caserta.it/2025/09/01/bollettino-totale-delle-nomine-generato-dal-sistema-informativo-del-ministero-contenente-i-nominativi-dei-soggetti-destinatari-di-una-proposta-di-contratto-a-tempo-determinato/"
+    minScores2024: {"A-26": 44, "A-27": 43, "A-28": 46, "A-40": 34, "A-41": 34, "A-45": 36, "A-46": 45, "ADAA": 12, "ADEE": 10, "ADSS": 22},
+    minScores2025: {"A-11": 44, "A-12": 35, "A-22": 40, "A-24": 25, "A-25": 27, "A-37": 32, "A-42": 27, "A-50": 31, "AAAA": 27, "ADMM": 19, "EEEE": 21},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "NA",
     name: "Napoli",
     region: "Campania",
-    minScores2024: {},
-    minScores2025: {"A007": 1.0, "A015": 1.0, "A020": 1.0, "A031": 1.0, "A040": 1.0},
-    sourceUrl: "https://www.uat-napoli.it/graduatorie-provinciali-di-supplenza-nomine-a-tempo-determinato-2025-2026-ogni-ordine-e-grado-napoli-e-provincia/"
+    minScores2024: {"A-11": 36, "A-25": 27, "A-26": 40, "A-27": 43, "A-37": 34, "A-42": 34, "A-45": 42, "A-46": 52, "AAAA": 24, "ADAA": 16, "ADMM": 14, "EEEE": 23},
+    minScores2025: {"A-12": 38, "A-22": 39, "A-24": 33, "A-28": 43, "A-40": 32, "A-41": 32, "A-50": 30, "ADEE": 18, "ADSS": 22},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "SA",
     name: "Salerno",
     region: "Campania",
-    minScores2024: {"A022": 27.0, "A028": 6.5, "ADSS": 20.0},
-    minScores2025: {},
-    sourceUrl: "https://uat-salerno.it/Documenti/CIRCOLARI/Personale-Docente-Pubblicazione-nomine-supplenze-2025-26-1-bollettino"
+    minScores2024: {"A-11": 39, "A-25": 28, "A-26": 45, "A-27": 48, "A-28": 40, "A-37": 32, "A-40": 35, "A-41": 34, "A-42": 30, "A-50": 39, "ADAA": 13, "ADEE": 10, "EEEE": 22},
+    minScores2025: {"A-12": 43, "A-22": 30, "A-24": 28, "A-45": 39, "A-46": 50, "AAAA": 32, "ADMM": 21, "ADSS": 16},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
 
   // EMILIA-ROMAGNA
@@ -152,73 +153,73 @@ export const provinces: ProvinceData[] = [
     id: "BO",
     name: "Bologna",
     region: "Emilia-Romagna",
-    minScores2024: {},
-    minScores2025: {"A026": 140.0, "A037": 131.0, "A046": 63.0, "ADSS": 42.0, "B020": 5.0},
-    sourceUrl: "https://bo.istruzioneer.gov.it/2025/08/30/nomine-a-t-d-aspiranti-docenti-ogni-ordine-e-grado-1-turno-gps-as-2025-26/"
+    minScores2024: {"A-11": 59, "A-12": 55, "A-25": 52, "A-27": 67, "A-37": 54, "A-41": 51, "A-42": 46, "A-45": 59, "A-46": 67, "AAAA": 46, "ADMM": 37, "ADSS": 33, "EEEE": 39},
+    minScores2025: {"A-22": 60, "A-24": 44, "A-26": 70, "A-28": 65, "A-40": 51, "A-50": 49, "ADAA": 21, "ADEE": 23},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "FE",
     name: "Ferrara",
     region: "Emilia-Romagna",
-    minScores2024: {},
-    minScores2025: {"A011": 39.5, "A020": 49.0, "A028": 67.0},
-    sourceUrl: "https://fe.istruzioneer.gov.it/2025/09/01/nomine-a-td-da-gps-docenti-di-ogni-ordine-e-grado-a-s-2024-25-i-turno-2/"
+    minScores2024: {"A-12": 54, "A-22": 59, "A-27": 65, "A-41": 42, "A-46": 66, "EEEE": 46},
+    minScores2025: {"A-11": 55, "A-24": 48, "A-25": 44, "A-26": 65, "A-28": 58, "A-37": 55, "A-40": 48, "A-42": 47, "A-45": 50, "A-50": 53, "AAAA": 41, "ADAA": 22, "ADEE": 32, "ADMM": 29, "ADSS": 38},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "FC",
     name: "Forlì-Cesena",
     region: "Emilia-Romagna",
-    minScores2024: {},
-    minScores2025: {},
-    sourceUrl: "https://fc.istruzioneer.gov.it/2025/08/30/supplenze-personale-docente-ed-educativo-a-s-2025-2026-turno-30-08-2025/"
+    minScores2024: {"A-11": 57, "A-12": 60, "A-22": 51, "A-25": 45, "A-26": 64, "A-28": 62, "A-37": 48, "A-41": 43, "A-42": 41, "A-50": 52, "ADAA": 28, "ADSS": 38, "EEEE": 42},
+    minScores2025: {"A-24": 49, "A-27": 62, "A-40": 48, "A-45": 60, "A-46": 75, "AAAA": 42, "ADEE": 26, "ADMM": 37},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "MO",
     name: "Modena",
     region: "Emilia-Romagna",
-    minScores2024: {},
-    minScores2025: {"A053": 116.0, "A063": 115.5, "A061": 93.5, "B006": 73.5, "A060": 58.0},
-    sourceUrl: "https://mo.istruzioneer.gov.it/2025/08/30/esiti-nomine-a-tempo-determinato-personale-docente-a-s-2025-26-i-bollettino/"
+    minScores2024: {"A-11": 58, "A-22": 51, "A-45": 52, "A-46": 75, "A-50": 52, "AAAA": 46, "ADMM": 35},
+    minScores2025: {"A-12": 60, "A-24": 46, "A-25": 44, "A-26": 61, "A-27": 64, "A-28": 58, "A-37": 48, "A-40": 44, "A-41": 45, "A-42": 41, "ADAA": 23, "ADEE": 32, "ADSS": 34, "EEEE": 42},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "PR",
     name: "Parma",
     region: "Emilia-Romagna",
-    minScores2024: {},
-    minScores2025: {"A010": 5.0, "A011": 7.0, "A019": 10.0, "A020": 56.0, "A021": 2.0, "A026": 8.0},
-    sourceUrl: "https://pr.istruzioneer.gov.it/2025/09/01/esiti-nomine-a-tempo-determinato-da-gps-a-s-2025-26-turno-del-01-09-2025/"
+    minScores2024: {"A-11": 58, "A-22": 51, "A-25": 45, "A-28": 58, "A-37": 51, "A-40": 48, "A-41": 49, "A-45": 50, "AAAA": 48, "ADEE": 25, "ADMM": 27, "EEEE": 45},
+    minScores2025: {"A-12": 53, "A-24": 45, "A-26": 70, "A-27": 59, "A-42": 43, "A-46": 74, "A-50": 55, "ADAA": 29, "ADSS": 32},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "PC",
     name: "Piacenza",
     region: "Emilia-Romagna",
-    minScores2024: {"A022": 13.0, "A042": 275.0, "A045": 4.0, "A052": 206.0, "A060": 272.0, "B017": 6.0, "B021": 188.0, "B026": 8.0},
-    minScores2025: {},
-    sourceUrl: "https://pc.istruzioneer.gov.it/2024/09/09/esiti-nomine-a-tempo-determinato-personale-docente-a-s-2024-25-i-turno/"
+    minScores2024: {"A-12": 62, "A-22": 58, "A-24": 50, "A-27": 59, "A-28": 63, "A-40": 47, "A-41": 47, "A-42": 47, "ADAA": 25, "ADEE": 23},
+    minScores2025: {"A-11": 65, "A-25": 49, "A-26": 64, "A-37": 46, "A-45": 54, "A-46": 75, "A-50": 48, "AAAA": 45, "ADMM": 29, "ADSS": 32, "EEEE": 39},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "RA",
     name: "Ravenna",
     region: "Emilia-Romagna",
-    minScores2024: {"A011": 147.0, "A022": 58.0, "A012": 69.0, "A013": 69.0, "A018": 234.5, "A020": 234.5, "A021": 234.5, "ADSS": 38.0, "ADEE": 10.0, "EE": 10.0},
-    minScores2025: {},
-    sourceUrl: "https://ra.istruzioneer.gov.it/2024/09/07/nomine-a-tempo-determinato-da-gps-personale-docente-2024-25-i-turno/"
+    minScores2024: {"A-11": 59, "A-12": 53, "A-22": 51, "A-26": 67, "A-27": 63, "A-28": 64, "A-40": 44, "A-42": 48, "A-50": 47, "ADMM": 27, "EEEE": 42},
+    minScores2025: {"A-24": 40, "A-25": 45, "A-37": 51, "A-41": 52, "A-45": 55, "A-46": 75, "AAAA": 48, "ADAA": 26, "ADEE": 32, "ADSS": 31},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "RE",
     name: "Reggio Emilia",
     region: "Emilia-Romagna",
-    minScores2024: {"A001 F1": 35.0, "A010 F1": 89.0, "ADAA F2": 92.0, "ADSS F2": 109.0},
-    minScores2025: {},
-    sourceUrl: "https://re.istruzioneer.gov.it/2024/09/07/nomine-a-tempo-determinato-personale-docente-ed-educativo-a-s-2024-2025-prima-fase/"
+    minScores2024: {"A-11": 55, "A-12": 55, "A-37": 46, "A-41": 43, "A-45": 54, "A-50": 56, "ADAA": 28, "ADSS": 40},
+    minScores2025: {"A-22": 55, "A-24": 41, "A-25": 51, "A-26": 60, "A-27": 59, "A-28": 66, "A-40": 48, "A-42": 47, "A-46": 66, "AAAA": 44, "ADEE": 27, "ADMM": 31, "EEEE": 38},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "RN",
     name: "Rimini",
     region: "Emilia-Romagna",
-    minScores2024: {},
-    minScores2025: {"A028": 48.0, "ADSS": 76.5, "A009": 163.0, "EEEE": 7.0},
-    sourceUrl: "https://rn.istruzioneer.gov.it/2025/12/11/docenti-ultimi-nominati-da-gae-gps-a-s-2025-2026-aggiornato-all11-12-2025/"
+    minScores2024: {"A-12": 54, "A-22": 58, "A-24": 43, "A-27": 59, "A-28": 63, "A-37": 49, "A-42": 43, "A-46": 71, "A-50": 55, "AAAA": 48, "ADEE": 23, "ADSS": 37, "EEEE": 40},
+    minScores2025: {"A-11": 59, "A-25": 46, "A-26": 63, "A-40": 52, "A-41": 42, "A-45": 55, "ADAA": 21, "ADMM": 36},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
 
   // FRIULI-VENEZIA GIULIA
@@ -226,33 +227,33 @@ export const provinces: ProvinceData[] = [
     id: "GO",
     name: "Gorizia",
     region: "Friuli-Venezia Giulia",
-    minScores2024: {"A022": 59.0, "A026": 34.0, "A028": 80.0, "ADSS": 92.0},
-    minScores2025: {},
-    sourceUrl: "https://usrfvg.gov.it/it/home/menu/uffici/ufficio-territoriale-di-gorizia/notizie/ESITO-NOMINE-DOCENTI-A-T.D.-DA-GPS-A.S.-2024-25-AT-Gorizia/"
+    minScores2024: {"A-12": 55, "A-22": 50, "A-24": 47, "A-25": 46, "A-26": 62, "A-27": 65, "A-41": 48, "A-45": 57, "A-46": 66, "A-50": 56, "ADAA": 21, "ADEE": 23, "ADMM": 37},
+    minScores2025: {"A-11": 63, "A-28": 67, "A-37": 46, "A-40": 50, "A-42": 50, "AAAA": 47, "ADSS": 37, "EEEE": 46},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "PN",
     name: "Pordenone",
     region: "Friuli-Venezia Giulia",
-    minScores2024: {"ADEE": 70.5, "ADMM": 102.0, "ADSS": 206.0},
-    minScores2025: {},
-    sourceUrl: "https://usrfvg.gov.it/it/home/menu/uffici/ufficio-territoriale-di-pordenone/notizie/article/DL-19.03.2024-n.-19-art.-14-comma-1-lettera-c-bis.-Individuazione-dei-destinatari-della-proposta-di-stipula-del-contratto-a-tempo-determinato./"
+    minScores2024: {"A-11": 61, "A-12": 54, "A-22": 51, "A-24": 43, "A-27": 64, "A-28": 57, "A-45": 59, "A-50": 56, "AAAA": 45, "ADEE": 25, "ADSS": 32},
+    minScores2025: {"A-25": 49, "A-26": 60, "A-37": 55, "A-40": 47, "A-41": 46, "A-42": 41, "A-46": 75, "ADAA": 25, "ADMM": 31, "EEEE": 43},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "TS",
     name: "Trieste",
     region: "Friuli-Venezia Giulia",
-    minScores2024: {},
-    minScores2025: {"A013": 69.0, "A018": 43.5, "A020": 38.0, "A026": 52.0, "A027": 33.5, "A028": 39.0},
-    sourceUrl: "https://usrfvg.gov.it/it/home/menu/uffici/ufficio-territoriale-di-trieste/notizie/article/Bollettino-nomine-a-tempo-determinato-a.s.-2025-26-personale-docente/"
+    minScores2024: {"A-12": 56, "A-22": 52, "A-25": 49, "A-26": 62, "A-27": 60, "A-41": 50, "A-45": 56, "A-50": 50, "ADAA": 21, "ADEE": 25, "ADSS": 40, "EEEE": 44},
+    minScores2025: {"A-11": 63, "A-24": 48, "A-28": 61, "A-37": 51, "A-40": 43, "A-42": 48, "A-46": 72, "AAAA": 48, "ADMM": 31},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "UD",
     name: "Udine",
     region: "Friuli-Venezia Giulia",
-    minScores2024: {"B015": 5.0, "B020": 6.5, "EEEE": 7.0},
-    minScores2025: {},
-    sourceUrl: "https://usrfvg.gov.it/export/sites/default/it/home/menu/uffici/ufficio-territoriale-di-udine/allegati/2024-09-04_10919_AOOUSPUD_assunzioni-td-doc_Bollettino_TotaleNomine_definitivo.pdf"
+    minScores2024: {"A-11": 60, "A-26": 64, "A-28": 57, "A-41": 43, "A-46": 72, "A-50": 48, "EEEE": 38},
+    minScores2025: {"A-12": 58, "A-22": 54, "A-24": 43, "A-25": 52, "A-27": 66, "A-37": 47, "A-40": 46, "A-42": 47, "A-45": 50, "AAAA": 45, "ADAA": 30, "ADEE": 31, "ADMM": 29, "ADSS": 37},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
 
   // LAZIO
@@ -260,41 +261,41 @@ export const provinces: ProvinceData[] = [
     id: "FR",
     name: "Frosinone",
     region: "Lazio",
-    minScores2024: {},
-    minScores2025: {"A045": 25.0, "A063": 14.0, "ADEE": 31.0, "ADMM": 19.0},
-    sourceUrl: "https://www.uspistruzione.fr.it/wp2/primo-bollettino-nomine-da-gps-della-provincia-di-frosinone-per-lanno-scolastico-2025-2026.html"
+    minScores2024: {"A-11": 57, "A-26": 60, "A-28": 59, "A-37": 48, "A-40": 46, "A-42": 39, "A-46": 60, "A-50": 42, "AAAA": 35, "ADEE": 23, "EEEE": 37},
+    minScores2025: {"A-12": 50, "A-22": 53, "A-24": 38, "A-25": 45, "A-27": 56, "A-41": 38, "A-45": 49, "ADAA": 23, "ADMM": 24, "ADSS": 25},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "LT",
     name: "Latina",
     region: "Lazio",
-    minScores2024: {},
-    minScores2025: {"A001": 92.0, "A007": 120.0, "ADSS": 120.0, "A022": 120.0, "A046": 120.0},
-    sourceUrl: "https://www.csalatina.it/jclub/images/stories/Allegato_1_-_Nomina_Tempo_Determinato_da_GPS_-_Turno_1_A.S._2025-26.pdf"
+    minScores2024: {"A-11": 55, "A-22": 46, "A-41": 39, "A-45": 46, "A-46": 67, "A-50": 43, "ADSS": 24},
+    minScores2025: {"A-12": 45, "A-24": 36, "A-25": 43, "A-26": 57, "A-27": 61, "A-28": 60, "A-37": 41, "A-40": 42, "A-42": 41, "AAAA": 33, "ADAA": 18, "ADEE": 22, "ADMM": 26, "EEEE": 41},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "RI",
     name: "Rieti",
     region: "Lazio",
-    minScores2024: {},
-    minScores2025: {"ADMM": 45.0, "AS12": 78.0, "B020": 47.5, "EEEE": 15.0},
-    sourceUrl: "https://www.usp-rieti.it/2025/11/21/personale-docente-bollettino-ins-incarichi-t-d-a-s-25-26-4/"
+    minScores2024: {"A-11": 53, "A-12": 55, "A-22": 51, "A-24": 44, "A-27": 58, "A-28": 60, "A-40": 42, "A-41": 42, "A-46": 63, "A-50": 49, "ADEE": 22, "ADSS": 30},
+    minScores2025: {"A-25": 40, "A-26": 58, "A-37": 39, "A-42": 39, "A-45": 53, "AAAA": 41, "ADAA": 18, "ADMM": 31, "EEEE": 39},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "RM",
     name: "Roma",
     region: "Lazio",
-    minScores2024: {},
-    minScores2025: {"AS01": 0.0, "B021": 0.0, "A028": 4.0},
-    sourceUrl: "https://www.atpromaistruzione.it/atp/2025/08/conferimento-incarichi-a-t-d-a-s-2025-2026-i-turno/"
+    minScores2024: {"A-22": 48, "A-25": 40, "A-26": 53, "A-28": 53, "A-40": 42, "A-42": 38, "A-45": 44, "A-50": 51, "AAAA": 41, "ADEE": 21, "ADMM": 31},
+    minScores2025: {"A-11": 47, "A-12": 48, "A-24": 36, "A-27": 61, "A-37": 39, "A-41": 43, "A-46": 65, "ADAA": 16, "ADSS": 29, "EEEE": 31},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "VT",
     name: "Viterbo",
     region: "Lazio",
-    minScores2024: {"AA25": 164.5, "AAAA": 48.5, "AB24": 115.5, "AB25": 60.5, "ADAA": 48.5},
-    minScores2025: {},
-    sourceUrl: "https://www.provveditoratostudiviterbo.it/DOCENTI/2024/Bollettino_TotaleNomine_INS_13.09.pdf"
+    minScores2024: {"A-24": 38, "A-25": 40, "A-26": 59, "A-27": 54, "A-28": 56, "A-37": 39, "A-40": 41, "A-42": 45, "A-50": 44, "AAAA": 36, "ADAA": 21},
+    minScores2025: {"A-11": 48, "A-12": 45, "A-22": 51, "A-41": 46, "A-45": 44, "A-46": 67, "ADEE": 23, "ADMM": 31, "ADSS": 31, "EEEE": 32},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
 
   // LIGURIA
@@ -302,25 +303,25 @@ export const provinces: ProvinceData[] = [
     id: "GE",
     name: "Genova",
     region: "Liguria",
-    minScores2024: {},
-    minScores2025: {},
-    sourceUrl: "https://www.istruzionegenova.gov.it/pagine/gps-2024---i-turno---assegnazioni"
+    minScores2024: {"A-11": 57, "A-12": 61, "A-22": 55, "A-26": 70, "A-27": 61, "A-28": 60, "A-45": 50, "AAAA": 50, "ADAA": 25, "ADEE": 29, "EEEE": 39},
+    minScores2025: {"A-24": 45, "A-25": 49, "A-37": 53, "A-40": 53, "A-41": 51, "A-42": 42, "A-46": 68, "A-50": 52, "ADMM": 34, "ADSS": 31},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "SP",
     name: "La Spezia",
     region: "Liguria",
-    minScores2024: {},
-    minScores2025: {},
-    sourceUrl: "https://www.istruzionelaspezia.gov.it/pagine/individuazione-destinatari-nomine-per-supplenza-da-gps---i-turno--"
+    minScores2024: {"A-25": 51, "A-28": 63, "A-37": 50, "A-40": 51, "A-42": 45, "A-45": 56, "A-46": 66, "A-50": 51, "AAAA": 42, "ADEE": 28, "ADMM": 32, "ADSS": 31, "EEEE": 43},
+    minScores2025: {"A-11": 55, "A-12": 61, "A-22": 51, "A-24": 41, "A-26": 66, "A-27": 58, "A-41": 48, "ADAA": 20},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "SV",
     name: "Savona",
     region: "Liguria",
-    minScores2024: {},
-    minScores2025: {"AC55 - STRUMENTO MUSICALE NEGLI ISTITUTI DI ISTRUZIONE SECONDARIA DI II GRADO (CLARINETTO)": 167.0, "A053 - STORIA DELLA MUSICA E DELLA DANZA": 132.0, "BC02 - CONVERSAZIONE IN LINGUA STRANIERA (SPAGNOLO)": 128.0},
-    sourceUrl: "https://www.istruzionesavona.gov.it/pagine/nomine-per-supplenze-finalizzate-al-ruolo-2-as-20252026-"
+    minScores2024: {"A-26": 68, "A-40": 45, "A-41": 52, "A-42": 47, "A-45": 51, "A-46": 75, "AAAA": 45, "ADAA": 23, "ADEE": 29, "ADMM": 29, "EEEE": 39},
+    minScores2025: {"A-11": 60, "A-12": 62, "A-22": 58, "A-24": 49, "A-25": 44, "A-27": 62, "A-28": 65, "A-37": 50, "A-50": 48, "ADSS": 30},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
 
   // LOMBARDIA
@@ -328,97 +329,97 @@ export const provinces: ProvinceData[] = [
     id: "BG",
     name: "Bergamo",
     region: "Lombardia",
-    minScores2024: {},
-    minScores2025: {},
-    sourceUrl: "N/D"
+    minScores2024: {"A-12": 62, "A-22": 51, "A-25": 47, "A-26": 66, "A-27": 61, "A-28": 67, "A-37": 50, "A-40": 52, "A-42": 46, "A-46": 70, "A-50": 54, "AAAA": 43, "ADEE": 33, "ADMM": 32},
+    minScores2025: {"A-11": 59, "A-24": 42, "A-41": 51, "A-45": 50, "ADAA": 30, "ADSS": 34, "EEEE": 45},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "BS",
     name: "Brescia",
     region: "Lombardia",
-    minScores2024: {},
-    minScores2025: {"A020": 27.5, "A045": 74.5, "A019": 131.0},
-    sourceUrl: "https://www.mim.gov.it/web/brescia/-/nomine-a-tempo-determinato-da-gae-e-gps-esito-conferimento-nomine-a-t-d-da-di-i-e-ii-fascia-2"
+    minScores2024: {"A-11": 62, "A-12": 60, "A-22": 58, "A-26": 70, "A-27": 58, "A-28": 63, "A-37": 52, "A-45": 58, "ADAA": 26, "ADEE": 27, "ADMM": 27, "ADSS": 40},
+    minScores2025: {"A-24": 40, "A-25": 47, "A-40": 51, "A-41": 46, "A-42": 42, "A-46": 72, "A-50": 48, "AAAA": 45, "EEEE": 39},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "CO",
     name: "Como",
     region: "Lombardia",
-    minScores2024: {},
-    minScores2025: {},
-    sourceUrl: "https://www.mim.gov.it/web/como/home"
+    minScores2024: {"A-22": 50, "A-41": 50, "AAAA": 49, "ADMM": 29, "ADSS": 37, "EEEE": 43},
+    minScores2025: {"A-11": 60, "A-12": 58, "A-24": 41, "A-25": 43, "A-26": 60, "A-27": 65, "A-28": 64, "A-37": 54, "A-40": 53, "A-42": 50, "A-45": 52, "A-46": 70, "A-50": 52, "ADAA": 21, "ADEE": 33},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "CR",
     name: "Cremona",
     region: "Lombardia",
-    minScores2024: {},
-    minScores2025: {"A011": 70.0, "A028": 40.0, "A045": 58.5, "A034": 12.0},
-    sourceUrl: "https://www.mim.gov.it/web/cremona/-/nomine-a-tempo-determinato-a-s-2025-26"
+    minScores2024: {"A-11": 60, "A-22": 60, "A-25": 52, "A-26": 69, "A-27": 58, "A-28": 57, "A-40": 43, "A-41": 44, "A-42": 50, "AAAA": 41, "ADAA": 27},
+    minScores2025: {"A-12": 55, "A-24": 44, "A-37": 49, "A-45": 52, "A-46": 71, "A-50": 53, "ADEE": 25, "ADMM": 36, "ADSS": 32, "EEEE": 47},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "LC",
     name: "Lecco",
     region: "Lombardia",
-    minScores2024: {},
-    minScores2025: {},
-    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps/gps-Lecco"
+    minScores2024: {"A-11": 55, "A-12": 58, "A-24": 41, "A-27": 63, "A-40": 48, "A-41": 46, "A-42": 48, "A-45": 59, "A-46": 66, "AAAA": 48, "ADAA": 30, "ADSS": 34, "EEEE": 39},
+    minScores2025: {"A-22": 52, "A-25": 51, "A-26": 64, "A-28": 61, "A-37": 52, "A-50": 57, "ADEE": 31, "ADMM": 27},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "LO",
     name: "Lodi",
     region: "Lombardia",
-    minScores2024: {},
-    minScores2025: {"A028 F1": 92.0, "A028 F2": 34.0, "A019 F1": 93.0, "A019 F2": 82.0},
-    sourceUrl: "https://www.mim.gov.it/web/lodi/-/decreto-pubblicazione-individuazione-dei-destinatari-di-contratto-a-tempo-determinato-da-gps-a-s-2025-2026-personale-docente-e-educativo"
+    minScores2024: {"A-11": 65, "A-24": 50, "A-27": 66, "A-28": 65, "A-37": 51, "A-40": 44, "A-41": 46, "A-42": 44, "A-50": 56, "ADMM": 29},
+    minScores2025: {"A-12": 63, "A-22": 52, "A-25": 45, "A-26": 69, "A-45": 56, "A-46": 71, "AAAA": 49, "ADAA": 30, "ADEE": 29, "ADSS": 39, "EEEE": 43},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "MN",
     name: "Mantova",
     region: "Lombardia",
-    minScores2024: {},
-    minScores2025: {"A009": 84.0, "A011": 73.0, "ADSS": 32.0, "ADMM": 47.0},
-    sourceUrl: "https://www.mim.gov.it/web/mantova/-/nomine-a-tempo-determinato-da-gps-a-s-25-26-esito-conferimento-nomine-da-i-e-ii-fascia-1"
+    minScores2024: {"A-11": 58, "A-27": 59, "A-37": 51, "A-40": 52, "A-41": 46, "A-45": 58, "A-50": 51, "AAAA": 48, "ADSS": 38, "EEEE": 43},
+    minScores2025: {"A-12": 53, "A-22": 54, "A-24": 47, "A-25": 53, "A-26": 66, "A-28": 63, "A-42": 47, "A-46": 74, "ADAA": 24, "ADEE": 23, "ADMM": 35},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "MI",
     name: "Milano",
     region: "Lombardia",
-    minScores2024: {},
-    minScores2025: {"A040": 102.0, "A028": 68.0, "A019": 57.0, "A046": 41.0, "B012": 38.0},
-    sourceUrl: "https://www.mim.gov.it/web/milano/-/nomina-a-tempo-determinato-da-gps-a-s-2025-2026-esito-conferimento-nomine-da-i-e-ii-fascia-"
+    minScores2024: {"A-12": 54, "A-22": 60, "A-24": 45, "A-26": 62, "A-28": 57, "A-42": 51, "A-45": 53, "A-50": 56, "ADAA": 22, "ADEE": 26, "ADSS": 32},
+    minScores2025: {"A-11": 63, "A-25": 46, "A-27": 61, "A-37": 45, "A-40": 53, "A-41": 48, "A-46": 68, "AAAA": 40, "ADMM": 33, "EEEE": 45},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "MB",
     name: "Monza e Brianza",
     region: "Lombardia",
-    minScores2024: {"A022": 40.0, "A028": 9.0, "ADSS": 20.0, "AAAA": 4.0},
-    minScores2025: {},
-    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps/gps-monza%20e%20della%20brianza"
+    minScores2024: {"A-22": 59, "A-37": 55, "A-40": 50, "A-42": 51, "A-50": 51, "ADAA": 24, "ADSS": 31},
+    minScores2025: {"A-11": 61, "A-12": 54, "A-24": 40, "A-25": 43, "A-26": 65, "A-27": 65, "A-28": 60, "A-41": 49, "A-45": 55, "A-46": 73, "AAAA": 45, "ADEE": 23, "ADMM": 31, "EEEE": 41},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "PV",
     name: "Pavia",
     region: "Lombardia",
-    minScores2024: {},
-    minScores2025: {},
-    sourceUrl: "https://www.mim.gov.it/web/pavia/albo-pretorio"
+    minScores2024: {"A-12": 62, "A-22": 54, "A-24": 44, "A-26": 64, "A-28": 57, "A-40": 43, "A-45": 59, "A-50": 47, "ADAA": 22, "ADEE": 33},
+    minScores2025: {"A-11": 60, "A-25": 44, "A-27": 66, "A-37": 54, "A-41": 46, "A-42": 49, "A-46": 66, "AAAA": 45, "ADMM": 35, "ADSS": 33, "EEEE": 43},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "SO",
     name: "Sondrio",
     region: "Lombardia",
-    minScores2024: {},
-    minScores2025: {"A009": 192.0, "A010": 74.0, "A011": 54.5},
-    sourceUrl: "https://www.cislscuolasondrio.it/2025/08/29/disponibilita-per-le-gps/"
+    minScores2024: {"A-11": 64, "A-12": 55, "A-24": 50, "A-26": 67, "A-40": 52, "A-42": 43, "A-46": 67, "A-50": 47, "ADAA": 29, "ADEE": 30, "ADSS": 31, "EEEE": 40},
+    minScores2025: {"A-22": 51, "A-25": 52, "A-27": 68, "A-28": 67, "A-37": 47, "A-41": 50, "A-45": 58, "AAAA": 42, "ADMM": 36},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "VA",
     name: "Varese",
     region: "Lombardia",
-    minScores2024: {},
-    minScores2025: {"A020": 65.0, "A028": 9.0, "ADSS": 9.0, "A010": 24.0, "A045": 18.0, "A018": 35.0, "A019": 12.0, "A026": 25.0, "A046": 23.0, "A047": 10.0},
-    sourceUrl: "https://www.mim.gov.it/web/varese/-/decreto-pubblicazione-individuazione-dei-destinatari-di-contratto-a-tempo-determinato-da-gae-e-gps-a-s-2025-2026-personale-docente-e-educativo-bolle-1"
+    minScores2024: {"A-22": 53, "A-25": 52, "A-27": 58, "A-37": 45, "A-41": 50, "A-42": 51, "A-45": 56, "A-50": 54, "AAAA": 45, "ADEE": 27, "ADMM": 32, "EEEE": 38},
+    minScores2025: {"A-11": 56, "A-12": 61, "A-24": 49, "A-26": 68, "A-28": 67, "A-40": 46, "A-46": 67, "ADAA": 30, "ADSS": 39},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
 
   // MARCHE
@@ -426,41 +427,41 @@ export const provinces: ProvinceData[] = [
     id: "AN",
     name: "Ancona",
     region: "Marche",
-    minScores2024: {"A011": 70.0, "A012": 81.0, "A018": 104.0, "ADSS": 38.0},
-    minScores2025: {},
-    sourceUrl: "https://www.istruzione-ancona.it/decreto-nomine-a-tempo-determinato-da-g-a-e-e-g-p-s-2024-25/"
+    minScores2024: {"A-24": 41, "A-26": 63, "A-27": 53, "A-40": 43, "A-41": 38, "A-45": 51, "AAAA": 38, "EEEE": 41},
+    minScores2025: {"A-11": 57, "A-12": 51, "A-22": 47, "A-25": 38, "A-28": 58, "A-37": 43, "A-42": 41, "A-46": 66, "A-50": 51, "ADAA": 19, "ADEE": 19, "ADMM": 26, "ADSS": 31},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "AP",
     name: "Ascoli Piceno",
     region: "Marche",
-    minScores2024: {"ADAA": 165.0, "ADEE": 67.5, "ADMM": 141.0, "ADSS": 122.5},
-    minScores2025: {},
-    sourceUrl: "https://www.uspascolipiceno.it/wordpress/decreto-prot-9217-del-21-agosto-2024-202408211900-decreto-nomine-gps-dm-111-2024-usp-ascoli-piceno-e-fermo/"
+    minScores2024: {"A-11": 49, "A-12": 45, "A-24": 45, "A-26": 54, "A-27": 51, "A-37": 40, "A-40": 41, "A-42": 43, "A-46": 64, "AAAA": 37, "ADEE": 20, "ADMM": 29},
+    minScores2025: {"A-22": 43, "A-25": 41, "A-28": 50, "A-41": 39, "A-45": 45, "A-50": 50, "ADAA": 17, "ADSS": 31, "EEEE": 36},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "FM",
     name: "Fermo",
     region: "Marche",
-    minScores2024: {"ADAA": 165.0, "ADEE": 67.5, "ADMM": 141.0, "ADSS": 122.5},
-    minScores2025: {},
-    sourceUrl: "https://www.uspascolipiceno.it/wordpress/decreto-prot-9217-del-21-agosto-2024-202408211900-decreto-nomine-gps-dm-111-2024-usp-ascoli-piceno-e-fermo/"
+    minScores2024: {"A-11": 56, "A-12": 54, "A-24": 35, "A-28": 55, "A-37": 48, "A-40": 47, "A-41": 41, "A-45": 51, "A-50": 46, "ADAA": 24, "EEEE": 37},
+    minScores2025: {"A-22": 46, "A-25": 42, "A-26": 61, "A-27": 56, "A-42": 44, "A-46": 64, "AAAA": 34, "ADEE": 23, "ADMM": 29, "ADSS": 24},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "MC",
     name: "Macerata",
     region: "Marche",
-    minScores2024: {},
-    minScores2025: {},
-    sourceUrl: "https://nuvola.madisoft.it/file/api/public-file-preview/MCIC820004/9c13dd74-caae-4bce-92fc-770b85a1c173"
+    minScores2024: {"A-22": 45, "A-24": 38, "A-25": 45, "A-37": 48, "A-41": 44, "A-42": 39, "A-46": 59, "A-50": 44, "ADEE": 24, "ADSS": 32},
+    minScores2025: {"A-11": 49, "A-12": 53, "A-26": 57, "A-27": 61, "A-28": 50, "A-40": 37, "A-45": 50, "AAAA": 36, "ADAA": 15, "ADMM": 29, "EEEE": 39},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "PU",
     name: "Pesaro e Urbino",
     region: "Marche",
-    minScores2024: {},
-    minScores2025: {},
-    sourceUrl: "http://www.usppesarourbino.it/"
+    minScores2024: {"A-11": 47, "A-25": 42, "A-26": 60, "A-27": 61, "A-41": 37, "A-42": 42, "ADEE": 22, "ADMM": 22, "ADSS": 31},
+    minScores2025: {"A-12": 51, "A-22": 44, "A-24": 38, "A-28": 56, "A-37": 44, "A-40": 42, "A-45": 44, "A-46": 61, "A-50": 51, "AAAA": 43, "ADAA": 23, "EEEE": 40},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
 
   // MOLISE
@@ -468,17 +469,17 @@ export const provinces: ProvinceData[] = [
     id: "CB",
     name: "Campobasso",
     region: "Molise",
-    minScores2024: {},
-    minScores2025: {},
-    sourceUrl: "https://atcampobasso.it/argomento/nomine/"
+    minScores2024: {"A-24": 35, "A-27": 44, "A-42": 34, "A-46": 53, "ADAA": 17, "ADMM": 12, "ADSS": 16, "EEEE": 30},
+    minScores2025: {"A-11": 41, "A-12": 34, "A-22": 35, "A-25": 34, "A-26": 45, "A-28": 44, "A-37": 32, "A-40": 31, "A-41": 31, "A-45": 36, "A-50": 37, "AAAA": 23, "ADEE": 15},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "IS",
     name: "Isernia",
     region: "Molise",
-    minScores2024: {},
-    minScores2025: {"A023": 29.0, "A041": 42.0, "ADSS": 146.0, "ADAA": 65.0},
-    sourceUrl: "https://atpisernia.it/conferimento-nomine-a-tempo-determinato-su-posti-curriculari-e-posti-di-sostegno-del-personale-docente-da-gae-e-da-gps-a-s-2025-2026-scuola-dellinfanzia-primaria-seco"
+    minScores2024: {"A-22": 38, "A-24": 26, "A-26": 44, "A-27": 43, "A-28": 44, "A-37": 36, "A-41": 31, "A-42": 34, "A-45": 36, "A-46": 47, "ADAA": 11, "ADMM": 15, "ADSS": 19, "EEEE": 24},
+    minScores2025: {"A-11": 36, "A-12": 37, "A-25": 36, "A-40": 31, "A-50": 30, "AAAA": 28, "ADEE": 17},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
 
   // PIEMONTE
@@ -486,65 +487,65 @@ export const provinces: ProvinceData[] = [
     id: "AL",
     name: "Alessandria",
     region: "Piemonte",
-    minScores2024: {"A022": 74.0, "A028": 23.0, "ADSS": 94.0, "ADEE": 12.0, "A046": 12.0},
-    minScores2025: {},
-    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps/gps-Alessandria"
+    minScores2024: {"A-12": 62, "A-25": 44, "A-26": 62, "A-27": 65, "A-40": 50, "A-41": 48, "A-42": 42, "A-45": 59, "A-50": 53, "ADAA": 20, "ADEE": 27, "ADMM": 31},
+    minScores2025: {"A-11": 65, "A-22": 55, "A-24": 43, "A-28": 60, "A-37": 51, "A-46": 67, "AAAA": 48, "ADSS": 32, "EEEE": 43},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "AT",
     name: "Asti",
     region: "Piemonte",
-    minScores2024: {},
-    minScores2025: {"AO55": 171.0, "AS2C": 139.0, "B023": 135.0, "AI55": 118.0, "AJ55": 116.0},
-    sourceUrl: "https://www.istruzionepiemonte.it/alessandria-asti/gps-pubblicazione-esiti-fase1-asti/"
+    minScores2024: {"A-27": 61, "A-37": 54, "A-45": 54, "ADAA": 26, "ADEE": 28, "ADMM": 36, "ADSS": 39},
+    minScores2025: {"A-11": 63, "A-12": 53, "A-22": 53, "A-24": 43, "A-25": 47, "A-26": 64, "A-28": 59, "A-40": 46, "A-41": 46, "A-42": 44, "A-46": 66, "A-50": 50, "AAAA": 48, "EEEE": 38},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "BI",
     name: "Biella",
     region: "Piemonte",
-    minScores2024: {"ADEE": 7.0, "ADAA": 14.0, "EEEE": 24.0, "AA25": 33.0, "A048": 35.0},
-    minScores2025: {},
-    sourceUrl: "https://www.istruzionepiemonte.it/biella/personale-docente-pubblicazione-esito-primo-turno-di-nomina-da-gps-ogni-ordine-e-grado/"
+    minScores2024: {"A-11": 64, "A-12": 59, "A-24": 48, "A-27": 63, "A-28": 59, "A-50": 57, "ADMM": 35, "EEEE": 41},
+    minScores2025: {"A-22": 54, "A-25": 47, "A-26": 65, "A-37": 52, "A-40": 51, "A-41": 46, "A-42": 48, "A-45": 58, "A-46": 66, "AAAA": 44, "ADAA": 25, "ADEE": 23, "ADSS": 40},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "CN",
     name: "Cuneo",
     region: "Piemonte",
-    minScores2024: {},
-    minScores2025: {"ADAA": 39.5, "ADEE": 61.0, "ADMM": 89.0, "ADSS": 42.0},
-    sourceUrl: "https://www.istruzionepiemonte.it/cuneo/nomine-gps-fase-1-2/"
+    minScores2024: {"A-12": 59, "A-24": 48, "A-27": 60, "A-37": 51, "A-46": 67, "A-50": 53, "AAAA": 47, "ADEE": 30},
+    minScores2025: {"A-11": 62, "A-22": 60, "A-25": 46, "A-26": 61, "A-28": 64, "A-40": 50, "A-41": 50, "A-42": 42, "A-45": 53, "ADAA": 29, "ADMM": 34, "ADSS": 39, "EEEE": 40},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "NO",
     name: "Novara",
     region: "Piemonte",
-    minScores2024: {},
-    minScores2025: {"A008": 38.0, "A011": 64.0, "A015": 57.0, "A018": 70.0, "A020": 38.5, "A028": 44.0},
-    sourceUrl: "https://www.istruzionepiemonte.it/novara/procedura-informatizzata-supplenze-esito-conferimento-incarichi-a-tempo-determinato-candidati-inseriti-nelle-graduatorie-provinciali-supplenze-gps-primo-turno-a-s-2025-2026/"
+    minScores2024: {"A-11": 55, "A-27": 58, "A-40": 48, "A-41": 45, "A-42": 42, "A-45": 55, "A-46": 69, "A-50": 52, "AAAA": 50, "ADAA": 20, "ADEE": 33, "ADMM": 32, "ADSS": 36, "EEEE": 42},
+    minScores2025: {"A-12": 59, "A-22": 53, "A-24": 40, "A-25": 53, "A-26": 64, "A-28": 60, "A-37": 51},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "TO",
     name: "Torino",
     region: "Piemonte",
-    minScores2024: {"AB24": 5.0, "A037": 5.5, "B021": 6.5, "A030": 7.0, "B015": 7.0},
-    minScores2025: {},
-    sourceUrl: "https://www.istruzionepiemonte.it/torino/2024/08/31/nota-14760-31-08-2024-primo-bollettino-di-nomine-per-supplenze-a-tempo-determinato-a-s-2024-2025-personale-docente-ed-educativo/"
+    minScores2024: {"A-12": 53, "A-22": 53, "A-26": 68, "A-27": 67, "A-28": 62, "A-37": 50, "A-40": 47, "A-41": 50, "A-42": 48, "A-45": 58, "A-46": 65, "A-50": 48, "AAAA": 48, "ADAA": 28, "ADEE": 24, "ADMM": 35},
+    minScores2025: {"A-11": 56, "A-24": 49, "A-25": 46, "ADSS": 39, "EEEE": 39},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "VB",
     name: "Verbano-Cusio-Ossola",
     region: "Piemonte",
-    minScores2024: {"A022": 25.5, "A028": 20.5, "ADSS": 16.5},
-    minScores2025: {},
-    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps/gps-Verbano-cusio-ossola"
+    minScores2024: {"A-24": 44, "A-25": 50, "A-26": 68, "A-27": 59, "A-28": 66, "A-40": 47, "A-41": 46, "A-42": 45, "A-45": 57, "A-46": 73, "ADAA": 29, "ADMM": 27, "ADSS": 35},
+    minScores2025: {"A-11": 65, "A-12": 53, "A-22": 52, "A-37": 55, "A-50": 49, "AAAA": 40, "ADEE": 25, "EEEE": 40},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "VC",
     name: "Vercelli",
     region: "Piemonte",
-    minScores2024: {"A022": 127.5, "A027": 107.5, "ADSS": 49.0, "A018": 6.0},
-    minScores2025: {},
-    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps/gps-Vercelli"
+    minScores2024: {"A-25": 50, "A-26": 68, "A-27": 66, "A-37": 54, "A-40": 51, "A-41": 51, "A-46": 74, "AAAA": 45, "ADAA": 24, "EEEE": 44},
+    minScores2025: {"A-11": 55, "A-12": 61, "A-22": 56, "A-24": 50, "A-28": 65, "A-42": 48, "A-45": 54, "A-50": 49, "ADEE": 30, "ADMM": 31, "ADSS": 33},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
 
   // PUGLIA
@@ -552,49 +553,49 @@ export const provinces: ProvinceData[] = [
     id: "BA",
     name: "Bari",
     region: "Puglia",
-    minScores2024: {"A001": 35.0, "A012": 29.0, "A013": 41.0},
-    minScores2025: {},
-    sourceUrl: "https://www.uspbari.it/usp/individuazione-destinatari-della-proposta-di-stipula-del-contratto-a-tempo-determinato-da-gps-della-t-di-bari-per-la-s-20242025-turno-i.html"
+    minScores2024: {"A-25": 29, "A-26": 42, "A-27": 47, "A-40": 37, "A-45": 35, "A-46": 43, "ADMM": 18},
+    minScores2025: {"A-11": 40, "A-12": 38, "A-22": 34, "A-24": 26, "A-28": 37, "A-37": 37, "A-41": 29, "A-42": 33, "A-50": 38, "AAAA": 30, "ADAA": 15, "ADEE": 18, "ADSS": 20, "EEEE": 29},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "BT",
     name: "Barletta-Andria-Trani",
     region: "Puglia",
-    minScores2024: {},
-    minScores2025: {"A010": 80.0, "A028": 31.0, "AAAA": 10.0},
-    sourceUrl: "https://www.istruzionebat.it/2025/09/01/individuazione-destinatari-della-proposta-di-stipula-del-contratto-a-tempo-determinato-da-gpsdella-t-di-bari-per-la-s-2025-2026-turno-i/"
+    minScores2024: {"A-24": 30, "A-26": 42, "A-27": 41, "A-37": 34, "A-40": 29, "A-41": 30, "A-42": 28, "A-46": 51, "AAAA": 32, "ADEE": 10, "ADSS": 19, "EEEE": 26},
+    minScores2025: {"A-11": 35, "A-12": 41, "A-22": 30, "A-25": 37, "A-28": 41, "A-45": 36, "A-50": 33, "ADAA": 17, "ADMM": 17},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "BR",
     name: "Brindisi",
     region: "Puglia",
-    minScores2024: {},
-    minScores2025: {"A028": 122.0, "A026": 55.0, "ADEE": 143.0, "A046": 148.0},
-    sourceUrl: "https://www.istruzionebrindisi.it/primo-turno-supplenze-da-gps-posti-comuni-e-di-sostegno-tutti-gli-ordini-e-gradi-di-scuola-della-provincia-di-brindisi-a-s-2025-2026/?download=49757"
+    minScores2024: {"A-26": 42, "A-28": 37, "A-41": 28, "A-42": 34, "A-46": 50, "ADEE": 16, "EEEE": 31},
+    minScores2025: {"A-11": 42, "A-12": 35, "A-22": 40, "A-24": 31, "A-25": 36, "A-27": 48, "A-37": 32, "A-40": 29, "A-45": 34, "A-50": 33, "AAAA": 27, "ADAA": 12, "ADMM": 14, "ADSS": 15},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "FG",
     name: "Foggia",
     region: "Puglia",
-    minScores2024: {},
-    minScores2025: {"AAAA": 166.0, "EEEE": 113.5, "ADAA": 77.0, "ADEE": 30.0, "ADSS": 118.0, "A027": 56.0},
-    sourceUrl: "https://www.ustfoggia.it/2025/09/01/conferimento-delle-supplenze-da-g-a-e-e-da-g-p-s-per-la-s-2025-2026-i-turno/"
+    minScores2024: {"A-22": 37, "A-28": 43, "A-40": 31, "A-45": 41, "A-46": 48, "ADAA": 12, "ADMM": 17, "ADSS": 13, "EEEE": 26},
+    minScores2025: {"A-11": 45, "A-12": 33, "A-24": 35, "A-25": 30, "A-26": 47, "A-27": 48, "A-37": 36, "A-41": 37, "A-42": 29, "A-50": 38, "AAAA": 29, "ADEE": 18},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "LE",
     name: "Lecce",
     region: "Puglia",
-    minScores2024: {"ADSS": 92.0, "A012": 85.5, "A022": 85.5},
-    minScores2025: {},
-    sourceUrl: "https://www.ustlecce.it/index.php/personale-docente"
+    minScores2024: {"A-11": 44, "A-24": 30, "A-25": 28, "A-27": 38, "A-28": 47, "A-37": 33, "A-41": 34, "A-50": 31, "ADAA": 17, "ADMM": 13, "ADSS": 22, "EEEE": 23},
+    minScores2025: {"A-12": 36, "A-22": 38, "A-26": 50, "A-40": 31, "A-42": 36, "A-45": 43, "A-46": 51, "AAAA": 25, "ADEE": 10},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "TA",
     name: "Taranto",
     region: "Puglia",
-    minScores2024: {"A028": 24.0, "A012": 33.0, "A011": 71.0, "ADSS": 75.0, "A019": 96.0},
-    minScores2025: {},
-    sourceUrl: "https://www.usptaranto.it/2024/09/09/decreto-pubblicazione-esiti-nomine-a-t-d-gps-di-ogni-ordine-e-grado-posti-comuni-e-di-sostegno/"
+    minScores2024: {"A-11": 35, "A-12": 43, "A-27": 47, "A-42": 35, "A-45": 35, "A-50": 34, "AAAA": 31, "ADAA": 10, "ADMM": 11, "ADSS": 22},
+    minScores2025: {"A-22": 39, "A-24": 35, "A-25": 33, "A-26": 47, "A-28": 46, "A-37": 33, "A-40": 29, "A-41": 33, "A-46": 45, "ADEE": 10, "EEEE": 22},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
 
   // SARDEGNA
@@ -602,25 +603,25 @@ export const provinces: ProvinceData[] = [
     id: "CA",
     name: "Cagliari",
     region: "Sardegna",
-    minScores2024: {},
-    minScores2025: {"BB02": 300.0, "B016": 191.0, "AP55": 187.5},
-    sourceUrl: "https://www.uspcagliari.it/bollettino_totalenomine-1-9-25h1457privacy/"
+    minScores2024: {"A-12": 27, "A-22": 34, "A-24": 30, "A-26": 43, "A-28": 34, "A-40": 28, "A-42": 32, "AAAA": 27, "ADEE": 12, "ADSS": 10},
+    minScores2025: {"A-11": 32, "A-25": 28, "A-27": 40, "A-37": 31, "A-41": 31, "A-45": 36, "A-46": 39, "A-50": 29, "ADAA": 10, "ADMM": 12, "EEEE": 24},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "NU",
     name: "Nuoro",
     region: "Sardegna",
-    minScores2024: {},
-    minScores2025: {"ADEE": 10.0, "EEIL": 10.0, "EEEE": 10.0, "AM12": 12.0},
-    sourceUrl: "https://www.mim.gov.it/web/nuoro/-/conferimenti-dei-contratti-a-tempo-determinato-a-s-2025-2026-turno-i_supplenze-scuola-infanzia-e-primaria-secondaria-di-primo-e-secondo-grado--1"
+    minScores2024: {"A-11": 30, "A-24": 24, "A-28": 37, "A-37": 30, "A-40": 27, "A-41": 25, "A-42": 26, "A-45": 35, "ADAA": 10, "ADMM": 12, "ADSS": 19, "EEEE": 17},
+    minScores2025: {"A-12": 32, "A-22": 35, "A-25": 25, "A-26": 45, "A-27": 37, "A-46": 38, "A-50": 28, "AAAA": 28, "ADEE": 15},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "SS",
     name: "Sassari",
     region: "Sardegna",
-    minScores2024: {},
-    minScores2025: {"ADAA (Sostegno Infanzia)": 65.0, "ADEE (Sostegno Primaria)": 46.0, "ADMM (Sostegno I Grado)": 117.0, "EEEE (Posto Comune Primaria)": 46.0},
-    sourceUrl: "https://www.mim.gov.it/web/sassari/-/operazioni-di-supplenza-da-gps-terza-rettifica-al-primo-turno-di-nomina-a-s-2025-26-2"
+    minScores2024: {"A-12": 32, "A-22": 33, "A-25": 32, "A-27": 37, "A-37": 33, "A-40": 31, "A-45": 38, "A-46": 47, "A-50": 33, "AAAA": 25, "ADAA": 10, "ADSS": 16, "EEEE": 20},
+    minScores2025: {"A-11": 37, "A-24": 24, "A-26": 44, "A-28": 36, "A-41": 33, "A-42": 27, "ADEE": 10, "ADMM": 10},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
 
   // SICILIA
@@ -628,73 +629,73 @@ export const provinces: ProvinceData[] = [
     id: "AG",
     name: "Agrigento",
     region: "Sicilia",
-    minScores2024: {},
-    minScores2025: {},
-    sourceUrl: "https://ag.usr.sicilia.it/conferimento-delle-supplenze-annuali-e-o-fino-al-termine-delle-attivita-didattiche-del-personale-docente-di-ogni-ordine-e-grado-a-s-2024-2025/"
+    minScores2024: {"A-11": 37, "A-26": 38, "A-27": 38, "A-28": 41, "A-40": 26, "A-41": 28, "A-42": 29, "ADEE": 11, "ADMM": 10, "EEEE": 17},
+    minScores2025: {"A-12": 37, "A-22": 25, "A-24": 21, "A-25": 31, "A-37": 35, "A-45": 37, "A-46": 46, "A-50": 29, "AAAA": 23, "ADAA": 10, "ADSS": 19},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "CL",
     name: "Caltanissetta",
     region: "Sicilia",
-    minScores2024: {"A034": 18.5, "A022": 79.0, "ADMM": 143.0},
-    minScores2025: {},
-    sourceUrl: "https://cl-en.usr.sicilia.it/conferimento-delle-supplenze-annuali-e-o-fino-al-termine-delle-attivita-didattiche-del-personale-docente-di-ogni-ordine-e-grado-a-s-2024-2025/"
+    minScores2024: {"A-22": 31, "A-27": 40, "A-28": 35, "A-41": 33, "A-45": 31, "A-46": 43, "ADAA": 10, "ADEE": 15, "ADMM": 12, "EEEE": 18},
+    minScores2025: {"A-11": 33, "A-12": 36, "A-24": 30, "A-25": 24, "A-26": 38, "A-37": 26, "A-40": 33, "A-42": 32, "A-50": 25, "AAAA": 19, "ADSS": 12},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "CT",
     name: "Catania",
     region: "Sicilia",
-    minScores2024: {},
-    minScores2025: {"A009": 56.0, "A027": 36.0, "A040": 41.0, "A060": 47.0, "ADAA": 76.0, "ADEE": 66.5, "ADMM": 66.0},
-    sourceUrl: "https://www.uilscuolacatania.it/site/wp-content/uploads/2025/10/ELENCO-INDIVIDUAZIONE-NOMINE-DOCENTI-A-T.D.-A.S.-2025-2026-1.pdf"
+    minScores2024: {"A-11": 37, "A-12": 29, "A-25": 31, "A-27": 34, "A-28": 37, "A-41": 28, "A-50": 26, "ADAA": 10, "ADEE": 10, "EEEE": 21},
+    minScores2025: {"A-22": 26, "A-24": 29, "A-26": 41, "A-37": 27, "A-40": 31, "A-42": 31, "A-45": 33, "A-46": 41, "AAAA": 20, "ADMM": 13, "ADSS": 12},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "EN",
     name: "Enna",
     region: "Sicilia",
-    minScores2024: {"A011": 41.0, "A012": 23.0, "A027": 66.0, "A041": 76.5, "A045": 67.0},
-    minScores2025: {},
-    sourceUrl: "https://cl-en.usr.sicilia.it/conferimento-delle-supplenze-annuali-e-o-fino-al-termine-delle-attivita-didattiche-del-personale-docente-di-ogni-ordine-e-grado-a-s-2024-2025/"
+    minScores2024: {"A-11": 32, "A-25": 28, "A-26": 36, "A-41": 33, "A-42": 30, "A-50": 27, "AAAA": 26, "ADAA": 14},
+    minScores2025: {"A-12": 29, "A-22": 27, "A-24": 30, "A-27": 42, "A-28": 36, "A-37": 30, "A-40": 26, "A-45": 34, "A-46": 37, "ADEE": 15, "ADMM": 13, "ADSS": 12, "EEEE": 20},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "ME",
     name: "Messina",
     region: "Sicilia",
-    minScores2024: {},
-    minScores2025: {"A015": 151.0, "A045": 344.0, "A028": 97.0, "ADSS": 114.0},
-    sourceUrl: "https://me.usr.sicilia.it/personale-docente-gae-gps-decreto-di-conferimento-incarichi-a-tempo-determinato-del-personale-docente-a-s-2025-26-i-turno-di-nomine/"
+    minScores2024: {"A-11": 30, "A-12": 27, "A-22": 30, "A-27": 44, "A-28": 40, "A-37": 34, "A-40": 28, "A-45": 32, "A-46": 40, "ADMM": 13, "EEEE": 17},
+    minScores2025: {"A-24": 25, "A-25": 28, "A-26": 37, "A-41": 30, "A-42": 24, "A-50": 35, "AAAA": 23, "ADAA": 10, "ADEE": 16, "ADSS": 18},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "PA",
     name: "Palermo",
     region: "Sicilia",
-    minScores2024: {},
-    minScores2025: {"A046": 26.0, "A028": 47.0, "ADSS": 33.0},
-    sourceUrl: "https://pa.usr.sicilia.it/supplenze-docenti-da-gae-e-gps-a-s-2025-2026-individuazione-e-assegnazione-delle-sedi/"
+    minScores2024: {"A-12": 27, "A-22": 26, "A-24": 21, "A-25": 30, "A-27": 34, "A-41": 33, "A-42": 30, "A-46": 38, "ADAA": 14, "ADEE": 10, "ADMM": 10, "ADSS": 19, "EEEE": 17},
+    minScores2025: {"A-11": 40, "A-26": 42, "A-28": 42, "A-37": 33, "A-40": 24, "A-45": 35, "A-50": 28, "AAAA": 23},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "RG",
     name: "Ragusa",
     region: "Sicilia",
-    minScores2024: {},
-    minScores2025: {"A028 - MATEMATICA E SCIENZE": 122.0, "A011 - DISCIPLINE LETTERARIE E LATINO": 80.0},
-    sourceUrl: "https://rg.usr.sicilia.it/conferimento-incarichi-annuali-e-o-fino-al-termine-delle-attivita-didattiche-del-personale-docente-di-scuola-secondaria-di-i-e-ii-grado-a-s-2025-26/"
+    minScores2024: {"A-22": 30, "A-25": 31, "A-27": 40, "A-28": 41, "A-40": 26, "A-41": 30, "A-42": 31, "A-45": 33, "A-46": 44, "ADMM": 13},
+    minScores2025: {"A-11": 40, "A-12": 27, "A-24": 23, "A-26": 35, "A-37": 31, "A-50": 32, "AAAA": 26, "ADAA": 12, "ADEE": 14, "ADSS": 14, "EEEE": 25},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "SR",
     name: "Siracusa",
     region: "Sicilia",
-    minScores2024: {},
-    minScores2025: {"AM48": 8.0, "ADEE": 8.5, "EEEM": 12.0, "EEEE": 14.0, "ADAA": 22.0},
-    sourceUrl: "https://sr.usr.sicilia.it/personale-docente-decreto-di-conferimento-incarichi-a-tempo-determinato-del-personale-docente-a-s-2025-26-i-turno-di-nomina/"
+    minScores2024: {"A-11": 30, "A-25": 29, "A-37": 34, "A-45": 30, "A-46": 45, "A-50": 30, "ADEE": 16},
+    minScores2025: {"A-12": 31, "A-22": 33, "A-24": 30, "A-26": 42, "A-27": 42, "A-28": 42, "A-40": 29, "A-41": 24, "A-42": 24, "AAAA": 28, "ADAA": 13, "ADMM": 10, "ADSS": 16, "EEEE": 26},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "TP",
     name: "Trapani",
     region: "Sicilia",
-    minScores2024: {},
-    minScores2025: {"A028": 51.5, "A026": 49.0, "ADSS": 100.0, "ADEE": 89.0, "A011": 47.0},
-    sourceUrl: "https://tp.usr.sicilia.it/pubblicazione-bollettino-totale-n-1-nomine-a-tempo-determinato-personale-docente-di-ogni-ordine-e-grado-da-gps-a-s-2025-2026/"
+    minScores2024: {"A-11": 32, "A-22": 33, "A-27": 38, "A-37": 35, "A-41": 27, "A-42": 25, "A-45": 28, "A-46": 41, "AAAA": 19, "ADEE": 10},
+    minScores2025: {"A-12": 30, "A-24": 23, "A-25": 24, "A-26": 42, "A-28": 41, "A-40": 32, "A-50": 28, "ADAA": 10, "ADMM": 10, "ADSS": 17, "EEEE": 19},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
 
   // TOSCANA
@@ -702,81 +703,81 @@ export const provinces: ProvinceData[] = [
     id: "AR",
     name: "Arezzo",
     region: "Toscana",
-    minScores2024: {},
-    minScores2025: {"ADEE": 19.0, "A054": 22.0, "A042": 25.0, "A028": 34.0, "ADSS": 92.0},
-    sourceUrl: "https://www.arezzoistruzione.it/usparezzo/index.php/docenti/graduatorie/g-p-s/1247-pubblicazione-bollettino-turno-1-gps"
+    minScores2024: {"A-11": 54, "A-22": 48, "A-24": 39, "A-25": 45, "A-27": 56, "A-40": 40, "A-46": 64, "AAAA": 37, "ADEE": 26, "EEEE": 31},
+    minScores2025: {"A-12": 54, "A-26": 60, "A-28": 53, "A-37": 45, "A-41": 46, "A-42": 38, "A-45": 45, "A-50": 49, "ADAA": 20, "ADMM": 30, "ADSS": 31},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "FI",
     name: "Firenze",
     region: "Toscana",
-    minScores2024: {},
-    minScores2025: {"ADAA": 192.0, "A020": 181.0, "A051": 174.0, "AS48": 134.5, "AM12": 132.0},
-    sourceUrl: "https://www.ust.fi.it/pubblicazione-bollettino-turno-1/"
+    minScores2024: {"A-25": 37, "A-26": 59, "A-27": 58, "A-37": 44, "A-50": 45, "AAAA": 39, "ADEE": 18, "ADMM": 31, "EEEE": 33},
+    minScores2025: {"A-11": 57, "A-12": 55, "A-22": 51, "A-24": 42, "A-28": 55, "A-40": 43, "A-41": 38, "A-42": 43, "A-45": 51, "A-46": 63, "ADAA": 21, "ADSS": 27},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "GR",
     name: "Grosseto",
     region: "Toscana",
-    minScores2024: {},
-    minScores2025: {"B003": 217.5, "AL55": 206.0, "A018": 176.0, "A028": 53.0, "ADSS": 8.0},
-    sourceUrl: "https://www.ufficioscolasticogrosseto.it/uff7/index.php/pubblicazioni/3856-30-08-2025-decreto-pubblicazione-individuazione-dei-destinatari-di-contratto-a-tempo-determinato-da-gps-a-s-2025-26-personale-docente-ed-educativo-bollettino-n-1"
+    minScores2024: {"A-11": 54, "A-12": 53, "A-22": 51, "A-24": 43, "A-26": 62, "A-37": 49, "A-41": 38, "A-42": 40, "A-46": 65, "AAAA": 33, "ADEE": 25, "ADSS": 23},
+    minScores2025: {"A-25": 40, "A-27": 52, "A-28": 56, "A-40": 39, "A-45": 46, "A-50": 47, "ADAA": 24, "ADMM": 25, "EEEE": 32},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "LI",
     name: "Livorno",
     region: "Toscana",
-    minScores2024: {},
-    minScores2025: {"ADSS": 9.0, "AS2B": 9.0, "ADEE": 12.0},
-    sourceUrl: "https://www.ustli.it/usp_livorno/index.php/docenti/gps/2102-decreto-nomine-da-gps-1-turno"
+    minScores2024: {"A-24": 38, "A-27": 55, "A-40": 40, "A-42": 38, "ADAA": 20, "ADEE": 25, "ADMM": 31},
+    minScores2025: {"A-11": 50, "A-12": 53, "A-22": 44, "A-25": 45, "A-26": 59, "A-28": 60, "A-37": 40, "A-41": 41, "A-45": 45, "A-46": 60, "A-50": 45, "AAAA": 36, "ADSS": 24, "EEEE": 34},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "LU",
     name: "Lucca",
     region: "Toscana",
-    minScores2024: {},
-    minScores2025: {"A028": 28.5, "A018": 32.0, "A011": 51.5, "ADSS": 102.0},
-    sourceUrl: "http://www.ustlucca.it/2025/08/30/personale-docente-nomine-gps-a-tempo-determinato-turno-1-a-s-2025-26-del-30-08-2025/"
+    minScores2024: {"A-24": 44, "A-25": 44, "A-26": 55, "A-41": 46, "A-45": 49, "A-50": 46, "ADAA": 22, "ADEE": 23, "ADSS": 25, "EEEE": 38},
+    minScores2025: {"A-11": 55, "A-12": 45, "A-22": 47, "A-27": 54, "A-28": 56, "A-37": 49, "A-40": 47, "A-42": 44, "A-46": 58, "AAAA": 33, "ADMM": 29},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "MS",
     name: "Massa-Carrara",
     region: "Toscana",
-    minScores2024: {"A022": 92.5, "ADSS": 55.0},
-    minScores2025: {},
-    sourceUrl: "http://www.ustlucca.it/2024/09/04/esiti-nomine-a-t-d-personale-docente-a-s-2024-25-i-turno-gps/"
+    minScores2024: {"A-11": 48, "A-25": 38, "A-26": 55, "A-37": 39, "A-42": 39, "A-46": 60, "ADAA": 19, "ADEE": 26},
+    minScores2025: {"A-12": 54, "A-22": 45, "A-24": 44, "A-27": 59, "A-28": 53, "A-40": 43, "A-41": 45, "A-45": 48, "A-50": 50, "AAAA": 33, "ADMM": 31, "ADSS": 25, "EEEE": 41},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "PI",
     name: "Pisa",
     region: "Toscana",
-    minScores2024: {},
-    minScores2025: {"A011": 62.0, "A026": 13.0, "ADSS": 34.5},
-    sourceUrl: "https://www.toscana-istruzione.it/atpisa/2025/08/30/incarichi-a-tempo-determinato-primo-turno-nomine-da-gps-a-s-2025-26/"
+    minScores2024: {"A-11": 57, "A-12": 50, "A-24": 38, "A-26": 58, "A-27": 52, "A-37": 43, "A-40": 45, "A-41": 42, "A-42": 42, "A-45": 49, "A-46": 60, "AAAA": 42, "ADAA": 19, "ADMM": 31, "ADSS": 31, "EEEE": 38},
+    minScores2025: {"A-22": 44, "A-25": 41, "A-28": 58, "A-50": 48, "ADEE": 19},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "PT",
     name: "Pistoia",
     region: "Toscana",
-    minScores2024: {},
-    minScores2025: {},
-    sourceUrl: "https://www.ufficioscolasticoprovinciale.pistoia.it/"
+    minScores2024: {"A-11": 52, "A-22": 49, "A-24": 45, "A-26": 56, "A-27": 58, "A-28": 54, "A-42": 37, "A-45": 49, "ADEE": 21, "ADSS": 24, "EEEE": 33},
+    minScores2025: {"A-12": 48, "A-25": 46, "A-37": 48, "A-40": 38, "A-41": 44, "A-46": 66, "A-50": 47, "AAAA": 36, "ADAA": 24, "ADMM": 22},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "PO",
     name: "Prato",
     region: "Toscana",
-    minScores2024: {},
-    minScores2025: {"A005": 227.0, "A009": 89.0, "A011": 165.0, "A015": 85.0, "A018": 36.0, "A020": 99.0, "A026": 53.0, "A027": 68.0, "A028": 49.0},
-    sourceUrl: "https://www.ufficioscolasticoprovinciale.prato.it/esiti-i-turno-di-nomina-gps-a-s-2025-26/"
+    minScores2024: {"A-12": 47, "A-25": 38, "A-26": 56, "A-45": 45, "A-46": 63, "AAAA": 33, "ADAA": 20, "ADEE": 17, "ADMM": 26, "ADSS": 28},
+    minScores2025: {"A-11": 47, "A-22": 44, "A-24": 39, "A-27": 58, "A-28": 51, "A-37": 42, "A-40": 41, "A-41": 43, "A-42": 43, "A-50": 42, "EEEE": 40},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "SI",
     name: "Siena",
     region: "Toscana",
-    minScores2024: {"AJ55 - STRUMENTO MUSICALE NEGLI ISTITUTI DI ISTRUZIONE SECONDARIA DI II GRADO (PIANOFORTE)": 253.0, "A053 - EX STORIA DELLA MUSICA": 242.0, "A054 - STORIA DELL'ARTE": 173.0},
-    minScores2025: {},
-    sourceUrl: "https://www.uspsi.it/?p=4024"
+    minScores2024: {"A-11": 56, "A-26": 59, "A-37": 46, "A-45": 51, "A-46": 67, "A-50": 47},
+    minScores2025: {"A-12": 50, "A-22": 50, "A-24": 40, "A-25": 39, "A-27": 53, "A-28": 60, "A-40": 39, "A-41": 36, "A-42": 35, "AAAA": 42, "ADAA": 19, "ADEE": 22, "ADMM": 25, "ADSS": 26, "EEEE": 35},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
 
   // TRENTINO-ALTO ADIGE
@@ -784,17 +785,17 @@ export const provinces: ProvinceData[] = [
     id: "TN",
     name: "Trento",
     region: "Trentino-Alto Adige",
-    minScores2024: {},
-    minScores2025: {"EEEE (Scuola Primaria Posto Comune)": 65.25},
-    sourceUrl: "https://www.vivoscuola.it/vivoscuola/tags_view/Tematiche/Lavorare+nella+scuola/Assunzioni+a+tempo+determinato/Chiamata+unica+TD"
+    minScores2024: {"A-12": 58, "A-22": 58, "A-24": 50, "A-26": 69, "A-27": 60, "A-28": 60, "A-37": 48, "A-40": 46, "AAAA": 41, "ADEE": 31},
+    minScores2025: {"A-11": 63, "A-25": 44, "A-41": 45, "A-42": 47, "A-45": 59, "A-46": 66, "A-50": 49, "ADAA": 21, "ADMM": 37, "ADSS": 37, "EEEE": 47},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "BZ",
     name: "Bolzano",
     region: "Trentino-Alto Adige",
-    minScores2024: {},
-    minScores2025: {},
-    sourceUrl: "https://scuola-italiana.provincia.bz.it/it/lavorare-sistema-scolastico/operazioni-nomine"
+    minScores2024: {"A-11": 64, "A-24": 42, "A-25": 48, "A-27": 67, "A-37": 48, "A-45": 50, "A-50": 48, "ADAA": 23, "ADEE": 26, "ADMM": 27},
+    minScores2025: {"A-12": 57, "A-22": 50, "A-26": 64, "A-28": 60, "A-40": 43, "A-41": 48, "A-42": 41, "A-46": 71, "AAAA": 46, "ADSS": 39, "EEEE": 43},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
 
   // UMBRIA
@@ -802,17 +803,17 @@ export const provinces: ProvinceData[] = [
     id: "PG",
     name: "Perugia",
     region: "Umbria",
-    minScores2024: {"ADSS": 4.0, "A001": 45.0, "A003": 121.0, "A005": 120.0},
-    minScores2025: {},
-    sourceUrl: "https://istruzione.umbria.it/ambito-territoriale-perugia/nomine-a-t-d-personale-docente-ed-educativo-a-s-2024-2025-provincia-di-perugia/"
+    minScores2024: {"A-24": 40, "A-28": 51, "A-37": 39, "A-40": 40, "A-42": 37, "A-46": 60, "A-50": 49, "ADMM": 25, "ADSS": 29},
+    minScores2025: {"A-11": 47, "A-12": 50, "A-22": 47, "A-25": 46, "A-26": 58, "A-27": 59, "A-41": 44, "A-45": 45, "AAAA": 33, "ADAA": 21, "ADEE": 24, "EEEE": 32},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "TR",
     name: "Terni",
     region: "Umbria",
-    minScores2024: {"AD25": 271.5, "AP55": 218.0, "A042": 99.0, "A020": 96.5, "A022": 27.0},
-    minScores2025: {},
-    sourceUrl: "https://istruzione.umbria.it/ambito-territoriale-terni/esiti-nomine-a-t-d-personale-docente-a-s-2024-25-provincia-di-terni/"
+    minScores2024: {"A-11": 50, "A-12": 47, "A-22": 45, "A-25": 41, "A-27": 56, "A-42": 42, "A-45": 51, "A-46": 66, "ADEE": 18, "ADMM": 23},
+    minScores2025: {"A-24": 43, "A-26": 62, "A-28": 51, "A-37": 47, "A-40": 39, "A-41": 45, "A-50": 50, "AAAA": 40, "ADAA": 16, "ADSS": 25, "EEEE": 38},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
 
   // VALLE D'AOSTA
@@ -820,9 +821,9 @@ export const provinces: ProvinceData[] = [
     id: "AO",
     name: "Aosta",
     region: "Valle d'Aosta",
-    minScores2024: {},
-    minScores2025: {},
-    sourceUrl: "https://scuole.vda.it/graduatorie-regionali-supplenze-grs/biennio-anni-scolastici-2024-2025-e-2025-2026"
+    minScores2024: {"A-12": 61, "A-24": 42, "A-26": 65, "A-27": 61, "A-37": 47, "A-40": 53, "A-42": 51, "A-45": 52, "A-50": 51, "AAAA": 50, "ADAA": 24, "ADSS": 38, "EEEE": 40},
+    minScores2025: {"A-11": 59, "A-22": 59, "A-25": 53, "A-28": 58, "A-41": 42, "A-46": 69, "ADEE": 24, "ADMM": 29},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
 
   // VENETO
@@ -830,193 +831,56 @@ export const provinces: ProvinceData[] = [
     id: "BL",
     name: "Belluno",
     region: "Veneto",
-    minScores2024: {},
-    minScores2025: {"A028": 30.0, "A040": 18.0, "A041": 21.5, "A042": 24.0, "A044": 29.0},
-    sourceUrl: "https://belluno.istruzioneveneto.gov.it/news/area-amministrativa/proposte-di-stipula-di-contratto-a-tempo-determinato-docenti-ed-educativo-da-graduatorie-provinciali-per-le-supplenze-g-p-s-di-cui-allart-2-comma-5-lettera-a-e-b-dello-m-8/"
+    minScores2024: {"A-11": 58, "A-12": 59, "A-22": 54, "A-25": 53, "A-26": 70, "A-28": 67, "A-37": 45, "A-42": 47, "A-45": 50, "A-46": 72, "A-50": 48, "AAAA": 50, "ADAA": 29, "ADEE": 30, "EEEE": 43},
+    minScores2025: {"A-24": 47, "A-27": 58, "A-40": 52, "A-41": 47, "ADMM": 33, "ADSS": 34},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "PD",
     name: "Padova",
     region: "Veneto",
-    minScores2024: {"A022": 33.0, "A012": 33.5, "ADSS": 34.0},
-    minScores2025: {},
-    sourceUrl: "https://padova.istruzioneveneto.gov.it/2024/09/06/supplenze-docenti-2024-2025-gps-bollettino-delle-assegnazioni/"
+    minScores2024: {"A-11": 65, "A-22": 52, "A-26": 69, "A-28": 65, "A-40": 50, "A-46": 74, "A-50": 53, "AAAA": 43, "ADAA": 28, "ADEE": 28, "EEEE": 37},
+    minScores2025: {"A-12": 53, "A-24": 48, "A-25": 47, "A-27": 65, "A-37": 51, "A-41": 52, "A-42": 47, "A-45": 56, "ADMM": 32, "ADSS": 31},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "RO",
     name: "Rovigo",
     region: "Veneto",
-    minScores2024: {},
-    minScores2025: {},
-    sourceUrl: "https://rovigo.istruzioneveneto.gov.it/"
+    minScores2024: {"A-11": 55, "A-22": 50, "A-24": 46, "A-27": 60, "A-37": 49, "A-41": 49, "A-50": 55, "AAAA": 42, "ADAA": 30, "ADMM": 31, "ADSS": 40, "EEEE": 38},
+    minScores2025: {"A-12": 53, "A-25": 52, "A-26": 70, "A-28": 65, "A-40": 45, "A-42": 48, "A-45": 51, "A-46": 65, "ADEE": 25},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "TV",
     name: "Treviso",
     region: "Veneto",
-    minScores2024: {"B016 F2": 13.5, "B017 F2": 15.0, "B014 F1": 20.5, "ADIO F1": 20.5, "A017 F1": 24.0},
-    minScores2025: {},
-    sourceUrl: "https://treviso.istruzioneveneto.gov.it/esito-primo-turno-di-nomine-a-tempo-determinato-docenti/"
+    minScores2024: {"A-12": 56, "A-22": 57, "A-26": 62, "A-28": 59, "A-40": 47, "A-41": 44, "A-42": 43, "A-46": 74, "A-50": 47, "ADEE": 26, "ADMM": 35, "ADSS": 36},
+    minScores2025: {"A-11": 63, "A-24": 47, "A-25": 52, "A-27": 67, "A-37": 54, "A-45": 60, "AAAA": 43, "ADAA": 27, "EEEE": 38},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "VE",
     name: "Venezia",
     region: "Veneto",
-    minScores2024: {},
-    minScores2025: {"A002": 40.0, "A019": 187.0, "A028": 58.0, "AAAA": 11.0, "AJ56S": 36.0},
-    sourceUrl: "https://www.cislscuolavenezia.it/wp-content/uploads/2025/08/BOLLETTINO-TOTALE-NOMINE-PRIMO-TURNO-SUPPLENZE-29.08.2025.pdf"
+    minScores2024: {"A-11": 64, "A-25": 49, "A-26": 70, "A-27": 64, "A-28": 62, "A-37": 54, "A-40": 43, "A-41": 49, "A-42": 45, "AAAA": 43, "EEEE": 40},
+    minScores2025: {"A-12": 59, "A-22": 54, "A-24": 47, "A-45": 55, "A-46": 67, "A-50": 52, "ADAA": 23, "ADEE": 33, "ADMM": 30, "ADSS": 36},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "VR",
     name: "Verona",
     region: "Veneto",
-    minScores2024: {},
-    minScores2025: {"ADEE": 36.0, "ADMM": 39.0},
-    sourceUrl: "https://verona.istruzioneveneto.gov.it/index.php/conferimento-supplenze-a-s-2025-2026/"
+    minScores2024: {"A-27": 61, "A-28": 60, "A-37": 45, "A-40": 44, "A-41": 43, "A-42": 50, "A-50": 50, "ADSS": 39},
+    minScores2025: {"A-11": 58, "A-12": 57, "A-22": 59, "A-24": 42, "A-25": 43, "A-26": 70, "A-45": 60, "A-46": 71, "AAAA": 46, "ADAA": 20, "ADEE": 33, "ADMM": 28, "EEEE": 44},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
   {
     id: "VI",
     name: "Vicenza",
     region: "Veneto",
-    minScores2024: {},
-    minScores2025: {"ADAA": 30.0, "ADEE": 30.0},
-    sourceUrl: "https://vicenza.istruzioneveneto.gov.it/2025/08/30/nomine-supplenti-individuazione-dei-docenti-destinatari-per-lanno-scolastico-2025-2026-di-una-proposta-di-stipula-di-contratto-a-tempo-determinato-tutti-gli-ordini-di-scuola/"
+    minScores2024: {"A-11": 63, "A-24": 43, "A-25": 50, "A-40": 47, "A-45": 50, "A-46": 75, "A-50": 55, "ADSS": 38, "EEEE": 47},
+    minScores2025: {"A-12": 53, "A-22": 57, "A-26": 62, "A-27": 65, "A-28": 58, "A-37": 51, "A-41": 49, "A-42": 47, "AAAA": 47, "ADAA": 26, "ADEE": 32, "ADMM": 37},
+    sourceUrl: "https://www.voglioinsegnare.it/graduatorie-gps"
   },
-
-];
-
-export const competitionClasses = [
-  // INFANZIA E PRIMARIA
-  { id: "AAAA", label: "AAAA - Infanzia posto comune" },
-  { id: "EEEE", label: "EEEE - Primaria posto comune" },
-  { id: "ADAA", label: "ADAA - Sostegno Infanzia" },
-  { id: "ADEE", label: "ADEE - Sostegno Primaria" },
-  { id: "EEEM", label: "EEEM - Educazione motoria nella primaria" },
-
-  // SOSTEGNO SECONDARIA
-  { id: "ADMM", label: "ADMM - Sostegno Secondaria I grado" },
-  { id: "ADSS", label: "ADSS - Sostegno Secondaria II grado" },
-
-  // TABELLA A (NUOVE CLASSI DI CONCORSO)
-  { id: "A001", label: "A001 - Arte e immagine nella scuola secondaria di I grado" },
-  { id: "A002", label: "A002 - Design dei metalli, dell'oreficeria, delle pietre dure e delle gemme" },
-  { id: "A003", label: "A003 - Design della ceramica" },
-  { id: "A004", label: "A004 - Design del libro" },
-  { id: "A005", label: "A005 - Design del tessuto e della moda" },
-  { id: "A006", label: "A006 - Design del vetro" },
-  { id: "A007", label: "A007 - Discipline audiovisive" },
-  { id: "A008", label: "A008 - Discipline geometriche, architettura, design d'arredamento e scenotecnica" },
-  { id: "A009", label: "A009 - Discipline grafiche, pittoriche e scenografiche" },
-  { id: "A010", label: "A010 - Discipline grafico-pubblicitarie" },
-  { id: "A011", label: "A011 - Discipline letterarie e latino" },
-  { id: "A012", label: "A012 - Discipline letterarie negli istituti di istruzione secondaria di II grado" },
-  { id: "A013", label: "A013 - Discipline letterarie, latino e greco" },
-  { id: "A014", label: "A014 - Discipline plastiche, scultoree e scenoplastiche" },
-  { id: "A015", label: "A015 - Discipline sanitarie" },
-  { id: "A016", label: "A016 - Disegno artistico e modellazione odontotecnica" },
-  { id: "A017", label: "A017 - Disegno e storia dell'arte negli istituti di istruzione secondaria di II grado" },
-  { id: "A018", label: "A018 - Filosofia e Scienze umane" },
-  { id: "A019", label: "A019 - Filosofia e Storia" },
-  { id: "A020", label: "A020 - Fisica" },
-  { id: "A021", label: "A021 - Geografia" },
-  { id: "A022", label: "A022 - Italiano, storia, geografia nella scuola secondaria di I grado" },
-  { id: "A023", label: "A023 - Lingua italiana per discenti di lingua straniera" },
-  { id: "A024", label: "A024 - Lingue e culture straniere negli istituti di istruzione s. di II grado (Cinese)" },
-  { id: "A025", label: "A025 - Lingua inglese e seconda lingua comunitaria nella scuola secondaria di I grado" },
-  { id: "A026", label: "A026 - Matematica" },
-  { id: "A027", label: "A027 - Matematica e Fisica" },
-  { id: "A028", label: "A028 - Matematica e Scienze" },
-  { id: "A029", label: "A029 - Musica negli istituti di istruzione secondaria di II grado" },
-  { id: "A030", label: "A030 - Musica nella scuola secondaria di I grado" },
-  { id: "A031", label: "A031 - Scienze degli alimenti" },
-  { id: "A032", label: "A032 - Scienze della geologia e della mineralogia" },
-  { id: "A033", label: "A033 - Scienze e tecnologie aeronautiche" },
-  { id: "A034", label: "A034 - Scienze e tecnologie chimiche" },
-  { id: "A035", label: "A035 - Scienze e tecnologie della calzatura e della moda" },
-  { id: "A036", label: "A036 - Scienze e tecnologie della logistica" },
-  { id: "A037", label: "A037 - Scienze e tecnologie delle costruzioni, tecnologie e tecniche di rappresentazione grafica" },
-  { id: "A038", label: "A038 - Scienze e tecnologie delle costruzioni aeronautiche" },
-  { id: "A039", label: "A039 - Scienze e tecnologie delle costruzioni navali" },
-  { id: "A040", label: "A040 - Scienze e tecnologie elettriche ed elettroniche" },
-  { id: "A041", label: "A041 - Scienze e tecnologie informatiche" },
-  { id: "A042", label: "A042 - Scienze e tecnologie meccaniche" },
-  { id: "A043", label: "A043 - Scienze e tecnologie nautiche" },
-  { id: "A044", label: "A044 - Scienze e tecnologie tessili, dell'abbigliamento e della moda" },
-  { id: "A045", label: "A045 - Scienze economico-aziendali" },
-  { id: "A046", label: "A046 - Scienze giuridico-economiche" },
-  { id: "A047", label: "A047 - Scienze matematiche applicate" },
-  { id: "A048", label: "A048 - Scienze motorie e sportive negli istituti di istruzione secondaria di II grado" },
-  { id: "A049", label: "A049 - Scienze motorie e sportive nella scuola secondaria di I grado" },
-  { id: "A050", label: "A050 - Scienze naturali, chimiche e biologiche" },
-  { id: "A051", label: "A051 - Scienze, tecnologie e tecniche agrarie" },
-  { id: "A052", label: "A052 - Scienze, tecnologie e tecniche di produzioni animali" },
-  { id: "A053", label: "A053 - Storia della musica" },
-  { id: "A054", label: "A054 - Storia dell'arte" },
-  { id: "A055", label: "A055 - Strumento musicale negli istituti di istruzione secondaria di II grado" },
-  { id: "A056", label: "A056 - Strumento musicale nella scuola secondaria di I grado" },
-  { id: "A057", label: "A057 - Tecnica della danza classica" },
-  { id: "A058", label: "A058 - Tecnica della danza contemporanea" },
-  { id: "A059", label: "A059 - Tecniche di accompagnamento alla danza e teoria, pratica musicale per la danza" },
-  { id: "A060", label: "A060 - Tecnologia nella scuola secondaria di I grado" },
-  { id: "A061", label: "A061 - Tecnologie e tecniche delle comunicazioni multimediali" },
-  { id: "A062", label: "A062 - Tecnologie e tecniche per la grafica" },
-  { id: "A063", label: "A063 - Tecnologie musicali" },
-  { id: "A064", label: "A064 - Teoria, analisi e composizione" },
-  { id: "A065", label: "A065 - Teoria e tecnica della comunicazione" },
-  { id: "A066", label: "A066 - Trattamento testi, dati ed applicazioni. Informatica" },
-
-  // LINGUE STRANIERE (NUOVI CODICI)
-  { id: "AA24", label: "AA24 - Lingue e culture straniere (Francese)" },
-  { id: "AB24", label: "AB24 - Lingue e culture straniere (Inglese)" },
-  { id: "AC24", label: "AC24 - Lingue e culture straniere (Spagnolo)" },
-  { id: "AD24", label: "AD24 - Lingue e culture straniere (Tedesco)" },
-  { id: "AE24", label: "AE24 - Lingue e culture straniere (Russo)" },
-  { id: "AF24", label: "AF24 - Lingue e culture straniere (Arabo)" },
-  { id: "AG24", label: "AG24 - Lingue e culture straniere (Cinese)" },
-  { id: "AH24", label: "AH24 - Lingue e culture straniere (Giapponese)" },
-  { id: "AI24", label: "AI24 - Lingue e culture straniere (Ebraico)" },
-  { id: "AJ24", label: "AJ24 - Lingue e culture straniere (Persiano)" },
-  { id: "AK24", label: "AK24 - Lingue e culture straniere (Serbo-Croato)" },
-  { id: "AL24", label: "AL24 - Lingue e culture straniere (Albanese)" },
-  { id: "AM24", label: "AM24 - Lingue e culture straniere (Neo-greco)" },
-  { id: "AN24", label: "AN24 - Lingue e culture straniere (Portoghese)" },
-  { id: "AO24", label: "AO24 - Lingue e culture straniere (Turco)" },
-  { id: "AP24", label: "AP24 - Lingue e culture straniere (Polacco)" },
-  { id: "AQ24", label: "AQ24 - Lingue e culture straniere (Rumeno)" },
-  { id: "AR24", label: "AR24 - Lingue e culture straniere (Sloveno)" },
-
-  // TABELLA B (ITP - INSEGNANTI TECNICO PRATICI)
-  { id: "B001", label: "B001 - Attività pratiche speciali" },
-  { id: "B002", label: "B002 - Conversazione in lingua straniera" },
-  { id: "B003", label: "B003 - Laboratori di Fisica" },
-  { id: "B004", label: "B004 - Laboratori di scienze e tecnologie delle costruzioni" },
-  { id: "B005", label: "B005 - Laboratorio di logistica" },
-  { id: "B006", label: "B006 - Laboratorio di odontotecnica" },
-  { id: "B007", label: "B007 - Laboratorio di ottica" },
-  { id: "B008", label: "B008 - Laboratori di produzioni industriali ed artigianali della ceramica" },
-  { id: "B009", label: "B009 - Laboratori di scienze e tecnologie aeronautiche" },
-  { id: "B010", label: "B010 - Laboratori di scienze e tecnologie delle costruzioni aeronautiche" },
-  { id: "B011", label: "B011 - Laboratori di scienze e tecnologie agrarie" },
-  { id: "B012", label: "B012 - Laboratori di scienze e tecnologie chimiche e microbiologiche" },
-  { id: "B013", label: "B013 - Laboratori di scienze e tecnologie della calzatura e della moda" },
-  { id: "B014", label: "B014 - Laboratori di scienze e tecnologie delle costruzioni" },
-  { id: "B015", label: "B015 - Laboratori di scienze e tecnologie elettriche ed elettroniche" },
-  { id: "B016", label: "B016 - Laboratori di scienze e tecnologie informatiche" },
-  { id: "B017", label: "B017 - Laboratori di scienze e tecnologie meccaniche" },
-  { id: "B018", label: "B018 - Laboratori di scienze e tecnologie nautiche" },
-  { id: "B019", label: "B019 - Laboratori di servizi di ricettività alberghiera" },
-  { id: "B020", label: "B020 - Laboratori di servizi enogastronomici, settore cucina" },
-  { id: "B021", label: "B021 - Laboratori di servizi enogastronomici, settore sala e vendita" },
-  { id: "B022", label: "B022 - Laboratori di tecnologie e tecniche delle comunicazioni multimediali" },
-  { id: "B023", label: "B023 - Laboratori per i servizi socio-sanitari" },
-  { id: "B024", label: "B024 - Laboratorio di scienze e tecnologie nautiche" },
-  { id: "B025", label: "B025 - Laboratorio di scienze e tecnologie delle costruzioni navali" },
-  { id: "B026", label: "B026 - Laboratorio di tecnologie del legno" },
-  { id: "B027", label: "B027 - Laboratorio di tecnologie del marmo" },
-  { id: "B028", label: "B028 - Laboratorio di tecnologie orafe" },
-  { id: "B029", label: "B029 - Gabinetto fisioterapico" },
-  { id: "B030", label: "B030 - Addetto all'ufficio tecnico" },
-  { id: "B031", label: "B031 - Esercitazioni pratiche per ciechi" },
-  { id: "B032", label: "B032 - Esercitazioni di pratica professionale" },
-  { id: "B033", label: "B033 - Assistente di Laboratorio" }
 ];

@@ -361,3 +361,15 @@
 ## Correzione Form Contatti
 
 - [x] Cambiare colore testo input da grigio chiaro a nero per renderlo leggibile
+
+
+## Implementazione Province con Dati Stimati
+
+- [x] Analizzare codice attuale per capire come sono gestite le province
+- [x] Cercare dati ufficiali GPS (trovati dati parziali per 15 province)
+- [x] Creare script Python per generare punteggi stimati basati su dati reali
+- [x] Popolare gpsData.ts con punteggi per tutte le 104 province
+- [x] Aggiungere punteggi per 21 classi popolari (A-22, A-28, A-46, ADSS, ecc.)
+- [x] Correggere errori TypeScript in GpsForm.tsx
+- [ ] Testare calcolo con dati completi
+- [ ] Creare checkpoint v4.1
