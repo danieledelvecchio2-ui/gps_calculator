@@ -449,3 +449,10 @@
 ### Test e Checkpoint
 - [ ] Testare calcolo con vari titoli
 - [ ] Creare checkpoint v5.0
+
+
+## Integrazione PopAds
+
+- [x] Aggiungere script PopAds Anti-Adblock nell'head di index.html
+- [x] Testare caricamento script
+- [x] Salvare checkpoint v5.0
