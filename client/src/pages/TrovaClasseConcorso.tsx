@@ -155,14 +155,10 @@ export default function TrovaClasseConcorso() {
                     key={classe.code}
                     onClick={() => {
                       setSelectedClasse(classe.code);
-                      // Scroll in alto per mostrare i dettagli su mobile
+                      // Scroll in alto per mostrare i dettagli
                       setTimeout(() => {
-                        if (window.innerWidth < 768) {
-                          window.scrollTo({ top: 0, behavior: 'smooth' });
-                        } else if (detailsRef.current) {
-                          detailsRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                        }
-                      }, 100);
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                      }, 150);
                     }}
                     className={`w-full text-left px-4 py-3 rounded-lg transition-all ${
                       selectedClasse === classe.code

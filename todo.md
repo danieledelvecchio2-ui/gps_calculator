@@ -534,3 +534,10 @@
 - [ ] Creare checkpoint v5.4 con database completo
 
 NOTA: Il sistema ora funziona perfettamente anche senza dati storici completi grazie al sistema di stima intelligente (45 punti standard). I dati reali possono essere aggiunti gradualmente.
+
+## Bug da Risolvere - Scroll Automatico
+
+- [x] Correggere scroll automatico pagina Trova Classe che non funziona
+- [x] Quando utente clicca su classe, deve scrollare in alto per mostrare dettagli
+- [x] Testare su mobile e desktop
+- [ ] Creare checkpoint v5.3.1
