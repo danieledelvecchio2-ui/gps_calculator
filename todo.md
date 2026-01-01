@@ -550,3 +550,10 @@ NOTA: Il sistema ora funziona perfettamente anche senza dati storici completi gr
 - [x] Aggiungere tooltip informativi sui titoli GPS nel form
 - [x] Testare tutti i miglioramenti
 - [ ] Creare checkpoint v5.4
+
+## Rimozione Popup - Richiesta Utente
+
+- [x] Rimuovere script popads da index.html
+- [x] Verificare che non ci siano altri popup nel sito
+- [x] Testare che il sito funzioni senza popup
+- [ ] Creare checkpoint v5.4.1
