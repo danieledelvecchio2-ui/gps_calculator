@@ -504,3 +504,11 @@
 - [ ] Aggiornare schema database per salvare tutti i nuovi campi titoli
 - [ ] Testare end-to-end: selezione classe, compilazione titoli, calcolo, raccomandazioni province
 - [ ] Creare checkpoint dopo fix bug e integrazione titoli
+
+## Nuove richieste - Miglioramenti Trova Classe
+
+- [x] Verificare che tutte le 154 classi di concorso siano presenti nella pagina
+- [x] Ottimizzare layout mobile della pagina Trova Classe
+- [x] Aggiungere scroll automatico in alto quando si clicca su una classe di concorso
+- [x] Testare funzionalità su mobile
+- [ ] Creare checkpoint v5.2

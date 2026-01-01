@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useRef } from "react";
 import { Link } from "wouter";
 import { Search, BookOpen, GraduationCap, ChevronDown, ChevronUp, ExternalLink } from "lucide-react";
 import { classiConcorsoData } from "@/data/classiConcorsoData";
@@ -23,6 +23,7 @@ export default function TrovaClasseConcorso() {
   const [selectedClasse, setSelectedClasse] = useState<string | null>(null);
   const [selectedLaurea, setSelectedLaurea] = useState<string | null>(null);
   const [expandedClasse, setExpandedClasse] = useState<string | null>(null);
+  const detailsRef = useRef<HTMLDivElement>(null);
 
   const allLauree = useMemo(() => getAllLauree(), []);
 
@@ -142,17 +143,27 @@ export default function TrovaClasseConcorso() {
 
         {/* Content Area */}
         {activeTab === "classe" ? (
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="flex flex-col md:grid md:grid-cols-2 gap-6">
             {/* Lista Classi */}
             <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
               <h2 className="text-xl font-bold text-gray-900 mb-4">
                 Classi di Concorso ({filteredClassi.length})
               </h2>
-              <div className="space-y-2 max-h-[600px] overflow-y-auto">
+              <div className="space-y-2 max-h-[400px] md:max-h-[600px] overflow-y-auto">
                 {filteredClassi.map((classe) => (
                   <button
                     key={classe.code}
-                    onClick={() => setSelectedClasse(classe.code)}
+                    onClick={() => {
+                      setSelectedClasse(classe.code);
+                      // Scroll in alto per mostrare i dettagli su mobile
+                      setTimeout(() => {
+                        if (window.innerWidth < 768) {
+                          window.scrollTo({ top: 0, behavior: 'smooth' });
+                        } else if (detailsRef.current) {
+                          detailsRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                      }, 100);
+                    }}
                     className={`w-full text-left px-4 py-3 rounded-lg transition-all ${
                       selectedClasse === classe.code
                         ? "bg-blue-100 border-2 border-blue-500"
@@ -172,11 +183,11 @@ export default function TrovaClasseConcorso() {
             </div>
 
             {/* Dettaglio Classe Selezionata */}
-            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+            <div ref={detailsRef} className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
               {selectedClasseData ? (
                 <>
                   <div className="mb-6 pb-4 border-b border-gray-200">
-                    <div className="flex items-start justify-between gap-4">
+                    <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
                       <div className="flex-1">
                         <div className="text-3xl font-bold text-blue-600 mb-2">
                           {selectedClasseData.codeId}
@@ -191,7 +202,7 @@ export default function TrovaClasseConcorso() {
                         )}
                       </div>
                       <Link href={`/classe/${selectedClasseData.codeId}`}>
-                        <a className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white text-sm font-semibold rounded-lg hover:bg-blue-700 transition-colors whitespace-nowrap">
+                        <a className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 text-white text-sm font-semibold rounded-lg hover:bg-blue-700 transition-colors w-full md:w-auto md:whitespace-nowrap">
                           Vedi Dettagli
                           <ExternalLink className="w-4 h-4" />
                         </a>
@@ -203,7 +214,7 @@ export default function TrovaClasseConcorso() {
                     Titoli di Accesso ({selectedClasseData.required_titles?.length || 0})
                   </h3>
 
-                  <div className="space-y-3 max-h-[480px] overflow-y-auto">
+                  <div className="space-y-3 max-h-[400px] md:max-h-[480px] overflow-y-auto">
                     {selectedClasseData.required_titles?.map((title, idx) => (
                       <div
                         key={idx}
@@ -230,13 +241,13 @@ export default function TrovaClasseConcorso() {
             </div>
           </div>
         ) : (
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="flex flex-col md:grid md:grid-cols-2 gap-6">
             {/* Lista Lauree */}
             <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
               <h2 className="text-xl font-bold text-gray-900 mb-4">
                 Lauree Magistrali ({filteredLauree.length})
               </h2>
-              <div className="space-y-2 max-h-[600px] overflow-y-auto">
+              <div className="space-y-2 max-h-[400px] md:max-h-[600px] overflow-y-auto">
                 {filteredLauree.map((laurea) => (
                   <button
                     key={laurea}
