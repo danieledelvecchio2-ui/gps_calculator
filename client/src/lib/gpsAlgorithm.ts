@@ -1,4 +1,5 @@
 import { ProvinceData, provinces } from "@/data/gpsData";
+import { calculateTitoliGPSScore } from "./calculateTitoliGPS";
 
 export interface CalculationResult {
   totalScore: number;
@@ -6,6 +7,11 @@ export interface CalculationResult {
     laurea: number;
     titoliCulturali: number;
     informatica: number;
+    titoliGPSAggiuntivi?: number;
+    abilitazioni?: number;
+    accademici?: number;
+    artistici?: number;
+    servizio?: number;
   };
   provincesAnalysis: ProvinceAnalysis[];
 }
@@ -34,6 +40,7 @@ export function calculateScore(data: {
   hasMasterL2: boolean; // Master universitario in L2 (3 punti, massimo 1)
   numDigComp22: number; // Certificazioni in linea al DigComp 2.2 (0.5 punti ciascuna)
   numDigCompEdu: number; // Certificazioni in linea al DigComp Edu (1 punto ciascuna)
+  titoliGPS?: Record<string, any>; // Tutti i titoli GPS aggiuntivi dall'Allegato A
 }): { totalScore: number; breakdown: any } {
   // 1. Calcolo Punteggio Titolo di Accesso (Diploma o Laurea)
   let titoloAccessoScore = 12;
@@ -76,14 +83,31 @@ export function calculateScore(data: {
   // Cap massimo a 2 punti
   const informaticaScore = Math.min(informaticaScoreRaw, 2);
 
-  const totalScore = titoloAccessoScore + titoliCulturaliScore + informaticaScore;
+  // 4. Calcola i titoli GPS aggiuntivi dall'Allegato A
+  let titoliGPSScore = 0;
+  let titoliGPSBreakdown = {
+    abilitazioni: 0,
+    accademici: 0,
+    artistici: 0,
+    servizio: 0,
+  };
+  
+  if (data.titoliGPS && Object.keys(data.titoliGPS).length > 0) {
+    const titoliResult = calculateTitoliGPSScore(data.titoliGPS);
+    titoliGPSScore = titoliResult.totalScore;
+    titoliGPSBreakdown = titoliResult.breakdown;
+  }
+
+  const totalScore = titoloAccessoScore + titoliCulturaliScore + informaticaScore + titoliGPSScore;
 
   return {
     totalScore,
     breakdown: {
       laurea: titoloAccessoScore, // Può essere diploma o laurea
       titoliCulturali: titoliCulturaliScore,
-      informatica: informaticaScore
+      informatica: informaticaScore,
+      titoliGPSAggiuntivi: titoliGPSScore,
+      ...titoliGPSBreakdown
     }
   };
 }

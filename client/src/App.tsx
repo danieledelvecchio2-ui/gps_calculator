@@ -16,6 +16,7 @@ import TrovaClasseConcorso from "./pages/TrovaClasseConcorso";
 import ClasseDetail from "./pages/ClasseDetail";
 import { CookiePolicy } from "./pages/CookiePolicy";
 import { TermsConditions } from "./pages/TermsConditions";
+import TestCombobox from "./pages/TestCombobox";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -31,6 +32,7 @@ function Router() {
       <Route path={"/classe/:codice"} component={ClasseDetail} />
       <Route path={"/cookie-policy"} component={CookiePolicy} />
       <Route path={"/termini-condizioni"} component={TermsConditions} />
+      <Route path={"/test-combobox"} component={TestCombobox} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

@@ -64,7 +64,7 @@ export function ResultsView({ result, onBack }: ResultsViewProps) {
       </div>
 
       {/* Breakdown Punteggio */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
         <Card className="glass-panel border-0 bg-white/5">
           <CardContent className="p-4 flex flex-col items-center justify-center text-center">
             <span className="text-white/60 text-sm mb-1">Laurea</span>
@@ -83,6 +83,34 @@ export function ResultsView({ result, onBack }: ResultsViewProps) {
             <span className="text-2xl font-bold text-white">{result.breakdown.informatica}</span>
           </CardContent>
         </Card>
+        {(result.breakdown.titoliGPSAggiuntivi ?? 0) > 0 && (
+          <>
+            <Card className="glass-panel border-0 bg-white/5">
+              <CardContent className="p-4 flex flex-col items-center justify-center text-center">
+                <span className="text-white/60 text-sm mb-1">Abilitazioni</span>
+                <span className="text-2xl font-bold text-green-300">{result.breakdown.abilitazioni || 0}</span>
+              </CardContent>
+            </Card>
+            <Card className="glass-panel border-0 bg-white/5">
+              <CardContent className="p-4 flex flex-col items-center justify-center text-center">
+                <span className="text-white/60 text-sm mb-1">Accademici</span>
+                <span className="text-2xl font-bold text-green-300">{result.breakdown.accademici || 0}</span>
+              </CardContent>
+            </Card>
+            <Card className="glass-panel border-0 bg-white/5">
+              <CardContent className="p-4 flex flex-col items-center justify-center text-center">
+                <span className="text-white/60 text-sm mb-1">Artistici</span>
+                <span className="text-2xl font-bold text-green-300">{result.breakdown.artistici || 0}</span>
+              </CardContent>
+            </Card>
+            <Card className="glass-panel border-0 bg-white/5">
+              <CardContent className="p-4 flex flex-col items-center justify-center text-center">
+                <span className="text-white/60 text-sm mb-1">Servizio</span>
+                <span className="text-2xl font-bold text-green-300">{result.breakdown.servizio || 0}</span>
+              </CardContent>
+            </Card>
+          </>
+        )}
       </div>
 
       {/* Analisi Province */}

@@ -4,6 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { TitoliGPSSection } from "@/components/TitoliGPSSection";
+import { titoliGPS, getTitoliBySezione } from "@/data/titoliGPS";
 import { classiConcorsoData } from "@/data/classiConcorsoData";
 import { motion } from "framer-motion";
 import { Calculator, BookOpen, GraduationCap, Laptop, Check, ChevronsUpDown } from "lucide-react";
@@ -48,10 +51,13 @@ export function GpsForm({ onCalculate }: GpsFormProps) {
   const [openCombobox, setOpenCombobox] = useState(false);
   const [privacyConsent, setPrivacyConsent] = useState<boolean>(false);
   
-  // Sezione A - Abilitazioni (I Fascia)
-  const [hasAbilitazione, setHasAbilitazione] = useState<boolean>(false);
-  const [votoAbilitazione, setVotoAbilitazione] = useState<number>(0); // Voto su 100
-  const [tipoAbilitazione, setTipoAbilitazione] = useState<string>(""); // A.1, A.2.a, A.2.b, ecc.
+  // Stato unificato per tutti i titoli GPS (40+ titoli dall'Allegato A)
+  const [titoliGPSValues, setTitoliGPSValues] = useState<Record<string, any>>({});
+  
+  // Handler per aggiornare i valori dei titoli GPS
+  const handleTitoloChange = (id: string, value: any) => {
+    setTitoliGPSValues(prev => ({ ...prev, [id]: value }));
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -82,7 +88,9 @@ export function GpsForm({ onCalculate }: GpsFormProps) {
       hasMasterL2,
       numDigComp22,
       numDigCompEdu,
-      classeConcorso
+      classeConcorso,
+      // Aggiungi tutti i titoli GPS
+      titoliGPS: titoliGPSValues
     });
   };
 
@@ -164,13 +172,13 @@ export function GpsForm({ onCalculate }: GpsFormProps) {
               
               <div className="space-y-2">
                 <Label htmlFor="classeConcorso" className="text-white/80">Seleziona la tua classe di concorso</Label>
-                <Popover open={openCombobox} onOpenChange={setOpenCombobox}>
+                <Popover open={openCombobox} onOpenChange={setOpenCombobox} modal={false}>
                   <PopoverTrigger asChild>
                     <Button
                       variant="outline"
                       role="combobox"
                       aria-expanded={openCombobox}
-                      className="w-full justify-between glass-input text-left font-normal"
+                      className="w-full justify-between glass-input text-left font-normal text-white"
                     >
                       {classeConcorso
                         ? (() => {
@@ -181,8 +189,8 @@ export function GpsForm({ onCalculate }: GpsFormProps) {
                       <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
                     </Button>
                   </PopoverTrigger>
-                  <PopoverContent className="w-[var(--radix-popover-trigger-width)] p-0 bg-slate-900 border-slate-700 text-white max-h-[300px]">
-                    <Command className="bg-transparent text-white">
+                  <PopoverContent className="w-[var(--radix-popover-trigger-width)] p-0 bg-slate-900 border-slate-700 text-white z-[9999]">
+                    <Command className="bg-transparent text-white" shouldFilter={true}>
                       <CommandInput placeholder="Cerca codice o descrizione..." className="text-white" />
                       <CommandList className="custom-scrollbar">
                         <CommandEmpty>Nessuna classe trovata.</CommandEmpty>
@@ -190,12 +198,13 @@ export function GpsForm({ onCalculate }: GpsFormProps) {
                           {classiConcorsoData.map((c: any) => (
                             <CommandItem
                               key={c.codeId}
-                              value={`${c.codeId} ${c.code} ${c.description}`.toLowerCase()}
-                              onSelect={() => {
-                                setClasseConcorso(c.codeId);
+                              value={c.codeId}
+                              keywords={[c.code, c.description]}
+                              onSelect={(currentValue) => {
+                                setClasseConcorso(currentValue);
                                 setOpenCombobox(false);
                               }}
-                              className="text-white aria-selected:bg-white/10 cursor-pointer"
+                              className="text-white data-[selected=true]:bg-white/20 cursor-pointer"
                             >
                               <Check
                                 className={cn(
@@ -439,6 +448,66 @@ export function GpsForm({ onCalculate }: GpsFormProps) {
                   ⓘ Massimo 2 punti totali per certificazioni informatiche
                 </p>
               </div>
+            </div>
+
+            {/* Sezione Titoli GPS Completi */}
+            <div className="space-y-4 mt-8">
+              <div className="flex items-center gap-2 text-white/90 font-semibold text-lg border-b border-white/10 pb-2">
+                <BookOpen className="w-5 h-5 text-primary" />
+                Titoli GPS Aggiuntivi (Opzionali)
+              </div>
+              <p className="text-white/70 text-sm mb-4">
+                Compila solo le sezioni che ti riguardano per aumentare il tuo punteggio GPS.
+              </p>
+              
+              <Tabs defaultValue="abilitazioni" className="w-full">
+                <TabsList className="grid w-full grid-cols-4 bg-white/5 p-1 rounded-lg">
+                  <TabsTrigger value="abilitazioni" className="data-[state=active]:bg-white/20 text-white/80 data-[state=active]:text-white">Abilitazioni</TabsTrigger>
+                  <TabsTrigger value="accademici" className="data-[state=active]:bg-white/20 text-white/80 data-[state=active]:text-white">Titoli Accademici</TabsTrigger>
+                  <TabsTrigger value="artistici" className="data-[state=active]:bg-white/20 text-white/80 data-[state=active]:text-white">Titoli Artistici</TabsTrigger>
+                  <TabsTrigger value="servizio" className="data-[state=active]:bg-white/20 text-white/80 data-[state=active]:text-white">Servizio</TabsTrigger>
+                </TabsList>
+                
+                <TabsContent value="abilitazioni" className="mt-4">
+                  <TitoliGPSSection
+                    titoli={getTitoliBySezione("A")}
+                    values={titoliGPSValues}
+                    onChange={handleTitoloChange}
+                    title="Abilitazioni (Solo I Fascia)"
+                    description="Compila questa sezione solo se sei in I Fascia GPS"
+                  />
+                </TabsContent>
+                
+                <TabsContent value="accademici" className="mt-4">
+                  <TitoliGPSSection
+                    titoli={getTitoliBySezione("B")}
+                    values={titoliGPSValues}
+                    onChange={handleTitoloChange}
+                    title="Titoli Accademici e Professionali"
+                    description="Lauree aggiuntive, dottorati, specializzazioni, master, certificazioni"
+                  />
+                </TabsContent>
+                
+                <TabsContent value="artistici" className="mt-4">
+                  <TitoliGPSSection
+                    titoli={getTitoliBySezione("BA")}
+                    values={titoliGPSValues}
+                    onChange={handleTitoloChange}
+                    title="Titoli Artistici"
+                    description="Solo per classi artistiche (A-55, A-56, A-57, A-58, A-59)"
+                  />
+                </TabsContent>
+                
+                <TabsContent value="servizio" className="mt-4">
+                  <TitoliGPSSection
+                    titoli={getTitoliBySezione("C")}
+                    values={titoliGPSValues}
+                    onChange={handleTitoloChange}
+                    title="Titoli di Servizio"
+                    description="Servizio di insegnamento prestato nelle scuole"
+                  />
+                </TabsContent>
+              </Tabs>
             </div>
 
             {/* Consenso Privacy */}

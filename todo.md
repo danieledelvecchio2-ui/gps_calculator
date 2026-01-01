@@ -456,3 +456,51 @@
 - [x] Aggiungere script PopAds Anti-Adblock nell'head di index.html
 - [x] Testare caricamento script
 - [x] Salvare checkpoint v5.0
+
+
+## Fix Bug Combobox Classi
+
+- [ ] Analizzare codice combobox in GpsForm.tsx
+- [ ] Identificare perché il popover non si apre
+- [ ] Correggere il bug
+- [ ] Testare che la lista classi appaia correttamente
+- [ ] Salvare checkpoint v5.1
+
+
+## Fix Bug Combobox + Integrazione Titoli GPS Completa
+
+### Bug Combobox
+- [ ] Analizzare e risolvere bug combobox classi
+- [ ] Testare che lista classi appaia correttamente
+
+### Integrazione Titoli GPS
+- [ ] Integrare TitoliGPSSection nel GpsForm
+- [ ] Organizzare form con Accordion per sezioni
+- [ ] Aggiornare algoritmo calcolo per tutti i titoli
+- [ ] Aggiornare schema database per salvare tutti i titoli
+- [ ] Testare calcolo completo
+- [ ] Salvare checkpoint v5.1
+
+## PRIORITÀ ALTA - Bug e Feature Completati
+
+- [x] FIX CRITICO: Risolvere bug combobox classi di concorso che non si apre
+- [x] Integrare sistema completo 40+ titoli GPS dall'Allegato A ministeriale
+- [x] Creare componente TitoliGPSSection per rendering dinamico titoli
+- [x] Organizzare form con Tabs per sezioni (Abilitazioni, Accademici, Artistici, Servizio)
+- [x] Aggiornare algoritmo calcolo per includere tutti i nuovi titoli GPS
+- [x] Aggiornare ResultsView per mostrare breakdown completo dei punteggi
+- [x] Testare integrazione completa frontend-backend
+
+## PRIORITÀ ALTA - Bug e Feature Critiche
+
+- [ ] FIX CRITICO: Risolvere bug combobox classi di concorso che non si apre al click
+- [ ] FEATURE COMPLETA: Integrare tutti i 40+ titoli GPS da titoliGPS.ts nel form GpsForm
+- [ ] Aggiungere sezioni Abilitazioni (I fascia) nel form
+- [ ] Aggiungere sezioni Titoli Accademici completi (B.1-B.17) nel form
+- [ ] Aggiungere sezioni Titoli Artistici (BA.18-BA.26) condizionali nel form
+- [ ] Aggiungere sezioni Titoli di Servizio (C.1-C.2) nel form
+- [ ] Organizzare form con tabs/accordion per UX migliore
+- [ ] Aggiornare algoritmo calcolo per includere tutti i nuovi titoli
+- [ ] Aggiornare schema database per salvare tutti i nuovi campi titoli
+- [ ] Testare end-to-end: selezione classe, compilazione titoli, calcolo, raccomandazioni province
+- [ ] Creare checkpoint dopo fix bug e integrazione titoli
