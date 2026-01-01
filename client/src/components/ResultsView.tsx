@@ -124,6 +124,9 @@ export function ResultsView({ result, onBack }: ResultsViewProps) {
             <p className="text-white/70 text-sm mt-1">
               Confronto con i punteggi minimi di nomina (2024-2025).
             </p>
+            <p className="text-white/40 text-xs mt-2 italic">
+              * Probabilità stimata basata su media nazionale (45 punti) per province senza dati storici
+            </p>
           </div>
         </div>
 
@@ -256,26 +259,24 @@ function ProvinceCard({ province, index }: { province: ProvinceAnalysis; index: 
                 )}
               </div>
             ) : (
-              <div className="text-sm text-white/40 mt-1 italic">
-                Dati storici non disponibili per questa classe di concorso.
+              <div className="text-sm text-white/50 mt-1 flex items-center gap-2">
+                <span className="opacity-60">Punteggio stimato:</span>
+                <span className="font-mono font-semibold text-white/70">~45 punti</span>
+                <span className="text-xs text-white/40">(media nazionale)</span>
               </div>
             )}
           </div>
 
           {/* Probabilità */}
           <div className="flex items-center gap-4 w-full md:w-auto justify-between md:justify-end">
-            {province.hasData ? (
-              <div className={`px-3 py-1.5 rounded-full border flex items-center gap-2 ${getProbabilityColor(province.probability)}`}>
-                {getProbabilityIcon(province.probability)}
-                <span className="font-bold uppercase tracking-wide text-xs">
-                  {province.probability}
-                </span>
-              </div>
-            ) : (
-              <div className="px-3 py-1.5 rounded-full border bg-slate-500/10 text-slate-400 border-slate-500/20 flex items-center gap-2">
-                <Search className="w-4 h-4" />
-                <span className="text-xs font-medium">Verifica Online</span>
-              </div>
+            <div className={`px-3 py-1.5 rounded-full border flex items-center gap-2 ${getProbabilityColor(province.probability)}`}>
+              {getProbabilityIcon(province.probability)}
+              <span className="font-bold uppercase tracking-wide text-xs">
+                {province.probability}
+              </span>
+            </div>
+            {!province.hasData && (
+              <span className="text-xs text-white/40 italic ml-2">*</span>
             )}
           </div>
 
