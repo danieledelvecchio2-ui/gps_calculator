@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X, Home, Calculator, Info, Sparkles, Mail, GraduationCap } from "lucide-react";
+import { Menu, X, Home, Calculator, Info, Sparkles, Mail, GraduationCap, TrendingUp } from "lucide-react";
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,6 +10,7 @@ export function Navigation() {
     { path: "/", label: "Home", icon: Home },
     { path: "/calcola-gps", label: "Calcola GPS", icon: Calculator },
     { path: "/info-gps", label: "Info Calcolo Punteggio GPS", icon: Info },
+    { path: "/guida-aumentare-punteggio", label: "Come Aumentare Punteggio", icon: TrendingUp },
     { path: "/novita-gps-2026", label: "Novità GPS 2026", icon: Sparkles },
     { path: "/trova-classe", label: "Trova Classe di Concorso", icon: GraduationCap },
     { path: "/contatti", label: "Contatti", icon: Mail },

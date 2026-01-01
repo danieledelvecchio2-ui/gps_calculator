@@ -17,6 +17,8 @@ import ClasseDetail from "./pages/ClasseDetail";
 import { CookiePolicy } from "./pages/CookiePolicy";
 import { TermsConditions } from "./pages/TermsConditions";
 import TestCombobox from "./pages/TestCombobox";
+import GuideAumentarePunteggio from "./pages/GuideAumentarePunteggio";
+import ConfrontaClassi from "./pages/ConfrontaClassi";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -28,6 +30,8 @@ function Router() {
       <Route path={"/info-gps"} component={InfoGPS} />
       <Route path={"/novita-gps-2026"} component={NewsGPS2026} />
       <Route path={"/contatti"} component={Contact} />
+      <Route path={"/guida-aumentare-punteggio"} component={GuideAumentarePunteggio} />
+      <Route path={"/confronta-classi"} component={ConfrontaClassi} />
       <Route path={"/trova-classe"} component={TrovaClasseConcorso} />
       <Route path={"/classe/:codice"} component={ClasseDetail} />
       <Route path={"/cookie-policy"} component={CookiePolicy} />

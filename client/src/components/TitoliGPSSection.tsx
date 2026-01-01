@@ -5,6 +5,8 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Label } from "@/components/ui/label";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+import { HelpCircle } from "lucide-react";
 
 interface TitoliGPSSectionProps {
   titoli: TitoloGPS[];
@@ -35,26 +37,44 @@ export function TitoliGPSSection({ titoli, values, onChange, title, description 
                     className="mt-1"
                   />
                   <div className="flex-1">
-                    <Label htmlFor={titolo.id} className="text-white font-medium cursor-pointer">
-                      <span className="text-blue-300">{titolo.codice}</span> - {titolo.descrizione}
-                      <span className="ml-2 text-green-300">({titolo.punti} punti)</span>
+                    <Label htmlFor={titolo.id} className="text-white font-medium cursor-pointer flex items-center gap-2">
+                      <span>
+                        <span className="text-blue-300">{titolo.codice}</span> - {titolo.descrizione}
+                        <span className="ml-2 text-green-300">({titolo.punti} punti)</span>
+                      </span>
+                      {titolo.note && (
+                        <Tooltip>
+                          <TooltipTrigger asChild>
+                            <HelpCircle className="w-4 h-4 text-white/50 hover:text-white transition-colors cursor-help" />
+                          </TooltipTrigger>
+                          <TooltipContent className="max-w-xs">
+                            <p className="text-sm">{titolo.note}</p>
+                          </TooltipContent>
+                        </Tooltip>
+                      )}
                     </Label>
-                    {titolo.note && (
-                      <p className="text-white/60 text-xs mt-1">{titolo.note}</p>
-                    )}
                   </div>
                 </>
               )}
 
               {titolo.tipo === "number" && (
                 <div className="flex-1">
-                  <Label htmlFor={titolo.id} className="text-white font-medium">
-                    <span className="text-blue-300">{titolo.codice}</span> - {titolo.descrizione}
-                    <span className="ml-2 text-green-300">({titolo.punti} punti{titolo.max ? ` - max ${titolo.max}` : ""})</span>
+                  <Label htmlFor={titolo.id} className="text-white font-medium flex items-center gap-2">
+                    <span>
+                      <span className="text-blue-300">{titolo.codice}</span> - {titolo.descrizione}
+                      <span className="ml-2 text-green-300">({titolo.punti} punti{titolo.max ? ` - max ${titolo.max}` : ""})</span>
+                    </span>
+                    {titolo.note && (
+                      <Tooltip>
+                        <TooltipTrigger asChild>
+                          <HelpCircle className="w-4 h-4 text-white/50 hover:text-white transition-colors cursor-help" />
+                        </TooltipTrigger>
+                        <TooltipContent className="max-w-xs">
+                          <p className="text-sm">{titolo.note}</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    )}
                   </Label>
-                  {titolo.note && (
-                    <p className="text-white/60 text-xs mt-1 mb-2">{titolo.note}</p>
-                  )}
                   <Input
                     id={titolo.id}
                     type="number"
@@ -70,12 +90,21 @@ export function TitoliGPSSection({ titoli, values, onChange, title, description 
 
               {titolo.tipo === "select" && titolo.opzioni && (
                 <div className="flex-1">
-                  <Label htmlFor={titolo.id} className="text-white font-medium">
-                    <span className="text-blue-300">{titolo.codice}</span> - {titolo.descrizione}
+                  <Label htmlFor={titolo.id} className="text-white font-medium flex items-center gap-2">
+                    <span>
+                      <span className="text-blue-300">{titolo.codice}</span> - {titolo.descrizione}
+                    </span>
+                    {titolo.note && (
+                      <Tooltip>
+                        <TooltipTrigger asChild>
+                          <HelpCircle className="w-4 h-4 text-white/50 hover:text-white transition-colors cursor-help" />
+                        </TooltipTrigger>
+                        <TooltipContent className="max-w-xs">
+                          <p className="text-sm">{titolo.note}</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    )}
                   </Label>
-                  {titolo.note && (
-                    <p className="text-white/60 text-xs mt-1 mb-2">{titolo.note}</p>
-                  )}
                   <Select
                     value={values[titolo.id] || ""}
                     onValueChange={(value) => onChange(titolo.id, value)}

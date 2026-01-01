@@ -160,10 +160,10 @@ export default function TrovaClasseConcorso() {
                         window.scrollTo({ top: 0, behavior: 'smooth' });
                       }, 150);
                     }}
-                    className={`w-full text-left px-4 py-3 rounded-lg transition-all ${
+                    className={`w-full text-left px-4 py-3 rounded-lg transition-all duration-300 ${
                       selectedClasse === classe.code
-                        ? "bg-blue-100 border-2 border-blue-500"
-                        : "bg-gray-50 border border-gray-200 hover:bg-gray-100"
+                        ? "bg-blue-100 border-2 border-blue-500 shadow-lg scale-[1.02] animate-in fade-in zoom-in duration-200"
+                        : "bg-gray-50 border border-gray-200 hover:bg-gray-100 hover:shadow-md hover:scale-[1.01]"
                     }`}
                   >
                     <div className="font-bold text-blue-600 mb-1">{classe.codeId}</div>

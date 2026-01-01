@@ -541,3 +541,12 @@ NOTA: Il sistema ora funziona perfettamente anche senza dati storici completi gr
 - [x] Quando utente clicca su classe, deve scrollare in alto per mostrare dettagli
 - [x] Testare su mobile e desktop
 - [ ] Creare checkpoint v5.3.1
+
+## Nuovi Miglioramenti UX - Priorità Alta
+
+- [x] Creare pagina "Come Aumentare il Punteggio GPS" con guida pratica
+- [x] Aggiungere animazione feedback visivo su selezione classe
+- [x] Implementare sistema confronto classi side-by-side
+- [x] Aggiungere tooltip informativi sui titoli GPS nel form
+- [x] Testare tutti i miglioramenti
+- [ ] Creare checkpoint v5.4
