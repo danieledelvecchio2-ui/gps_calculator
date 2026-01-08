@@ -42,3 +42,14 @@
 - [x] Implementare notifiche email automatiche per nuove richieste info
 - [x] Testare autenticazione e notifiche (11 test passati)
 - [ ] Creare checkpoint v6.1
+
+
+## Sistema Login Admin - v6.2
+
+- [x] Creare pagina /login con form email/password
+- [x] Implementare API autenticazione (login, logout, me)
+- [x] Creare hook useAuth per gestione autenticazione frontend
+- [x] Proteggere pannello admin con redirect a /login se non autenticato
+- [x] Aggiungere pulsante Logout nel pannello admin con info utente
+- [x] Testare flusso completo login -> admin -> logout (19 test passati)
+- [ ] Creare checkpoint v6.2

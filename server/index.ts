@@ -29,6 +29,9 @@ async function startServer() {
   
   const corsiRoutes = (await import("./routes/corsi.js")).default;
   app.use("/api", corsiRoutes);
+  
+  const authRoutes = (await import("./routes/auth.js")).default;
+  app.use("/api/auth", authRoutes);
 
   app.use(express.static(staticPath));
 

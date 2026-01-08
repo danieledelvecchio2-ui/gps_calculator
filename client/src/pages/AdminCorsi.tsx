@@ -44,6 +44,8 @@ import {
   Clock
 } from "lucide-react";
 import { toast } from "sonner";
+import { useAuth } from "@/hooks/useAuth";
+import { LogOut, Shield } from "lucide-react";
 
 interface RichiestaInfo {
   id: number;
@@ -70,16 +72,22 @@ interface Corso {
 }
 
 export default function AdminCorsi() {
+  const { user, loading: authLoading, requireAdmin, logout } = useAuth();
   const [richieste, setRichieste] = useState<RichiestaInfo[]>([]);
   const [corsi, setCorsi] = useState<Corso[]>([]);
   const [loading, setLoading] = useState(true);
   const [selectedRichiesta, setSelectedRichiesta] = useState<RichiestaInfo | null>(null);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
 
-  // Carica dati iniziali
+  // Verifica autenticazione admin
   useEffect(() => {
-    loadData();
-  }, []);
+    if (!authLoading) {
+      const isAuthorized = requireAdmin();
+      if (isAuthorized) {
+        loadData();
+      }
+    }
+  }, [authLoading]);
 
   const loadData = async () => {
     try {
@@ -180,14 +188,36 @@ export default function AdminCorsi() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-8">
       <div className="container mx-auto px-4">
-        {/* Header */}
-        <div className="mb-8">
-          <h1 className="text-4xl font-bold text-gray-900 mb-2">
-            Pannello Admin Corsi
-          </h1>
-          <p className="text-gray-600">
-            Gestisci corsi e richieste info
-          </p>
+        {/* Header con Logout */}
+        <div className="mb-8 flex items-start justify-between">
+          <div>
+            <h1 className="text-4xl font-bold text-gray-900 mb-2">
+              Pannello Admin Corsi
+            </h1>
+            <p className="text-gray-600">
+              Gestisci corsi e richieste info
+            </p>
+          </div>
+          
+          {/* Info Utente e Logout */}
+          <div className="flex items-center gap-4 bg-white rounded-lg shadow-md px-4 py-3">
+            <div className="flex items-center gap-2 text-sm">
+              <Shield className="w-4 h-4 text-blue-600" />
+              <div>
+                <p className="font-medium text-gray-900">{user?.name || user?.email}</p>
+                <p className="text-xs text-gray-500">Amministratore</p>
+              </div>
+            </div>
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={logout}
+              className="flex items-center gap-2"
+            >
+              <LogOut className="w-4 h-4" />
+              Logout
+            </Button>
+          </div>
         </div>
 
         {/* Stats Cards */}

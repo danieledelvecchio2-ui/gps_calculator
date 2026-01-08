@@ -22,6 +22,7 @@ import ConfrontaClassi from "./pages/ConfrontaClassi";
 import FAQGPS from "./pages/FAQGPS";
 import Corsi from "./pages/Corsi";
 import AdminCorsi from "./pages/AdminCorsi";
+import Login from "./pages/Login";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -37,6 +38,7 @@ function Router() {
       <Route path={"/confronta-classi"} component={ConfrontaClassi} />
       <Route path={"/faq-gps"} component={FAQGPS} />
       <Route path={"/corsi"} component={Corsi} />
+      <Route path={"/login"} component={Login} />
       <Route path={"/admin/corsi"} component={AdminCorsi} />
       <Route path={"/trova-classe"} component={TrovaClasseConcorso} />
       <Route path={"/classe/:codice"} component={ClasseDetail} />
