@@ -9,6 +9,8 @@ import {
   updateCorso,
   deleteCorso
 } from "../db";
+import { requireAdmin } from "../middleware/requireAdmin";
+import { sendRichiestaInfoNotification, sendRichiestaInfoConfirmation } from "../lib/emailNotifications";
 
 const router = Router();
 
@@ -48,6 +50,30 @@ router.post("/richieste-info", async (req, res) => {
       privacyConsent: 1,
       ipAddress: typeof ipAddress === 'string' ? ipAddress : ipAddress?.[0],
       userAgent: userAgent || null,
+    });
+
+    // Ottieni info corso per email
+    const corso = await getCorsoById(parseInt(corsoId));
+    const corsoTitolo = corso?.titolo || `Corso #${corsoId}`;
+
+    // Invia notifiche email (non bloccanti)
+    Promise.all([
+      sendRichiestaInfoNotification({
+        nome,
+        email,
+        telefono,
+        corso: corsoTitolo,
+        messaggio: messaggio || undefined
+      }),
+      sendRichiestaInfoConfirmation({
+        nome,
+        email,
+        telefono,
+        corso: corsoTitolo
+      })
+    ]).catch(error => {
+      console.error("Errore invio email notifiche:", error);
+      // Non bloccare la risposta se le email falliscono
     });
 
     res.status(201).json({
@@ -107,12 +133,8 @@ router.get("/corsi/:id", async (req, res) => {
  * GET /api/admin/richieste-info
  * Ottiene tutte le richieste info (solo admin)
  */
-router.get("/admin/richieste-info", async (req, res) => {
+router.get("/admin/richieste-info", requireAdmin, async (req, res) => {
   try {
-    // TODO: Aggiungere middleware autenticazione admin
-    // if (!req.user || req.user.role !== 'admin') {
-    //   return res.status(403).json({ error: "Accesso negato" });
-    // }
 
     const richieste = await getAllRichiesteInfoCorsi();
     res.json(richieste);
@@ -126,9 +148,8 @@ router.get("/admin/richieste-info", async (req, res) => {
  * PATCH /api/admin/richieste-info/:id
  * Aggiorna lo stato di una richiesta (solo admin)
  */
-router.patch("/admin/richieste-info/:id", async (req, res) => {
+router.patch("/admin/richieste-info/:id", requireAdmin, async (req, res) => {
   try {
-    // TODO: Aggiungere middleware autenticazione admin
 
     const { id } = req.params;
     const { stato, note } = req.body;
@@ -151,9 +172,8 @@ router.patch("/admin/richieste-info/:id", async (req, res) => {
  * POST /api/admin/corsi
  * Crea un nuovo corso (solo admin)
  */
-router.post("/admin/corsi", async (req, res) => {
+router.post("/admin/corsi", requireAdmin, async (req, res) => {
   try {
-    // TODO: Aggiungere middleware autenticazione admin
 
     const corso = req.body;
     
@@ -173,9 +193,8 @@ router.post("/admin/corsi", async (req, res) => {
  * PATCH /api/admin/corsi/:id
  * Aggiorna un corso esistente (solo admin)
  */
-router.patch("/admin/corsi/:id", async (req, res) => {
+router.patch("/admin/corsi/:id", requireAdmin, async (req, res) => {
   try {
-    // TODO: Aggiungere middleware autenticazione admin
 
     const { id } = req.params;
     const updates = req.body;
@@ -193,9 +212,8 @@ router.patch("/admin/corsi/:id", async (req, res) => {
  * DELETE /api/admin/corsi/:id
  * Elimina un corso (solo admin)
  */
-router.delete("/admin/corsi/:id", async (req, res) => {
+router.delete("/admin/corsi/:id", requireAdmin, async (req, res) => {
   try {
-    // TODO: Aggiungere middleware autenticazione admin
 
     const { id } = req.params;
 

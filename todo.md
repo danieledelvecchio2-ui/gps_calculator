@@ -33,3 +33,12 @@
 - [x] v5.2 - Ottimizzazione Mobile e UX Trova Classe
 - [x] v5.1.1 - Pulizia Progetto (rimozione script Python)
 - [x] v5.1 - Integrazione Sistema Completo 40+ Titoli GPS
+
+
+## Miglioramenti Post v6.0 - Richiesta Utente
+
+- [x] Popolare database corsi iniziale con script SQL (10 corsi inseriti)
+- [x] Implementare middleware autenticazione admin per proteggere /admin/corsi
+- [x] Implementare notifiche email automatiche per nuove richieste info
+- [x] Testare autenticazione e notifiche (11 test passati)
+- [ ] Creare checkpoint v6.1

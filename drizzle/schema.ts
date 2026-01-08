@@ -78,11 +78,11 @@ export const corsiEcampus = mysqlTable("corsi_ecampus", {
   // Informazioni corso
   titolo: varchar("titolo", { length: 255 }).notNull(),
   categoria: mysqlEnum("categoria", [
-    "certificazione_linguistica",
-    "clil",
-    "certificazione_informatica",
-    "master",
-    "cfu_abilitanti"
+    "Percorsi Abilitanti",
+    "Certificazioni Linguistiche",
+    "Metodologie Didattiche",
+    "Certificazioni Informatiche",
+    "Master"
   ]).notNull(),
   livello: varchar("livello", { length: 50 }), // es: "C2", "B2", "60 CFU", "30 CFU"
   descrizione: text("descrizione").notNull(),
@@ -91,8 +91,8 @@ export const corsiEcampus = mysqlTable("corsi_ecampus", {
   punteggioGps: varchar("punteggio_gps", { length: 50 }), // es: "6 punti", "3 punti"
   
   // Dettagli economici
-  costo: decimal("costo", { precision: 8, scale: 2 }),
-  costoPromo: decimal("costo_promo", { precision: 8, scale: 2 }),
+  costo: varchar("costo", { length: 100 }), // es: "€ 2.500", "Contattaci per info"
+  costoPromo: varchar("costo_promo", { length: 100 }),
   
   // Modalità e requisiti
   modalita: varchar("modalita", { length: 100 }), // es: "100% online", "Blended"

@@ -36,6 +36,20 @@
       "when": 1767906470031,
       "tag": "0004_moaning_red_shift",
       "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "5",
+      "when": 1767907103510,
+      "tag": "0005_calm_zuras",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "5",
+      "when": 1767907139092,
+      "tag": "0006_abandoned_wrecker",
+      "breakpoints": true
     }
   ]
 }
