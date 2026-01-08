@@ -19,6 +19,7 @@ import { TermsConditions } from "./pages/TermsConditions";
 import TestCombobox from "./pages/TestCombobox";
 import GuideAumentarePunteggio from "./pages/GuideAumentarePunteggio";
 import ConfrontaClassi from "./pages/ConfrontaClassi";
+import FAQGPS from "./pages/FAQGPS";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -32,6 +33,7 @@ function Router() {
       <Route path={"/contatti"} component={Contact} />
       <Route path={"/guida-aumentare-punteggio"} component={GuideAumentarePunteggio} />
       <Route path={"/confronta-classi"} component={ConfrontaClassi} />
+      <Route path={"/faq-gps"} component={FAQGPS} />
       <Route path={"/trova-classe"} component={TrovaClasseConcorso} />
       <Route path={"/classe/:codice"} component={ClasseDetail} />
       <Route path={"/cookie-policy"} component={CookiePolicy} />

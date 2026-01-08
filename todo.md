@@ -557,3 +557,11 @@ NOTA: Il sistema ora funziona perfettamente anche senza dati storici completi gr
 - [x] Verificare che non ci siano altri popup nel sito
 - [x] Testare che il sito funzioni senza popup
 - [ ] Creare checkpoint v5.4.1
+
+## Nuovi Miglioramenti - Richiesta Utente
+
+- [x] Aggiungere link "Confronta Classi" nel menu principale
+- [x] Implementare breadcrumb navigation (Home > Pagina > Dettaglio)
+- [x] Creare pagina FAQ GPS 2026 con domande frequenti
+- [x] Testare tutti i miglioramenti
+- [ ] Creare checkpoint v5.5

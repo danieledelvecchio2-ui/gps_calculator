@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X, Home, Calculator, Info, Sparkles, Mail, GraduationCap, TrendingUp } from "lucide-react";
+import { Menu, X, Home, Calculator, Info, Sparkles, Mail, GraduationCap, TrendingUp, GitCompare, HelpCircle } from "lucide-react";
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,6 +13,8 @@ export function Navigation() {
     { path: "/guida-aumentare-punteggio", label: "Come Aumentare Punteggio", icon: TrendingUp },
     { path: "/novita-gps-2026", label: "Novità GPS 2026", icon: Sparkles },
     { path: "/trova-classe", label: "Trova Classe di Concorso", icon: GraduationCap },
+    { path: "/confronta-classi", label: "Confronta Classi", icon: GitCompare },
+    { path: "/faq-gps", label: "FAQ GPS 2026", icon: HelpCircle },
     { path: "/contatti", label: "Contatti", icon: Mail },
   ];
 

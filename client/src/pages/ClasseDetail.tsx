@@ -2,6 +2,7 @@ import { useParams, Link } from "wouter";
 import { ChevronLeft, BookOpen, School, FileText, ArrowRight } from "lucide-react";
 import classiDettagliate from "@/data/classiDettagliate.json";
 import { classiConcorsoData } from "@/data/classiConcorsoData";
+import { Breadcrumb } from "@/components/Breadcrumb";
 
 interface TitoloAccesso {
   laurea?: string;
@@ -87,17 +88,12 @@ export default function ClasseDetail() {
       {/* Breadcrumb */}
       <div className="bg-white border-b border-gray-200">
         <div className="container py-3">
-          <nav className="flex items-center gap-2 text-sm text-gray-600">
-            <Link href="/">
-              <a className="hover:text-blue-600 transition-colors">Home</a>
-            </Link>
-            <span>/</span>
-            <Link href="/trova-classe">
-              <a className="hover:text-blue-600 transition-colors">Trova Classe</a>
-            </Link>
-            <span>/</span>
-            <span className="text-gray-900 font-medium">{classe.codice}</span>
-          </nav>
+          <Breadcrumb 
+            items={[
+              { label: "Trova Classe", path: "/trova-classe" },
+              { label: codice || "Classe" }
+            ]}
+          />
         </div>
       </div>
 
