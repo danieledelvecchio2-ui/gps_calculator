@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X, Home, Calculator, Info, Sparkles, Mail, GraduationCap, TrendingUp, GitCompare, HelpCircle } from "lucide-react";
+import { Menu, X, Home, Calculator, Info, Sparkles, Mail, GraduationCap, TrendingUp, GitCompare, HelpCircle, BookOpen } from "lucide-react";
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,6 +15,7 @@ export function Navigation() {
     { path: "/trova-classe", label: "Trova Classe di Concorso", icon: GraduationCap },
     { path: "/confronta-classi", label: "Confronta Classi", icon: GitCompare },
     { path: "/faq-gps", label: "FAQ GPS 2026", icon: HelpCircle },
+    { path: "/corsi", label: "Corsi", icon: BookOpen },
     { path: "/contatti", label: "Contatti", icon: Mail },
   ];
 

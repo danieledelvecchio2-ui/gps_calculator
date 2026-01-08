@@ -26,6 +26,9 @@ async function startServer() {
   
   const contactRoutes = (await import("./routes/contact.js")).default;
   app.use("/api/contact", contactRoutes);
+  
+  const corsiRoutes = (await import("./routes/corsi.js")).default;
+  app.use("/api", corsiRoutes);
 
   app.use(express.static(staticPath));
 

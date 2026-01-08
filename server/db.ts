@@ -146,3 +146,157 @@ export async function countGpsLeads() {
     throw error;
   }
 }
+
+
+// ============================================
+// Corsi eCampus Management
+// ============================================
+
+/**
+ * Inserisce una nuova richiesta info corso
+ */
+export async function insertRichiestaInfoCorso(richiesta: any) {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+
+  try {
+    const { richiesteInfoCorsi } = await import("../drizzle/schema");
+    const result = await db.insert(richiesteInfoCorsi).values(richiesta);
+    return result;
+  } catch (error) {
+    console.error("[Database] Failed to insert richiesta info corso:", error);
+    throw error;
+  }
+}
+
+/**
+ * Recupera tutte le richieste info corsi
+ */
+export async function getAllRichiesteInfoCorsi() {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+
+  try {
+    const { richiesteInfoCorsi } = await import("../drizzle/schema");
+    const results = await db.select().from(richiesteInfoCorsi);
+    return results;
+  } catch (error) {
+    console.error("[Database] Failed to get richieste info corsi:", error);
+    throw error;
+  }
+}
+
+/**
+ * Aggiorna lo stato di una richiesta info
+ */
+export async function updateRichiestaInfoCorso(id: number, updates: any) {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+
+  try {
+    const { richiesteInfoCorsi } = await import("../drizzle/schema");
+    await db.update(richiesteInfoCorsi).set(updates).where(eq(richiesteInfoCorsi.id, id));
+  } catch (error) {
+    console.error("[Database] Failed to update richiesta info corso:", error);
+    throw error;
+  }
+}
+
+/**
+ * Recupera tutti i corsi attivi
+ */
+export async function getCorsiAttivi() {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+
+  try {
+    const { corsiEcampus } = await import("../drizzle/schema");
+    const results = await db.select().from(corsiEcampus).where(eq(corsiEcampus.attivo, 1));
+    return results;
+  } catch (error) {
+    console.error("[Database] Failed to get corsi attivi:", error);
+    throw error;
+  }
+}
+
+/**
+ * Recupera un corso per ID
+ */
+export async function getCorsoById(id: number) {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+
+  try {
+    const { corsiEcampus } = await import("../drizzle/schema");
+    const [corso] = await db.select().from(corsiEcampus).where(eq(corsiEcampus.id, id));
+    return corso;
+  } catch (error) {
+    console.error("[Database] Failed to get corso:", error);
+    throw error;
+  }
+}
+
+/**
+ * Inserisce un nuovo corso
+ */
+export async function insertCorso(corso: any) {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+
+  try {
+    const { corsiEcampus } = await import("../drizzle/schema");
+    const result = await db.insert(corsiEcampus).values(corso);
+    return result;
+  } catch (error) {
+    console.error("[Database] Failed to insert corso:", error);
+    throw error;
+  }
+}
+
+/**
+ * Aggiorna un corso
+ */
+export async function updateCorso(id: number, updates: any) {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+
+  try {
+    const { corsiEcampus } = await import("../drizzle/schema");
+    await db.update(corsiEcampus).set(updates).where(eq(corsiEcampus.id, id));
+  } catch (error) {
+    console.error("[Database] Failed to update corso:", error);
+    throw error;
+  }
+}
+
+/**
+ * Elimina un corso (soft delete)
+ */
+export async function deleteCorso(id: number) {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+
+  try {
+    const { corsiEcampus } = await import("../drizzle/schema");
+    await db.update(corsiEcampus).set({ attivo: 0 }).where(eq(corsiEcampus.id, id));
+  } catch (error) {
+    console.error("[Database] Failed to delete corso:", error);
+    throw error;
+  }
+}

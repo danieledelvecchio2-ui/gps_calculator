@@ -68,3 +68,78 @@ export const gpsLeads = mysqlTable("gps_leads", {
 
 export type GpsLead = typeof gpsLeads.$inferSelect;
 export type InsertGpsLead = typeof gpsLeads.$inferInsert;
+
+/**
+ * Tabella per i corsi eCampus (gestita da admin)
+ */
+export const corsiEcampus = mysqlTable("corsi_ecampus", {
+  id: int("id").autoincrement().primaryKey(),
+  
+  // Informazioni corso
+  titolo: varchar("titolo", { length: 255 }).notNull(),
+  categoria: mysqlEnum("categoria", [
+    "certificazione_linguistica",
+    "clil",
+    "certificazione_informatica",
+    "master",
+    "cfu_abilitanti"
+  ]).notNull(),
+  livello: varchar("livello", { length: 50 }), // es: "C2", "B2", "60 CFU", "30 CFU"
+  descrizione: text("descrizione").notNull(),
+  durata: varchar("durata", { length: 100 }), // es: "1500 ore", "12 mesi"
+  crediti: varchar("crediti", { length: 50 }), // es: "60 CFU", "2 CFU"
+  punteggioGps: varchar("punteggio_gps", { length: 50 }), // es: "6 punti", "3 punti"
+  
+  // Dettagli economici
+  costo: decimal("costo", { precision: 8, scale: 2 }),
+  costoPromo: decimal("costo_promo", { precision: 8, scale: 2 }),
+  
+  // Modalità e requisiti
+  modalita: varchar("modalita", { length: 100 }), // es: "100% online", "Blended"
+  requisiti: text("requisiti"),
+  
+  // Stato e visibilità
+  attivo: int("attivo").default(1).notNull(), // 0 = nascosto, 1 = visibile
+  ordine: int("ordine").default(0).notNull(), // per ordinamento visualizzazione
+  
+  // Metadata
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+  updatedAt: timestamp("updated_at").defaultNow().onUpdateNow().notNull(),
+});
+
+export type CorsoEcampus = typeof corsiEcampus.$inferSelect;
+export type InsertCorsoEcampus = typeof corsiEcampus.$inferInsert;
+
+/**
+ * Tabella per le richieste info sui corsi (lead generation)
+ */
+export const richiesteInfoCorsi = mysqlTable("richieste_info_corsi", {
+  id: int("id").autoincrement().primaryKey(),
+  
+  // Riferimento al corso
+  corsoId: int("corso_id").notNull(),
+  
+  // Dati utente
+  nome: varchar("nome", { length: 255 }).notNull(),
+  email: varchar("email", { length: 320 }).notNull(),
+  telefono: varchar("telefono", { length: 20 }).notNull(),
+  messaggio: text("messaggio"),
+  
+  // Stato richiesta
+  stato: mysqlEnum("stato", ["nuova", "contattato", "interessato", "iscritto", "non_interessato"])
+    .default("nuova")
+    .notNull(),
+  note: text("note"), // Note admin
+  
+  // Consenso privacy
+  privacyConsent: int("privacy_consent").default(1).notNull(),
+  
+  // Metadata
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+  updatedAt: timestamp("updated_at").defaultNow().onUpdateNow().notNull(),
+  ipAddress: varchar("ip_address", { length: 45 }),
+  userAgent: text("user_agent"),
+});
+
+export type RichiestaInfoCorso = typeof richiesteInfoCorsi.$inferSelect;
+export type InsertRichiestaInfoCorso = typeof richiesteInfoCorsi.$inferInsert;

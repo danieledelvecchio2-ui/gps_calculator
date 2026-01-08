@@ -20,6 +20,8 @@ import TestCombobox from "./pages/TestCombobox";
 import GuideAumentarePunteggio from "./pages/GuideAumentarePunteggio";
 import ConfrontaClassi from "./pages/ConfrontaClassi";
 import FAQGPS from "./pages/FAQGPS";
+import Corsi from "./pages/Corsi";
+import AdminCorsi from "./pages/AdminCorsi";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -34,6 +36,8 @@ function Router() {
       <Route path={"/guida-aumentare-punteggio"} component={GuideAumentarePunteggio} />
       <Route path={"/confronta-classi"} component={ConfrontaClassi} />
       <Route path={"/faq-gps"} component={FAQGPS} />
+      <Route path={"/corsi"} component={Corsi} />
+      <Route path={"/admin/corsi"} component={AdminCorsi} />
       <Route path={"/trova-classe"} component={TrovaClasseConcorso} />
       <Route path={"/classe/:codice"} component={ClasseDetail} />
       <Route path={"/cookie-policy"} component={CookiePolicy} />
