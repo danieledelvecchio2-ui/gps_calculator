@@ -52,4 +52,21 @@
 - [x] Proteggere pannello admin con redirect a /login se non autenticato
 - [x] Aggiungere pulsante Logout nel pannello admin con info utente
 - [x] Testare flusso completo login -> admin -> logout (19 test passati)
-- [ ] Creare checkpoint v6.2
+- [x] Creare checkpoint v6.2
+
+## Revisione sito - Agosto 2026
+
+- [x] Verificare navigazione, calcolatore GPS, ricerca classi e pagine pubbliche in produzione e anteprima
+- [x] Verificare usabilità e layout sui dispositivi mobili nel viewport tablet ristretto (888 px)
+- [x] Documentare criticità prioritarie e proporre interventi correttivi
+- [ ] Correggere collegamento privacy del modulo e completare informativa con i dati reali del titolare
+- [ ] Rimuovere tonalità viola e correggere responsive menu, card corsi e moduli sotto i 1024 px
+- [ ] Uniformare denominazioni del brand e i contenuti istituzionali, legali e normativi
+
+## Archiviazione asset statici
+
+- [x] Trasferire le quattro immagini statiche oltre 1 MB nello spazio asset del progetto
+- [x] Sostituire i riferimenti locali con URL statici e rimuovere le copie dalla cartella pubblica
+- [x] Aggiungere ed eseguire un test del proxy per gli asset persistenti
+- [x] Verificare l’aspetto delle pagine coinvolte e la raggiungibilità degli asset tramite proxy
+- [ ] Salvare il checkpoint
