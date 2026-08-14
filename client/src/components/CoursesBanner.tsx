@@ -17,8 +17,8 @@ export function CoursesBanner() {
       title: "Certificazioni CLIL",
       description: "Percorsi universitari riconosciuti MIUR",
       points: "+3 punti",
-      bgColor: "bg-purple-500",
-      hoverBg: "hover:bg-purple-600"
+      bgColor: "bg-sky-500",
+      hoverBg: "hover:bg-sky-600"
     },
     {
       icon: Laptop,
@@ -113,7 +113,7 @@ export function CoursesBanner() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 inline-flex items-center gap-2 text-lg"
+              className="px-8 py-4 bg-gradient-to-r from-blue-600 to-sky-500 hover:from-blue-700 hover:to-sky-600 text-white font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 inline-flex items-center gap-2 text-lg"
             >
               <span>Richiedi Informazioni sui Corsi</span>
               <ArrowRight className="w-5 h-5" />

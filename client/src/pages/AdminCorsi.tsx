@@ -176,7 +176,7 @@ export default function AdminCorsi() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-sky-100 flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>
           <p className="mt-4 text-gray-600">Caricamento...</p>
@@ -186,7 +186,7 @@ export default function AdminCorsi() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-8">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-sky-100 py-8">
       <div className="container mx-auto px-4">
         {/* Header con Logout */}
         <div className="mb-8 flex items-start justify-between">
@@ -255,10 +255,10 @@ export default function AdminCorsi() {
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-sm font-medium">Tasso Conversione</CardTitle>
-              <BookOpen className="h-4 w-4 text-purple-600" />
+              <BookOpen className="h-4 w-4 text-sky-600" />
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold text-purple-600">{stats.conversionRate}%</div>
+              <div className="text-2xl font-bold text-sky-600">{stats.conversionRate}%</div>
             </CardContent>
           </Card>
         </div>

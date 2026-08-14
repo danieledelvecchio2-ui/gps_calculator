@@ -18,18 +18,18 @@ export default function Home() {
       title: "Trova Classe di Concorso",
       description: "Verifica per quali classi di concorso puoi insegnare con la tua laurea, o scopri quali lauree servono per una specifica classe.",
       link: "/trova-classe",
-      color: "text-purple-600",
-      bgColor: "bg-purple-50",
-      borderColor: "border-purple-200"
+      color: "text-sky-600",
+      bgColor: "bg-sky-50",
+      borderColor: "border-sky-200"
     },
     {
       icon: Info,
       title: "Info GPS 2026",
       description: "Tutte le informazioni essenziali sulle Graduatorie Provinciali per le Supplenze: requisiti, punteggi, scadenze e procedure.",
       link: "/info-gps",
-      color: "text-indigo-600",
-      bgColor: "bg-indigo-50",
-      borderColor: "border-indigo-200"
+      color: "text-cyan-700",
+      bgColor: "bg-cyan-50",
+      borderColor: "border-cyan-200"
     },
     {
       icon: Sparkles,
@@ -143,7 +143,7 @@ export default function Home() {
         <CoursesBanner />
 
         {/* CTA Section */}
-        <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-10 md:p-16 text-center shadow-xl">
+        <div className="bg-gradient-to-r from-blue-700 to-sky-600 rounded-2xl p-10 md:p-16 text-center shadow-xl">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Inizia il Tuo Percorso Oggi
           </h2>

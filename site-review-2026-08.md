@@ -32,3 +32,13 @@
 ## Archiviazione tecnica
 
 Le quattro immagini statiche che impedivano l’archiviazione sono state trasferite nello spazio asset persistente. È stato introdotto un proxy server-side per servirle in modo sicuro; la home e l’asset di sfondo sono stati verificati nella preview dopo la migrazione.
+
+Le pagine Contatti e Privacy sono state poi verificate nella preview con la palette blu e bianca. Il collegamento alla privacy del modulo corsi ora punta alla route esistente; restano da compilare esclusivamente i dati reali del titolare nell’informativa.
+
+Un audit sulle pagine pubbliche effettivamente raggiungibili non rileva più riferimenti a tonalità viola, violetto o indaco. La preview a 900 px conferma inoltre il menu compatto, una griglia corsi a due colonne leggibile e il modulo contatti senza tagli o sovrapposizioni.
+
+La verifica del menu compatto è stata completata a 900 px: l’icona hamburger è visibile senza sovrapporsi ai contenuti. Il modulo “Richiedi Informazioni” dei corsi si apre correttamente, presenta campi, consenso alla privacy e pulsanti d’azione accessibili; non è stato inviato alcun dato durante il controllo.
+
+La verifica automatizzata a 900 px conferma che il menu hamburger apre il pannello di navigazione laterale e che il modulo corsi rimane interamente nel viewport (larghezza form 622 px su viewport 900 px), senza tagli o sovrapposizioni.
+
+Il controllo esteso a 900 px conferma anche che la griglia corsi passa a due colonne (nove card rilevate, senza overflow orizzontale) e che il form pubblico Contatti è visibile con larghezza 640 px, senza sovrapposizioni né campi tagliati.

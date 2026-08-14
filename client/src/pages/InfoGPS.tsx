@@ -207,8 +207,8 @@ export function InfoGPS() {
           {/* Punteggio Servizio */}
           <div className="bg-white rounded-2xl shadow-lg p-8 md:p-10">
             <div className="flex items-center gap-3 mb-6">
-              <div className="bg-purple-100 p-3 rounded-xl">
-                <Clock className="w-8 h-8 text-purple-600" />
+              <div className="bg-sky-100 p-3 rounded-xl">
+                <Clock className="w-8 h-8 text-sky-600" />
               </div>
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
                 Punteggio per Servizio (Supplenze)
@@ -298,8 +298,8 @@ export function InfoGPS() {
           {/* Certificazioni Linguistiche */}
           <div className="bg-white rounded-2xl shadow-lg p-8 md:p-10">
             <div className="flex items-center gap-3 mb-6">
-              <div className="bg-indigo-100 p-3 rounded-xl">
-                <Languages className="w-8 h-8 text-indigo-600" />
+              <div className="bg-sky-100 p-3 rounded-xl">
+                <Languages className="w-8 h-8 text-sky-600" />
               </div>
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
                 Certificazioni Linguistiche
@@ -349,15 +349,15 @@ export function InfoGPS() {
             <div className="grid gap-3">
               <div className="flex items-center justify-between p-4 rounded-xl bg-gray-50 border-2 border-gray-200">
                 <span className="font-semibold text-gray-900">Master I o II livello (60 CFU)</span>
-                <span className="bg-purple-100 text-purple-800 font-bold px-4 py-2 rounded-lg">1 punto</span>
+                <span className="bg-sky-100 text-sky-800 font-bold px-4 py-2 rounded-lg">1 punto</span>
               </div>
               <div className="flex items-center justify-between p-4 rounded-xl bg-gray-50 border-2 border-gray-200">
                 <span className="font-semibold text-gray-900">Corso di Perfezionamento (60 CFU)</span>
-                <span className="bg-purple-100 text-purple-800 font-bold px-4 py-2 rounded-lg">1 punto</span>
+                <span className="bg-sky-100 text-sky-800 font-bold px-4 py-2 rounded-lg">1 punto</span>
               </div>
-              <div className="flex items-center justify-between p-4 rounded-xl bg-purple-50 border-2 border-purple-300">
-                <span className="font-bold text-purple-900">Master in L2 (Didattica Italiano L2)</span>
-                <span className="bg-purple-600 text-white font-bold px-4 py-2 rounded-lg">3 punti</span>
+              <div className="flex items-center justify-between p-4 rounded-xl bg-sky-50 border-2 border-sky-300">
+                <span className="font-bold text-sky-900">Master in L2 (Didattica Italiano L2)</span>
+                <span className="bg-sky-600 text-white font-bold px-4 py-2 rounded-lg">3 punti</span>
               </div>
             </div>
           </div>
@@ -385,7 +385,7 @@ export function InfoGPS() {
                     EIPASS User, EIPASS Standard, IDPASS EDSC DigComp 2.2, IDCERT DigComp 2.2
                   </p>
                 </div>
-                <div className="p-5 rounded-xl bg-indigo-50 border-2 border-indigo-200">
+                <div className="p-5 rounded-xl bg-sky-50 border-2 border-sky-200">
                   <div className="font-bold text-gray-900 mb-2">In linea al DigComp Edu (1 pt)</div>
                   <p className="text-sm text-gray-600">
                     EIPASS DigCompEdu, IDPASS DigCompEdu, IDCERT DigCompEdu

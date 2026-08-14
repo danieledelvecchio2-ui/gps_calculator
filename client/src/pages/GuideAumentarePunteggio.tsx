@@ -28,7 +28,7 @@ export default function GuideAumentarePunteggio() {
     {
       categoria: "Titoli Accademici",
       icon: <BookOpen className="w-6 h-6" />,
-      color: "purple",
+      color: "cyan",
       titoli: [
         { nome: "Dottorato di ricerca", punti: "12", note: "Attinente alla classe di concorso" },
         { nome: "Diploma di specializzazione", punti: "6", note: "Conseguito in università" },
@@ -68,7 +68,7 @@ export default function GuideAumentarePunteggio() {
     const colors: Record<string, { bg: string; border: string; text: string; icon: string }> = {
       blue: { bg: "bg-blue-50", border: "border-blue-200", text: "text-blue-900", icon: "text-blue-600" },
       green: { bg: "bg-green-50", border: "border-green-200", text: "text-green-900", icon: "text-green-600" },
-      purple: { bg: "bg-purple-50", border: "border-purple-200", text: "text-purple-900", icon: "text-purple-600" },
+      cyan: { bg: "bg-cyan-50", border: "border-cyan-200", text: "text-cyan-900", icon: "text-cyan-600" },
       amber: { bg: "bg-amber-50", border: "border-amber-200", text: "text-amber-900", icon: "text-amber-600" },
       red: { bg: "bg-red-50", border: "border-red-200", text: "text-red-900", icon: "text-red-600" },
     };
@@ -121,8 +121,8 @@ export default function GuideAumentarePunteggio() {
                     <div className="text-4xl font-bold text-blue-600 mb-2">+50%</div>
                     <div className="text-sm text-gray-700">Supplenze più lunghe</div>
                   </div>
-                  <div className="bg-purple-50 border-2 border-purple-200 rounded-xl p-6 text-center">
-                    <div className="text-4xl font-bold text-purple-600 mb-2">+40%</div>
+                  <div className="bg-cyan-50 border-2 border-cyan-200 rounded-xl p-6 text-center">
+                    <div className="text-4xl font-bold text-cyan-600 mb-2">+40%</div>
                     <div className="text-sm text-gray-700">Province più competitive</div>
                   </div>
                 </div>
@@ -254,10 +254,10 @@ export default function GuideAumentarePunteggio() {
           </Card>
 
           {/* Esempio Pratico */}
-          <Card className="mb-12 shadow-lg border-2 border-purple-200">
-            <CardHeader className="bg-purple-50 border-b-2 border-purple-200">
-              <CardTitle className="flex items-center gap-3 text-2xl text-purple-900">
-                <Award className="w-8 h-8 text-purple-600" />
+          <Card className="mb-12 shadow-lg border-2 border-cyan-200">
+            <CardHeader className="bg-cyan-50 border-b-2 border-cyan-200">
+              <CardTitle className="flex items-center gap-3 text-2xl text-cyan-900">
+                <Award className="w-8 h-8 text-cyan-600" />
                 Esempio Pratico: Da 40 a 80 Punti
               </CardTitle>
             </CardHeader>
@@ -272,7 +272,7 @@ export default function GuideAumentarePunteggio() {
                     </div>
                     <div className="flex justify-between items-center py-2 font-bold text-lg">
                       <span>Totale</span>
-                      <span className="text-purple-600">40 punti</span>
+                      <span className="text-cyan-600">40 punti</span>
                     </div>
                   </div>
                 </div>

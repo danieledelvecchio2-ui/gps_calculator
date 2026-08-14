@@ -48,7 +48,7 @@ export function Contact() {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-12 md:py-16">
+      <div className="bg-gradient-to-r from-blue-700 to-sky-600 text-white py-12 md:py-16">
         <div className="container">
           <div className="text-center max-w-3xl mx-auto">
             <div className="flex justify-center mb-6">
@@ -89,7 +89,7 @@ export function Contact() {
               
               <Button
                 onClick={() => setIsSubmitted(false)}
-                className="bg-indigo-600 hover:bg-indigo-700"
+                className="bg-blue-700 hover:bg-blue-800"
               >
                 Invia un altro messaggio
               </Button>
@@ -178,7 +178,7 @@ export function Contact() {
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-6 text-lg font-semibold"
+                  className="w-full bg-blue-700 hover:bg-blue-800 text-white py-6 text-lg font-semibold"
                 >
                   {isSubmitting ? (
                     <>
@@ -201,7 +201,7 @@ export function Contact() {
           )}
 
           {/* Info Box */}
-          <div className="mt-8 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl shadow-lg p-8 text-white">
+          <div className="mt-8 bg-gradient-to-r from-blue-600 to-sky-600 rounded-2xl shadow-lg p-8 text-white">
             <h3 className="text-2xl font-bold mb-4">
               📧 Tempi di Risposta
             </h3>

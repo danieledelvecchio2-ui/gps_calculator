@@ -91,7 +91,7 @@ export function NewsGPS2026() {
               </div>
 
               {/* Novità 3 */}
-              <div className="border-l-4 border-purple-500 pl-6 py-2">
+              <div className="border-l-4 border-sky-500 pl-6 py-2">
                 <h3 className="text-xl font-bold text-gray-900 mb-2">
                   3. Valutazione Titoli Culturali
                 </h3>
@@ -165,9 +165,9 @@ export function NewsGPS2026() {
               </div>
 
               {/* Step 3 */}
-              <div className="bg-purple-50 rounded-xl p-6 border-2 border-purple-200">
+              <div className="bg-sky-50 rounded-xl p-6 border-2 border-sky-200">
                 <div className="flex items-center gap-2 mb-3">
-                  <span className="bg-purple-600 text-white font-bold w-8 h-8 rounded-full flex items-center justify-center">
+                  <span className="bg-sky-600 text-white font-bold w-8 h-8 rounded-full flex items-center justify-center">
                     3
                   </span>
                   <h3 className="font-bold text-gray-900">Calcola il Punteggio</h3>

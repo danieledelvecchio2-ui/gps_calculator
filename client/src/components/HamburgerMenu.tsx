@@ -52,13 +52,13 @@ export function HamburgerMenu() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 border-l border-white/10 z-40 shadow-2xl"
+              className="fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 border-l border-white/10 z-40 shadow-2xl"
             >
               <div className="flex flex-col h-full p-8 pt-24">
                 {/* Logo/Title */}
                 <div className="mb-8">
                   <h2 className="text-2xl font-bold text-white mb-1">
-                    GPS <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Calculator</span>
+                    GPS <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-sky-400">Calculator</span>
                   </h2>
                   <p className="text-white/60 text-sm">Calcola il tuo punteggio GPS</p>
                 </div>
@@ -76,7 +76,7 @@ export function HamburgerMenu() {
                           whileTap={{ scale: 0.98 }}
                           className={`flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-200 ${
                             isActive
-                              ? "bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 text-white"
+                              ? "bg-gradient-to-r from-cyan-500/20 to-sky-500/20 border border-cyan-500/30 text-white"
                               : "text-white/70 hover:bg-white/5 hover:text-white"
                           }`}
                         >

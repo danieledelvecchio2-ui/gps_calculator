@@ -248,7 +248,7 @@ export default function ClasseDetail() {
           {/* Classi Correlate */}
           <section className="bg-white rounded-xl shadow-sm p-8">
             <div className="flex items-center gap-3 mb-6">
-              <BookOpen className="w-6 h-6 text-purple-600" />
+              <BookOpen className="w-6 h-6 text-sky-600" />
               <h2 className="text-2xl font-bold text-gray-900">
                 Classi di Concorso Correlate
               </h2>

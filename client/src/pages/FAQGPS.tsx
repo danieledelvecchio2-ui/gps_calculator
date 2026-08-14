@@ -96,7 +96,7 @@ const faqData: FAQItem[] = [
 const categories = [
   { id: "generale", label: "Informazioni Generali", icon: HelpCircle, color: "blue" },
   { id: "iscrizione", label: "Iscrizione e Province", icon: FileText, color: "green" },
-  { id: "punteggio", label: "Calcolo Punteggio", icon: CheckCircle, color: "purple" },
+  { id: "punteggio", label: "Calcolo Punteggio", icon: CheckCircle, color: "sky" },
   { id: "graduatorie", label: "Graduatorie", icon: Users, color: "orange" },
   { id: "supplenze", label: "Supplenze e Convocazioni", icon: Calendar, color: "red" }
 ];
@@ -208,7 +208,7 @@ export default function FAQGPS() {
         </div>
 
         {/* CTA Section */}
-        <Card className="max-w-4xl mx-auto mt-12 shadow-xl border-2 border-blue-200 bg-gradient-to-br from-blue-50 to-indigo-50">
+        <Card className="max-w-4xl mx-auto mt-12 shadow-xl border-2 border-blue-200 bg-gradient-to-br from-blue-50 to-sky-50">
           <CardContent className="p-8 text-center">
             <AlertCircle className="w-12 h-12 text-blue-600 mx-auto mb-4" />
             <h3 className="text-2xl font-bold text-gray-900 mb-4">

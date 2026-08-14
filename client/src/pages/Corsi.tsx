@@ -104,7 +104,7 @@ const corsiData: Corso[] = [
     requisiti: "Vincita concorso + 24 CFU conseguiti entro 31/10/2022",
     ente: "eCampus",
     icon: CheckCircle,
-    color: "purple"
+    color: "blue"
   },
   
   // CERTIFICAZIONI LINGUISTICHE
@@ -201,7 +201,7 @@ const corsiData: Corso[] = [
     requisiti: "Docenti e aspiranti docenti scuole secondarie",
     ente: "eCampus",
     icon: BookOpen,
-    color: "indigo"
+    color: "sky"
   },
   
   // MASTER L2
@@ -331,13 +331,13 @@ export default function Corsi() {
             <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
               {categoria}
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5 md:gap-6">
               {corsiData
                 .filter(c => c.categoria === categoria)
                 .map((corso) => {
                   const Icon = corso.icon;
                   return (
-                    <Card key={corso.id} className="shadow-lg hover:shadow-xl transition-shadow">
+                      <Card key={corso.id} className="shadow-lg hover:shadow-xl transition-shadow h-full flex flex-col">
                       <CardHeader className={`bg-${corso.color}-50 border-b border-${corso.color}-100`}>
                         <div className="flex items-start justify-between">
                           <div className="flex-1">
@@ -353,7 +353,7 @@ export default function Corsi() {
                           </div>
                         </div>
                       </CardHeader>
-                      <CardContent className="p-6">
+                      <CardContent className="p-5 sm:p-6 flex flex-col flex-1">
                         <p className="text-gray-700 mb-4 text-sm leading-relaxed">
                           {corso.descrizione}
                         </p>
@@ -481,7 +481,7 @@ export default function Corsi() {
                     <div className="bg-gray-50 p-4 rounded-lg">
                       <p className="text-xs text-gray-600">
                         Inviando questo form accetti la nostra{" "}
-                        <a href="/privacy-policy" className="text-blue-600 hover:underline">
+                        <a href="/privacy" className="text-blue-700 hover:underline">
                           Privacy Policy
                         </a>
                         . I tuoi dati verranno utilizzati esclusivamente per fornirti informazioni sui corsi richiesti.

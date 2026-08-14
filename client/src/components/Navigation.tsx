@@ -25,7 +25,7 @@ export function Navigation() {
   return (
     <>
       {/* Desktop Navigation - White Background */}
-      <nav className="hidden md:block fixed top-0 left-0 right-0 z-40 bg-white shadow-md">
+      <nav className="hidden xl:block fixed top-0 left-0 right-0 z-40 bg-white shadow-md">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
@@ -65,7 +65,7 @@ export function Navigation() {
       </nav>
 
       {/* Mobile Navigation */}
-      <div className="md:hidden">
+      <div className="xl:hidden">
         {/* Hamburger Button */}
         <button
           onClick={toggleMenu}

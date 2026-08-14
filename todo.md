@@ -59,9 +59,19 @@
 - [x] Verificare navigazione, calcolatore GPS, ricerca classi e pagine pubbliche in produzione e anteprima
 - [x] Verificare usabilità e layout sui dispositivi mobili nel viewport tablet ristretto (888 px)
 - [x] Documentare criticità prioritarie e proporre interventi correttivi
-- [ ] Correggere collegamento privacy del modulo e completare informativa con i dati reali del titolare
-- [ ] Rimuovere tonalità viola e correggere responsive menu, card corsi e moduli sotto i 1024 px
+- [x] Correggere collegamento privacy del modulo corsi
+- [ ] Completare informativa privacy con i dati reali del titolare
+- [x] Rimuovere tonalità viola e correggere responsive menu, card corsi e moduli sotto i 1024 px
+- [x] Aggiungere test di regressione per palette, responsive e collegamento privacy
 - [ ] Uniformare denominazioni del brand e i contenuti istituzionali, legali e normativi
+- [x] Uniformare il nome del servizio nei termini pubblici al brand MONDO SCUOLA
+- [x] Eseguire audit finale delle pagine pubbliche routate per escludere residui viola o indaco
+- [x] Verificare in preview i breakpoint sotto 1024 px per menu, card corsi e moduli principali
+- [x] Verificare il menu hamburger sotto 1024 px su una pagina pubblica e registrarne l’esito
+- [x] Verificare il modulo Richiedi Informazioni dei corsi sotto 1024 px senza tagli o sovrapposizioni
+- [x] Eseguire test esplicito a 900 px con menu hamburger aperto e modulo corsi aperto
+- [x] Verificare a 900 px la griglia delle card corsi senza overflow o tagli
+- [x] Verificare a 900 px il modulo contatti pubblico senza sovrapposizioni o campi tagliati
 
 ## Archiviazione asset statici
 
@@ -69,4 +79,4 @@
 - [x] Sostituire i riferimenti locali con URL statici e rimuovere le copie dalla cartella pubblica
 - [x] Aggiungere ed eseguire un test del proxy per gli asset persistenti
 - [x] Verificare l’aspetto delle pagine coinvolte e la raggiungibilità degli asset tramite proxy
-- [ ] Salvare il checkpoint
+- [x] Salvare il checkpoint
